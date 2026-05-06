@@ -48,104 +48,104 @@ The orientation of glycans attached to proteins is governed by complex energy la
 
 #### Theoretical Foundation
 
-Consider a glycan with \(n\) rotatable dihedral angles \(\boldsymbol{\theta} = (\theta_1, \theta_2, ..., \theta_n)\). The probability distribution of conformations follows the Boltzmann distribution:
+Consider a glycan with $n$ rotatable dihedral angles $\boldsymbol{\theta} = (\theta_1, \theta_2, ..., \theta_n)$. The probability distribution of conformations follows the Boltzmann distribution:
 
-\[
+$$
 P(\boldsymbol{\theta}) = \frac{1}{Z} \exp\left(-\frac{E(\boldsymbol{\theta})}{k_B T}\right)
-\]
+$$
 
 where:
-- \(E(\boldsymbol{\theta})\) is the potential energy of the conformation
-- \(k_B\) is Boltzmann's constant
-- \(T\) is the absolute temperature
-- \(Z = \int \exp(-E(\boldsymbol{\theta})/k_B T) d\boldsymbol{\theta}\) is the partition function
+- $E(\boldsymbol{\theta})$ is the potential energy of the conformation
+- $k_B$ is Boltzmann's constant
+- $T$ is the absolute temperature
+- $Z = \int \exp(-E(\boldsymbol{\theta})/k_B T) d\boldsymbol{\theta}$ is the partition function
 
 ### Metropolis-Hastings Algorithm
 
-The Metropolis-Hastings algorithm generates a Markov chain that samples from \(P(\boldsymbol{\theta})\) without requiring knowledge of \(Z\).
+The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(\boldsymbol{\theta})$ without requiring knowledge of $Z$.
 
 **Algorithm Steps:**
 
-1. **Initialize** starting conformation \(\boldsymbol{\theta}_0\)
+1. **Initialize** starting conformation $\boldsymbol{\theta}_0$
 
-2. **For each iteration** \(t = 1, 2, ..., N\):
+2. **For each iteration** $t = 1, 2, ..., N$:
    
-   a. **Propose** a new conformation \(\boldsymbol{\theta}'\) from proposal distribution \(q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})\)
+   a. **Propose** a new conformation $\boldsymbol{\theta}'$ from proposal distribution $q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})$
    
    b. **Calculate acceptance probability**:
    
-   \[
+   $$
    \alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})} \cdot \frac{q(\boldsymbol{\theta}_{t-1} | \boldsymbol{\theta}')}{q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})}\right)
-   \]
+   $$
    
-   For symmetric proposal distributions (e.g., Gaussian random walk), \(q(\boldsymbol{\theta}_{t-1} | \boldsymbol{\theta}') = q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})\), simplifying to:
+   For symmetric proposal distributions (e.g., Gaussian random walk), $q(\boldsymbol{\theta}_{t-1} | \boldsymbol{\theta}') = q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})$, simplifying to:
    
-   \[
+   $$
    \alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})}\right) = \min\left(1, \exp\left(-\frac{\Delta E}{k_B T}\right)\right)
-   \]
+   $$
    
    c. **Accept or reject**:
-   - Generate random number \(u \sim \mathcal{U}(0,1)\)
-   - If \(u \leq \alpha\), accept: \(\boldsymbol{\theta}_t = \boldsymbol{\theta}'\)
-   - Else, reject: \(\boldsymbol{\theta}_t = \boldsymbol{\theta}_{t-1}\)
+   - Generate random number $u \sim \mathcal{U}(0,1)$
+   - If $u \leq \alpha$, accept: $\boldsymbol{\theta}_t = \boldsymbol{\theta}'$
+   - Else, reject: $\boldsymbol{\theta}_t = \boldsymbol{\theta}_{t-1}$
 
-3. **After convergence**, the samples \(\{\boldsymbol{\theta}_t\}\) approximate the Boltzmann distribution.
+3. **After convergence**, the samples $\{\boldsymbol{\theta}_t\}$ approximate the Boltzmann distribution.
 
 ### Energy Functions and Force Fields
 
 The total potential energy is calculated using the CHARMM36 force field:
 
-\[
+$$
 E_{\text{total}} = E_{\text{bond}} + E_{\text{angle}} + E_{\text{dihedral}} + E_{\text{improper}} + E_{\text{nonbonded}}
-\]
+$$
 
 #### Bond Stretching (Harmonic oscillator approximation)
 
-\[
+$$
 E_{\text{bond}} = \sum_{\text{bonds}} k_b (r - r_0)^2
-\]
+$$
 
-where \(k_b\) is the bond force constant, \(r\) is the current bond length, and \(r_0\) is the equilibrium bond length.
+where $k_b$ is the bond force constant, $r$ is the current bond length, and $r_0$ is the equilibrium bond length.
 
 #### Angle Bending
 
-\[
+$$
 E_{\text{angle}} = \sum_{\text{angles}} k_\theta (\theta - \theta_0)^2
-\]
+$$
 
-where \(k_\theta\) is the angle force constant, \(\theta\) is the current angle, and \(\theta_0\) is the equilibrium angle.
+where $k_\theta$ is the angle force constant, $\theta$ is the current angle, and $\theta_0$ is the equilibrium angle.
 
 #### Dihedral Torsions
 
-\[
+$$
 E_{\text{dihedral}} = \sum_{\text{dihedrals}} k_\phi [1 + \cos(n\phi - \delta)]
-\]
+$$
 
-where \(k_\phi\) is the dihedral force constant, \(n\) is the multiplicity, \(\phi\) is the dihedral angle, and \(\delta\) is the phase shift.
+where $k_\phi$ is the dihedral force constant, $n$ is the multiplicity, $\phi$ is the dihedral angle, and $\delta$ is the phase shift.
 
 #### Non-bonded Interactions
 
 **Lennard-Jones potential (van der Waals):**
 
-\[
+$$
 E_{\text{vdW}} = \sum_{i<j} 4\varepsilon_{ij} \left[\left(\frac{\sigma_{ij}}{r_{ij}}\right)^{12} - \left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]
-\]
+$$
 
-where \(\varepsilon_{ij}\) is the well depth, \(\sigma_{ij}\) is the distance at zero potential, and \(r_{ij}\) is the distance between atoms \(i\) and \(j\).
+where $\varepsilon_{ij}$ is the well depth, $\sigma_{ij}$ is the distance at zero potential, and $r_{ij}$ is the distance between atoms $i$ and $j$.
 
 **Coulomb potential (electrostatics):**
 
-\[
+$$
 E_{\text{elec}} = \sum_{i<j} \frac{q_i q_j}{4\pi\epsilon_0 \epsilon_r r_{ij}}
-\]
+$$
 
-where \(q_i\) and \(q_j\) are partial atomic charges, \(\epsilon_0\) is the vacuum permittivity, and \(\epsilon_r\) is the relative permittivity.
+where $q_i$ and $q_j$ are partial atomic charges, $\epsilon_0$ is the vacuum permittivity, and $\epsilon_r$ is the relative permittivity.
 
 #### Total Non-bonded Energy
 
-\[
+$$
 E_{\text{nonbonded}} = E_{\text{vdW}} + E_{\text{elec}}
-\]
+$$
 
 ## Installation
 
@@ -372,7 +372,7 @@ glyco-orient -i step2_output/VALENCE_GLYCAN_VARIANTS/glycosylated_protein_final_
 ```bash
 # Process multiple proteins
 for protein in *.pdb; do
-    name=${protein%.pdb}
+    name="${protein%.pdb}"
     glyco-all -i "$protein" -o "${name}_glycosylation" \
         --download-charmm \
         --n-cpus 4 \
@@ -465,80 +465,80 @@ OUTPUT_DIR/
 
 The Metropolis-Hastings acceptance ratio ensures detailed balance:
 
-\[
+$$
 \pi(\boldsymbol{\theta}) P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}') = \pi(\boldsymbol{\theta}') P(\boldsymbol{\theta}' \rightarrow \boldsymbol{\theta})
-\]
+$$
 
-where \(\pi(\boldsymbol{\theta})\) is the target distribution and \(P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}')\) is the transition probability:
+where $\pi(\boldsymbol{\theta})$ is the target distribution and $P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}')$ is the transition probability:
 
-\[
+$$
 P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}') = q(\boldsymbol{\theta}' | \boldsymbol{\theta}) \alpha(\boldsymbol{\theta}, \boldsymbol{\theta}')
-\]
+$$
 
 Substituting:
 
-\[
+$$
 \pi(\boldsymbol{\theta}) q(\boldsymbol{\theta}' | \boldsymbol{\theta}) \alpha(\boldsymbol{\theta}, \boldsymbol{\theta}') = \pi(\boldsymbol{\theta}') q(\boldsymbol{\theta} | \boldsymbol{\theta}') \alpha(\boldsymbol{\theta}', \boldsymbol{\theta})
-\]
+$$
 
-Solving for \(\alpha\):
+Solving for $\alpha$:
 
-\[
+$$
 \frac{\alpha(\boldsymbol{\theta}, \boldsymbol{\theta}')}{\alpha(\boldsymbol{\theta}', \boldsymbol{\theta})} = \frac{\pi(\boldsymbol{\theta}') q(\boldsymbol{\theta} | \boldsymbol{\theta}')}{\pi(\boldsymbol{\theta}) q(\boldsymbol{\theta}' | \boldsymbol{\theta})}
-\]
+$$
 
 The Metropolis choice is:
 
-\[
+$$
 \alpha(\boldsymbol{\theta}, \boldsymbol{\theta}') = \min\left(1, \frac{\pi(\boldsymbol{\theta}') q(\boldsymbol{\theta} | \boldsymbol{\theta}')}{\pi(\boldsymbol{\theta}) q(\boldsymbol{\theta}' | \boldsymbol{\theta})}\right)
-\]
+$$
 
 ### Energy Minimization in MCMC
 
 The potential energy for a glycan conformation is computed as:
 
-\[
+$$
 E(\boldsymbol{\theta}) = E_{\text{intra}}(\boldsymbol{\theta}) + E_{\text{inter}}(\boldsymbol{\theta})
-\]
+$$
 
 where:
-- \(E_{\text{intra}}\) is the internal energy of the glycan (bond, angle, dihedral terms)
-- \(E_{\text{inter}}\) is the interaction energy with the protein (van der Waals + electrostatics)
+- $E_{\text{intra}}$ is the internal energy of the glycan (bond, angle, dihedral terms)
+- $E_{\text{inter}}$ is the interaction energy with the protein (van der Waals + electrostatics)
 
 ### Convergence Criteria
 
 The MCMC simulation is considered converged when:
 
-1. **Gelman-Rubin statistic** \(\hat{R} < 1.1\):
+1. **Gelman-Rubin statistic** $\hat{R} < 1.1$:
 
-\[
+$$
 \hat{R} = \sqrt{\frac{\text{Var}(\boldsymbol{\theta})}{W}}
-\]
+$$
 
-where \(\text{Var}(\boldsymbol{\theta})\) is the between-chain variance and \(W\) is the within-chain variance.
+where $\text{Var}(\boldsymbol{\theta})$ is the between-chain variance and $W$ is the within-chain variance.
 
-2. **Autocorrelation time** \(\tau < 10\) steps:
+2. **Autocorrelation time** $\tau < 10$ steps:
 
-\[
+$$
 \tau = 1 + 2 \sum_{k=1}^{\infty} \rho_k
-\]
+$$
 
-where \(\rho_k\) is the autocorrelation at lag \(k\).
+where $\rho_k$ is the autocorrelation at lag $k$.
 
-3. **Energy stabilization**: The running average of \(\Delta E\) changes by < 1% over 100 steps.
+3. **Energy stabilization**: The running average of $\Delta E$ changes by < 1% over 100 steps.
 
 ### Temperature Schedule (Simulated Annealing)
 
 The pipeline optionally implements a cooling schedule:
 
-\[
+$$
 T_k = T_0 \cdot \beta^k
-\]
+$$
 
 where:
-- \(T_0\) is the initial temperature (default: 300 K)
-- \(\beta\) is the cooling factor (default: 0.99)
-- \(k\) is the step number
+- $T_0$ is the initial temperature (default: 300 K)
+- $\beta$ is the cooling factor (default: 0.99)
+- $k$ is the step number
 
 This allows the system to escape local minima and find global energy minima.
 
@@ -573,9 +573,9 @@ If you use this pipeline in your research, please cite:
 
 ```bibtex
 @software{automated_glycosylation_2024,
-  author = {Souza, Anacleto Silva de},
+  author = {Silva de Souza, Anacleto},
   title = {Automated Glycosylation Pipeline for Glycoproteins},
-  year = {2026},
+  year = {2024},
   url = {https://github.com/anacletosouza/automated_glycosylation},
   doi = {10.5281/zenodo.xxxxxxx}
 }
@@ -596,3 +596,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Contact**: anacletosilvadesouza@usp.br
 
 **GitHub**: [https://github.com/anacletosouza/automated_glycosylation](https://github.com/anacletosouza/automated_glycosylation)
+
