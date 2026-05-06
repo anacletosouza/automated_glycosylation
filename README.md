@@ -335,9 +335,47 @@ def mcmc_optimization(theta_initial, energy_function, n_steps=10000, sigma=10.0,
 
 ### Prerequisites
 
-- Python 3.7 or higher
-- pip package manager
-- GROMACS (optional, for molecular dynamics simulations)
+- **Python 3.7 or higher** - The pipeline requires Python 3.7+ for full compatibility with type hints and dataclasses
+- **pip package manager** - For installing Python dependencies
+- **GROMACS (optional)** - Only required if you plan to run molecular dynamics simulations with the generated topology files
+
+### Python Dependencies
+
+The pipeline requires the following Python packages:
+
+| Package | Minimum Version | Purpose |
+|---------|----------------|---------|
+| `numpy` | 1.19.0+ | Numerical operations, rotation matrices, distance calculations |
+| `scipy` | 1.5.0+ | Scientific computing (optional, used for advanced statistics) |
+| `pandas` | 1.1.0+ | Reading TSV files containing glycosylation site tables |
+| `matplotlib` | 3.3.0+ | SNFG (Symbol Nomenclature for Glycans) visualization |
+| `mdtraj` | 1.9.0+ | Molecular trajectory manipulation (required by glycosylator) |
+| `glycosylator` | 0.1.0+ | Core library for protein glycosylation operations |
+| `tqdm` | 4.50.0+ | Progress bars for MCMC simulations |
+
+### System Requirements
+
+- **RAM**: 
+  - Minimum: 2 GB for single chain proteins
+  - Recommended: 8 GB for 4 parallel workers
+  - Large systems (>1000 residues): 16+ GB
+
+- **CPU**: 
+  - Multi-core processor recommended for parallel MCMC processing
+  - The pipeline automatically detects and uses available CPU cores
+
+- **Disk Space**: 
+  - Minimum: 500 MB for CHARMM36 force field and dependencies
+  - Additional space required for output files (varies with system size)
+
+### Install Dependencies
+
+```bash
+# Install all required packages via pip
+pip install numpy>=1.19.0 scipy>=1.5.0 pandas>=1.1.0 matplotlib>=3.3.0 mdtraj>=1.9.0 tqdm>=4.50.0 glycosylator
+
+# Or use the requirements file
+pip install -r requirements.txt
 
 ### Install from GitHub
 
