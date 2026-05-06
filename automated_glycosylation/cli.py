@@ -179,8 +179,8 @@ Examples:
         create_directory(d)
     
     # Step 0: Correct Caselino table (if TSV provided)
-    if args.asn_tsv and Path(args.asn_tsv).exists():
-        asn_tsv_path = Path(args.asn_tsv).resolve()
+    if args.glycan_sites_tsv and Path(args.glycan_sites_tsv).exists():
+        asn_tsv_path = Path(args.glycan_sites_tsv).resolve()
         corrected_tsv = tsv_dir / "glycosylation_sites_corrected.tsv"
         
         print("Step 0: Correcting glycosylation sites table...")
@@ -794,8 +794,8 @@ Examples:
     step1_cmd = [sys.executable, "-c", f"""
 import sys
 sys.argv = ['glyco-prep', '-i', '{input_pdb}', '-o', '{step1_dir}']
-if '{args.asn_tsv}' and '{args.asn_tsv}' != 'None':
-    sys.argv.extend(['--glycan_sites_tsv', '{args.asn_tsv}'])
+if '{args.glycan_sites_tsv}' and '{args.glycan_sites_tsv}' != 'None':
+    sys.argv.extend(['--glycan_sites_tsv', '{args.glycan_sites_tsv}'])
 sys.argv.extend(['--rotate-atoms', '{args.rotate_atoms}'])
 sys.argv.extend(['--fixed-atom', '{args.fixed_atom}'])
 sys.argv.extend(['--center-atom', '{args.center_atom}'])
