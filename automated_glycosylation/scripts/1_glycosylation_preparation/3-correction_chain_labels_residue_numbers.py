@@ -9,7 +9,7 @@ Functionalities:
 4. Preserves connectivity (CONECT lines)
 5. Identifies glycan blocks based on sequence in the file
 
-Author: Script for PDB file processing
+Author: Anacleto SIlva de Souza
 """
 
 import sys
@@ -146,109 +146,17 @@ def get_user_options() -> Dict:
     
     options = {}
     
-    # Option for glycan chain labeling
-    print("\nChain labeling for glycans:")
-    print("1. Protein chain A -> Glycan chain D, Protein chain B -> Glycan chain E, etc.")
-    print("2. Protein chain A -> Glycan chain A, Protein chain B -> Glycan chain B, etc.")
-    print("3. Custom mapping (user provides specific mappings)")
+    # Fixed option for glycan chain labeling - Cadeia A para proteina e carboidrato, cadeia B para proteina e carboidrato
+    print("\nChain labeling for glycans: Fixed mapping (A->A, B->B, etc.)")
+    options["glycan_labeling"] = 2  # Fixed to option 2: A->A, B->B
     
-    while True:
-        try:
-            choice = int(input("\nChoose option (1, 2, or 3): ").strip())
-            if choice in [1, 2, 3]:
-                options["glycan_labeling"] = choice
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2, or 3.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
+    # Fixed option for protein renumbering - manter numero original da proteina
+    print("\nProtein residue renumbering: Keep original numbering")
+    options["protein_renumbering"] = 4  # New option to keep original numbers
     
-    # Option for custom mapping
-    if options["glycan_labeling"] == 3:
-        options["custom_mapping"] = {}
-        print("\nEnter custom chain mappings (e.g., A->X, B->Y).")
-        print("Enter 'done' when finished or press Enter with empty input to finish.")
-        
-        mapping_count = 0
-        while True:
-            mapping = input(f"\nMapping {mapping_count + 1} (format: protein_chain->glycan_chain): ").strip()
-            
-            if mapping.lower() == 'done' or mapping == '':
-                if mapping_count == 0:
-                    print("No mappings entered. Using default (A->D, B->E, C->F, etc.)")
-                    options["glycan_labeling"] = 1  # Reverts to option 1
-                break
-            
-            if '->' in mapping:
-                parts = mapping.split('->')
-                if len(parts) == 2:
-                    prot_chain = parts[0].strip()
-                    glycan_chain = parts[1].strip()
-                    
-                    if len(prot_chain) != 1 or len(glycan_chain) != 1:
-                        print("Error: Chain identifiers should be single characters (e.g., A, B, C)")
-                        continue
-                    
-                    options["custom_mapping"][prot_chain] = glycan_chain
-                    mapping_count += 1
-                    print(f"Added mapping: {prot_chain} -> {glycan_chain}")
-                    print(f"Current mappings: {', '.join([f'{k}->{v}' for k, v in options['custom_mapping'].items()])}")
-                else:
-                    print("Invalid format. Use format: A->X")
-            else:
-                print("Invalid format. Use format: A->X or enter 'done' to finish")
-    
-    # Option for protein renumbering
-    print("\nProtein residue renumbering:")
-    print("1. Start each protein chain from 1")
-    print("2. Continue numbering from previous chain")
-    print("3. Use custom starting number for all chains")
-    
-    while True:
-        try:
-            choice = int(input("\nChoose option (1, 2, or 3): ").strip())
-            if choice in [1, 2, 3]:
-                options["protein_renumbering"] = choice
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2, or 3.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-    
-    if options["protein_renumbering"] == 3:
-        while True:
-            try:
-                start_num = int(input("Enter custom starting number for all protein chains: ").strip())
-                options["protein_start"] = start_num
-                break
-            except ValueError:
-                print("Invalid input. Please enter a number.")
-    
-    # Option for glycan renumbering
-    print("\nGlycan residue renumbering:")
-    print("1. Start each glycan chain from 1")
-    print("2. Continue numbering from previous glycan")
-    print("3. Use custom starting number for all glycans")
-    
-    while True:
-        try:
-            choice = int(input("\nChoose option (1, 2, or 3): ").strip())
-            if choice in [1, 2, 3]:
-                options["glycan_renumbering"] = choice
-                break
-            else:
-                print("Invalid choice. Please enter 1, 2, or 3.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-    
-    if options["glycan_renumbering"] == 3:
-        while True:
-            try:
-                start_num = int(input("Enter custom starting number for all glycan chains: ").strip())
-                options["glycan_start"] = start_num
-                break
-            except ValueError:
-                print("Invalid input. Please enter a number.")
+    # Fixed option for glycan renumbering - cada bloco começa com 1
+    print("\nGlycan residue renumbering: Each block starts from 1")
+    options["glycan_renumbering"] = 4  # New option for block restart
     
     return options
 
@@ -256,27 +164,9 @@ def generate_glycan_chain_mapping(protein_chains: List[str], options: Dict) -> D
     """Generates glycan chain mapping based on user options."""
     mapping = {}
     
-    if options["glycan_labeling"] == 1:
-        # Option 1: A->D, B->E, C->F, etc.
-        for i, prot_chain in enumerate(sorted(protein_chains)):
-            glycan_chain = chr(ord('D') + i)
-            mapping[prot_chain] = glycan_chain
-    elif options["glycan_labeling"] == 2:
-        # Option 2: A->A, B->B, C->C, etc.
-        for prot_chain in sorted(protein_chains):
-            mapping[prot_chain] = prot_chain
-    else:
-        # Option 3: Custom mapping
-        mapping = options.get("custom_mapping", {})
-        
-        # If any mapping is missing, uses default
-        for prot_chain in protein_chains:
-            if prot_chain not in mapping:
-                # Uses sequential default
-                i = sorted(protein_chains).index(prot_chain)
-                default_chain = chr(ord('D') + i)
-                mapping[prot_chain] = default_chain
-                print(f"Warning: No mapping for protein chain {prot_chain}. Using default: {prot_chain}->{default_chain}")
+    # Fixed to option 2: A->A, B->B, C->C, etc.
+    for prot_chain in sorted(protein_chains):
+        mapping[prot_chain] = prot_chain
     
     return mapping
 
@@ -360,61 +250,30 @@ def process_pdb_file(input_file: str, output_file: str, options: Dict) -> None:
     # Dictionaries for renumbering mapping
     residue_mapping = {}  # (old_chain, old_residue) -> (new_chain, new_residue)
     
-    # Counters for renumbering
-    current_protein_residue = {}
-    current_glycan_residue = {}
+    # Counters for renumbering - each glycan block starts at 1
+    glycan_block_counter = 1
     
-    # Initializes counters for protein chains
-    for chain in protein_chains:
-        if options["protein_renumbering"] == 1:
-            current_protein_residue[chain] = 1
-        elif options["protein_renumbering"] == 3:
-            current_protein_residue[chain] = options.get("protein_start", 1)
-        else:  # option 2
-            current_protein_residue[chain] = 1  # Will be adjusted later
-    
-    # Initializes counters for glycan chains
-    for prot_chain in protein_chains:
-        if prot_chain in glycan_chain_map:
-            glycan_chain = glycan_chain_map[prot_chain]
-            if options["glycan_renumbering"] == 1:
-                current_glycan_residue[glycan_chain] = 1
-            elif options["glycan_renumbering"] == 3:
-                current_glycan_residue[glycan_chain] = options.get("glycan_start", 1)
-            else:  # option 2
-                current_glycan_residue[glycan_chain] = 1  # Will be adjusted later
-    
-    # Processes protein chains
+    # Process protein chains - keep original numbering
     for chain in sorted(chains_info.keys()):
         if chain_types[chain] != "protein":
             continue
             
         residues = sorted(chains_info[chain]["residues"])
         
-        # If option 2 (continuation), adjusts the counter
-        if options["protein_renumbering"] == 2 and chain != protein_chains[0]:
-            # Finds the last processed chain
-            prev_chains = [c for c in protein_chains if c < chain]
-            if prev_chains:
-                last_chain = max(prev_chains)
-                if last_chain in current_protein_residue:
-                    current_protein_residue[chain] = current_protein_residue[last_chain]
-        
-        # Creates mapping for this protein chain
-        new_residue = current_protein_residue[chain]
+        # Keep original residue numbers for protein
         for old_res in residues:
-            residue_mapping[(chain, old_res)] = (chain, new_residue)
-            new_residue += 1
-        
-        current_protein_residue[chain] = new_residue
+            residue_mapping[(chain, old_res)] = (chain, old_res)
     
-    # Processes glycan blocks
+    # Process glycan blocks - each block starts at 1
     for block_info in glycan_blocks:
         protein_chain = block_info["protein_chain"]
         old_glycan_chain = block_info["glycan_chain"]
         
         if protein_chain in glycan_chain_map:
             new_glycan_chain = glycan_chain_map[protein_chain]
+            
+            # Reset counter for each glycan block
+            current_glycan_residue = 1
             
             # For each glycan block
             for _, _, start, end in block_info["blocks"]:
@@ -428,20 +287,11 @@ def process_pdb_file(input_file: str, output_file: str, options: Dict) -> None:
                 # Sorts residues
                 sorted_residues = sorted(residues_in_block)
                 
-                # If option 2 (continuation), adjusts the counter
-                if (options["glycan_renumbering"] == 2 and 
-                    new_glycan_chain in current_glycan_residue and
-                    current_glycan_residue[new_glycan_chain] > 1):
-                    # Already has residues, continues numbering
-                    pass
-                
-                # Creates mapping for these glycan residues
-                new_residue = current_glycan_residue.get(new_glycan_chain, 1)
+                # Creates mapping for these glycan residues - starts at 1 for each block
+                new_residue = 1
                 for old_res in sorted_residues:
                     residue_mapping[(old_glycan_chain, old_res)] = (new_glycan_chain, new_residue)
                     new_residue += 1
-                
-                current_glycan_residue[new_glycan_chain] = new_residue
     
     # Processes each line of the file
     atom_counter = 1
@@ -525,7 +375,7 @@ def main():
         base, ext = os.path.splitext(input_file)
         output_file = f"{base}_renumbered{ext}"
     
-    # Gets user options
+    # Gets user options (now fixed, no user input needed)
     options = get_user_options()
     
     # Processes the file
