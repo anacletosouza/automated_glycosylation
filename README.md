@@ -79,7 +79,7 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
    
    $\alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})}\right) = \min\left(1, \exp\left(-\frac{\Delta E}{k_B T}\right)\right)$
    
-   c. **Accept or reject**:
+   c. **Accept or reject the proposal**:
    - Generate random number $u \sim \mathcal{U}(0,1)$
    - If $u \leq \alpha$, accept: $\boldsymbol{\theta}_t = \boldsymbol{\theta}'$
    - Else, reject: $\boldsymbol{\theta}_t = \boldsymbol{\theta}_{t-1}$
