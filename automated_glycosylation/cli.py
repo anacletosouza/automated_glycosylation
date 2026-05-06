@@ -115,7 +115,7 @@ Examples:
   glyco-prep -i input.pdb -o output_dir
   
   # With custom parameters
-  glyco-prep -i input.pdb -o output_dir --asn-tsv glycosylation_sites.tsv
+  glyco-prep -i input.pdb -o output_dir --glycan_sites_tsv glycosylation_sites.tsv
         """
     )
     
@@ -126,7 +126,7 @@ Examples:
                         help="Output directory for results")
     
     # Optional arguments for glycosylation sites
-    parser.add_argument("--asn-tsv", default=None,
+    parser.add_argument("--glycan_sites_tsv", default=None,
                         help="TSV file with glycosylation sites (optional, auto-detect if not provided)")
     
     # Optional arguments for asparagine orientation
@@ -710,7 +710,7 @@ Examples:
   glyco-all --input protein.pdb --output-dir results
   
   # With all options
-  glyco-all --input protein.pdb --output-dir results --asn-tsv sites.tsv \\
+  glyco-all --input protein.pdb --output-dir results --glycan_sites_tsv sites.tsv \\
             --download-charmm --n-cpus 4 --n-workers 4 --verbose
         """
     )
@@ -722,7 +722,7 @@ Examples:
                         help="Output directory for all results")
     
     # Optional arguments
-    parser.add_argument("--asn-tsv", default=None,
+    parser.add_argument("--glycan_sites_tsv", default=None,
                         help="TSV file with glycosylation sites")
     parser.add_argument("--download-charmm", action="store_true",
                         help="Download CHARMM36 force field")
@@ -795,7 +795,7 @@ Examples:
 import sys
 sys.argv = ['glyco-prep', '-i', '{input_pdb}', '-o', '{step1_dir}']
 if '{args.asn_tsv}' and '{args.asn_tsv}' != 'None':
-    sys.argv.extend(['--asn-tsv', '{args.asn_tsv}'])
+    sys.argv.extend(['--glycan_sites_tsv', '{args.asn_tsv}'])
 sys.argv.extend(['--rotate-atoms', '{args.rotate_atoms}'])
 sys.argv.extend(['--fixed-atom', '{args.fixed_atom}'])
 sys.argv.extend(['--center-atom', '{args.center_atom}'])
