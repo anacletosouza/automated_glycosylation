@@ -23,6 +23,7 @@ A comprehensive computational pipeline for automated glycosylation of proteins, 
 - [Examples](#examples)
 - [Output Structure](#output-structure)
 - [Mathematical Details](#mathematical-details)
+- [Troubleshooting](#troubleshooting)
 - [Citation](#citation)
 - [License](#license)
 
@@ -221,7 +222,7 @@ glyco-prep -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `--rotate-atoms`: Atoms to rotate for asparagine orientation (default: "OD1,CG,ND2,HD22,HD21,HB2,HB3")
 - `--fixed-atom`: Fixed atom for rotation (default: "CB")
 - `--center-atom`: Center atom for rotation (default: "CA")
-- `--radius`: Radius for neighbor detection in Ångströms (default: 30.0)
+- `--radius`: Radius for neighbor detection in Angstroms (default: 30.0)
 - `--rotation-step`: Rotation step in degrees (default: 1)
 - `--protein-residue-start`: Starting residue number for protein (default: 1)
 - `--keep-temp`: Keep temporary files
@@ -261,8 +262,8 @@ glyco-orient -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `--theta-step`: Dihedral angle step size in degrees (default: 10)
 - `--n-steps`: Number of MCMC steps per cycle (default: 10)
 - `--max-cycles`: Maximum number of optimization cycles (default: 5)
-- `--radius`: Interaction radius in Ångströms (default: 300.0)
-- `--use-coulomb`: Include Coulomb electrostatics {yes, no} (default: no)
+- `--radius`: Interaction radius in Angstroms (default: 300.0)
+- `--use-coulomb`: Include Coulomb electrostatics (default: false)
 
 **Parallel Processing:**
 - `--n-workers`: Number of CPU workers for parallel MCMC (default: 1)
@@ -300,15 +301,15 @@ glyco-all -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `--rotate-atoms`: Atoms to rotate (default: "OD1,CG,ND2,HD22,HD21,HB2,HB3")
 - `--fixed-atom`: Fixed atom (default: "CB")
 - `--center-atom`: Center atom (default: "CA")
-- `--radius`: Neighbor radius in Å (default: 30.0)
+- `--radius`: Neighbor radius in Angstroms (default: 30.0)
 - `--rotation-step`: Rotation step in degrees (default: 1)
 
 **MCMC Options:**
 - `--theta-step`: Dihedral step size (default: 10)
 - `--n-steps`: MCMC steps per cycle (default: 10)
 - `--max-cycles`: Maximum cycles (default: 5)
-- `--mcmc-radius`: Interaction radius in Å (default: 300.0)
-- `--use-coulomb`: Include electrostatics {yes, no} (default: no)
+- `--mcmc-radius`: Interaction radius in Angstroms (default: 300.0)
+- `--use-coulomb`: Include electrostatics (default: false)
 
 ## Examples
 
@@ -372,7 +373,7 @@ glyco-orient -i step2_output/VALENCE_GLYCAN_VARIANTS/glycosylated_protein_final_
 # Process multiple proteins
 for protein in *.pdb; do
     name=${protein%.pdb}
-    glyco-all -i $protein -o ${name}_glycosylation \
+    glyco-all -i "$protein" -o "${name}_glycosylation" \
         --download-charmm \
         --n-cpus 4 \
         --n-workers 4 \
@@ -524,7 +525,7 @@ where \(\text{Var}(\boldsymbol{\theta})\) is the between-chain variance and \(W\
 
 where \(\rho_k\) is the autocorrelation at lag \(k\).
 
-3. **Energy stabilization**: The running average of \(\Delta E\) changes by < 1\% over 100 steps.
+3. **Energy stabilization**: The running average of \(\Delta E\) changes by < 1% over 100 steps.
 
 ### Temperature Schedule (Simulated Annealing)
 
@@ -541,47 +542,28 @@ where:
 
 This allows the system to escape local minima and find global energy minima.
 
-## Performance Optimization
-
-### Parallel MCMC Implementation
-
-The pipeline supports parallel tempering with \(N\) replicas at different temperatures:
-
-\[
-T_i = T_0 \cdot \gamma^{i-1}
-\]
-
-where \(\gamma > 1\) ensures temperature spacing. Exchange between replicas occurs with probability:
-
-\[
-P_{\text{exchange}} = \min\left(1, \exp\left[\left(\frac{1}{T_i} - \frac{1}{T_j}\right)(E_j - E_i)\right]\right)
-\]
-
-### Memory Requirements
-
-- Minimal: 2 GB RAM for single chain
-- Recommended: 8 GB RAM for 4 workers
-- Large systems (>1000 residues): 16+ GB RAM
-
 ## Troubleshooting
 
 ### Common Issues and Solutions
 
 **Issue**: CHARMM force field download fails
+
+**Solution**: Manually download using a mirror URL
 ```bash
-# Solution: Manual download
 glyco-param -i input.pdb -o output --charmm-url "your_mirror_url"
 ```
 
 **Issue**: MCMC not converging
+
+**Solution**: Increase steps and cycles
 ```bash
-# Solution: Increase steps and cycles
 glyco-orient -i input.pdb -o output --n-steps 100 --max-cycles 20
 ```
 
 **Issue**: Memory error during parametrization
+
+**Solution**: Reduce parallel workers
 ```bash
-# Solution: Reduce parallel workers
 glyco-param -i input.pdb -o output --n-cpus 2
 ```
 
@@ -591,9 +573,9 @@ If you use this pipeline in your research, please cite:
 
 ```bibtex
 @software{automated_glycosylation_2024,
-  author = {Silva de Souza, Anacleto},
+  author = {Souza, Anacleto Silva de},
   title = {Automated Glycosylation Pipeline for Glycoproteins},
-  year = {2024},
+  year = {2026},
   url = {https://github.com/anacletosouza/automated_glycosylation},
   doi = {10.5281/zenodo.xxxxxxx}
 }
@@ -614,4 +596,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Contact**: anacletosilvadesouza@usp.br
 
 **GitHub**: [https://github.com/anacletosouza/automated_glycosylation](https://github.com/anacletosouza/automated_glycosylation)
-```
