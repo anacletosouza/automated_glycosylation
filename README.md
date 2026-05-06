@@ -173,23 +173,26 @@ $ESS = \frac{N}{1 + 2\sum_{k=1}^{\infty} \rho_k}$
 
 where $\rho_k$ is the autocorrelation at lag $k$. We consider $ESS \geq 100$ as sufficient for reliable inference.
 
-#### Geweke Diagnostic
+
+### Geweke Diagnostic
 
 The Geweke test compares the mean of the first 10% of samples to the last 50%:
 
-$z = \frac{\bar{\theta}_A - \bar{\theta}_B}{\sqrt{\text{Var}(\theta_A) + \text{Var}(\theta_B)}}$
+$\displaystyle z = \frac{\bar{\theta}_A - \bar{\theta}_B}{\sqrt{\mathrm{Var}(\theta_A) + \mathrm{Var}(\theta_B)}}$
 
 Under convergence, $z \sim \mathcal{N}(0,1)$. Values $|z| > 2$ indicate non-convergence.
 
-#### Energy Convergence Criterion
+---
+
+### Energy Convergence Criterion
 
 For glycoprotein systems, we monitor the running average of potential energy:
 
-$\bar{E}_t = \frac{1}{t} \sum_{i=1}^t E(\theta_i)$
+$\displaystyle \bar{E}*t = \frac{1}{t}\sum*{i=1}^{t} E(\theta_i)$
 
 The chain is considered converged when:
 
-$\frac{|\bar{E}_t - \bar{E}_{t-100}|}{\bar{E}_t} < 0.01$
+$\displaystyle \frac{|\bar{E}*t - \bar{E}*{t-100}|}{\bar{E}_t} < 0.01$
 
 indicating energy stabilization within 1% over 100 steps.
 
