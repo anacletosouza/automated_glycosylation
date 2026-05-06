@@ -154,6 +154,18 @@ Examples:
                         default=1,
                         help="Starting residue number for protein (default: 1)")
     
+    # Optional arguments for carbohydrate residue start
+    parser.add_argument("--carb-residue-start",
+                        type=int,
+                        default=1,
+                        help="Starting residue number for carbohydrate (default: 1)")
+    
+    # Optional arguments for carbohydrate initiation residues
+    parser.add_argument("--residue-carb-initiation",
+                        type=str,
+                        default="NDG,A2G",
+                        help="Comma-separated list of residue names that initiate a new glycan block (default: NDG,A2G)")
+    
     # Other options
     parser.add_argument("--keep-temp",
                         action="store_true",
@@ -249,7 +261,14 @@ Examples:
     renamed_pdb = pdb_glycosylated / "protein_glycosylated_renumbered.pdb"
     
     print("Step 3: Correcting chain labels and residue numbers...")
-    correct_args = [str(glycosylated_output), str(renamed_pdb)]
+    # Using positional arguments as expected by script 3
+    correct_args = [
+        str(glycosylated_output),
+        str(renamed_pdb),
+        "--start_number_protein", str(args.protein_residue_start),
+        "--start_number_carb", str(args.carb_residue_start),
+        "--residue_carb_initiation", args.residue_carb_initiation
+    ]
     
     result = run_python_script("3-correction_chain_labels_residue_numbers.py", 
                                correct_args, "1_glycosylation_preparation")
@@ -749,6 +768,14 @@ Examples:
     parser.add_argument("--rotation-step", type=int, default=1,
                         help="Rotation step in degrees")
     
+    # Protein and carbohydrate residue numbering
+    parser.add_argument("--protein-residue-start", type=int, default=1,
+                        help="Starting residue number for protein (default: 1)")
+    parser.add_argument("--carb-residue-start", type=int, default=1,
+                        help="Starting residue number for carbohydrate (default: 1)")
+    parser.add_argument("--residue-carb-initiation", type=str, default="NDG,A2G",
+                        help="Comma-separated list of residue names that initiate a new glycan block (default: NDG,A2G)")
+    
     # MCMC parameters
     parser.add_argument("--theta-step", type=int, default=10,
                         help="Theta step for MCMC")
@@ -801,6 +828,9 @@ sys.argv.extend(['--fixed-atom', '{args.fixed_atom}'])
 sys.argv.extend(['--center-atom', '{args.center_atom}'])
 sys.argv.extend(['--radius', '{args.radius}'])
 sys.argv.extend(['--rotation-step', '{args.rotation_step}'])
+sys.argv.extend(['--protein-residue-start', '{args.protein_residue_start}'])
+sys.argv.extend(['--carb-residue-start', '{args.carb_residue_start}'])
+sys.argv.extend(['--residue-carb-initiation', '{args.residue_carb_initiation}'])
 if {args.keep_temp}:
     sys.argv.append('--keep-temp')
 

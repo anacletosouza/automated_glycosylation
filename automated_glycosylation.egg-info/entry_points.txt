@@ -1,0 +1,6 @@
+[console_scripts]
+glyco-all = automated_glycosylation.cli:run_all_pipeline
+glyco-orient = automated_glycosylation.cli:run_glyco_orient
+glyco-param = automated_glycosylation.cli:run_glyco_param
+glyco-prep = automated_glycosylation.cli:run_glyco_prep
+

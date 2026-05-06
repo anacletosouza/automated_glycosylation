@@ -2,9 +2,8 @@
 """
 Script to process glycosylated PDB files (distance-based, robust)
 
-- DOES NOT change sugar labels
-- Detects N-glycosylation via ASN ND2 to NAG/NDG C1 distance
-- Extracts ONLY the glycan block connected to each specific glycosylation site
+- Detects N-glycosylation via ASN ND2/ND1? to NAG/NDG C1 distance
+- Detects O-glycosylation via SER OG or THR OG1 to A2G C1 distance
 """
 
 import os
@@ -28,16 +27,18 @@ ION_RESNAMES = {
     "FE", "CU", "CO", "NI", "CD"
 }
 
+# Protein residue names for detection
+PROTEIN_RESIDUES = {
+    "ALA", "ARG", "ASN", "ASP", "CYS", "GLN", "GLU", "GLY",
+    "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER",
+    "THR", "TRP", "TYR", "VAL", "HIE", "HID", "HIP"
+}
+
 # N-glycosidic bond cutoff distance (Å)
 N_GLY_CUTOFF = 2.0  # Å
 
-# Specific N-glycan residue names (first residue attached to ASN)
-N_GLYCAN_FIRST_RESIDUES = {
-    "NDG",  # N-acetylglucosamine (GROMACS naming)
-    "NAG",  # N-acetylglucosamine (alternative naming)
-    "NGN",  # N-glycan
-    "GLCNAC",  # N-acetylglucosamine (full name)
-}
+# O-glycosidic bond cutoff distance (Å)
+O_GLY_CUTOFF = 2.0  # Å
 
 # =========================
 # DETECT GLYCAN RESNAMES AUTOMATICALLY
@@ -136,234 +137,196 @@ def parse_pdb_and_build_connectivity(pdb_file):
     return residues, all_lines
 
 
-def find_connected_glycan_block(residues, start_chain, start_resnum, glycan_resnames):
-    """
-    Find all residues connected to a starting glycan residue
-    by traversing sequentially until a break is found.
-    A break occurs when:
-      1. Next residue number is not consecutive (gap > 1)
-      2. Next residue is from a different chain
-      3. Next residue is not a glycan (protein, water, ion)
-    """
-    connected = []
-    current_resnum = start_resnum
-    
-    # Sort residues in this chain by residue number
-    chain_residues = sorted([r for r in residues.keys() if r[0] == start_chain], key=lambda x: x[1])
-    
-    # Find the index of the starting residue
-    start_idx = None
-    for i, (chain, resnum) in enumerate(chain_residues):
-        if chain == start_chain and resnum == start_resnum:
-            start_idx = i
-            break
-    
-    if start_idx is None:
-        return []
-    
-    # Traverse forward from start residue
-    for i in range(start_idx, len(chain_residues)):
-        chain, resnum = chain_residues[i]
-        
-        # Check if this is still the same chain
-        if chain != start_chain:
-            break
-        
-        # For residues beyond the first, check if consecutive
-        if i > start_idx:
-            prev_resnum = chain_residues[i-1][1]
-            if resnum - prev_resnum > 1:
-                # Break in numbering - new glycan block
-                break
-        
-        # Get residue name
-        res_lines = residues[(chain, resnum)]
-        if not res_lines:
-            continue
-        
-        resname = res_lines[0][17:20].strip()
-        
-        # Check if this is a glycan residue
-        if resname in glycan_resnames:
-            connected.append((chain, resnum, res_lines))
-        else:
-            # Hit a non-glycan residue (protein, water, ion) - stop
-            break
-    
-    return connected
-
-
 # =========================
-# DETECT GLYCAN ROOTS
+# DETECT GLYCAN ROOTS (N and O-linked)
 # =========================
 
-def detect_glycan_roots(residues, all_lines, glycan_resnames):
+def detect_glycan_roots(residues, all_lines, glycan_resnames, residue_start_carn):
     """
-    Identify N-glycosylation sites by detecting ASN ND2 to NAG/NDG C1 distance
+    Identify N-glycosylation and O-glycosylation sites by distance.
+    
+    residue_start_carn format: "O:A2G,N:NDG" (default)
     """
-    # First, collect all ASN ND2 atoms
-    asn_nd2_atoms = []
+    # Parse residue_start_carn
+    n_initiation_residues = set()
+    o_initiation_residues = set()
+    
+    for item in residue_start_carn.split(','):
+        if ':' in item:
+            linkage_type, resname = item.split(':')
+            if linkage_type.upper() == 'N':
+                n_initiation_residues.add(resname.strip().upper())
+            elif linkage_type.upper() == 'O':
+                o_initiation_residues.add(resname.strip().upper())
+    
+    print(f"  N-linked initiation residues: {n_initiation_residues}")
+    print(f"  O-linked initiation residues: {o_initiation_residues}")
+    
+    # Collect ASN atoms for N-glycosylation
+    asn_atoms = []
     for (chain, resnum), lines in residues.items():
         for line in lines:
             if line.startswith("ATOM"):
                 resname = line[17:20].strip()
                 atomname = line[12:16].strip()
-                if resname == "ASN" and atomname == "ND2":
+                if resname == "ASN" and atomname in ["ND2", "ND1"]:
                     coords = extract_coordinates_from_line(line)
                     if coords:
-                        asn_nd2_atoms.append({
+                        asn_atoms.append({
                             "coords": coords,
                             "chain": chain,
                             "resnum": resnum,
+                            "resname": resname,
+                            "atomname": atomname,
                             "line": line
                         })
     
-    print(f"  Found {len(asn_nd2_atoms)} ASN ND2 atoms")
+    print(f"  Found {len(asn_atoms)} ASN ND2/ND1 atoms")
     
-    # Collect all C1 atoms from glycan residues
-    glycan_c1_atoms = []
+    # Collect SER/THR atoms for O-glycosylation
+    ser_thr_atoms = []
+    for (chain, resnum), lines in residues.items():
+        for line in lines:
+            if line.startswith("ATOM"):
+                resname = line[17:20].strip()
+                atomname = line[12:16].strip()
+                if resname in ["SER", "THR"]:
+                    if (resname == "SER" and atomname == "OG") or \
+                       (resname == "THR" and atomname == "OG1"):
+                        coords = extract_coordinates_from_line(line)
+                        if coords:
+                            ser_thr_atoms.append({
+                                "coords": coords,
+                                "chain": chain,
+                                "resnum": resnum,
+                                "resname": resname,
+                                "atomname": atomname,
+                                "line": line
+                            })
+    
+    print(f"  Found {len(ser_thr_atoms)} SER OG / THR OG1 atoms")
+    
+    # Collect initiation atoms from glycan residues (C1 atoms)
+    n_initiation_atoms = []  # For N-linked
+    o_initiation_atoms = []  # For O-linked
+    
     for (chain, resnum), lines in residues.items():
         for line in lines:
             if line.startswith("HETATM"):
                 resname = line[17:20].strip()
                 atomname = line[12:16].strip()
-                if resname in glycan_resnames and atomname == "C1":
+                if atomname == "C1":
                     coords = extract_coordinates_from_line(line)
                     if coords:
-                        glycan_c1_atoms.append({
+                        atom_info = {
                             "coords": coords,
                             "chain": chain,
                             "resnum": resnum,
                             "resname": resname,
                             "line": line
-                        })
+                        }
+                        if resname in n_initiation_residues:
+                            n_initiation_atoms.append(atom_info)
+                        if resname in o_initiation_residues:
+                            o_initiation_atoms.append(atom_info)
     
-    print(f"  Found {len(glycan_c1_atoms)} glycan C1 atoms")
+    print(f"  Found {len(n_initiation_atoms)} N-linked initiation C1 atoms")
+    print(f"  Found {len(o_initiation_atoms)} O-linked initiation C1 atoms")
     
     # Detect N-glycosidic bonds
-    roots = []
-    for glycan in glycan_c1_atoms:
-        for protein in asn_nd2_atoms:
+    n_roots = []
+    for glycan in n_initiation_atoms:
+        for protein in asn_atoms:
             dist = distance(glycan["coords"], protein["coords"])
             if dist <= N_GLY_CUTOFF:
-                roots.append({
+                n_roots.append({
+                    "type": "N-linked",
                     "glycan_chain": glycan["chain"],
                     "glycan_resnum": glycan["resnum"],
                     "glycan_resname": glycan["resname"],
                     "protein_chain": protein["chain"],
                     "protein_resnum": protein["resnum"],
+                    "protein_resname": protein["resname"],
+                    "protein_atom": protein["atomname"],
+                    "glycan_atom": "C1",
                     "distance": round(dist, 3)
                 })
-                print(f"  N-glycosylation: ASN{protein['resnum']}{protein['chain']} -> "
-                      f"{glycan['resname']}{glycan['resnum']}{glycan['chain']} (dist: {dist:.3f} Å)")
+                print(f"  N-glycosylation: {protein['resname']}{protein['resnum']}{protein['chain']} "
+                      f"({protein['atomname']}) -> {glycan['resname']}{glycan['resnum']}{glycan['chain']} "
+                      f"(dist: {dist:.3f} Å)")
     
-    return roots
-
-
-# =========================
-# EXTRACT GLYCAN BLOCKS
-# =========================
-
-def extract_glycan_blocks(residues, roots, glycan_resnames):
-    """
-    Extract each glycan block separately (not all glycans together)
-    """
-    glycans = {}
+    # Detect O-glycosidic bonds
+    o_roots = []
+    for glycan in o_initiation_atoms:
+        for protein in ser_thr_atoms:
+            dist = distance(glycan["coords"], protein["coords"])
+            if dist <= O_GLY_CUTOFF:
+                o_roots.append({
+                    "type": "O-linked",
+                    "glycan_chain": glycan["chain"],
+                    "glycan_resnum": glycan["resnum"],
+                    "glycan_resname": glycan["resname"],
+                    "protein_chain": protein["chain"],
+                    "protein_resnum": protein["resnum"],
+                    "protein_resname": protein["resname"],
+                    "protein_atom": protein["atomname"],
+                    "glycan_atom": "C1",
+                    "distance": round(dist, 3)
+                })
+                print(f"  O-glycosylation: {protein['resname']}{protein['resnum']}{protein['chain']} "
+                      f"({protein['atomname']}) -> {glycan['resname']}{glycan['resnum']}{glycan['chain']} "
+                      f"(dist: {dist:.3f} Å)")
     
-    for i, root in enumerate(roots, 1):
-        glycan_id = f"GLYCAN_{i}"
-        
-        # Find the connected block starting from this root
-        connected = find_connected_glycan_block(
-            residues, 
-            root["glycan_chain"], 
-            root["glycan_resnum"], 
-            glycan_resnames
-        )
-        
-        if not connected:
-            continue
-        
-        # Extract all lines for this glycan block
-        lines = []
-        for chain, resnum, res_lines in connected:
-            lines.extend(res_lines)
-        
-        # Build residue sequence
-        residue_info = {}
-        for line in lines:
-            resn = line[17:20].strip()
-            resi = int(line[22:26])
-            if resi not in residue_info:
-                residue_info[resi] = resn
-        
-        seq = [residue_info[r] for r in sorted(residue_info)]
-        
-        glycans[glycan_id] = {
-            "lines": lines,
-            "chain": root["glycan_chain"],
-            "residue_numbers": [r for _, r, _ in connected],
-            "start_residue": min([r for _, r, _ in connected]),
-            "end_residue": max([r for _, r, _ in connected]),
-            "residues": seq,
-            "residue_sequence": "_".join(f"{r}{i+1}" for i, r in enumerate(seq)),
-            "simple_residue_sequence": "_".join(seq),
-            "unit_number": len(seq),
-            "protein_resnum": root["protein_resnum"],
-            "protein_chain": root["protein_chain"],
-            "distance": root["distance"]
-        }
-        
-        print(f"  Glycan {glycan_id}: {len(seq)} residues -> {'-'.join(seq)}")
+    return n_roots, o_roots
+
+
+# =========================
+# SAVE TSV WITH GLYCOSYLATION SITES
+# =========================
+
+def save_linkages_tsv(n_roots, o_roots, output_dir):
+    out = Path(output_dir) / "glycosylation_sites.tsv"
     
-    return glycans
-
-
-# =========================
-# SAVE GLYCANS
-# =========================
-
-def save_glycan_pdbs(glycans, output_dir):
-    pdb_dir = Path(output_dir) / "PDB"
-    pdb_dir.mkdir(parents=True, exist_ok=True)
-
-    for gid, data in glycans.items():
-        out = pdb_dir / f"{gid}.pdb"
-        with open(out, "w") as f:
-            for l in data["lines"]:
-                f.write(l)
-            f.write("TER\n")
-
-    print(f"  Saved {len(glycans)} glycan PDBs to {pdb_dir}")
-    return pdb_dir
-
-
-# =========================
-# SAVE TSV
-# =========================
-
-def save_linkages_tsv(glycans, output_dir):
-    out = Path(output_dir) / "topol_carb.tsv"
     with open(out, "w") as f:
         f.write(
-            "site_protein_residue\tglycan_binding\tsequence_poly\tunit_number\t"
+            "site_protein_residue\tglycan_residue\t"
             "protein_residue_number\tprotein_chain\tprotein_atom\tglycan_atom\t"
-            "glycan_resname\tdistance\tlinking_type\n"
+            "glycan_resname\tglycan_chain\tglycan_resnum\tdistance\tlinking_type\n"
         )
-        for gid, data in glycans.items():
-            f.write(f"ASN{data['protein_resnum']}\t")
-            f.write(f"{gid}\t")
-            f.write(f"{data['residue_sequence']}\t")
-            f.write(f"{data['unit_number']}\t")
-            f.write(f"{data['protein_resnum']}\t")
-            f.write(f"{data['protein_chain']}\t")
-            f.write(f"ND2\t")
-            f.write(f"C1\t")
-            f.write(f"{data['residues'][0] if data['residues'] else 'UNK'}\t")
-            f.write(f"{data['distance']}\t")
-            f.write(f"N-linked\n")
+        
+        # Write N-linked sites
+        for root in n_roots:
+            site = f"{root['protein_resname']}{root['protein_resnum']}"
+            glycan_site = f"{root['glycan_resname']}{root['glycan_resnum']}"
+            f.write(f"{site}\t")
+            f.write(f"{glycan_site}\t")
+            f.write(f"{root['protein_resnum']}\t")
+            f.write(f"{root['protein_chain']}\t")
+            f.write(f"{root['protein_atom']}\t")
+            f.write(f"{root['glycan_atom']}\t")
+            f.write(f"{root['glycan_resname']}\t")
+            f.write(f"{root['glycan_chain']}\t")
+            f.write(f"{root['glycan_resnum']}\t")
+            f.write(f"{root['distance']}\t")
+            f.write(f"{root['type']}\n")
+        
+        # Write O-linked sites
+        for root in o_roots:
+            site = f"{root['protein_resname']}{root['protein_resnum']}"
+            glycan_site = f"{root['glycan_resname']}{root['glycan_resnum']}"
+            f.write(f"{site}\t")
+            f.write(f"{glycan_site}\t")
+            f.write(f"{root['protein_resnum']}\t")
+            f.write(f"{root['protein_chain']}\t")
+            f.write(f"{root['protein_atom']}\t")
+            f.write(f"{root['glycan_atom']}\t")
+            f.write(f"{root['glycan_resname']}\t")
+            f.write(f"{root['glycan_chain']}\t")
+            f.write(f"{root['glycan_resnum']}\t")
+            f.write(f"{root['distance']}\t")
+            f.write(f"{root['type']}\n")
     
-    print(f"  Saved {len(glycans)} linkages to {out}")
+    print(f"  Saved {len(n_roots) + len(o_roots)} glycosylation sites to {out}")
 
 
 # =========================
@@ -372,7 +335,7 @@ def save_linkages_tsv(glycans, output_dir):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Extract glycan coordinates from glycosylated PDB structure",
+        description="Detect N and O-glycosylation sites in PDB structure",
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("--input_pdb", required=True,
@@ -380,8 +343,20 @@ def main():
     parser.add_argument("--output_noH", required=True,
                         help="Output PDB file without hydrogens")
     parser.add_argument("--output_dir", required=True,
-                        help="Output directory for glycans and TSV file")
+                        help="Output directory for TSV file")
+    parser.add_argument("--residue_start_carn", type=str, default="O:A2G,N:NDG",
+                        help="Residue names for initiating N and O glycans (default: O:A2G,N:NDG)")
+    parser.add_argument("--n_gly_cutoff", type=float, default=2.0,
+                        help="Distance cutoff for N-glycosidic bonds (default: 2.0 Å)")
+    parser.add_argument("--o_gly_cutoff", type=float, default=2.0,
+                        help="Distance cutoff for O-glycosidic bonds (default: 2.0 Å)")
+    
     args = parser.parse_args()
+    
+    # Set global cutoffs
+    global N_GLY_CUTOFF, O_GLY_CUTOFF
+    N_GLY_CUTOFF = args.n_gly_cutoff
+    O_GLY_CUTOFF = args.o_gly_cutoff
     
     # Convert to absolute paths
     input_pdb = Path(args.input_pdb).resolve()
@@ -395,7 +370,7 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     
     print("=" * 70)
-    print("EXTRACTING GLYCANS FROM GLYCOSYLATED PROTEIN")
+    print("DETECTING GLYCOSYLATION SITES IN PROTEIN")
     print("=" * 70)
     print(f"Input:  {input_pdb}")
     print(f"Output: {output_dir}")
@@ -420,41 +395,33 @@ def main():
     residues, all_lines = parse_pdb_and_build_connectivity(str(input_pdb))
     print(f"  Found {len(residues)} unique residues")
     
-    # Detect glycosylation roots
+    # Detect glycosylation roots (N and O-linked)
     print("\n" + "-" * 70)
-    print("Step 4: Detecting N-glycosylation sites...")
+    print("Step 4: Detecting N and O-glycosylation sites...")
     print("-" * 70)
-    roots = detect_glycan_roots(residues, all_lines, glycan_resnames)
+    n_roots, o_roots = detect_glycan_roots(residues, all_lines, glycan_resnames, args.residue_start_carn)
     
-    if not roots:
-        print("  No N-glycosylation sites found!")
+    all_roots = n_roots + o_roots
+    
+    if not all_roots:
+        print("  No glycosylation sites found!")
         sys.exit(0)
     
-    # Extract glycan blocks
-    print("\n" + "-" * 70)
-    print("Step 5: Extracting individual glycan blocks...")
-    print("-" * 70)
-    glycans = extract_glycan_blocks(residues, roots, glycan_resnames)
-    print(f"  Extracted {len(glycans)} independent glycan block(s)")
-    
-    # Save glycan PDBs
-    print("\n" + "-" * 70)
-    print("Step 6: Saving glycan PDB files...")
-    print("-" * 70)
-    save_glycan_pdbs(glycans, str(output_dir))
+    print(f"\n  Total glycosylation sites found: {len(all_roots)}")
+    print(f"    N-linked: {len(n_roots)}")
+    print(f"    O-linked: {len(o_roots)}")
     
     # Save TSV
     print("\n" + "-" * 70)
-    print("Step 7: Saving linkage TSV...")
+    print("Step 5: Saving glycosylation sites TSV...")
     print("-" * 70)
-    save_linkages_tsv(glycans, str(output_dir))
+    save_linkages_tsv(n_roots, o_roots, str(output_dir))
     
     print("\n" + "=" * 70)
-    print("EXTRACTION COMPLETED SUCCESSFULLY!")
+    print("DETECTION COMPLETED SUCCESSFULLY!")
     print("=" * 70)
     print(f"  No-H PDB:      {output_noH}")
-    print(f"  Glycans PDBs:  {output_dir}/PDB/")
-    print(f"  Linkages TSV:  {output_dir}/topol_carb.tsv")
+    print(f"  Sites TSV:     {output_dir}/glycosylation_sites.tsv")
     print("=" * 70)
 
 

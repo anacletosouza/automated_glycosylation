@@ -9,11 +9,12 @@ Functionalities:
 4. Preserves connectivity (CONECT lines)
 5. Identifies glycan blocks based on sequence in the file
 
-Author: Anacleto SIlva de Souza
+Author: Anacleto Souza
 """
 
 import sys
 import os
+import argparse
 from typing import Dict, Tuple, List, Optional, Set
 
 def parse_pdb_line(line: str) -> Optional[Dict]:
@@ -138,68 +139,71 @@ def analyze_structure(pdb_lines: List[str]) -> Tuple[Dict, Dict, List[Dict], Lis
     
     return chains_info, chain_types, atom_data, structure_blocks
 
-def get_user_options() -> Dict:
-    """Requests options from the user."""
-    print("=" * 60)
-    print("PDB Residue Renumbering and Relabeling Tool")
-    print("=" * 60)
+def identify_glycan_blocks_by_residue_number(pdb_lines: List[str], residue_initiation: Set[str]) -> List[Dict]:
+    """
+    Identifies glycan blocks based on residue number changes and initiation residues.
     
-    options = {}
+    Scans line by line. When it finds a residue initiation (NDG, A2G, or user-defined),
+    starts a new block and resets the counter to start_number_carb.
+    Continues numbering sequentially until the next initiation residue.
+    """
+    blocks = []
+    current_block = None
+    last_resSeq = None
     
-    # Fixed option for glycan chain labeling - Cadeia A para proteina e carboidrato, cadeia B para proteina e carboidrato
-    print("\nChain labeling for glycans: Fixed mapping (A->A, B->B, etc.)")
-    options["glycan_labeling"] = 2  # Fixed to option 2: A->A, B->B
+    for line_num, line in enumerate(pdb_lines):
+        data = parse_pdb_line(line)
+        
+        if not data or data["record"] not in ["ATOM", "HETATM"]:
+            continue
+        
+        res_name = data["resName"]
+        res_seq = data["resSeq"]
+        
+        # Check if this is an initiation residue
+        is_initiation = res_name in residue_initiation
+        
+        if is_initiation:
+            # Start a new block
+            if current_block is not None:
+                blocks.append(current_block)
+            current_block = {
+                "start_line": line_num,
+                "residues": [],
+                "initiation_residue": res_name,
+                "initiation_seq": res_seq
+            }
+            current_block["residues"].append((line_num, data))
+            last_resSeq = res_seq
+        elif current_block is not None:
+            # Check if this is a new residue (different resSeq)
+            if res_seq != last_resSeq:
+                # Same block, different residue - will be assigned sequential numbers
+                current_block["residues"].append((line_num, data))
+                last_resSeq = res_seq
+            else:
+                # Same residue, same block - add to current residue
+                current_block["residues"].append((line_num, data))
     
-    # Fixed option for protein renumbering - manter numero original da proteina
-    print("\nProtein residue renumbering: Keep original numbering")
-    options["protein_renumbering"] = 4  # New option to keep original numbers
+    # Add the last block
+    if current_block is not None:
+        blocks.append(current_block)
     
-    # Fixed option for glycan renumbering - cada bloco começa com 1
-    print("\nGlycan residue renumbering: Each block starts from 1")
-    options["glycan_renumbering"] = 4  # New option for block restart
-    
-    return options
+    return blocks
 
-def generate_glycan_chain_mapping(protein_chains: List[str], options: Dict) -> Dict:
-    """Generates glycan chain mapping based on user options."""
-    mapping = {}
+def process_pdb_file(input_file: str, output_file: str, 
+                     start_number_protein: int = 1,
+                     start_number_carb: int = 1,
+                     residue_carb_initiation: str = "NDG,A2G") -> None:
+    """Processes the PDB file with the standard chain pattern."""
     
-    # Fixed to option 2: A->A, B->B, C->C, etc.
-    for prot_chain in sorted(protein_chains):
-        mapping[prot_chain] = prot_chain
-    
-    return mapping
-
-def identify_glycan_blocks(structure_blocks: List[Tuple], chain_types: Dict) -> List[Tuple]:
-    """Identifies glycan blocks and associates them with preceding proteins."""
-    glycan_blocks = []
-    current_protein_chain = None
-    
-    for i, (block_type, chain, start, end) in enumerate(structure_blocks):
-        if block_type == "protein":
-            current_protein_chain = chain
-        elif block_type == "glycan" and current_protein_chain:
-            # Finds all consecutive glycan blocks
-            glycan_start = i
-            glycan_end = i
-            
-            # Checks if there are more consecutive glycan blocks
-            j = i + 1
-            while j < len(structure_blocks) and structure_blocks[j][0] == "glycan":
-                glycan_end = j
-                j += 1
-            
-            glycan_blocks.append({
-                "protein_chain": current_protein_chain,
-                "glycan_chain": chain,
-                "blocks": structure_blocks[glycan_start:glycan_end+1]
-            })
-    
-    return glycan_blocks
-
-def process_pdb_file(input_file: str, output_file: str, options: Dict) -> None:
-    """Processes the PDB file with the provided options."""
     print(f"\nProcessing file: {input_file}")
+    print(f"Protein start number: {start_number_protein}")
+    print(f"Carbohydrate start number: {start_number_carb}")
+    print(f"Carbohydrate initiation residues: {residue_carb_initiation}")
+    
+    # Parse initiation residues
+    init_residues = set(r.strip() for r in residue_carb_initiation.split(','))
     
     # Reads the file
     with open(input_file, 'r') as f:
@@ -216,85 +220,101 @@ def process_pdb_file(input_file: str, output_file: str, options: Dict) -> None:
               f"(range: {min(residues)}-{max(residues)})")
     
     # Identifies protein chains
-    protein_chains = [c for c in chain_types if chain_types[c] == "protein"]
-    print(f"\nProtein chains: {', '.join(sorted(protein_chains))}")
+    protein_chains = sorted([c for c in chain_types if chain_types[c] == "protein"])
+    print(f"\nProtein chains: {', '.join(protein_chains)}")
     
-    # Identifies glycan blocks
-    glycan_blocks = identify_glycan_blocks(structure_blocks, chain_types)
+    # Generate chain mapping: protein chains get A, B, C, etc.
+    # Carbohydrate chains get the same letters as their associated protein chains
+    chain_mapping = {}
+    protein_chain_letters = {}
+    
+    # Assign letters to protein chains
+    for idx, prot_chain in enumerate(protein_chains):
+        chain_letter = chr(ord('A') + idx)
+        protein_chain_letters[prot_chain] = chain_letter
+        chain_mapping[prot_chain] = chain_letter
+    
+    print(f"\nChain mapping:")
+    for prot_chain, letter in protein_chain_letters.items():
+        print(f"  Protein chain {prot_chain} -> {letter}")
+    
+    # Identify glycan blocks
+    glycan_blocks = identify_glycan_blocks_by_residue_number(lines, init_residues)
     
     print(f"\nFound {len(glycan_blocks)} glycan blocks:")
-    for i, block_info in enumerate(glycan_blocks):
-        total_residues = 0
-        for _, _, start, end in block_info["blocks"]:
-            # Counts residues in this block
-            residues_in_block = set()
-            for j in range(start, end + 1):
-                data = parse_pdb_line(lines[j])
-                if data and data["record"] == "HETATM":
-                    residues_in_block.add(data["resSeq"])
-            total_residues += len(residues_in_block)
+    for i, block in enumerate(glycan_blocks):
+        # Count unique residues in this block
+        unique_residues = set()
+        for _, data in block["residues"]:
+            unique_residues.add(data["resSeq"])
+        print(f"  Block {i+1}: Initiated with {block['initiation_residue']} "
+              f"(original seq {block['initiation_seq']}), {len(unique_residues)} residues")
+    
+    # Create mapping for protein residues (renumber sequentially from start_number_protein)
+    protein_residue_mapping = {}  # (old_chain, old_residue) -> (new_chain, new_residue)
+    
+    # Process each protein chain
+    for prot_chain in protein_chains:
+        new_chain = protein_chain_letters[prot_chain]
+        residues = sorted(chains_info[prot_chain]["residues"])
+        current_res = start_number_protein
         
-        print(f"  Block {i+1}: Protein chain {block_info['protein_chain']} -> "
-              f"{len(block_info['blocks'])} glycan sub-blocks, {total_residues} total residues")
+        for old_res in residues:
+            protein_residue_mapping[(prot_chain, old_res)] = (new_chain, current_res)
+            current_res += 1
     
-    # Generates glycan chain mapping
-    glycan_chain_map = generate_glycan_chain_mapping(protein_chains, options)
-    print(f"\nGlycan chain mapping:")
-    for prot, glycan in sorted(glycan_chain_map.items()):
-        print(f"  Protein {prot} -> Glycan {glycan}")
+    # Create mapping for glycan residues
+    glycan_residue_mapping = {}  # (old_chain, old_residue) -> (new_chain, new_residue)
     
-    # Processes the file
+    # For each glycan block, assign sequential numbers starting from start_number_carb
+    block_counter = 0
+    for block in glycan_blocks:
+        block_counter += 1
+        current_res = start_number_carb
+        last_res_seq = None
+        
+        # The chain for this glycan block is determined by the associated protein chain
+        # Since we don't track which protein each glycan is attached to in this simplified version,
+        # we need to infer it. For now, we'll use chain A for all glycans,
+        # but we can look at the original chain to determine.
+        # Better approach: find the protein chain that precedes this glycan block in the file
+        
+        # Find which protein chain this glycan is associated with
+        # Look backwards for the nearest protein chain
+        associated_protein_chain = None
+        block_start_line = block["start_line"]
+        
+        for i in range(block_start_line - 1, -1, -1):
+            data = parse_pdb_line(lines[i])
+            if data and data["record"] == "ATOM":
+                associated_protein_chain = data["chain"]
+                break
+        
+        # If we found an associated protein chain, use its mapped chain letter
+        if associated_protein_chain and associated_protein_chain in protein_chain_letters:
+            new_glycan_chain = protein_chain_letters[associated_protein_chain]
+        else:
+            # Default to the first protein chain's letter
+            new_glycan_chain = protein_chain_letters.get(protein_chains[0], "A") if protein_chains else "A"
+        
+        # Map residues in this block
+        for _, data in block["residues"]:
+            old_chain = data["chain"]
+            old_res = data["resSeq"]
+            
+            # Check if this is a new residue
+            if old_res != last_res_seq:
+                if last_res_seq is not None:
+                    current_res += 1
+                last_res_seq = old_res
+            
+            glycan_residue_mapping[(old_chain, old_res)] = (new_glycan_chain, current_res)
+    
+    # Process each line of the file
     output_lines = []
     conect_lines = []
-    
-    # Dictionaries for renumbering mapping
-    residue_mapping = {}  # (old_chain, old_residue) -> (new_chain, new_residue)
-    
-    # Counters for renumbering - each glycan block starts at 1
-    glycan_block_counter = 1
-    
-    # Process protein chains - keep original numbering
-    for chain in sorted(chains_info.keys()):
-        if chain_types[chain] != "protein":
-            continue
-            
-        residues = sorted(chains_info[chain]["residues"])
-        
-        # Keep original residue numbers for protein
-        for old_res in residues:
-            residue_mapping[(chain, old_res)] = (chain, old_res)
-    
-    # Process glycan blocks - each block starts at 1
-    for block_info in glycan_blocks:
-        protein_chain = block_info["protein_chain"]
-        old_glycan_chain = block_info["glycan_chain"]
-        
-        if protein_chain in glycan_chain_map:
-            new_glycan_chain = glycan_chain_map[protein_chain]
-            
-            # Reset counter for each glycan block
-            current_glycan_residue = 1
-            
-            # For each glycan block
-            for _, _, start, end in block_info["blocks"]:
-                # Collects all residues in this block
-                residues_in_block = set()
-                for j in range(start, end + 1):
-                    data = parse_pdb_line(lines[j])
-                    if data and data["record"] == "HETATM":
-                        residues_in_block.add(data["resSeq"])
-                
-                # Sorts residues
-                sorted_residues = sorted(residues_in_block)
-                
-                # Creates mapping for these glycan residues - starts at 1 for each block
-                new_residue = 1
-                for old_res in sorted_residues:
-                    residue_mapping[(old_glycan_chain, old_res)] = (new_glycan_chain, new_residue)
-                    new_residue += 1
-    
-    # Processes each line of the file
     atom_counter = 1
+    
     for line in lines:
         data = parse_pdb_line(line)
         
@@ -306,29 +326,33 @@ def process_pdb_file(input_file: str, output_file: str, options: Dict) -> None:
             old_chain = data["chain"]
             old_res = data["resSeq"]
             
-            # Applies mapping
-            if (old_chain, old_res) in residue_mapping:
-                new_chain, new_res = residue_mapping[(old_chain, old_res)]
+            # Apply mapping
+            if (old_chain, old_res) in protein_residue_mapping:
+                new_chain, new_res = protein_residue_mapping[(old_chain, old_res)]
+                data["chain"] = new_chain
+                data["resSeq"] = new_res
+            elif (old_chain, old_res) in glycan_residue_mapping:
+                new_chain, new_res = glycan_residue_mapping[(old_chain, old_res)]
                 data["chain"] = new_chain
                 data["resSeq"] = new_res
             
-            # Renumbers atoms sequentially
+            # Renumber atoms sequentially
             data["serial"] = atom_counter
             atom_counter += 1
             
             output_lines.append(format_pdb_line(data))
             
         elif data["record"] == "CONECT":
-            # Saves CONECT lines for later processing
+            # Save CONECT lines for later processing
             conect_lines.append(data["line"])
         else:
             output_lines.append(data["line"])
     
-    # Processes CONECT lines
+    # Process CONECT lines
     for conect_line in conect_lines:
         output_lines.append(conect_line)
     
-    # Writes the output file
+    # Write the output file
     with open(output_file, 'w') as f:
         for line in output_lines:
             f.write(line + '\n')
@@ -341,45 +365,87 @@ def process_pdb_file(input_file: str, output_file: str, options: Dict) -> None:
     print("SUMMARY")
     print("=" * 60)
     
-    # Counts residues per chain in the output file
+    # Count residues per chain in the output file
     output_chains = {}
     for line in output_lines:
-        if len(line) >= 22 and line[0:6].strip() in ["ATOM", "HETATM"]:
+        if len(line) >= 26 and line[0:6].strip() in ["ATOM", "HETATM"]:
             chain = line[21:22].strip() or " "
-            res_seq = int(line[22:26].strip()) if line[22:26].strip() else 0
+            try:
+                res_seq = int(line[22:26].strip())
+            except ValueError:
+                continue
             if chain not in output_chains:
                 output_chains[chain] = set()
             output_chains[chain].add(res_seq)
     
+    protein_residues = 0
+    glycan_residues = 0
+    
     for chain in sorted(output_chains.keys()):
         residues = output_chains[chain]
-        print(f"Chain {chain or ' '}: {len(residues)} residues "
-              f"(range: {min(residues)}-{max(residues)})")
+        count = len(residues)
+        if chain in protein_chain_letters.values():
+            protein_residues += count
+            print(f"Chain {chain} (protein): {count} residues "
+                  f"(range: {min(residues)}-{max(residues)})")
+        else:
+            glycan_residues += count
+            print(f"Chain {chain} (glycan): {count} residues "
+                  f"(range: {min(residues)}-{max(residues)})")
+    
+    print(f"\nTotal protein residues: {protein_residues}")
+    print(f"Total glycan residues: {glycan_residues}")
 
 def main():
     """Main function."""
-    if len(sys.argv) < 2:
-        print("Usage: python pdb_renumber.py input.pdb [output.pdb]")
-        print("If output file is not specified, '_renumbered' will be appended to input filename.")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description='PDB Residue Renumbering and Relabeling Tool',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python pdb_renumber.py input.pdb output.pdb
+  python pdb_renumber.py input.pdb --start_number_protein 100 --start_number_carb 50
+  python pdb_renumber.py input.pdb --residue_carb_initiation "NDG,A2G,MAN"
+
+The script automatically uses:
+- Chain A for first protein, Chain B for second protein, etc.
+- Chain A for glycans attached to first protein, Chain B for glycans attached to second protein, etc.
+- Residue numbering starts from 1 for both protein and carbohydrate by default
+- Carbohydrate blocks are identified by residues starting with NDG or A2G (configurable)
+        """
+    )
     
-    input_file = sys.argv[1]
+    parser.add_argument('input_file', help='Input PDB file')
+    parser.add_argument('output_file', nargs='?', help='Output PDB file (optional, will add _renumbered if not specified)')
+    parser.add_argument('--start_number_protein', type=int, default=1,
+                        help='Starting residue number for protein chains (default: 1)')
+    parser.add_argument('--start_number_carb', type=int, default=1,
+                        help='Starting residue number for carbohydrate chains (default: 1)')
+    parser.add_argument('--residue_carb_initiation', type=str, default="NDG,A2G",
+                        help='Comma-separated list of residue names that initiate a new glycan block (default: NDG,A2G)')
+    
+    args = parser.parse_args()
+    
+    input_file = args.input_file
     
     if not os.path.exists(input_file):
         print(f"Error: Input file '{input_file}' not found.")
         sys.exit(1)
     
-    if len(sys.argv) >= 3:
-        output_file = sys.argv[2]
+    if args.output_file:
+        output_file = args.output_file
     else:
         base, ext = os.path.splitext(input_file)
         output_file = f"{base}_renumbered{ext}"
     
-    # Gets user options (now fixed, no user input needed)
-    options = get_user_options()
-    
-    # Processes the file
-    process_pdb_file(input_file, output_file, options)
+    # Process the file
+    process_pdb_file(
+        input_file, 
+        output_file,
+        start_number_protein=args.start_number_protein,
+        start_number_carb=args.start_number_carb,
+        residue_carb_initiation=args.residue_carb_initiation
+    )
     
     print("\nDone!")
 

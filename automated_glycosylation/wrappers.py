@@ -31,12 +31,19 @@ def run_all_pipeline():
     from .cli import run_all_pipeline as _run_all_pipeline
     _run_all_pipeline()
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for wrapper."""
     if len(sys.argv) < 2:
         print("Usage: python -m automated_glycosylation [prep|param|orient|all] [arguments]")
+        print("\nExamples:")
+        print("  python -m automated_glycosylation prep -i protein.pdb -o results/")
+        print("  python -m automated_glycosylation param -i glycosylated.pdb -o topology/")
+        print("  python -m automated_glycosylation orient -i glycoprotein.pdb -o optimized/")
+        print("  python -m automated_glycosylation all -i protein.pdb -o results/")
         sys.exit(1)
     
     command = sys.argv[1]
+    # Remove the command from argv so the sub-command parser works correctly
     sys.argv = [sys.argv[0]] + sys.argv[2:]
     
     if command == "prep":
@@ -49,4 +56,8 @@ if __name__ == "__main__":
         run_all_pipeline()
     else:
         print(f"Unknown command: {command}")
+        print("Available commands: prep, param, orient, all")
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()
