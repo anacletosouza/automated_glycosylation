@@ -457,19 +457,16 @@ The orientation of glycans attached to proteins is governed by complex energy la
 
 Consider a glycan with $n$ rotatable dihedral angles $\boldsymbol{\theta} = (\theta_1, \theta_2, ..., \theta_n)$. The probability distribution of conformations follows the Boltzmann distribution:
 
-$
+$$
 P(\boldsymbol{\theta}) = \frac{1}{Z} \exp\left(-\frac{E(\boldsymbol{\theta})}{k_B T}\right)
-$
+$$
 
 where:
 
 - $E(\boldsymbol{\theta})$ is the potential energy of the conformation
-
 - $k_B$ is Boltzmann's constant ($0.008314462618$ kJ/mol·K)
-
 - $T$ is the absolute temperature (default: 300 K)
-
-- $Z = \int \exp(-E(\boldsymbol{\theta})/k_B T) d\boldsymbol{\theta}$ is the partition function
+- $\displaystyle Z = \int \exp\left(-\frac{E(\boldsymbol{\theta})}{k_B T}\right) d\boldsymbol{\theta}$ is the partition function
 
 ### Metropolis-Hastings Algorithm
 
@@ -486,27 +483,19 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
    b. **Calculate acceptance probability**:
    
    $$
-   \alpha = \min\left(1, \frac{P(\theta')}{P(\theta_{t-1})} \cdot \frac{q(\theta_{t-1} \mid \theta')}{q(\theta' \mid \theta_{t-1})}\right)
+   \alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})} \cdot \frac{q(\boldsymbol{\theta}_{t-1} \mid \boldsymbol{\theta}')}{q(\boldsymbol{\theta}' \mid \boldsymbol{\theta}_{t-1})}\right)
    $$
    
    For symmetric proposal distributions, this simplifies to:
    
-   $
+   $$
    \alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})}\right) = \min\left(1, \exp\left(-\frac{\Delta E}{k_B T}\right)\right)
-   $
+   $$
    
    c. **Accept or reject the proposal**:
    - Generate random number $u \sim \mathcal{U}(0,1)$
-   - If $u \leq \alpha$, accept: 
-     
-     $
-     \theta_t = \theta'
-     $
-   - Else, reject: 
-     
-     $
-     \theta_t = \theta_{t-1}
-     $
+   - If $u \leq \alpha$, accept: $\theta_t = \theta'$
+   - Else, reject: $\theta_t = \theta_{t-1}$
 
 3. **After convergence**, the samples $\{\boldsymbol{\theta}_t\}$ approximate the Boltzmann distribution.
 
@@ -514,23 +503,23 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
 
 The total potential energy is calculated using the CHARMM36 force field:
 
-$
+$$
 E_{\text{total}} = E_{\text{vdW}} + E_{\text{coulomb}}
-$
+$$
 
 #### Van der Waals Energy (Lennard-Jones)
 
-$
+$$
 E_{\text{vdW}} = \sum_{i<j} 4\varepsilon_{ij} \left[\left(\frac{\sigma_{ij}}{r_{ij}}\right)^{12} - \left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]
-$
+$$
 
 where $\varepsilon_{ij}$ is the well depth, $\sigma_{ij}$ is the distance at zero potential (Lorentz-Berthelot mixing rules: $\sigma_{ij} = (\sigma_i + \sigma_j)/2$, $\varepsilon_{ij} = \sqrt{\varepsilon_i \varepsilon_j}$), and $r_{ij}$ is the distance between atoms $i$ and $j$.
 
 #### Coulomb Energy (Electrostatics)
 
-$
+$$
 E_{\text{coulomb}} = \sum_{i<j} \frac{q_i q_j}{4\pi\epsilon_0 \epsilon_r r_{ij}}
-$
+$$
 
 where $q_i$ and $q_j$ are partial atomic charges, $\epsilon_0$ is the vacuum permittivity, and $\epsilon_r$ is the relative permittivity.
 
@@ -540,23 +529,23 @@ where $q_i$ and $q_j$ are partial atomic charges, $\epsilon_0$ is the vacuum per
 
 The conformational space of a glycan attached to a protein is defined by:
 
-$
+$$
 \Omega = \{\boldsymbol{\theta} \in [0, 2\pi)^d\}
-$
+$$
 
 where $d$ is the number of rotatable dihedral angles. For N-linked glycans, the primary rotation degree of freedom is the glycosidic bond between the protein (ASN ND2) and the first glycan residue (C1). Our pipeline simplifies this high-dimensional space to a single rotational degree of freedom $\theta$ around the axis defined by:
 
-$
+$$
 \mathbf{a} = \frac{\mathbf{r}_{C1} - \mathbf{r}_{\text{ND2}}}{|\mathbf{r}_{C1} - \mathbf{r}_{\text{ND2}}|}
-$
+$$
 
 The target sampling distribution is the Boltzmann distribution:
 
-$
+$$
 \pi(\theta) = \frac{1}{Z} \exp\left(-\frac{E(\theta)}{k_B T}\right)
-$
+$$
 
-where $Z = \int_0^{2\pi} \exp(-E(\theta)/k_B T) d\theta$ is the normalization constant.
+where $\displaystyle Z = \int_0^{2\pi} \exp\left(-\frac{E(\theta)}{k_B T}\right) d\theta$ is the normalization constant.
 
 #### Proposal Distribution and Adaptive Tuning
 
@@ -564,36 +553,34 @@ where $Z = \int_0^{2\pi} \exp(-E(\theta)/k_B T) d\theta$ is the normalization co
 
 We employ a symmetric Gaussian random walk proposal distribution:
 
-$
+$$
 q(\theta' | \theta_t) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(\theta' - \theta_t)^2}{2\sigma^2}\right)
-$
+$$
 
 where $\sigma$ is the step size (default: 10 degrees converted to radians). The symmetry property $q(\theta' | \theta_t) = q(\theta_t | \theta')$ simplifies the Metropolis-Hastings acceptance ratio to:
 
-$
+$$
 \alpha = \min\left(1, \exp\left(-\frac{E(\theta') - E(\theta_t)}{k_B T}\right)\right)
-$
+$$
 
 ##### Adaptive Metropolis
 
 The pipeline optionally implements adaptive MCMC where the proposal distribution covariance is tuned during burn-in:
 
-$
+$$
 \Sigma_t = \text{Cov}(\theta_0, ..., \theta_t) + \epsilon I_d
-$
+$$
 
 where $\epsilon = 10^{-6}$ ensures positive definiteness. The step size is adjusted to maintain an optimal acceptance rate of $0.234$ (theoretical optimum for high-dimensional problems):
 
-$
+$$
 \sigma_{t+1} = \sigma_t \cdot \exp\left(\gamma_t (\alpha_t - \alpha^*)\right)
-$
+$$
 
 where:
 
 - $\alpha_t$ is the empirical acceptance rate over the last $W$ steps
-
 - $\alpha^* = 0.234$ is the target acceptance rate
-
 - $\gamma_t = t^{-0.6}$ is the step size adaptation gain
 
 ### Convergence Diagnostics
@@ -602,18 +589,15 @@ where:
 
 For $M$ parallel chains, compute:
 
-$
+$$
 \hat{R} = \sqrt{\frac{\text{Var}(\theta)}{W}}
-$
+$$
 
 where:
 
-- $W = \frac{1}{M}\sum_{j=1}^M s_j^2$ is the within-chain variance
-
+- $\displaystyle W = \frac{1}{M}\sum_{j=1}^M s_j^2$ is the within-chain variance
 - $s_j^2$ is the variance of chain $j$
-
-- $\text{Var}(\theta) = \frac{N-1}{N}W + \frac{1}{N}B$ is the estimated posterior variance
-
+- $\displaystyle \text{Var}(\theta) = \frac{N-1}{N}W + \frac{1}{N}B$ is the estimated posterior variance
 - $B$ is the between-chain variance
 
 Convergence is achieved when $\hat{R} < 1.1$ for all parameters.
@@ -622,9 +606,9 @@ Convergence is achieved when $\hat{R} < 1.1$ for all parameters.
 
 The effective sample size accounts for autocorrelation in the Markov chain:
 
-$
+$$
 ESS = \frac{N}{1 + 2\sum_{k=1}^{\infty} \rho_k}
-$
+$$
 
 where $\rho_k$ is the autocorrelation at lag $k$. We consider $ESS \geq 100$ as sufficient for reliable inference.
 
@@ -632,9 +616,9 @@ where $\rho_k$ is the autocorrelation at lag $k$. We consider $ESS \geq 100$ as 
 
 The Geweke test compares the mean of the first 10% of samples to the last 50%:
 
-$
+$$
 z = \frac{\bar{\theta}_A - \bar{\theta}_B}{\sqrt{\mathrm{Var}(\theta_A) + \mathrm{Var}(\theta_B)}}
-$
+$$
 
 Under convergence, $z \sim \mathcal{N}(0,1)$. Values $|z| > 2$ indicate non-convergence.
 
@@ -642,15 +626,15 @@ Under convergence, $z \sim \mathcal{N}(0,1)$. Values $|z| > 2$ indicate non-conv
 
 For glycoprotein systems, we monitor the running average of potential energy:
 
-$
+$$
 \bar{E}_t = \frac{1}{t}\sum_{i=1}^{t} E(\theta_i)
-$
+$$
 
 The chain is considered converged when:
 
-$
+$$
 \frac{|\bar{E}_t - \bar{E}_{t-100}|}{\bar{E}_t} < 0.01
-$
+$$
 
 indicating energy stabilization within 1% over 100 steps.
 
@@ -658,31 +642,29 @@ indicating energy stabilization within 1% over 100 steps.
 
 To overcome energy barriers and sample multimodal distributions, the pipeline implements parallel tempering (replica exchange MCMC) with $M$ replicas at different temperatures:
 
-$
+$$
 T_i = T_0 \cdot \gamma^{i-1}, \quad i = 1, 2, ..., M
-$
+$$
 
 where:
 
 - $T_0 = 300$ K is the base temperature
-
 - $\gamma = 1.2$ ensures overlapping temperature distributions
-
 - $M = \lceil \log(T_{\max}/T_0)/\log(\gamma) \rceil$ replicas
 
 #### Replica Exchange Probability
 
 At regular intervals, adjacent replicas $i$ and $j$ (where $j = i+1$ and $T_j > T_i$) attempt exchange with probability:
 
-$
+$$
 P_{\text{swap}} = \min\left(1, \exp\left[\left(\frac{1}{k_B T_i} - \frac{1}{k_B T_j}\right)(E_j - E_i)\right]\right)
-$
+$$
 
 This maintains detailed balance:
 
-$
+$$
 \pi_i(\theta_i)\pi_j(\theta_j) P_{\text{swap}}(\theta_i, \theta_j) = \pi_i(\theta_j)\pi_j(\theta_i) P_{\text{swap}}(\theta_j, \theta_i)
-$
+$$
 
 #### Round-Robin Exchange Schedule
 
@@ -698,43 +680,43 @@ This ensures that all replicas have opportunity to exchange, improving mixing an
 
 After convergence, the distribution of potential energies should approximate:
 
-$
+$$
 P(E) \propto \Omega(E) e^{-E/k_B T}
-$
+$$
 
 where $\Omega(E)$ is the density of states. We validate using:
 
-- **Mean energy**: 
+- **Mean energy**:
   
-  $
+  $$
   \langle E \rangle = \frac{1}{N}\sum_{t=1}^N E(\theta_t)
-  $
+  $$
 
-- **Energy variance**: 
+- **Energy variance**:
   
-  $
+  $$
   \text{Var}(E) = \langle E^2 \rangle - \langle E \rangle^2 = C_V k_B T^2
-  $
+  $$
 
-- **Heat capacity**: 
+- **Heat capacity**:
   
-  $
+  $$
   C_V = \frac{\partial \langle E \rangle}{\partial T} = \frac{\text{Var}(E)}{k_B T^2}
-  $
+  $$
 
 #### Autocorrelation Analysis
 
 The integrated autocorrelation time is computed as:
 
-$
+$$
 \tau_{\text{int}} = \frac{1}{2} + \sum_{k=1}^{\infty} \rho(k)
-$
+$$
 
-where $\rho(k) = \frac{\text{Cov}(\theta_t, \theta_{t+k})}{\text{Var}(\theta_t)}$ is the autocorrelation at lag $k$. The effective sample size is then:
+where $\displaystyle \rho(k) = \frac{\text{Cov}(\theta_t, \theta_{t+k})}{\text{Var}(\theta_t)}$ is the autocorrelation at lag $k$. The effective sample size is then:
 
-$
+$$
 ESS = \frac{N}{\tau_{\text{int}}}
-$
+$$
 
 ### Algorithm Implementation Details
 
@@ -826,23 +808,25 @@ For each glycan, the rotation axis is defined as the vector from the protein att
 
 A full 360° grid search is performed at $\theta_{\text{step}}$ increments to find the orientation that minimizes:
 
-$
+$$
 E(\theta) = E_{\text{vdW}}(\theta) + E_{\text{coulomb}}(\theta)
-$
+$$
 
 ### MCMC Refinement
 
 After identifying the optimal angle $\theta_{\text{best}}$ from grid search, MCMC refinement explores the local energy landscape:
 
-$
+$$
 \theta_{\text{proposed}} = \theta_{\text{current}} + \Delta\theta
-$, where $\Delta\theta \sim \mathcal{U}(-\theta_{\text{step}}, \theta_{\text{step}})$
+$$
+
+where $\Delta\theta \sim \mathcal{U}(-\theta_{\text{step}}, \theta_{\text{step}})$
 
 Acceptance probability:
 
-$
+$$
 \alpha = \min\left(1, \exp\left(-\frac{E(\theta_{\text{proposed}}) - E(\theta_{\text{current}})}{k_B T}\right)\right)
-$
+$$
 
 ### Convergence Criteria
 
@@ -852,15 +836,15 @@ A glycan is considered converged when the energy improvement between cycles is l
 
 The Metropolis-Hastings algorithm satisfies detailed balance:
 
-$
+$$
 \pi(\theta) P(\theta \rightarrow \theta') = \pi(\theta') P(\theta' \rightarrow \theta)
-$
+$$
 
 For our symmetric proposal:
 
-$
+$$
 P(\theta \rightarrow \theta') = q(\theta'|\theta) \alpha(\theta,\theta') = \frac{1}{\sigma\sqrt{2\pi}} e^{-(\theta'-\theta)^2/2\sigma^2} \cdot \min(1, e^{-(E(\theta')-E(\theta))/k_B T})
-$
+$$
 
 This ensures the stationary distribution is exactly $\pi(\theta)$.
 
@@ -883,10 +867,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
+- CHARMM36 force field developers
+- GROMACS community
 - São Paulo Research Foundation (FAPESP) for funding
 
 ---
 
-**Contact**: anacletosilvadesouza@usp.br or a.silva.de.souza@rug.nl
+**Contact**: anacletosilvadesouza@usp.br
 
 **GitHub**: [https://github.com/anacletosouza/automated_glycosylation](https://github.com/anacletosouza/automated_glycosylation)
