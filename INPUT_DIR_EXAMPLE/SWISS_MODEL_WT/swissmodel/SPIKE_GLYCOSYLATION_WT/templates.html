@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../web/css/bootstrap-3.4.1.min.css"/> 
+    <link rel="stylesheet" href="../web/css/master.css"/>
+    <link rel="stylesheet" href="../web/css/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="../web/css/jquery-ui.min.css"/>  
+    <title>SPIKE_GLYCOSYLATION_WT | Templates</title>
+    <style>
+      .noborder > thead > tr > th,
+      .noborder > tbody > tr > td {
+        border:0px;
+        padding:0px 5px 0px 5px;
+      }
+      .alignTbl tr[keyseqchain] span[nores] {
+        opacity:.3;
+      }
+
+      @media (min-width: 768px) {
+      #flex-panel-container > #left-panel {
+          width: 450px;
+          min-width: 280px;
+          padding-bottom: 16px;
+        }
+      }
+      dl.dl-models {
+        margin-bottom: 0px;
+      }
+      .dl-models dt, dd {
+        border-top: none;
+        padding: 0;
+      }
+      .dl-models dt {
+        font-size: 85%;
+        line-height: 90%;
+      }
+      .dl-models dd {
+        margin: 2px 0px 8px 12px;
+      }
+
+      .noborder tr > th:first-child, .noborder tr > td:first-child {
+        padding-left: 0px;
+      }
+      .noborder tr > th:last-child, .noborder tr > td:last-child {
+        padding-right: 0px;
+      }
+
+      #annotateDiv {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+        opacity: .7;
+        display: none; 
+        text-align:right;
+      }
+      #annotate {
+        width: 350px; 
+        opacity:.8; 
+        margin-bottom:4px;
+        color: #000
+      }
+      #annotateBtn {
+        margin-right:2px;
+      }
+    </style>
+  </head>
+  <body><div id="alignmentOptions" style="display:none;">
+  <form class="alignmentOptions form form-inline" autocomplete="off">
+    <div id="exportOptions" style="padding-bottom:8px">
+      <b>Export Alignment</b>
+      <br>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('#alignTbl'+$('#currentAlignmentIndex').val()).alignment('exportAlignment', {'format':'FASTA'});">FASTA format</button>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('#alignTbl'+$('#currentAlignmentIndex').val()).alignment('exportAlignment', {'format':'ClustalW'});">Clustal Format</button>
+      <button type="button" class="btn btn-sm btn-default" onclick="$('.alTbl').first().alignment('html2image')">PNG Image</button>
+    </div>
+    <div>
+      <div id="ssOptions">
+        <b>Secondary Structure</b>
+        <br>
+        <label><input type="radio" name="sstype" id="secStruct_none" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'none'})"  >None</label> 
+        <label><input type="radio" name="sstype" id="secStruct_dssp" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'dssp'})" checked="checked" />DSSP</label>  
+        <label><input type="radio" name="sstype" id="secStruct_psipred" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'psipred'})"  />PSIPRED</label>
+        <label><input type="radio" name="sstype" id="secStruct_sspro" onclick="$('.alignTbl').alignment('secondaryStructure',{sstype:'sspro'})"  />SSpro</label>   
+      </div>
+
+      <div id="colourOptions" style="padding-top:8px">
+        <b>Colour Scheme </b>
+        <a class="smng-help" href="/docs/help#colour_schemes"></a>
+        <div id="fadeMismatches">
+        <label class="inline checkbox" style="margin-right:12px;"><input type="checkbox" id="fadeMismatch_cb" onclick="$('.alignTbl').alignment('targetMismatch',{match:this.checked?'fade':null})" checked="checked" />Fade Mismatches</label>
+        <label class="inline checkbox"><input type="checkbox" id="enhanceMismatch_cb" onclick="$('.alignTbl').alignment('targetMismatch',{match:this.checked?'enhance':null})"  />Enhance Mismatches</label></div>
+        
+        
+
+         
+
+        
+        <label class="confLabel"><input title="Per residue confidence colours" type="radio" name="csRadioGroup" id="qmean_localButton" value="qmean_local" checked="checked" />Confidence<sup>gradient</sup></label>
+        <label class="confLabel"><input title="Confidence classes" type="radio" name="csRadioGroup" id="confClassButton" value="confClass" checked="checked" />Confidence<sup>class</sup></label>
+        <label><input type="radio" name="csRadioGroup" id="indelsButton" value="indels"  />Indels</label>
+
+        <label><input type="radio" name="csRadioGroup" id="chainButton" value="chain" >Chain</label>
+        <label><input type="radio" name="csRadioGroup" id="uniqueChainButton" value="uniqueChain" >Unique Chain</label>
+        <label><input type="radio" name="csRadioGroup" id="rainbowButton" value="rainbow" checked="checked">Rainbow</label>
+        <label><input type="radio" name="csRadioGroup" id="secstrucButton" value="secstruc" checked="checked">2&deg; Structure</label>
+
+        
+
+        
+
+
+        
+        <label><input type="radio" name="csRadioGroup" id="clustalButton" value="clustal"  />Clustal</label>
+        <label><input type="radio" name="csRadioGroup" id="hydrophobicButton" value="hydrophobic"  />Hydrophobic</label>
+        <label><input type="radio" name="csRadioGroup" id="sizeButton" value="size"  />Size</label>
+        <label><input type="radio" name="csRadioGroup" id="chargedButton" value="charged"  />Charged</label>
+        <label><input type="radio" name="csRadioGroup" id="polarButton" value="polar"  />Polar</label>
+        <label><input type="radio" name="csRadioGroup" id="prolineButton" value="proline"  />Proline</label>
+        <label><input type="radio" name="csRadioGroup" id="serThrButton" value="serThr"  />Ser/Thr</label>
+        <label><input type="radio" name="csRadioGroup" id="cysButton" value="cysteine"  />Cysteine</label>      
+        <label><input type="radio" name="csRadioGroup" id="aliphaticButton" value="aliphatic"  />Aliphatic</label>
+        <label><input type="radio" name="csRadioGroup" id="aromaticButton" value="aromatic"  />Aromatic</label>
+        
+        <label><input type="radio" name="csRadioGroup" id="noColourButton" value="none"  />No Colour</label> 
+      </div>
+      
+      
+      <label class="checkbox" style="display: none" id="qmeanbraneLbl">
+        <input type="checkbox" id="qmeanbraneCB" onclick="toggleQMEANBrane($(this).prop('checked'))">Use QMEANBrane values
+      </label>
+
+      <table>
+        <tr>
+          <td><div style="margin-right:16px">Background</div></td>
+          <td><div style="height:16px; width:16px; border:1px solid #777;cursor:pointer;background-color:black" onclick="$('#bgColSlider').slider('value',0);"> </div></td>
+          <td style="width:220px"><div id="bgColSlider" style="margin:8px"></div></td>
+          <td><div style="height:16px; width:16px; border:1px solid #777;cursor:pointer;background-color:white" onclick="$('#bgColSlider').slider('value',255);"> </div></td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="viewerSelect" style="padding-top:8px">
+      <b>3D Viewer</b><br>
+      <label><input type="radio" name="3dRG" value="NGL" checked="checked" />NGL</label>
+      <label><input type="radio" name="3dRG" value="PV"  />PV</label>
+    </div>
+  </form>
+  <div id="formattedAlignment" style="width:610px;height:470px;" class="fancy_box_swap">
+    <label class="checkbox-inline" >
+      <select style="height:28px;width:150px;" class="form-control" name="alignmentFormatSelect" id="alignmentFormatSelect" onchange="$('.alignTbl').first().alignment('changeExportFormat')">
+        <option value="FASTA" selected="selected">FASTA</option>
+        <option value="Multi FASTA">Multi FASTA</option>
+        <option value="ClustalW">ClustalW</option>
+      </select>
+    </label>
+    <button type="button" class="btn btn-sm btn-default" onclick="$('.alignTbl').first().alignment('html2image')">PNG</button>
+    <div align="center">
+      <textarea name="formattedAlignmentTextarea" id="formattedAlignmentTextarea" style="margin-top:8px;font-family:'Courier New', Courier, monospace; font-size:12px;width:100%;height:400px"></textarea>
+    </div>
+  </div>
+</div>
+<input type="hidden" id="currentAlignmentIndex" value="">
+
+    <div class="container-fluid" style="padding-left:15px">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom:12px">
+        <a href="https://swissmodel.expasy.org">
+          <img style="height:4rem" src="../web/images/SWISS-MODEL.tsb.svg">
+        </a> 
+        <h3 style="display:inline-block; margin:0px" id="title_8NGqV6">SPIKE_GLYCOSYLATION_WT
+        </h3>
+        <h3 style="display:inline-block; margin:0px;">
+          <small>Created: Jan. 16, 2026, 1:03 p.m. at 13:03</small>
+        </h3>
+      </div>
+    </div>
+      
+    
+<style>
+.odd { 
+  background-color:#BBDDED;
+}
+td { 
+  padding:2px 2px 2px 2px; 
+  cursor: pointer;
+}
+td:first-child {
+  text-align:center;
+}
+th{
+  font-size: .8em;
+  text-align: center;
+}
+.headerSortNone, .headerSortUp, .headerSortDown {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 0px 0px 8px 0px !important;
+}
+
+.btn-xs {
+  margin: 2px;
+}
+</style>
+
+
+<ul class="nav nav-pills" style="margin-bottom:0px; display: inline-block;">
+  <li class="active"><a href="templates.html">Templates</a></li>
+  
+  <li><a href="models.html">Models </a></li>
+</ul>
+
+
+
+<div style="overflow-x:auto">
+  <table id="full_monty_tbl">
+    <thead>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Models</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Name</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Description</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">GMQE</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">QSQE</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Seq Id</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Coverage</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Range</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Method</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Resolution</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Oligo-state</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Ligands</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Found by</th>
+      <th class="headerSortNone" onclick="sortTemplates(this);">Seq Similarity</th>
+    </thead>
+    <tbody>
+      <tr id="f4d36173a0db42cdf5dee25c7466120cd0010e7b" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/f4d36173a0db42cdf5dee25c7466120cd0010e7b.pdb" target="_blank">template_upload.1.A</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.68</td>
+        <td>0.92</td>
+        <td>100.00</td>
+        <td>1.00</td>
+        <td> 1-1273</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.62</td>
+      </tr>
+      <tr id="f4d36173a0db42cdf5dee25c7466120cd0010e7b_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_f4d36173a0db42cdf5dee25c7466120cd0010e7b"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>target    SEPVLKGVKLHYT<br>template_upload.1SEPVLKGVKLHYT<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="6550cc461fef4003037978578093fb762115c613" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/6550cc461fef4003037978578093fb762115c613.pdb" target="_blank">template_upload.1.B</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.68</td>
+        <td>0.92</td>
+        <td>100.00</td>
+        <td>1.00</td>
+        <td> 1-1273</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.62</td>
+      </tr>
+      <tr id="6550cc461fef4003037978578093fb762115c613_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_6550cc461fef4003037978578093fb762115c613"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>target    SEPVLKGVKLHYT<br>template_upload.1SEPVLKGVKLHYT<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="0c471c9c5d263cde2e424769ec3d834c48ae543c" class="odd">
+        <td>&#10003;<br>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/0c471c9c5d263cde2e424769ec3d834c48ae543c.pdb" target="_blank">template_upload.1.C</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.69</td>
+        <td>0.92</td>
+        <td>100.00</td>
+        <td>1.00</td>
+        <td> 1-1273</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.62</td>
+      </tr>
+      <tr id="0c471c9c5d263cde2e424769ec3d834c48ae543c_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_0c471c9c5d263cde2e424769ec3d834c48ae543c"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>target    SEPVLKGVKLHYT<br>template_upload.1SEPVLKGVKLHYT<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="ff175664b21109535810772e707e44762d8ddc53" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/ff175664b21109535810772e707e44762d8ddc53.pdb" target="_blank">template_upload.1.A</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.69</td>
+        <td>0.89</td>
+        <td>100.00</td>
+        <td>0.99</td>
+        <td> 12-1273</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>BLAST</td>
+        <td>0.62</td>
+      </tr>
+      <tr id="ff175664b21109535810772e707e44762d8ddc53_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_ff175664b21109535810772e707e44762d8ddc53"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1-----------SSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>target    SEPVLKGVKLHYT<br>template_upload.1SEPVLKGVKLHYT<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="c33561d91e01d20c86705361498d38a7c5f5286c" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/c33561d91e01d20c86705361498d38a7c5f5286c.pdb" target="_blank">template_upload.1.B</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.69</td>
+        <td>0.89</td>
+        <td>100.00</td>
+        <td>0.99</td>
+        <td> 12-1273</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>BLAST</td>
+        <td>0.62</td>
+      </tr>
+      <tr id="c33561d91e01d20c86705361498d38a7c5f5286c_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_c33561d91e01d20c86705361498d38a7c5f5286c"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1-----------SSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>target    SEPVLKGVKLHYT<br>template_upload.1SEPVLKGVKLHYT<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="63b79ed4ac2a687639aab0e2917f70e0722170be" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/63b79ed4ac2a687639aab0e2917f70e0722170be.pdb" target="_blank">template_upload.1.C</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.69</td>
+        <td>0.89</td>
+        <td>100.00</td>
+        <td>0.99</td>
+        <td> 12-1273</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>BLAST</td>
+        <td>0.62</td>
+      </tr>
+      <tr id="63b79ed4ac2a687639aab0e2917f70e0722170be_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_63b79ed4ac2a687639aab0e2917f70e0722170be"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1-----------SSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>target    SEPVLKGVKLHYT<br>template_upload.1SEPVLKGVKLHYT<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="43529d2bf089a29cc64fe4734d313e92aebe3202" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/43529d2bf089a29cc64fe4734d313e92aebe3202.pdb" target="_blank">template_upload.1.A</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.02</td>
+        <td></td>
+        <td>16.00</td>
+        <td>0.24</td>
+        <td> 936-1269</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.29</td>
+      </tr>
+      <tr id="43529d2bf089a29cc64fe4734d313e92aebe3202_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_43529d2bf089a29cc64fe4734d313e92aebe3202"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1----------------------------------------------------------------------<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1----------------------------------------------------------------------<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1----------------------------------------------------------------------<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1----------------------------------------------------------------------<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1----------------------------------------------------------------------<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1----------------------------------------------------------------------<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1----------------------------------------------------------------------<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1----------------------------------------------------------------------<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1----------------------------------------------------------------------<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1----------------------------------------------------------------------<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1----------------------------------------------------------------------<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1-------------------------LIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQL<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAA--EIRASANLAATKMSECVLGQSKRVDFCGKGYH<br>template_upload.1SSNFGAISSVLN---DILSRLDKVEAEV--QIDRLITGRLQSLQTYVTQQLIRAAEIRASAN--------<br><br>target    LMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHF-----PREGVFVSNG----T---------<br>template_upload.1------LAAT--------KMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAP<br><br>target    HWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEE--LDKYFKNHTSPD-----<br>template_upload.1AICHDG-KAHFPRE----GVFVS--NGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQ<br><br>target    ---VDLG-DISGI--NAS--VVNI------QKEIDRLNEVAKNLNESLIDLQ----ELGKYEQYIKWPWY<br>template_upload.1PELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKW<br><br>target    IWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT<br>template_upload.1PWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLK----<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="3b6350d48623ad4e21d809fb0f5256b92fbf08bb" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/3b6350d48623ad4e21d809fb0f5256b92fbf08bb.pdb" target="_blank">template_upload.1.B</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.02</td>
+        <td></td>
+        <td>16.00</td>
+        <td>0.24</td>
+        <td> 936-1269</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.29</td>
+      </tr>
+      <tr id="3b6350d48623ad4e21d809fb0f5256b92fbf08bb_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_3b6350d48623ad4e21d809fb0f5256b92fbf08bb"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1----------------------------------------------------------------------<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1----------------------------------------------------------------------<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1----------------------------------------------------------------------<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1----------------------------------------------------------------------<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1----------------------------------------------------------------------<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1----------------------------------------------------------------------<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1----------------------------------------------------------------------<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1----------------------------------------------------------------------<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1----------------------------------------------------------------------<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1----------------------------------------------------------------------<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1----------------------------------------------------------------------<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1-------------------------LIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQL<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAA--EIRASANLAATKMSECVLGQSKRVDFCGKGYH<br>template_upload.1SSNFGAISSVLN---DILSRLDKVEAEV--QIDRLITGRLQSLQTYVTQQLIRAAEIRASAN--------<br><br>target    LMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHF-----PREGVFVSNG----T---------<br>template_upload.1------LAAT--------KMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAP<br><br>target    HWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEE--LDKYFKNHTSPD-----<br>template_upload.1AICHDG-KAHFPRE----GVFVS--NGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQ<br><br>target    ---VDLG-DISGI--NAS--VVNI------QKEIDRLNEVAKNLNESLIDLQ----ELGKYEQYIKWPWY<br>template_upload.1PELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKW<br><br>target    IWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT<br>template_upload.1PWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLK----<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="9e6e2a85302d59daa0ab0299c0a6fced0cad7503" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/9e6e2a85302d59daa0ab0299c0a6fced0cad7503.pdb" target="_blank">template_upload.1.C</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.02</td>
+        <td></td>
+        <td>16.00</td>
+        <td>0.24</td>
+        <td> 936-1269</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.29</td>
+      </tr>
+      <tr id="9e6e2a85302d59daa0ab0299c0a6fced0cad7503_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_9e6e2a85302d59daa0ab0299c0a6fced0cad7503"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1----------------------------------------------------------------------<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1----------------------------------------------------------------------<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1----------------------------------------------------------------------<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1----------------------------------------------------------------------<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1----------------------------------------------------------------------<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1----------------------------------------------------------------------<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1----------------------------------------------------------------------<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1----------------------------------------------------------------------<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1----------------------------------------------------------------------<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1----------------------------------------------------------------------<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1----------------------------------------------------------------------<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1-------------------------LIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQL<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAA--EIRASANLAATKMSECVLGQSKRVDFCGKGYH<br>template_upload.1SSNFGAISSVLN---DILSRLDKVEAEV--QIDRLITGRLQSLQTYVTQQLIRAAEIRASAN--------<br><br>target    LMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHF-----PREGVFVSNG----T---------<br>template_upload.1------LAAT--------KMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAP<br><br>target    HWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEE--LDKYFKNHTSPD-----<br>template_upload.1AICHDG-KAHFPRE----GVFVS--NGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQ<br><br>target    ---VDLG-DISGI--NAS--VVNI------QKEIDRLNEVAKNLNESLIDLQ----ELGKYEQYIKWPWY<br>template_upload.1PELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKW<br><br>target    IWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT<br>template_upload.1PWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLK----<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="20f678c869e492ffae6d5dd26882b343006847c3" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/20f678c869e492ffae6d5dd26882b343006847c3.pdb" target="_blank">template_upload.1.A</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>16.25</td>
+        <td>0.06</td>
+        <td> 1169-1266</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.31</td>
+      </tr>
+      <tr id="20f678c869e492ffae6d5dd26882b343006847c3_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_20f678c869e492ffae6d5dd26882b343006847c3"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1----------------------------------------------------------------------<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1----------------------------------------------------------------------<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1----------------------------------------------------------------------<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1----------------------------------------------------------------------<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1----------------------------------------------------------------------<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1----------------------------------------------------------------------<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1----------------------------------------------------------------------<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1----------------------------------------------------------------------<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1----------------------------------------------------------------------<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1----------------------------------------------------------------------<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1----------------------------------------------------------------------<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1----------------------------------------------------------------------<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1----------------------------------------------------------------------<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1----------------------------------------------------------------------<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1------------------------------------------------AKNLNESLIDLQ-ELGK-----<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1------------YEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEP<br><br>target    SEPVLKGVKLHYT<br>template_upload.1VLKGVK-------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="25a3f3dc60fadc34042f7fe7bf5fb554b3a1fa95" class="odd">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/25a3f3dc60fadc34042f7fe7bf5fb554b3a1fa95.pdb" target="_blank">template_upload.1.B</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>16.25</td>
+        <td>0.06</td>
+        <td> 1169-1266</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.31</td>
+      </tr>
+      <tr id="25a3f3dc60fadc34042f7fe7bf5fb554b3a1fa95_b" class="odd">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_25a3f3dc60fadc34042f7fe7bf5fb554b3a1fa95"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1----------------------------------------------------------------------<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1----------------------------------------------------------------------<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1----------------------------------------------------------------------<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1----------------------------------------------------------------------<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1----------------------------------------------------------------------<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1----------------------------------------------------------------------<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1----------------------------------------------------------------------<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1----------------------------------------------------------------------<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1----------------------------------------------------------------------<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1----------------------------------------------------------------------<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1----------------------------------------------------------------------<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1----------------------------------------------------------------------<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1----------------------------------------------------------------------<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1----------------------------------------------------------------------<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1------------------------------------------------AKNLNESLIDLQ-ELGK-----<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1------------YEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEP<br><br>target    SEPVLKGVKLHYT<br>template_upload.1VLKGVK-------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="f48a0d1132c26350fe4e335fb439abb9bbf08a63" class="even">
+        <td>
+        </td>
+        </td>
+        <td>
+          <a href="https://swissmodel.expasy.org/interactive/8NGqV6/templates/f48a0d1132c26350fe4e335fb439abb9bbf08a63.pdb" target="_blank">template_upload.1.C</a></td>
+        <td><div class="text-left">Polypeptide
+          <br><small><i>Polypeptide</i></small></div></td>
+        <td>0.00</td>
+        <td></td>
+        <td>16.25</td>
+        <td>0.06</td>
+        <td> 1169-1266</td>
+        <td>Unknown</td>
+        <td>-1.00</td>
+        <td title="homo-trimer">homo-trimer</td>
+        <td></td>
+        <td>HHblits</td>
+        <td>0.31</td>
+      </tr>
+      <tr id="f48a0d1132c26350fe4e335fb439abb9bbf08a63_b" class="even">
+        <td style="font-family:'Courier New', Courier, monospace; " colspan="50">
+          <div id="simple_align_f48a0d1132c26350fe4e335fb439abb9bbf08a63"  style="display:none">
+            
+            <div class="text-left">
+              <pre>target    MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHV<br>template_upload.1----------------------------------------------------------------------<br><br>target    SGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPF<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1----------------------------------------------------------------------<br><br>target    NLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYN<br>template_upload.1----------------------------------------------------------------------<br><br>target    ENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASV<br>template_upload.1----------------------------------------------------------------------<br><br>target    YAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1----------------------------------------------------------------------<br><br>target    YNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYF<br>template_upload.1----------------------------------------------------------------------<br><br>target    PLQSYGFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFL<br>template_upload.1----------------------------------------------------------------------<br><br>target    PFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1----------------------------------------------------------------------<br><br>target    PTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>template_upload.1----------------------------------------------------------------------<br><br>target    AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1----------------------------------------------------------------------<br><br>target    AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1----------------------------------------------------------------------<br><br>target    LGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG<br>template_upload.1----------------------------------------------------------------------<br><br>target    VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDI<br>template_upload.1----------------------------------------------------------------------<br><br>target    LSRLDKVEAEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1----------------------------------------------------------------------<br><br>target    SFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNT<br>template_upload.1----------------------------------------------------------------------<br><br>target    FVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVA<br>template_upload.1------------------------------------------------AKNLNESLIDLQ-ELGK-----<br><br>target    KNLNESLIDLQELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1------------YEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEP<br><br>target    SEPVLKGVKLHYT<br>template_upload.1VLKGVK-------<br><br></pre>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+  </body>
+</html> 
+
+<script src="../web/js/jquery-3.7.0.min.js"></script>
+<script src="../web/js/jquery-ui.min.js"></script>
+<script src="../web/js/bootstrap-3.4.1.min.js"></script>
+<script src="../web/js/bio-pv.min.js"></script>
+<script src="../web/js/ngl.js"></script>
+<script src="../web/js/raphael-min.js"></script>
+<script src="../web/js/smng.min.js"></script>
+<script src="../web/js/jquery.fancybox.pack.js"></script> 
+
+
+<script>
+function sortTemplates(col)
+{
+  var col_idx = $('#full_monty_tbl th').index( col );
+  var isRange = false;
+  var isText = true;
+  switch(col.textContent.toLowerCase())
+  {
+   case 'coverage':
+   case 'range': isRange=true;
+   case 'seq id':
+   case 'resolution':
+   case 'seq similarity':
+   case 'gmqe':
+   case 'qsqe':
+   case 'score': isText = false; break;
+   default: isText = true;
+  }  
+  var sortlist = [];
+  $('#full_monty_tbl tr:nth-child(odd)').each(
+  function()
+  {
+    let val = $(this).find('td:eq('+col_idx+')').text();
+    if(isRange)
+      val = val.split('-')[0];
+    else if(!isText)
+    {
+      val = parseFloat(val);
+      if(isNaN(val))
+        val = null;
+    }
+    sortlist.push( [$(this).attr('id'), val] );
+  });
+     
+  if(isText)
+    sortlist.sort(
+      function(a,b){  
+          return  (a[1] < b[1]) ? -1 : (a[1] > b[1]) ? 1 : 0; 
+        }
+    );
+  else           
+    sortlist.sort(
+        function(a,b){   
+          return  (a[1] < b[1]) ? -1 : (a[1] > b[1]) ? 1 : 0;
+        }
+      );
+
+  var asc = false
+  if($(col).hasClass('headerSortDown'))
+    asc = true;
+
+  $('.headerSortUp,.headerSortDown')
+        .removeClass('headerSortUp')
+        .removeClass('headerSortDown')
+        .addClass('headerSortNone');
+
+  if(!asc)
+    $(col).addClass('headerSortDown').removeClass('headerSortNone')
+  else
+  {
+    $(col).addClass('headerSortUp').removeClass('headerSortNone')
+    sortlist.reverse();
+  }
+  var tplTrs = [];
+  var $tmp = $('#full_monty_tbl tr[tpl_id]');
+  for(var i=0; i<sortlist.length; i++)
+  {
+    tplTrs.push(  $('#'+sortlist[i][0]) );
+    tplTrs.push(  $('#'+sortlist[i][0]+'_b') );
+  }
+
+  $('#full_monty_tbl').append(tplTrs);
+
+  $('.odd').removeClass('odd');
+  $('#full_monty_tbl > tbody > tr:nth-child(4n-3), #full_monty_tbl > tbody > tr:nth-child(4n-2)').addClass('odd');
+}
+
+let isDragging = false;
+$('body')
+  .mousedown(function() {
+      isDragging = false;
+  })
+  .mousemove(function() {
+      isDragging = true;
+   })
+  .on('mouseup', 'tr[id]', function(evt) {
+      let wasDragging = isDragging;
+      isDragging = false;
+      if(!wasDragging) 
+      {
+        if(evt.target.localName=='img' 
+          || evt.target.localName=='a'
+          || evt.target.localName=='b'
+          || evt.target.localName=='button')
+          return;
+
+        let id = $(this).attr('id');
+        if(id.indexOf('_b')>-1)
+          id = id.substring(0, id.indexOf('_b'));
+
+        if($('#simple_align_'+id+':visible').length==0)
+        {  
+          $('#simple_align_'+id).show();
+          $('#tpl_img_'+id).attr('src', id+'_s150.png');
+        }
+        else
+          $('#simple_align_'+id).hide();
+      }
+  });
+
+
+
+
+
+</script>
+

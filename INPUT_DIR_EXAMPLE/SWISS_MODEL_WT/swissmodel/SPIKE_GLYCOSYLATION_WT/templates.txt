@@ -1,0 +1,30 @@
+
+/----------------------------------------------------------------------------------------------------------\
+|Template Search Results                                                                                   |
+\----------------------------------------------------------------------------------------------------------/
+
+      Project : 8NGqV6
+        Title : SPIKE_GLYCOSYLATION_WT
+      Created : today at 13:03
+      Expires : Jan. 30, 2026 at 13:03
+
+
+/--------------------------------------------------------------------------------------------------------\
+| Found Templates                                                                                        |
+\--------------------------------------------------------------------------------------------------------/
+
+                    ID                             Name          Seq ID  Seq Sim   Cov   Resolu   Method   GMQE  Found By 
+--------------------------------------------------------------------------------------------------------------------------
+ f4d36173a0db42cdf5dee25c7466120cd0010e7b  template_upload.1.A   100.000    0.619  1.000   NA    Unknown   0.682 HHblits  
+ 6550cc461fef4003037978578093fb762115c613  template_upload.1.B   100.000    0.619  1.000   NA    Unknown   0.682 HHblits  
+ 0c471c9c5d263cde2e424769ec3d834c48ae543c  template_upload.1.C   100.000    0.619  1.000   NA    Unknown   0.685 HHblits  
+ ff175664b21109535810772e707e44762d8ddc53  template_upload.1.A   100.000    0.619  0.991   NA    Unknown   0.685 BLAST    
+ c33561d91e01d20c86705361498d38a7c5f5286c  template_upload.1.B   100.000    0.619  0.991   NA    Unknown   0.686 BLAST    
+ 63b79ed4ac2a687639aab0e2917f70e0722170be  template_upload.1.C   100.000    0.619  0.991   NA    Unknown   0.689 BLAST    
+ 43529d2bf089a29cc64fe4734d313e92aebe3202  template_upload.1.A    16.000    0.286  0.236   NA    Unknown   0.018 HHblits  
+ 3b6350d48623ad4e21d809fb0f5256b92fbf08bb  template_upload.1.B    16.000    0.286  0.236   NA    Unknown   0.019 HHblits  
+ 9e6e2a85302d59daa0ab0299c0a6fced0cad7503  template_upload.1.C    16.000    0.286  0.236   NA    Unknown   0.018 HHblits  
+ 20f678c869e492ffae6d5dd26882b343006847c3  template_upload.1.A    16.250    0.314  0.063   NA    Unknown   0.000 HHblits  
+ 25a3f3dc60fadc34042f7fe7bf5fb554b3a1fa95  template_upload.1.B    16.250    0.314  0.063   NA    Unknown   0.000 HHblits  
+ f48a0d1132c26350fe4e335fb439abb9bbf08a63  template_upload.1.C    16.250    0.314  0.063   NA    Unknown   0.000 HHblits  
+

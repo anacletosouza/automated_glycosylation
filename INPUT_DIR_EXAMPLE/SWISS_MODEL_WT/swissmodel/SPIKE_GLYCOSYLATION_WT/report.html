@@ -1,0 +1,3811 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPIKE_GLYCOSYLATION_WT | Report</title>
+    <meta name="description" content="SWISS-MODEL modelling results for SPIKE_GLYCOSYLATION_WT." />
+    <link rel="stylesheet" type="text/css" href="../web/js/jquery.fancybox.css"/>
+    <style>
+			.sequence { font-size: 12px; font-family:"Courier New", Courier, monospace;}
+			h2 {font-size: 1.2em; font-family:Arial; margin:20 0 0 0}
+			h3 {font-size: 1.0em; font-family:Arial; margin:0 0 0 0}
+			
+			.borderedTbl>tbody>tr>td, .borderedTbl th{ 
+        text-align:center;
+  			border-top:1px solid #DDD;
+  			border-left:1px solid #DDD;
+      }
+      .borderedTbl{
+        border-bottom:1px solid #DDD;
+        border-right:1px solid #DDD; 
+      }
+      td { 
+        -webkit-hyphens: auto;
+           -moz-hyphens: auto;
+                hyphens: auto; 
+              }
+
+			body {
+			width:100%; 
+			height:100%; 
+			background-color: #E7E8EA;
+			margin: 0;
+			padding: 0;
+			word-wrap: break-word;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 14px;
+
+			}
+			#content{
+			padding:20px;
+			width:780px;
+			margin-left:auto;
+			margin-right:auto;
+			background-color:#FFF;}
+			
+			#sib_footer {
+			background-color: #333333;
+			color: #F7F8FA;
+			font-family: Verdana;
+			font-size: 10px;
+			font-weight: normal;
+			height: 20px;
+			letter-spacing: 1px;
+			
+			width:760px;
+      margin-left:auto;
+      margin-right:auto;
+      padding:0px 20px 0px 20px
+			}
+			
+			#sib_footer a {
+  			color: #FFFFFF;
+  			font-family: Verdana;
+  			font-size: 10px;
+  			font-weight: normal;
+  			letter-spacing: 1px;
+			}
+			a, a:link, a:visited {
+			color: #D6161D;
+			text-decoration: none;
+			} 	
+
+			.alTbl{ font-family:'Courier New', Courier, monospace; }
+	   img{ border:0; }
+			
+    .refLinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0px 8px;
+    }
+    .references li {
+      margin: 12px 0px;
+    }
+    .references .title {
+      font-style: italic;
+    }
+    .references img {
+      max-height: 1.2em;
+    }
+    .references.subtle img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .references a {
+      color: inherit;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 2px;
+    }
+    .references.inline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0px 2px;
+    }   
+	@media print{
+	
+    #content{
+        padding:20px;
+        background-color:#FFF;
+      }
+    body{ 
+        width:100%;
+        height:100%; 
+        background-color: #FFF;
+        padding: 0;
+      }	
+    #sib_footer{
+      display:none;
+    }
+	}
+      
+    </style>
+  </head>
+  <body>
+  
+  <div id="content"> 
+    <div style="display: flex; font-size:1.9em; align-items: center; gap: 64px;">
+      <img style="height:1.9em" src="../web/images/SWISS-MODEL.tsb.svg"> 
+      <div>Homology Modelling Report</div>
+    </div>
+ 
+  <h2>Model Building Report</h2>
+  <p>
+This document lists the results for the homology modelling project &quot;SPIKE_GLYCOSYLATION_WT&quot; submitted to SWISS-MODEL workspace
+on Jan. 16, 2026, 1:03 p.m..The submitted primary amino acid sequence is given in Table T1.</p>
+<p>If you use any results in your research, please cite the relevant publications:</p>
+<ul class="references">
+
+  <li><div>Waterhouse A, Bertoni M, Bienert S, Studer G, Tauriello G, Gumienny R, Heer FT, de Beer TAP, Rempfer C, Bordoli L, Lepore R, Schwede T </div><div class="title">SWISS-MODEL: homology modelling of protein structures and complexes. </div><div class="refLinks">Nucleic Acids Res 46, W296-W303. (2018) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/29788355"><img alt="PubMed logo" src="../web//images/pubmed.png" />29788355</a><a title="Show DOI record" href="https://doi.org/10.1093/nar/gky427"><img alt="DOI logo" src="../web//images/doi.png" />10.1093/nar/gky427</a> </div></li>
+  <li><div>Bienert S, Waterhouse A, de Beer TAP, Tauriello G, Studer G, Bordoli L, Schwede T </div><div class="title">The SWISS-MODEL Repository - new features and functionality. </div><div class="refLinks">Nucleic Acids Res 45, D313-D319. (2017) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/27899672"><img alt="PubMed logo" src="../web//images/pubmed.png" />27899672</a><a title="Show DOI record" href="https://doi.org/10.1093/nar/gkw1132"><img alt="DOI logo" src="../web//images/doi.png" />10.1093/nar/gkw1132</a> </div></li>
+  <li><div>Studer G, Tauriello G, Bienert S, Biasini M, Johner N, Schwede T </div><div class="title">ProMod3 - A versatile homology modelling toolbox. </div><div class="refLinks">PLOS Comp Biol 17(1), e1008667. (2021) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/33507980"><img alt="PubMed logo" src="../web//images/pubmed.png" />33507980</a><a title="Show DOI record" href="https://doi.org/10.1371/journal.pcbi.1008667"><img alt="DOI logo" src="../web//images/doi.png" />10.1371/journal.pcbi.1008667</a> </div></li>
+  <li><div>Studer G, Rempfer C, Waterhouse AM, Gumienny R, Haas J, Schwede T </div><div class="title">QMEANDisCo - distance constraints applied on model quality estimation. </div><div class="refLinks">Bioinformatics 36, 1765-1771. (2020) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/31697312"><img alt="PubMed logo" src="../web//images/pubmed.png" />31697312</a><a title="Show DOI record" href="https://doi.org/10.1093/bioinformatics/btz828"><img alt="DOI logo" src="../web//images/doi.png" />10.1093/bioinformatics/btz828</a> </div></li>
+  <li><div>Bertoni M, Kiefer F, Biasini M, Bordoli L, Schwede T </div><div class="title">Modeling protein quaternary structure of homo- and hetero-oligomers beyond binary interactions by homology. </div><div class="refLinks">Scientific Reports 7. (2017) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/28874689"><img alt="PubMed logo" src="../web//images/pubmed.png" />28874689</a><a title="Show DOI record" href="https://doi.org/10.1038/s41598-017-09654-8"><img alt="DOI logo" src="../web//images/doi.png" />10.1038/s41598-017-09654-8</a> </div></li>
+
+</ul>
+
+<h2>Results</h2>
+
+<p>The user uploaded a template structure to use for the modelling process.</p>
+
+
+
+<h2>Models</h2>
+
+
+<p>The following model was built (see Materials and Methods "Model Building"):</p>
+
+      
+
+      <table id="model_01" class="borderedTbl" width="100%" border=0 cellspacing=1 cellpadding=5>
+  		<thead>
+        <tr>
+        <th><h3>Model #01</h3></th>
+        <th>File</th>
+        <th>Built with</th>
+        <th>Oligo-State</th>
+        <th>Ligands</th>
+        <th title="Global Model Quality Estimate">GMQE</th>
+        <th>QMEANDisCo Global</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><a href="models/01/01.png" target="_blank"><img height="60" src="models/01/01.png"></a>
+        </td>
+  	    <td><a href="models/01/model.pdb" target="_blank">PDB</a></td>
+  		<td>ProMod3 3.6.0</td>
+        <td>homo-trimer (matching prediction)</td>
+        <td>
+          <div style="max-width:350px;"> 13 x AFU: AFU;<br> 12 x AMA: AMA;<br> 3 x BGA: BGA;<br> 21 x BGL: BGL;
+          </div>
+        </td>
+        <td>0.73</td>
+        <td><span id="avgLocalScore_01">0.69</span> &plusmn; 0.05</td>
+      </tr>
+     </table>
+  	
+  	<table width="100%" cellspacing=5>
+  	<tr>
+  	    <td width="30%">
+       	 <table id="qmeanGlobalTbl01"></table>
+        </td>
+          <td width="33%">
+            <a href="#lq-chart-01" rel="lq-01" class="fancybox">
+              <div id="lq-chart-01-thumb" style="margin:12px 4px;"></div>
+            </a>
+            <div id="lq-chart-01" style="display:none"></div>
+          </td>
+
+          <td width="33%">
+            <a href="#qn-chart-01" class="fancybox">
+              <div id="qn-chart-01-thumb" style="margin:12px 4px;"></div>
+            </a>
+            <div id="qn-chart-01" style="display:none"></div>
+          </td>
+  	 </tr>
+  	</table>
+
+
+  	<table class="borderedTbl">
+  		<thead>
+  			<tr>
+  				<th>Template</th>
+  				<th>Seq Identity</th>
+  				<th>Oligo-state</th>
+  				<th>QSQE</th>
+  				<th>Found by</th>
+  				<th>Method</th>
+  				<th>Resolution</th>
+  				<th>Seq Similarity</th>
+  				<th>Range</th>
+  				<th>Coverage</th>
+  				<th>Description</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+        
+        
+        <tr>
+  				<td>
+                
+                  <a href="model/01/templates/template_upload.1.A.pdb.gz" target="_blank">template_upload.1.A</a>
+                
+            
+          </td>
+  				<td>100.00</td>
+  				<td>homo-trimer</td>
+  				<td>0.92</td>
+  				<td>HHblits</td>
+  				<td>Unknown</td>
+  				<td>-</td>
+  				<td>0.62</td>
+  				<td>1 - 1272
+
+        </td>
+  				<td>1.00</td>
+  				<td>
+          Polypeptide</td>
+  			</tr>
+  		</tbody>
+  	</table> 
+  	
+    
+
+    
+    <br>
+    <h3>Included Ligands</h3>
+  	<table width="100%" class="borderedTbl">
+  		<thead>
+  			<tr>
+	  			<th>Ligand</th>
+	  			<th>Description</th>
+	  		</tr>
+	  	</thead>
+		<tbody>
+	  
+      <tr><td>13 x AFU</td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+    
+      <tr><td>12 x AMA</td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+    
+      <tr><td>3 x BGA</td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+    
+      <tr><td>21 x BGL</td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+    
+    </tbody>
+    </table>
+
+  
+    <br>
+    <h3>Excluded ligands</h3>
+    <table width="100%" class="borderedTbl">
+      <thead>
+        <tr>
+          <th>Ligand Name.Number</th>
+          <th>Reason for Exclusion</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+    <tbody>
+    
+      
+      <tr><td>AFU.21</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.50</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.52</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.59</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.87</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.95</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.149</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.173</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.175</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.188</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.204</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.212</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.266</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.282</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.292</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.321</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.324</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.333</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.346</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.382</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.394</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.413</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.439</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.448</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.479</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.487</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.541</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.557</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+      <tr><td>AFU.567</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AFU</div></td>
+      </tr>
+      
+    
+      
+      <tr><td>AGA.70</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AGA</div></td>
+      </tr>
+      
+      <tr><td>AGA.390</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AGA</div></td>
+      </tr>
+      
+      <tr><td>AGA.469</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AGA</div></td>
+      </tr>
+      
+    
+      
+      <tr><td>AMA.5</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.9</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.14</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.15</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.16</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.17</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.24</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.29</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.33</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.35</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.39</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.42</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.43</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.44</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.45</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.46</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.47</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.60</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.64</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.67</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.76</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.77</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.78</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.79</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.83</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.85</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.91</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.93</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.99</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.101</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.107</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.108</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.109</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.110</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.114</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.115</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.116</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.117</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.123</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.124</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.125</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.126</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.130</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.131</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.133</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.137</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.138</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.139</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.140</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.144</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.145</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.147</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.152</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.154</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.161</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.163</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.169</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.171</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.178</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.181</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.185</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.191</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.200</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.202</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.208</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.210</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.216</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.217</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.218</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.219</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.223</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.225</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.231</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.232</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.233</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.234</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.240</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.241</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.242</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.243</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.247</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.248</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.249</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.250</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.254</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.255</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.256</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.257</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.261</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.262</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.269</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.271</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.278</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.280</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.286</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.288</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.295</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.298</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.302</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.308</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.317</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.319</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.334</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.339</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.340</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.341</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.342</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.343</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.344</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.349</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.353</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.358</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.359</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.360</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.361</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.368</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.373</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.377</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.380</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.387</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.388</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.389</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.397</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.401</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.406</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.407</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.408</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.409</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.416</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.421</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.426</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.427</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.428</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.432</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.434</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.449</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.451</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.454</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.455</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.456</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.457</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.458</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.459</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.463</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.466</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.475</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.477</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.483</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.485</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.491</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.492</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.493</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.494</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.498</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.500</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.506</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.507</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.508</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.509</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.515</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.516</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.517</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.518</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.522</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.523</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.524</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.525</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.529</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.530</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.531</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.532</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.536</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.537</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.544</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.546</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.553</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.555</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.561</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.563</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.570</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.573</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.577</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+      <tr><td>AMA.583</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">AMA</div></td>
+      </tr>
+      
+    
+      
+      <tr><td>ANE.27</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.58</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.72</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.157</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.194</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.274</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.311</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.332</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.371</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.392</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.419</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.447</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.471</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.549</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+      <tr><td>ANE.586</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">ANE</div></td>
+      </tr>
+      
+    
+      
+      <tr><td>BGA.7</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.26</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.51</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.57</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.119</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.156</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.165</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.193</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.196</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.236</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.273</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.290</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.310</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.313</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.325</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.331</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.351</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.370</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.399</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.418</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.440</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.446</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.511</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.548</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.565</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.585</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+      <tr><td>BGA.588</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGA</div></td>
+      </tr>
+      
+    
+      
+      <tr><td>BGL.1</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.3</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.6</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.10</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.11</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.12</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.18</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.19</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.20</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.22</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.25</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.28</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.30</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.31</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.34</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.36</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.38</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.40</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.48</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.49</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.53</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.56</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.61</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.62</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.65</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.66</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.68</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.73</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.80</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.81</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.84</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.86</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.89</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.92</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.94</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.96</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.97</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.100</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.102</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.104</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.105</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.111</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.112</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.118</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.120</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.121</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.127</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.134</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.135</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.141</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.142</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.148</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.150</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.153</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.155</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.158</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.159</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.162</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.164</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.166</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.167</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.170</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.172</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.174</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.176</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.179</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.180</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.182</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.186</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.187</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.189</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.192</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.197</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.198</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.201</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.203</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.206</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.209</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.211</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.213</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.214</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.220</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.221</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.224</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.226</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.228</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.229</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.235</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.237</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.238</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.244</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.251</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.252</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.258</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.259</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.265</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.267</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.270</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.272</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.275</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.276</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.279</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.281</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.283</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.284</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.287</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.289</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.291</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.293</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.296</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.297</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.299</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.300</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.301</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.303</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.304</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.306</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.309</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.315</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.318</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.320</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.322</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.323</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.330</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.335</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.337</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.345</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.347</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.350</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.354</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.355</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.356</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.362</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.363</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.364</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.366</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.369</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.372</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.374</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.375</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.378</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.379</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.381</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.383</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.393</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.395</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.398</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.400</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.402</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.403</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.404</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.410</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.411</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.412</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.414</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.417</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.420</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.422</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.429</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.430</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.433</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.435</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.437</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.438</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.445</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.452</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.460</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.461</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.464</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.465</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.467</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.472</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.473</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.476</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.481</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.484</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.486</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.488</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.489</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.495</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.496</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.499</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.501</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.503</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.504</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.510</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.512</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.513</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.519</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.526</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.527</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.533</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.534</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.540</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.542</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.545</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.547</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.550</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.551</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.554</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.556</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.558</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.559</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.562</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.564</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.566</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.568</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.571</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.572</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.574</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.575</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.576</td><td>
+      Clashing with protein.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.578</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.579</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.581</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+      <tr><td>BGL.584</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BGL</div></td>
+      </tr>
+      
+    
+      
+      <tr><td>BMA.4</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.13</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.23</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.32</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.41</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.54</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.63</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.75</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.82</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.90</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.98</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.106</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.113</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.122</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.129</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.136</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.143</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.151</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.160</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.168</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.177</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.190</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.199</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.207</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.215</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.222</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.230</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.239</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.246</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.253</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.260</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.268</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.277</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.285</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.294</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.307</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.316</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.328</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.338</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.348</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.357</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.367</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.376</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.385</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.396</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.405</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.415</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.424</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.431</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.443</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.453</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.462</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.474</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.482</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.490</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.497</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.505</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.514</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.521</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.528</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.535</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.543</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.552</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.560</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.569</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+      <tr><td>BMA.582</td><td>
+      Not in contact with model.
+      </td>
+      <td><div style="max-width:650px;">BMA</div></td>
+      </tr>
+      
+    
+		</tbody>
+	</table>
+  
+
+<br>
+
+
+<pre>Target                   MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLF<br>template_upload.1.A      MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLF<br><br>Target                   LPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTL<br>template_upload.1.A      LPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTL<br><br>Target                   DSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANN<br>template_upload.1.A      DSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANN<br><br>Target                   CTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGF<br>template_upload.1.A      CTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHTPINLVRDLPQGF<br><br>Target                   SALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTF<br>template_upload.1.A      SALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTF<br><br>Target                   LLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFP<br>template_upload.1.A      LLKYNENGTITDAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFP<br><br>Target                   NITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPT<br>template_upload.1.A      NITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPT<br><br>Target                   KLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNN<br>template_upload.1.A      KLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNN<br><br>Target                   LDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSY<br>template_upload.1.A      LDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSY<br><br>Target                   GFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTG<br>template_upload.1.A      GFQPTNGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTG<br><br>Target                   VLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTS<br>template_upload.1.A      VLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITPGTNTS<br><br>Target                   NQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSY<br>template_upload.1.A      NQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSY<br><br>Target                   ECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIP<br>template_upload.1.A      ECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIP<br><br>Target                   TNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br>template_upload.1.A      TNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGI<br><br>Target                   AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNK<br>template_upload.1.A      AVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNK<br><br>Target                   VTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAG<br>template_upload.1.A      VTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAG<br><br>Target                   TITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQ<br>template_upload.1.A      TITSGWTFGAGAALQIPFAMQMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQ<br><br>Target                   DSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAE<br>template_upload.1.A      DSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAE<br><br>Target                   VQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGK<br>template_upload.1.A      VQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGK<br><br>Target                   GYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGT<br>template_upload.1.A      GYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGT<br><br>Target                   HWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKY<br>template_upload.1.A      HWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKY<br><br>Target                   FKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYI<br>template_upload.1.A      FKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYI<br><br>Target                   KWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVL<br>template_upload.1.A      KWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVL<br><br>Target                   KGVKLHYT<br>template_upload.1.A      KGVKLHYT<br><br><br>Target                   MFVFLVLLPLVSSQCVNLTTRTQLPPAYTN<br>template_upload.1.B      MFVFLVLLPLVSSQCVNLTTRTQLPPAYTN<br><br>Target                   SFTRGVYYPDKVFRSSVLHSTQDLFLPFFS<br>template_upload.1.B      SFTRGVYYPDKVFRSSVLHSTQDLFLPFFS<br><br>Target                   NVTWFHAIHVSGTNGTKRFDNPVLPFNDGV<br>template_upload.1.B      NVTWFHAIHVSGTNGTKRFDNPVLPFNDGV<br><br>Target                   YFASTEKSNIIRGWIFGTTLDSKTQSLLIV<br>template_upload.1.B      YFASTEKSNIIRGWIFGTTLDSKTQSLLIV<br><br>Target                   NNATNVVIKVCEFQFCNDPFLGVYYHKNNK<br>template_upload.1.B      NNATNVVIKVCEFQFCNDPFLGVYYHKNNK<br><br>Target                   SWMESEFRVYSSANNCTFEYVSQPFLMDLE<br>template_upload.1.B      SWMESEFRVYSSANNCTFEYVSQPFLMDLE<br><br>Target                   GKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br>template_upload.1.B      GKQGNFKNLREFVFKNIDGYFKIYSKHTPI<br><br>Target                   NLVRDLPQGFSALEPLVDLPIGINITRFQT<br>template_upload.1.B      NLVRDLPQGFSALEPLVDLPIGINITRFQT<br><br>Target                   LLALHRSYLTPGDSSSGWTAGAAAYYVGYL<br>template_upload.1.B      LLALHRSYLTPGDSSSGWTAGAAAYYVGYL<br><br>Target                   QPRTFLLKYNENGTITDAVDCALDPLSETK<br>template_upload.1.B      QPRTFLLKYNENGTITDAVDCALDPLSETK<br><br>Target                   CTLKSFTVEKGIYQTSNFRVQPTESIVRFP<br>template_upload.1.B      CTLKSFTVEKGIYQTSNFRVQPTESIVRFP<br><br>Target                   NITNLCPFGEVFNATRFASVYAWNRKRISN<br>template_upload.1.B      NITNLCPFGEVFNATRFASVYAWNRKRISN<br><br>Target                   CVADYSVLYNSASFSTFKCYGVSPTKLNDL<br>template_upload.1.B      CVADYSVLYNSASFSTFKCYGVSPTKLNDL<br><br>Target                   CFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br>template_upload.1.B      CFTNVYADSFVIRGDEVRQIAPGQTGKIAD<br><br>Target                   YNYKLPDDFTGCVIAWNSNNLDSKVGGNYN<br>template_upload.1.B      YNYKLPDDFTGCVIAWNSNNLDSKVGGNYN<br><br>Target                   YLYRLFRKSNLKPFERDISTEIYQAGSTPC<br>template_upload.1.B      YLYRLFRKSNLKPFERDISTEIYQAGSTPC<br><br>Target                   NGVEGFNCYFPLQSYGFQPTNGVGYQPYRV<br>template_upload.1.B      NGVEGFNCYFPLQSYGFQPTNGVGYQPYRV<br><br>Target                   VVLSFELLHAPATVCGPKKSTNLVKNKCVN<br>template_upload.1.B      VVLSFELLHAPATVCGPKKSTNLVKNKCVN<br><br>Target                   FNFNGLTGTGVLTESNKKFLPFQQFGRDIA<br>template_upload.1.B      FNFNGLTGTGVLTESNKKFLPFQQFGRDIA<br><br>Target                   DTTDAVRDPQTLEILDITPCSFGGVSVITP<br>template_upload.1.B      DTTDAVRDPQTLEILDITPCSFGGVSVITP<br><br>Target                   GTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br>template_upload.1.B      GTNTSNQVAVLYQDVNCTEVPVAIHADQLT<br><br>Target                   PTWRVYSTGSNVFQTRAGCLIGAEHVNNSY<br>template_upload.1.B      PTWRVYSTGSNVFQTRAGCLIGAEHVNNSY<br><br>Target                   ECDIPIGAGICASYQTQTNSPRRARSVASQ<br>template_upload.1.B      ECDIPIGAGICASYQTQTNSPRRARSVASQ<br><br>Target                   SIIAYTMSLGAENSVAYSNNSIAIPTNFTI<br>template_upload.1.B      SIIAYTMSLGAENSVAYSNNSIAIPTNFTI<br><br>Target                   SVTTEILPVSMTKTSVDCTMYICGDSTECS<br>template_upload.1.B      SVTTEILPVSMTKTSVDCTMYICGDSTECS<br><br>Target                   NLLLQYGSFCTQLNRALTGIAVEQDKNTQE<br>template_upload.1.B      NLLLQYGSFCTQLNRALTGIAVEQDKNTQE<br><br>Target                   VFAQVKQIYKTPPIKDFGGFNFSQILPDPS<br>template_upload.1.B      VFAQVKQIYKTPPIKDFGGFNFSQILPDPS<br><br>Target                   KPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br>template_upload.1.B      KPSKRSFIEDLLFNKVTLADAGFIKQYGDC<br><br>Target                   LGDIAARDLICAQKFNGLTVLPPLLTDEMI<br>template_upload.1.B      LGDIAARDLICAQKFNGLTVLPPLLTDEMI<br><br>Target                   AQYTSALLAGTITSGWTFGAGAALQIPFAM<br>template_upload.1.B      AQYTSALLAGTITSGWTFGAGAALQIPFAM<br><br>Target                   QMAYRFNGIGVTQNVLYENQKLIANQFNSA<br>template_upload.1.B      QMAYRFNGIGVTQNVLYENQKLIANQFNSA<br><br>Target                   IGKIQDSLSSTASALGKLQDVVNQNAQALN<br>template_upload.1.B      IGKIQDSLSSTASALGKLQDVVNQNAQALN<br><br>Target                   TLVKQLSSNFGAISSVLNDILSRLDKVEAE<br>template_upload.1.B      TLVKQLSSNFGAISSVLNDILSRLDKVEAE<br><br>Target                   VQIDRLITGRLQSLQTYVTQQLIRAAEIRA<br>template_upload.1.B      VQIDRLITGRLQSLQTYVTQQLIRAAEIRA<br><br>Target                   SANLAATKMSECVLGQSKRVDFCGKGYHLM<br>template_upload.1.B      SANLAATKMSECVLGQSKRVDFCGKGYHLM<br><br>Target                   SFPQSAPHGVVFLHVTYVPAQEKNFTTAPA<br>template_upload.1.B      SFPQSAPHGVVFLHVTYVPAQEKNFTTAPA<br><br>Target                   ICHDGKAHFPREGVFVSNGTHWFVTQRNFY<br>template_upload.1.B      ICHDGKAHFPREGVFVSNGTHWFVTQRNFY<br><br>Target                   EPQIITTDNTFVSGNCDVVIGIVNNTVYDP<br>template_upload.1.B      EPQIITTDNTFVSGNCDVVIGIVNNTVYDP<br><br>Target                   LQPELDSFKEELDKYFKNHTSPDVDLGDIS<br>template_upload.1.B      LQPELDSFKEELDKYFKNHTSPDVDLGDIS<br><br>Target                   GINASVVNIQKEIDRLNEVAKNLNESLIDL<br>template_upload.1.B      GINASVVNIQKEIDRLNEVAKNLNESLIDL<br><br>Target                   QELGKYEQYIKWPWYIWLGFIAGLIAIVMV<br>template_upload.1.B      QELGKYEQYIKWPWYIWLGFIAGLIAIVMV<br><br>Target                   TIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br>template_upload.1.B      TIMLCCMTSCCSCLKGCCSCGSCCKFDEDD<br><br>Target                   SEPVLKGVKLHYT<br>template_upload.1.B      SEPVLKGVKLHYT<br><br><br>Target                   MFVFL<br>template_upload.1.C      MFVFL<br><br>Target                   VLLPL<br>template_upload.1.C      VLLPL<br><br>Target                   VSSQC<br>template_upload.1.C      VSSQC<br><br>Target                   VNLTT<br>template_upload.1.C      VNLTT<br><br>Target                   RTQLP<br>template_upload.1.C      RTQLP<br><br>Target                   PAYTN<br>template_upload.1.C      PAYTN<br><br>Target                   SFTRG<br>template_upload.1.C      SFTRG<br><br>Target                   VYYPD<br>template_upload.1.C      VYYPD<br><br>Target                   KVFRS<br>template_upload.1.C      KVFRS<br><br>Target                   SVLHS<br>template_upload.1.C      SVLHS<br><br>Target                   TQDLF<br>template_upload.1.C      TQDLF<br><br>Target                   LPFFS<br>template_upload.1.C      LPFFS<br><br>Target                   NVTWF<br>template_upload.1.C      NVTWF<br><br>Target                   HAIHV<br>template_upload.1.C      HAIHV<br><br>Target                   SGTNG<br>template_upload.1.C      SGTNG<br><br>Target                   TKRFD<br>template_upload.1.C      TKRFD<br><br>Target                   NPVLP<br>template_upload.1.C      NPVLP<br><br>Target                   FNDGV<br>template_upload.1.C      FNDGV<br><br>Target                   YFAST<br>template_upload.1.C      YFAST<br><br>Target                   EKSNI<br>template_upload.1.C      EKSNI<br><br>Target                   IRGWI<br>template_upload.1.C      IRGWI<br><br>Target                   FGTTL<br>template_upload.1.C      FGTTL<br><br>Target                   DSKTQ<br>template_upload.1.C      DSKTQ<br><br>Target                   SLLIV<br>template_upload.1.C      SLLIV<br><br>Target                   NNATN<br>template_upload.1.C      NNATN<br><br>Target                   VVIKV<br>template_upload.1.C      VVIKV<br><br>Target                   CEFQF<br>template_upload.1.C      CEFQF<br><br>Target                   CNDPF<br>template_upload.1.C      CNDPF<br><br>Target                   LGVYY<br>template_upload.1.C      LGVYY<br><br>Target                   HKNNK<br>template_upload.1.C      HKNNK<br><br>Target                   SWMES<br>template_upload.1.C      SWMES<br><br>Target                   EFRVY<br>template_upload.1.C      EFRVY<br><br>Target                   SSANN<br>template_upload.1.C      SSANN<br><br>Target                   CTFEY<br>template_upload.1.C      CTFEY<br><br>Target                   VSQPF<br>template_upload.1.C      VSQPF<br><br>Target                   LMDLE<br>template_upload.1.C      LMDLE<br><br>Target                   GKQGN<br>template_upload.1.C      GKQGN<br><br>Target                   FKNLR<br>template_upload.1.C      FKNLR<br><br>Target                   EFVFK<br>template_upload.1.C      EFVFK<br><br>Target                   NIDGY<br>template_upload.1.C      NIDGY<br><br>Target                   FKIYS<br>template_upload.1.C      FKIYS<br><br>Target                   KHTPI<br>template_upload.1.C      KHTPI<br><br>Target                   NLVRD<br>template_upload.1.C      NLVRD<br><br>Target                   LPQGF<br>template_upload.1.C      LPQGF<br><br>Target                   SALEP<br>template_upload.1.C      SALEP<br><br>Target                   LVDLP<br>template_upload.1.C      LVDLP<br><br>Target                   IGINI<br>template_upload.1.C      IGINI<br><br>Target                   TRFQT<br>template_upload.1.C      TRFQT<br><br>Target                   LLALH<br>template_upload.1.C      LLALH<br><br>Target                   RSYLT<br>template_upload.1.C      RSYLT<br><br>Target                   PGDSS<br>template_upload.1.C      PGDSS<br><br>Target                   SGWTA<br>template_upload.1.C      SGWTA<br><br>Target                   GAAAY<br>template_upload.1.C      GAAAY<br><br>Target                   YVGYL<br>template_upload.1.C      YVGYL<br><br>Target                   QPRTF<br>template_upload.1.C      QPRTF<br><br>Target                   LLKYN<br>template_upload.1.C      LLKYN<br><br>Target                   ENGTI<br>template_upload.1.C      ENGTI<br><br>Target                   TDAVD<br>template_upload.1.C      TDAVD<br><br>Target                   CALDP<br>template_upload.1.C      CALDP<br><br>Target                   LSETK<br>template_upload.1.C      LSETK<br><br>Target                   CTLKS<br>template_upload.1.C      CTLKS<br><br>Target                   FTVEK<br>template_upload.1.C      FTVEK<br><br>Target                   GIYQT<br>template_upload.1.C      GIYQT<br><br>Target                   SNFRV<br>template_upload.1.C      SNFRV<br><br>Target                   QPTES<br>template_upload.1.C      QPTES<br><br>Target                   IVRFP<br>template_upload.1.C      IVRFP<br><br>Target                   NITNL<br>template_upload.1.C      NITNL<br><br>Target                   CPFGE<br>template_upload.1.C      CPFGE<br><br>Target                   VFNAT<br>template_upload.1.C      VFNAT<br><br>Target                   RFASV<br>template_upload.1.C      RFASV<br><br>Target                   YAWNR<br>template_upload.1.C      YAWNR<br><br>Target                   KRISN<br>template_upload.1.C      KRISN<br><br>Target                   CVADY<br>template_upload.1.C      CVADY<br><br>Target                   SVLYN<br>template_upload.1.C      SVLYN<br><br>Target                   SASFS<br>template_upload.1.C      SASFS<br><br>Target                   TFKCY<br>template_upload.1.C      TFKCY<br><br>Target                   GVSPT<br>template_upload.1.C      GVSPT<br><br>Target                   KLNDL<br>template_upload.1.C      KLNDL<br><br>Target                   CFTNV<br>template_upload.1.C      CFTNV<br><br>Target                   YADSF<br>template_upload.1.C      YADSF<br><br>Target                   VIRGD<br>template_upload.1.C      VIRGD<br><br>Target                   EVRQI<br>template_upload.1.C      EVRQI<br><br>Target                   APGQT<br>template_upload.1.C      APGQT<br><br>Target                   GKIAD<br>template_upload.1.C      GKIAD<br><br>Target                   YNYKL<br>template_upload.1.C      YNYKL<br><br>Target                   PDDFT<br>template_upload.1.C      PDDFT<br><br>Target                   GCVIA<br>template_upload.1.C      GCVIA<br><br>Target                   WNSNN<br>template_upload.1.C      WNSNN<br><br>Target                   LDSKV<br>template_upload.1.C      LDSKV<br><br>Target                   GGNYN<br>template_upload.1.C      GGNYN<br><br>Target                   YLYRL<br>template_upload.1.C      YLYRL<br><br>Target                   FRKSN<br>template_upload.1.C      FRKSN<br><br>Target                   LKPFE<br>template_upload.1.C      LKPFE<br><br>Target                   RDIST<br>template_upload.1.C      RDIST<br><br>Target                   EIYQA<br>template_upload.1.C      EIYQA<br><br>Target                   GSTPC<br>template_upload.1.C      GSTPC<br><br>Target                   NGVEG<br>template_upload.1.C      NGVEG<br><br>Target                   FNCYF<br>template_upload.1.C      FNCYF<br><br>Target                   PLQSY<br>template_upload.1.C      PLQSY<br><br>Target                   GFQPT<br>template_upload.1.C      GFQPT<br><br>Target                   NGVGY<br>template_upload.1.C      NGVGY<br><br>Target                   QPYRV<br>template_upload.1.C      QPYRV<br><br>Target                   VVLSF<br>template_upload.1.C      VVLSF<br><br>Target                   ELLHA<br>template_upload.1.C      ELLHA<br><br>Target                   PATVC<br>template_upload.1.C      PATVC<br><br>Target                   GPKKS<br>template_upload.1.C      GPKKS<br><br>Target                   TNLVK<br>template_upload.1.C      TNLVK<br><br>Target                   NKCVN<br>template_upload.1.C      NKCVN<br><br>Target                   FNFNG<br>template_upload.1.C      FNFNG<br><br>Target                   LTGTG<br>template_upload.1.C      LTGTG<br><br>Target                   VLTES<br>template_upload.1.C      VLTES<br><br>Target                   NKKFL<br>template_upload.1.C      NKKFL<br><br>Target                   PFQQF<br>template_upload.1.C      PFQQF<br><br>Target                   GRDIA<br>template_upload.1.C      GRDIA<br><br>Target                   DTTDA<br>template_upload.1.C      DTTDA<br><br>Target                   VRDPQ<br>template_upload.1.C      VRDPQ<br><br>Target                   TLEIL<br>template_upload.1.C      TLEIL<br><br>Target                   DITPC<br>template_upload.1.C      DITPC<br><br>Target                   SFGGV<br>template_upload.1.C      SFGGV<br><br>Target                   SVITP<br>template_upload.1.C      SVITP<br><br>Target                   GTNTS<br>template_upload.1.C      GTNTS<br><br>Target                   NQVAV<br>template_upload.1.C      NQVAV<br><br>Target                   LYQDV<br>template_upload.1.C      LYQDV<br><br>Target                   NCTEV<br>template_upload.1.C      NCTEV<br><br>Target                   PVAIH<br>template_upload.1.C      PVAIH<br><br>Target                   ADQLT<br>template_upload.1.C      ADQLT<br><br>Target                   PTWRV<br>template_upload.1.C      PTWRV<br><br>Target                   YSTGS<br>template_upload.1.C      YSTGS<br><br>Target                   NVFQT<br>template_upload.1.C      NVFQT<br><br>Target                   RAGCL<br>template_upload.1.C      RAGCL<br><br>Target                   IGAEH<br>template_upload.1.C      IGAEH<br><br>Target                   VNNSY<br>template_upload.1.C      VNNSY<br><br>Target                   ECDIP<br>template_upload.1.C      ECDIP<br><br>Target                   IGAGI<br>template_upload.1.C      IGAGI<br><br>Target                   CASYQ<br>template_upload.1.C      CASYQ<br><br>Target                   TQTNS<br>template_upload.1.C      TQTNS<br><br>Target                   PRRAR<br>template_upload.1.C      PRRAR<br><br>Target                   SVASQ<br>template_upload.1.C      SVASQ<br><br>Target                   SIIAY<br>template_upload.1.C      SIIAY<br><br>Target                   TMSLG<br>template_upload.1.C      TMSLG<br><br>Target                   AENSV<br>template_upload.1.C      AENSV<br><br>Target                   AYSNN<br>template_upload.1.C      AYSNN<br><br>Target                   SIAIP<br>template_upload.1.C      SIAIP<br><br>Target                   TNFTI<br>template_upload.1.C      TNFTI<br><br>Target                   SVTTE<br>template_upload.1.C      SVTTE<br><br>Target                   ILPVS<br>template_upload.1.C      ILPVS<br><br>Target                   MTKTS<br>template_upload.1.C      MTKTS<br><br>Target                   VDCTM<br>template_upload.1.C      VDCTM<br><br>Target                   YICGD<br>template_upload.1.C      YICGD<br><br>Target                   STECS<br>template_upload.1.C      STECS<br><br>Target                   NLLLQ<br>template_upload.1.C      NLLLQ<br><br>Target                   YGSFC<br>template_upload.1.C      YGSFC<br><br>Target                   TQLNR<br>template_upload.1.C      TQLNR<br><br>Target                   ALTGI<br>template_upload.1.C      ALTGI<br><br>Target                   AVEQD<br>template_upload.1.C      AVEQD<br><br>Target                   KNTQE<br>template_upload.1.C      KNTQE<br><br>Target                   VFAQV<br>template_upload.1.C      VFAQV<br><br>Target                   KQIYK<br>template_upload.1.C      KQIYK<br><br>Target                   TPPIK<br>template_upload.1.C      TPPIK<br><br>Target                   DFGGF<br>template_upload.1.C      DFGGF<br><br>Target                   NFSQI<br>template_upload.1.C      NFSQI<br><br>Target                   LPDPS<br>template_upload.1.C      LPDPS<br><br>Target                   KPSKR<br>template_upload.1.C      KPSKR<br><br>Target                   SFIED<br>template_upload.1.C      SFIED<br><br>Target                   LLFNK<br>template_upload.1.C      LLFNK<br><br>Target                   VTLAD<br>template_upload.1.C      VTLAD<br><br>Target                   AGFIK<br>template_upload.1.C      AGFIK<br><br>Target                   QYGDC<br>template_upload.1.C      QYGDC<br><br>Target                   LGDIA<br>template_upload.1.C      LGDIA<br><br>Target                   ARDLI<br>template_upload.1.C      ARDLI<br><br>Target                   CAQKF<br>template_upload.1.C      CAQKF<br><br>Target                   NGLTV<br>template_upload.1.C      NGLTV<br><br>Target                   LPPLL<br>template_upload.1.C      LPPLL<br><br>Target                   TDEMI<br>template_upload.1.C      TDEMI<br><br>Target                   AQYTS<br>template_upload.1.C      AQYTS<br><br>Target                   ALLAG<br>template_upload.1.C      ALLAG<br><br>Target                   TITSG<br>template_upload.1.C      TITSG<br><br>Target                   WTFGA<br>template_upload.1.C      WTFGA<br><br>Target                   GAALQ<br>template_upload.1.C      GAALQ<br><br>Target                   IPFAM<br>template_upload.1.C      IPFAM<br><br>Target                   QMAYR<br>template_upload.1.C      QMAYR<br><br>Target                   FNGIG<br>template_upload.1.C      FNGIG<br><br>Target                   VTQNV<br>template_upload.1.C      VTQNV<br><br>Target                   LYENQ<br>template_upload.1.C      LYENQ<br><br>Target                   KLIAN<br>template_upload.1.C      KLIAN<br><br>Target                   QFNSA<br>template_upload.1.C      QFNSA<br><br>Target                   IGKIQ<br>template_upload.1.C      IGKIQ<br><br>Target                   DSLSS<br>template_upload.1.C      DSLSS<br><br>Target                   TASAL<br>template_upload.1.C      TASAL<br><br>Target                   GKLQD<br>template_upload.1.C      GKLQD<br><br>Target                   VVNQN<br>template_upload.1.C      VVNQN<br><br>Target                   AQALN<br>template_upload.1.C      AQALN<br><br>Target                   TLVKQ<br>template_upload.1.C      TLVKQ<br><br>Target                   LSSNF<br>template_upload.1.C      LSSNF<br><br>Target                   GAISS<br>template_upload.1.C      GAISS<br><br>Target                   VLNDI<br>template_upload.1.C      VLNDI<br><br>Target                   LSRLD<br>template_upload.1.C      LSRLD<br><br>Target                   KVEAE<br>template_upload.1.C      KVEAE<br><br>Target                   VQIDR<br>template_upload.1.C      VQIDR<br><br>Target                   LITGR<br>template_upload.1.C      LITGR<br><br>Target                   LQSLQ<br>template_upload.1.C      LQSLQ<br><br>Target                   TYVTQ<br>template_upload.1.C      TYVTQ<br><br>Target                   QLIRA<br>template_upload.1.C      QLIRA<br><br>Target                   AEIRA<br>template_upload.1.C      AEIRA<br><br>Target                   SANLA<br>template_upload.1.C      SANLA<br><br>Target                   ATKMS<br>template_upload.1.C      ATKMS<br><br>Target                   ECVLG<br>template_upload.1.C      ECVLG<br><br>Target                   QSKRV<br>template_upload.1.C      QSKRV<br><br>Target                   DFCGK<br>template_upload.1.C      DFCGK<br><br>Target                   GYHLM<br>template_upload.1.C      GYHLM<br><br>Target                   SFPQS<br>template_upload.1.C      SFPQS<br><br>Target                   APHGV<br>template_upload.1.C      APHGV<br><br>Target                   VFLHV<br>template_upload.1.C      VFLHV<br><br>Target                   TYVPA<br>template_upload.1.C      TYVPA<br><br>Target                   QEKNF<br>template_upload.1.C      QEKNF<br><br>Target                   TTAPA<br>template_upload.1.C      TTAPA<br><br>Target                   ICHDG<br>template_upload.1.C      ICHDG<br><br>Target                   KAHFP<br>template_upload.1.C      KAHFP<br><br>Target                   REGVF<br>template_upload.1.C      REGVF<br><br>Target                   VSNGT<br>template_upload.1.C      VSNGT<br><br>Target                   HWFVT<br>template_upload.1.C      HWFVT<br><br>Target                   QRNFY<br>template_upload.1.C      QRNFY<br><br>Target                   EPQII<br>template_upload.1.C      EPQII<br><br>Target                   TTDNT<br>template_upload.1.C      TTDNT<br><br>Target                   FVSGN<br>template_upload.1.C      FVSGN<br><br>Target                   CDVVI<br>template_upload.1.C      CDVVI<br><br>Target                   GIVNN<br>template_upload.1.C      GIVNN<br><br>Target                   TVYDP<br>template_upload.1.C      TVYDP<br><br>Target                   LQPEL<br>template_upload.1.C      LQPEL<br><br>Target                   DSFKE<br>template_upload.1.C      DSFKE<br><br>Target                   ELDKY<br>template_upload.1.C      ELDKY<br><br>Target                   FKNHT<br>template_upload.1.C      FKNHT<br><br>Target                   SPDVD<br>template_upload.1.C      SPDVD<br><br>Target                   LGDIS<br>template_upload.1.C      LGDIS<br><br>Target                   GINAS<br>template_upload.1.C      GINAS<br><br>Target                   VVNIQ<br>template_upload.1.C      VVNIQ<br><br>Target                   KEIDR<br>template_upload.1.C      KEIDR<br><br>Target                   LNEVA<br>template_upload.1.C      LNEVA<br><br>Target                   KNLNE<br>template_upload.1.C      KNLNE<br><br>Target                   SLIDL<br>template_upload.1.C      SLIDL<br><br>Target                   QELGK<br>template_upload.1.C      QELGK<br><br>Target                   YEQYI<br>template_upload.1.C      YEQYI<br><br>Target                   KWPWY<br>template_upload.1.C      KWPWY<br><br>Target                   IWLGF<br>template_upload.1.C      IWLGF<br><br>Target                   IAGLI<br>template_upload.1.C      IAGLI<br><br>Target                   AIVMV<br>template_upload.1.C      AIVMV<br><br>Target                   TIMLC<br>template_upload.1.C      TIMLC<br><br>Target                   CMTSC<br>template_upload.1.C      CMTSC<br><br>Target                   CSCLK<br>template_upload.1.C      CSCLK<br><br>Target                   GCCSC<br>template_upload.1.C      GCCSC<br><br>Target                   GSCCK<br>template_upload.1.C      GSCCK<br><br>Target                   FDEDD<br>template_upload.1.C      FDEDD<br><br>Target                   SEPVL<br>template_upload.1.C      SEPVL<br><br>Target                   KGVKL<br>template_upload.1.C      KGVKL<br><br>Target                   HYT<br>template_upload.1.C      HYT<br><br></pre>
+
+
+  <br>
+  <hr><br>
+  
+
+
+
+
+
+<h2>Materials and Methods</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>User Template Alignment</h2>
+The user entered their own target sequence together with an uploaded a template structure file in PDB format.
+
+
+
+
+
+
+<h2>Model Building</h2>
+<p>
+Models are built based on the target-template alignment using ProMod3 (<a href="#promod3">Studer et al.</a>). Coordinates which are conserved between the target and the template are copied from the template to the model. Insertions and deletions are remodelled using a fragment library. Side chains are then rebuilt. Finally, the geometry of the resulting model is regularized by using a force field.
+</p>
+
+<h2>Model Quality Estimation</h2>
+<p>
+The global and per-residue model quality has been assessed using the QMEAN scoring function (<a href="#qmean">Studer et al.</a>).
+</p>
+
+<h2>Ligand Modelling</h2>
+<p>
+Ligands present in the template structure are transferred by homology to the model when the following criteria are met: (a) The ligands are annotated as biologically relevant in the template library, (b) the ligand is in contact with the model, (c) the ligand is not clashing with the protein, (d) the residues in contact with the ligand are conserved between the target and the template. If any of these four criteria is not satisfied, a certain ligand will not be included in the model. The model summary includes information on why and which ligand has not been included.</p>
+
+<h2>Oligomeric State Conservation</h2>
+<p>
+The quaternary structure annotation of the template is used to model the target sequence in its oligomeric form. The method (<a href="#qsqe">Bertoni et al.</a>) is based on a supervised machine learning algorithm, Support Vector Machines (SVM), which combines interface conservation, structural clustering, and other template features to provide a quaternary structure quality estimate (QSQE). The QSQE score is a number between 0 and 1, reflecting the expected accuracy of the interchain contacts for a model built based a given alignment and template. Higher numbers indicate higher reliability. This complements the GMQE score which estimates the accuracy of the tertiary structure of the resulting model.</p>
+
+<h2>References</h2>
+<p>
+  <ul class="references">
+    
+      <li><div>Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL </div><div class="title">BLAST+: architecture and applications. </div><div class="refLinks">BMC Bioinformatics, 10, 421-430. (2009) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/20003500"><img alt="PubMed logo" src="../web//images/pubmed.png" />20003500</a><a title="Show DOI record" href="https://doi.org/10.1186/1471-2105-10-421"><img alt="DOI logo" src="../web//images/doi.png" />10.1186/1471-2105-10-421</a> </div></li>
+      <li><div>Steinegger M, Meier M, Mirdita M, Vöhringer H, Haunsberger SJ, Söding J </div><div class="title">HH-suite3 for fast remote homology detection and deep protein annotation. </div><div class="refLinks">BMC Bioinformatics 20, 473. (2019) <a title="Show PubMed record" href="https://pubmed.ncbi.nlm.nih.gov/31521110"><img alt="PubMed logo" src="../web//images/pubmed.png" />31521110</a><a title="Show DOI record" href="https://doi.org/10.1186/s12859-019-3019-7"><img alt="DOI logo" src="../web//images/doi.png" />10.1186/s12859-019-3019-7</a> </div></li>
+      
+    
+  </ul>
+
+<h2>Table T1:</h2>
+<p>Primary amino acid sequence for which templates were searched and models were built.</p>
+<div class="sequence">MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQDLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNI<br>IRGWIFGTTLDSKTQSLLIVNNATNVVIKVCEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGY<br>FKIYSKHTPINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTITDAVDCALDPLSETK<br>CTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVADYSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSF<br>VIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLDSKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPT<br>NGVGYQPYRVVVLSFELLHAPATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVITP<br>GTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQTQTNSPRRARSVASQSIIAYTMSLG<br>AENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLLQYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGF<br>NFSQILPDPSKPSKRSFIEDLLFNKVTLADAGFIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAM<br>QMAYRFNGIGVTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVEAEVQIDRLITGR<br>LQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVTYVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGT<br>HWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPELDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDL<br>QELGKYEQYIKWPWYIWLGFIAGLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT<br></div>
+
+
+<h2>Table T2:</h2>
+<table class="borderedTbl">
+<thead>
+	<tr>
+		<th>Template</th>
+		<th>Seq Identity</th>
+		<th>Oligo-state</th>
+		<th>QSQE</th>
+		<th>Found by</th>
+		<th>Method</th>
+		<th>Resolution</th>
+		<th>Seq Similarity</th>
+		<th>Coverage</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+
+<tr>
+		<td>template_upload.1.C</td>
+		<td>100.00</td>
+		<td>homo-trimer</td>
+		<td>0.92</td>
+		<td>HHblits</td>
+		<td>Unknown</td>
+		<td>NA</td>
+		<td>0.62</td>
+		<td>1.00</td>
+		<td>Polypeptide</td>
+	</tr>
+<tr>
+		<td>template_upload.1.B</td>
+		<td>100.00</td>
+		<td>homo-trimer</td>
+		<td>0.92</td>
+		<td>HHblits</td>
+		<td>Unknown</td>
+		<td>NA</td>
+		<td>0.62</td>
+		<td>1.00</td>
+		<td>Polypeptide</td>
+	</tr>
+<tr>
+		<td>template_upload.1.A</td>
+		<td>100.00</td>
+		<td>homo-trimer</td>
+		<td>0.92</td>
+		<td>HHblits</td>
+		<td>Unknown</td>
+		<td>NA</td>
+		<td>0.62</td>
+		<td>1.00</td>
+		<td>Polypeptide</td>
+	</tr>
+<tr>
+		<td>template_upload.1.C</td>
+		<td>100.00</td>
+		<td>homo-trimer</td>
+		<td>0.89</td>
+		<td>BLAST</td>
+		<td>Unknown</td>
+		<td>NA</td>
+		<td>0.62</td>
+		<td>0.99</td>
+		<td>Polypeptide</td>
+	</tr>
+<tr>
+		<td>template_upload.1.B</td>
+		<td>100.00</td>
+		<td>homo-trimer</td>
+		<td>0.89</td>
+		<td>BLAST</td>
+		<td>Unknown</td>
+		<td>NA</td>
+		<td>0.62</td>
+		<td>0.99</td>
+		<td>Polypeptide</td>
+	</tr>
+<tr>
+		<td>template_upload.1.A</td>
+		<td>100.00</td>
+		<td>homo-trimer</td>
+		<td>0.89</td>
+		<td>BLAST</td>
+		<td>Unknown</td>
+		<td>NA</td>
+		<td>0.62</td>
+		<td>0.99</td>
+		<td>Polypeptide</td>
+	</tr>
+</tbody>
+</table>
+
+
+<br>The table above shows the top 6 filtered templates. A further 3 templates were found which were considered to be less suitable for modelling than the filtered list.<br>
+template_upload.1.A, template_upload.1.B, template_upload.1.C
+ 
+
+
+	</div>
+	
+  <div id="sib_footer">			
+   <div id="sib_footer_content"> 
+       <a href="https://www.sib.swiss">Swiss Institute of Bioinformatics</a>
+       <a href="mailto:help-swissmodel@unibas.ch" style="margin-left:16px;">Contact Us</a>
+      <div id="sib_footer_right" style="float:right"></div>
+  	</div>
+	</div>
+  
+  <script src="../web/js/jquery-3.7.0.min.js"></script>
+  <script src="../web/js/jquery.fancybox.pack.js"></script> 
+  <script src="../web/js/raphael-min.js"></script>
+  <script src="../web/js/smng.min.js"></script>
+  <script>
+ var localQMEANNormImage='../web/images/qmean_norm.png';
+ var modelData = {
+   
+      "01":{
+        'qmean_local' : { 
+        "A":[0.2,0.22,0.2,0.26,0.37,0.38,0.35,0.33,0.39,0.24,0.28,0.27,0.43,0.42,0.54,0.48,0.54,0.52,0.47,0.52,0.52,0.54,0.56,0.59,0.69,0.73,0.77,0.71,0.82,0.8,0.81,0.77,0.82,0.75,0.86,0.88,0.87,0.83,0.85,0.72,0.61,0.61,0.59,0.65,0.65,0.68,0.75,0.78,0.78,0.84,0.82,0.77,0.81,0.82,0.85,0.86,0.85,0.77,0.74,0.79,0.81,0.85,0.83,0.78,0.76,0.68,0.67,0.58,0.5,0.47,0.36,0.42,0.35,0.39,0.36,0.45,0.5,0.53,0.61,0.68,0.73,0.77,0.8,0.83,0.86,0.82,0.8,0.8,0.87,0.88,0.86,0.85,0.86,0.8,0.72,0.59,0.55,0.57,0.58,0.62,0.71,0.62,0.81,0.81,0.82,0.83,0.81,0.71,0.66,0.61,0.52,0.48,0.4,0.57,0.56,0.79,0.82,0.8,0.79,0.78,0.68,0.51,0.48,0.5,0.62,0.76,0.78,0.79,0.77,0.79,0.73,0.61,0.6,0.57,0.54,0.58,0.58,0.67,0.68,0.59,0.6,0.5,0.41,0.38,0.41,0.39,0.37,0.35,0.35,0.42,0.45,0.44,0.4,0.38,0.43,0.44,0.47,0.55,0.59,0.59,0.56,0.6,0.63,0.55,0.59,0.69,0.7,0.73,0.73,0.67,0.72,0.7,0.63,0.62,0.58,0.58,0.48,0.48,0.46,0.38,0.38,0.4,0.41,0.41,0.56,0.54,0.59,0.63,0.72,0.71,0.8,0.86,0.9,0.87,0.83,0.84,0.77,0.64,0.64,0.64,0.79,0.82,0.86,0.86,0.86,0.81,0.69,0.69,0.66,0.63,0.58,0.59,0.48,0.52,0.67,0.67,0.73,0.72,0.82,0.82,0.83,0.89,0.87,0.83,0.87,0.79,0.78,0.76,0.76,0.74,0.63,0.64,0.68,0.75,0.78,0.79,0.76,0.83,0.78,0.79,0.75,0.7,0.69,0.51,0.53,0.51,0.45,0.35,0.34,0.34,0.38,0.34,0.34,0.35,0.34,0.31,0.49,0.48,0.52,0.49,0.45,0.56,0.65,0.77,0.8,0.83,0.88,0.9,0.86,0.85,0.77,0.83,0.71,0.83,0.86,0.87,0.87,0.83,0.8,0.76,0.61,0.69,0.81,0.86,0.87,0.87,0.86,0.89,0.87,0.85,0.82,0.79,0.76,0.77,0.83,0.84,0.86,0.78,0.87,0.85,0.86,0.75,0.75,0.79,0.85,0.81,0.79,0.81,0.76,0.83,0.9,0.88,0.85,0.79,0.77,0.69,0.62,0.59,0.57,0.58,0.56,0.63,0.61,0.73,0.81,0.82,0.81,0.73,0.7,0.69,0.69,0.63,0.57,0.74,0.75,0.79,0.76,0.79,0.72,0.74,0.81,0.71,0.62,0.76,0.67,0.66,0.77,0.82,0.8,0.82,0.71,0.76,0.74,0.76,0.71,0.75,0.69,0.76,0.77,0.74,0.79,0.78,0.81,0.73,0.67,0.53,0.5,0.66,0.5,0.48,0.44,0.4,0.6,0.63,0.64,0.75,0.71,0.77,0.8,0.65,0.69,0.68,0.67,0.66,0.58,0.63,0.67,0.69,0.65,0.65,0.7,0.69,0.63,0.7,0.82,0.79,0.86,0.83,0.85,0.83,0.83,0.81,0.72,0.79,0.67,0.74,0.82,0.71,0.74,0.81,0.82,0.79,0.52,0.57,0.61,0.68,0.69,0.77,0.83,0.76,0.7,0.77,0.78,0.77,0.79,0.78,0.65,0.65,0.72,0.79,0.84,0.84,0.86,0.84,0.87,0.8,0.8,0.81,0.77,0.73,0.69,0.76,0.72,0.62,0.59,0.67,0.68,0.67,0.59,0.66,0.7,0.72,0.72,0.67,0.69,0.61,0.6,0.54,0.63,0.7,0.74,0.68,0.78,0.72,0.68,0.62,0.67,0.6,0.61,0.61,0.59,0.6,0.55,0.61,0.53,0.47,0.62,0.54,0.68,0.58,0.5,0.49,0.53,0.57,0.59,0.46,0.53,0.67,0.61,0.63,0.72,0.74,0.68,0.77,0.74,0.82,0.76,0.73,0.75,0.69,0.65,0.64,0.61,0.68,0.64,0.74,0.86,0.82,0.77,0.87,0.87,0.87,0.83,0.83,0.77,0.69,0.55,0.41,0.37,0.54,0.64,0.75,0.68,0.79,0.76,0.75,0.69,0.61,0.56,0.65,0.78,0.79,0.8,0.84,0.79,0.72,0.71,0.77,0.84,0.81,0.82,0.8,0.78,0.73,0.74,0.69,0.74,0.83,0.8,0.85,0.81,0.83,0.81,0.76,0.76,0.63,0.59,0.7,0.65,0.6,0.64,0.52,0.65,0.68,0.74,0.81,0.6,0.54,0.44,0.48,0.46,0.55,0.71,0.7,0.85,0.83,0.73,0.78,0.79,0.72,0.73,0.69,0.77,0.81,0.82,0.81,0.81,0.78,0.75,0.58,0.59,0.57,0.67,0.77,0.8,0.87,0.89,0.9,0.88,0.89,0.86,0.81,0.77,0.75,0.81,0.82,0.79,0.87,0.89,0.86,0.87,0.78,0.78,0.71,0.76,0.75,0.76,0.67,0.63,0.65,0.53,0.45,0.44,0.42,0.35,0.43,0.36,0.39,0.4,0.44,0.44,0.4,0.49,0.45,0.46,0.55,0.57,0.51,0.56,0.58,0.77,0.83,0.84,0.81,0.84,0.73,0.84,0.87,0.84,0.87,0.84,0.87,0.88,0.77,0.81,0.74,0.72,0.74,0.81,0.76,0.75,0.83,0.85,0.89,0.9,0.88,0.85,0.79,0.88,0.88,0.9,0.92,0.89,0.81,0.67,0.56,0.52,0.43,0.36,0.35,0.34,0.32,0.34,0.35,0.29,0.35,0.33,0.37,0.51,0.59,0.73,0.82,0.82,0.89,0.85,0.86,0.75,0.75,0.6,0.59,0.57,0.48,0.44,0.52,0.54,0.59,0.5,0.66,0.68,0.78,0.82,0.81,0.84,0.79,0.85,0.84,0.84,0.86,0.9,0.9,0.92,0.92,0.89,0.87,0.85,0.88,0.89,0.92,0.91,0.9,0.83,0.83,0.77,0.81,0.85,0.85,0.85,0.83,0.8,0.76,0.84,0.86,0.85,0.77,0.67,0.79,0.79,0.76,0.83,0.8,0.78,0.8,0.81,0.75,0.72,0.71,0.67,0.75,0.82,0.77,0.8,0.82,0.84,0.83,0.81,0.88,0.85,0.82,0.86,0.86,0.87,0.8,0.79,0.82,0.81,0.81,0.87,0.87,0.8,0.82,0.88,0.86,0.87,0.79,0.78,0.7,0.71,0.76,0.74,0.71,0.73,0.71,0.65,0.63,0.69,0.66,0.79,0.84,0.88,0.85,0.86,0.86,0.86,0.83,0.88,0.86,0.88,0.73,0.7,0.68,0.66,0.58,0.67,0.77,0.73,0.86,0.85,0.86,0.84,0.85,0.82,0.84,0.81,0.78,0.75,0.75,0.63,0.58,0.54,0.39,0.42,0.45,0.35,0.39,0.34,0.25,0.33,0.4,0.35,0.39,0.3,0.41,0.36,0.36,0.35,0.36,0.36,0.38,0.53,0.61,0.53,0.57,0.66,0.6,0.5,0.67,0.78,0.8,0.73,0.71,0.64,0.66,0.8,0.66,0.76,0.77,0.8,0.76,0.76,0.84,0.87,0.8,0.82,0.85,0.86,0.87,0.84,0.85,0.86,0.87,0.85,0.85,0.83,0.83,0.85,0.79,0.73,0.72,0.79,0.62,0.67,0.63,0.67,0.65,0.71,0.7,0.76,0.77,0.82,0.7,0.8,0.83,0.84,0.78,0.79,0.83,0.8,0.81,0.79,0.83,0.83,0.79,0.74,0.75,0.83,0.8,0.67,0.74,0.82,0.78,0.8,0.83,0.85,0.87,0.86,0.84,0.85,0.85,0.88,0.9,0.86,0.87,0.81,0.8,0.76,0.79,0.77,0.75,0.76,0.78,0.71,0.61,0.76,0.77,0.81,0.84,0.79,0.83,0.78,0.82,0.84,0.8,0.77,0.75,0.78,0.78,0.73,0.84,0.79,0.74,0.8,0.82,0.79,0.74,0.78,0.79,0.78,0.8,0.77,0.75,0.79,0.81,0.74,0.8,0.82,0.77,0.76,0.73,0.72,0.77,0.78,0.73,0.69,0.75,0.73,0.69,0.7,0.71,0.82,0.76,0.79,0.81,0.85,0.83,0.75,0.83,0.85,0.8,0.85,0.78,0.83,0.76,0.83,0.85,0.76,0.77,0.8,0.84,0.76,0.73,0.79,0.78,0.7,0.73,0.87,0.79,0.73,0.83,0.75,0.75,0.84,0.89,0.77,0.8,0.88,0.87,0.81,0.8,0.8,0.84,0.75,0.81,0.85,0.83,0.85,0.78,0.78,0.66,0.59,0.58,0.67,0.7,0.84,0.85,0.72,0.86,0.81,0.84,0.87,0.85,0.89,0.87,0.89,0.83,0.87,0.89,0.84,0.81,0.91,0.9,0.91,0.89,0.89,0.87,0.9,0.89,0.86,0.89,0.89,0.83,0.77,0.75,0.77,0.8,0.83,0.85,0.86,0.87,0.87,0.88,0.84,0.82,0.72,0.74,0.84,0.8,0.88,0.83,0.83,0.87,0.66,0.7,0.86,0.86,0.86,0.88,0.87,0.83,0.84,0.79,0.8,0.83,0.85,0.86,0.86,0.81,0.75,0.83,0.84,0.84,0.81,0.87,0.78,0.78,0.82,0.79,0.8,0.75,0.75,0.84,0.67,0.75,0.71,0.77,0.75,0.79,0.71,0.64,0.66,0.6,0.76,0.79,0.83,0.77,0.76,0.75,0.82,0.76,0.8,0.75,0.61,0.63,0.71,0.54,0.41,0.53,0.59,0.46,0.42,0.41,0.4,0.49,0.55,0.46,0.38,0.37,0.44,0.45,0.43,0.51,0.52,0.53,0.49,0.38,0.45,0.44,0.44,0.39,0.37,0.45,0.47,0.45,0.55,0.55,0.53,0.51,0.45,0.47,0.64,0.73,0.77,0.73,0.72,0.77,0.76,0.66,0.73,0.78,0.73,0.64,0.64,0.61,0.59,0.54,0.5,0.5,0.46,0.41,0.42,0.37,0.4,0.42,0.38,0.39,0.43,0.29,0.24,0.34,0.29,0.29,0.22,0.25,0.4,0.31,0.31,0.39,0.34,0.47,0.61,0.56,0.58,0.67,0.73,0.67,0.62,0.67,0.58,0.59,0.6,0.58,0.61,0.53,0.42,0.37,0.35,0.36,0.3,0.25,0.54,0.5,0.49,0.43,0.33,0.6,0.55,0.51,0.35,0.33,0.36,0.28,0.33,0.56,0.61,0.3,0.33,0.46,0.5,0.51,0.53,0.51,0.51,0.46,0.4,0.36,0.36,0.36,0.41,0.36,0.36,0.33,0.51,0.52,null] ,
+        "B":[0.19,0.26,0.17,0.17,0.31,0.37,0.34,0.36,0.39,0.24,0.25,0.31,0.43,0.39,0.54,0.47,0.45,0.44,0.41,0.42,0.43,0.46,0.55,0.56,0.67,0.69,0.78,0.71,0.81,0.79,0.81,0.77,0.82,0.76,0.87,0.88,0.87,0.84,0.86,0.75,0.62,0.63,0.59,0.66,0.65,0.68,0.75,0.77,0.77,0.83,0.83,0.78,0.82,0.83,0.85,0.86,0.85,0.77,0.75,0.79,0.8,0.85,0.84,0.77,0.75,0.64,0.6,0.52,0.48,0.39,0.35,0.35,0.36,0.39,0.38,0.4,0.44,0.49,0.54,0.65,0.7,0.76,0.8,0.83,0.86,0.83,0.8,0.81,0.87,0.88,0.86,0.85,0.87,0.8,0.73,0.6,0.5,0.49,0.55,0.64,0.71,0.61,0.8,0.81,0.82,0.83,0.82,0.74,0.68,0.62,0.51,0.46,0.41,0.58,0.56,0.79,0.83,0.8,0.79,0.78,0.68,0.51,0.46,0.5,0.6,0.74,0.79,0.79,0.77,0.8,0.72,0.59,0.57,0.54,0.53,0.58,0.6,0.65,0.66,0.62,0.56,0.49,0.43,0.37,0.36,0.36,0.35,0.36,0.33,0.4,0.4,0.35,0.37,0.39,0.41,0.41,0.47,0.55,0.61,0.57,0.53,0.58,0.6,0.51,0.56,0.67,0.69,0.73,0.74,0.69,0.72,0.69,0.61,0.62,0.6,0.57,0.46,0.45,0.42,0.35,0.39,0.39,0.4,0.43,0.58,0.56,0.57,0.64,0.73,0.73,0.81,0.86,0.91,0.87,0.83,0.84,0.76,0.63,0.64,0.64,0.8,0.82,0.85,0.86,0.86,0.83,0.76,0.73,0.64,0.61,0.59,0.62,0.46,0.56,0.68,0.66,0.71,0.71,0.82,0.82,0.84,0.89,0.88,0.84,0.87,0.77,0.77,0.77,0.76,0.73,0.63,0.64,0.68,0.74,0.81,0.81,0.78,0.83,0.78,0.8,0.75,0.7,0.65,0.53,0.49,0.48,0.4,0.4,0.36,0.36,0.35,0.35,0.34,0.36,0.37,0.34,0.45,0.44,0.46,0.45,0.46,0.56,0.69,0.76,0.8,0.83,0.88,0.9,0.86,0.85,0.78,0.84,0.72,0.84,0.86,0.86,0.86,0.84,0.78,0.75,0.61,0.7,0.81,0.87,0.87,0.86,0.86,0.9,0.87,0.85,0.83,0.79,0.76,0.78,0.84,0.84,0.85,0.79,0.87,0.84,0.85,0.74,0.75,0.78,0.84,0.81,0.79,0.8,0.75,0.82,0.89,0.87,0.84,0.78,0.77,0.68,0.61,0.59,0.58,0.58,0.55,0.63,0.61,0.72,0.81,0.82,0.82,0.74,0.7,0.7,0.7,0.63,0.56,0.73,0.74,0.79,0.77,0.79,0.67,0.73,0.82,0.73,0.66,0.78,0.69,0.63,0.74,0.82,0.77,0.79,0.71,0.75,0.73,0.76,0.72,0.75,0.69,0.75,0.76,0.74,0.79,0.78,0.81,0.75,0.67,0.53,0.51,0.67,0.5,0.47,0.46,0.4,0.61,0.62,0.68,0.74,0.7,0.77,0.8,0.64,0.69,0.68,0.66,0.66,0.57,0.63,0.68,0.69,0.65,0.65,0.7,0.69,0.64,0.71,0.82,0.78,0.86,0.82,0.84,0.82,0.83,0.8,0.71,0.78,0.69,0.72,0.81,0.7,0.75,0.8,0.76,0.7,0.5,0.65,0.64,0.68,0.65,0.76,0.84,0.76,0.69,0.76,0.77,0.77,0.8,0.78,0.67,0.64,0.72,0.79,0.84,0.84,0.85,0.83,0.87,0.79,0.79,0.81,0.76,0.74,0.72,0.76,0.72,0.62,0.59,0.69,0.71,0.69,0.6,0.67,0.66,0.72,0.71,0.66,0.68,0.6,0.61,0.57,0.64,0.71,0.77,0.71,0.79,0.73,0.68,0.63,0.67,0.61,0.61,0.61,0.6,0.59,0.56,0.62,0.6,0.47,0.61,0.57,0.67,0.61,0.6,0.57,0.53,0.56,0.62,0.46,0.54,0.68,0.61,0.63,0.71,0.74,0.7,0.76,0.71,0.79,0.76,0.73,0.71,0.67,0.66,0.64,0.62,0.68,0.64,0.73,0.85,0.81,0.77,0.87,0.87,0.86,0.83,0.83,0.77,0.69,0.56,0.42,0.37,0.54,0.64,0.74,0.65,0.79,0.76,0.76,0.68,0.62,0.58,0.64,0.8,0.79,0.8,0.82,0.77,0.72,0.68,0.75,0.82,0.8,0.82,0.8,0.78,0.73,0.74,0.69,0.74,0.83,0.8,0.85,0.8,0.82,0.8,0.76,0.78,0.67,0.7,0.71,0.67,0.62,0.65,0.51,0.66,0.69,0.75,0.81,0.6,0.54,0.45,0.49,0.47,0.56,0.72,0.71,0.85,0.84,0.73,0.79,0.79,0.72,0.73,0.69,0.77,0.81,0.82,0.82,0.81,0.79,0.75,0.59,0.61,0.57,0.67,0.77,0.8,0.87,0.89,0.88,0.88,0.87,0.85,0.81,0.76,0.77,0.81,0.82,0.79,0.87,0.89,0.87,0.87,0.78,0.78,0.72,0.75,0.75,0.76,0.68,0.63,0.66,0.54,0.45,0.44,0.42,0.35,0.44,0.37,0.39,0.4,0.44,0.44,0.39,0.5,0.44,0.47,0.56,0.6,0.52,0.56,0.58,0.77,0.83,0.83,0.81,0.84,0.73,0.84,0.84,0.84,0.87,0.84,0.88,0.88,0.77,0.8,0.74,0.74,0.75,0.82,0.74,0.73,0.82,0.85,0.88,0.89,0.87,0.85,0.79,0.88,0.88,0.89,0.92,0.89,0.83,0.68,0.57,0.55,0.43,0.4,0.37,0.36,0.3,0.3,0.35,0.31,0.37,0.34,0.39,0.52,0.6,0.72,0.82,0.82,0.89,0.85,0.86,0.74,0.74,0.58,0.58,0.55,0.46,0.46,0.53,0.55,0.59,0.5,0.68,0.69,0.79,0.83,0.81,0.84,0.79,0.84,0.82,0.82,0.85,0.89,0.9,0.92,0.91,0.89,0.87,0.85,0.88,0.9,0.92,0.92,0.91,0.83,0.83,0.78,0.81,0.84,0.87,0.86,0.84,0.8,0.76,0.83,0.86,0.84,0.75,0.67,0.79,0.79,0.75,0.83,0.81,0.78,0.8,0.8,0.75,0.73,0.71,0.67,0.74,0.81,0.78,0.8,0.82,0.84,0.83,0.8,0.87,0.85,0.82,0.86,0.85,0.87,0.8,0.79,0.83,0.81,0.81,0.87,0.86,0.81,0.82,0.88,0.86,0.87,0.79,0.78,0.7,0.73,0.78,0.76,0.72,0.72,0.7,0.65,0.63,0.68,0.66,0.78,0.83,0.88,0.84,0.86,0.85,0.86,0.83,0.88,0.86,0.88,0.77,0.76,0.75,0.68,0.64,0.69,0.78,0.75,0.86,0.86,0.86,0.84,0.85,0.82,0.84,0.81,0.78,0.74,0.73,0.62,0.57,0.53,0.39,0.42,0.45,0.36,0.38,0.34,0.24,0.32,0.4,0.34,0.39,0.3,0.41,0.36,0.36,0.35,0.35,0.37,0.39,0.52,0.6,0.53,0.57,0.65,0.59,0.5,0.67,0.77,0.79,0.72,0.72,0.63,0.68,0.8,0.66,0.77,0.77,0.81,0.76,0.77,0.84,0.87,0.8,0.82,0.84,0.86,0.87,0.84,0.84,0.86,0.87,0.85,0.85,0.83,0.83,0.85,0.79,0.75,0.73,0.8,0.63,0.66,0.64,0.68,0.64,0.7,0.71,0.77,0.77,0.81,0.69,0.79,0.83,0.84,0.77,0.78,0.83,0.8,0.81,0.79,0.83,0.83,0.79,0.74,0.74,0.83,0.8,0.67,0.74,0.83,0.78,0.8,0.83,0.85,0.87,0.86,0.84,0.85,0.85,0.88,0.9,0.85,0.87,0.8,0.8,0.74,0.78,0.76,0.74,0.75,0.76,0.68,0.61,0.75,0.77,0.8,0.83,0.79,0.83,0.77,0.81,0.84,0.8,0.76,0.75,0.78,0.78,0.72,0.84,0.79,0.74,0.8,0.83,0.79,0.74,0.78,0.79,0.78,0.8,0.77,0.75,0.79,0.82,0.74,0.8,0.82,0.78,0.77,0.75,0.73,0.78,0.78,0.73,0.7,0.75,0.73,0.67,0.7,0.71,0.83,0.77,0.8,0.81,0.86,0.83,0.74,0.83,0.85,0.8,0.85,0.78,0.83,0.76,0.83,0.85,0.77,0.77,0.8,0.84,0.75,0.73,0.8,0.78,0.71,0.74,0.88,0.79,0.72,0.84,0.75,0.75,0.85,0.89,0.77,0.8,0.88,0.87,0.81,0.8,0.8,0.84,0.74,0.79,0.85,0.83,0.85,0.78,0.77,0.67,0.6,0.59,0.68,0.71,0.85,0.86,0.73,0.87,0.81,0.84,0.87,0.85,0.89,0.87,0.88,0.83,0.87,0.89,0.84,0.81,0.91,0.9,0.9,0.89,0.89,0.87,0.9,0.89,0.86,0.88,0.87,0.82,0.74,0.71,0.76,0.8,0.84,0.86,0.86,0.87,0.88,0.89,0.84,0.84,0.76,0.77,0.86,0.82,0.89,0.84,0.84,0.89,0.66,0.7,0.89,0.86,0.86,0.88,0.88,0.84,0.85,0.79,0.8,0.84,0.86,0.87,0.86,0.82,0.75,0.83,0.83,0.84,0.82,0.88,0.79,0.79,0.84,0.82,0.82,0.77,0.81,0.86,0.7,0.8,0.71,0.78,0.75,0.8,0.7,0.65,0.66,0.6,0.75,0.78,0.83,0.78,0.77,0.78,0.85,0.8,0.83,0.76,0.69,0.69,0.8,0.61,0.56,0.66,0.67,0.55,0.64,0.68,0.66,0.58,0.67,0.64,0.5,0.41,0.5,0.48,0.49,0.56,0.55,0.56,0.57,0.44,0.52,0.48,0.47,0.42,0.41,0.5,0.5,0.47,0.56,0.57,0.52,0.52,0.45,0.49,0.65,0.74,0.78,0.71,0.7,0.75,0.76,0.64,0.73,0.78,0.69,0.66,0.65,0.64,0.6,0.55,0.52,0.55,0.53,0.45,0.46,0.43,0.51,0.46,0.39,0.43,0.43,0.29,0.23,0.34,0.36,0.28,0.21,0.22,0.41,0.31,0.33,0.39,0.34,0.51,0.6,0.56,0.6,0.68,0.75,0.67,0.64,0.69,0.62,0.6,0.62,0.61,0.67,0.57,0.45,0.37,0.4,0.39,0.27,0.25,0.55,0.51,0.48,0.43,0.33,0.61,0.56,0.52,0.36,0.33,0.36,0.29,0.33,0.63,0.64,0.29,0.33,0.43,0.51,0.55,0.61,0.56,0.54,0.44,0.41,0.37,0.36,0.31,0.38,0.39,0.41,0.39,0.53,0.53,null] ,
+        "C":[0.19,0.22,0.23,0.24,0.33,0.37,0.37,0.35,0.38,0.21,0.31,0.3,0.41,0.4,0.5,0.41,0.51,0.46,0.44,0.5,0.5,0.53,0.52,0.56,0.67,0.73,0.75,0.71,0.81,0.79,0.81,0.77,0.81,0.74,0.87,0.88,0.86,0.82,0.85,0.74,0.64,0.62,0.59,0.66,0.66,0.69,0.73,0.79,0.78,0.83,0.82,0.77,0.8,0.82,0.85,0.86,0.85,0.78,0.75,0.79,0.81,0.84,0.83,0.77,0.75,0.68,0.66,0.57,0.5,0.44,0.37,0.38,0.35,0.4,0.36,0.43,0.49,0.52,0.61,0.68,0.7,0.78,0.8,0.83,0.86,0.83,0.79,0.81,0.86,0.88,0.87,0.85,0.86,0.8,0.72,0.59,0.54,0.54,0.57,0.63,0.71,0.62,0.79,0.8,0.82,0.83,0.83,0.82,0.69,0.6,0.49,0.43,0.44,0.6,0.55,0.77,0.81,0.79,0.78,0.78,0.65,0.51,0.46,0.5,0.59,0.72,0.76,0.77,0.76,0.78,0.76,0.65,0.58,0.56,0.58,0.6,0.59,0.64,0.68,0.61,0.62,0.47,0.42,0.4,0.41,0.39,0.37,0.35,0.37,0.4,0.42,0.44,0.4,0.35,0.46,0.47,0.49,0.53,0.6,0.57,0.54,0.61,0.65,0.6,0.63,0.69,0.69,0.7,0.73,0.66,0.71,0.66,0.62,0.61,0.58,0.56,0.47,0.48,0.47,0.39,0.39,0.41,0.41,0.41,0.55,0.54,0.59,0.62,0.71,0.69,0.8,0.86,0.9,0.87,0.83,0.84,0.77,0.64,0.64,0.66,0.81,0.81,0.86,0.86,0.86,0.81,0.7,0.7,0.66,0.63,0.58,0.6,0.48,0.5,0.66,0.66,0.71,0.7,0.8,0.81,0.82,0.89,0.87,0.83,0.87,0.79,0.77,0.76,0.73,0.73,0.64,0.64,0.67,0.77,0.81,0.83,0.78,0.83,0.78,0.78,0.75,0.69,0.67,0.53,0.54,0.49,0.48,0.36,0.34,0.36,0.39,0.36,0.36,0.35,0.34,0.34,0.52,0.49,0.55,0.48,0.44,0.53,0.62,0.77,0.79,0.83,0.87,0.91,0.86,0.85,0.78,0.84,0.72,0.84,0.86,0.87,0.87,0.84,0.8,0.75,0.61,0.69,0.82,0.85,0.87,0.86,0.86,0.89,0.87,0.85,0.83,0.79,0.76,0.77,0.83,0.84,0.85,0.79,0.86,0.84,0.85,0.76,0.77,0.78,0.83,0.8,0.79,0.8,0.75,0.82,0.89,0.87,0.83,0.79,0.77,0.67,0.59,0.6,0.58,0.58,0.57,0.63,0.58,0.7,0.8,0.81,0.81,0.73,0.68,0.71,0.69,0.6,0.58,0.72,0.73,0.79,0.76,0.78,0.71,0.72,0.81,0.71,0.64,0.76,0.68,0.65,0.77,0.82,0.8,0.82,0.73,0.77,0.75,0.76,0.72,0.76,0.69,0.76,0.77,0.73,0.8,0.78,0.81,0.75,0.68,0.53,0.5,0.66,0.5,0.47,0.45,0.4,0.61,0.64,0.67,0.75,0.71,0.76,0.79,0.63,0.66,0.66,0.65,0.66,0.58,0.64,0.66,0.7,0.65,0.64,0.7,0.69,0.63,0.7,0.82,0.77,0.86,0.82,0.85,0.83,0.84,0.8,0.71,0.78,0.69,0.72,0.81,0.72,0.77,0.81,0.83,0.77,0.5,0.5,0.61,0.68,0.68,0.78,0.84,0.76,0.69,0.77,0.77,0.77,0.79,0.78,0.67,0.62,0.7,0.76,0.83,0.83,0.85,0.83,0.87,0.79,0.79,0.81,0.76,0.71,0.69,0.77,0.72,0.63,0.58,0.68,0.7,0.7,0.66,0.73,0.73,0.74,0.73,0.68,0.69,0.62,0.62,0.61,0.67,0.7,0.73,0.67,0.77,0.72,0.67,0.63,0.67,0.61,0.62,0.65,0.62,0.64,0.59,0.63,0.62,0.47,0.62,0.58,0.68,0.61,0.57,0.58,0.54,0.57,0.65,0.49,0.56,0.69,0.62,0.64,0.74,0.76,0.71,0.78,0.74,0.81,0.76,0.72,0.73,0.68,0.66,0.65,0.63,0.7,0.64,0.73,0.86,0.82,0.78,0.87,0.87,0.86,0.82,0.82,0.75,0.67,0.54,0.4,0.37,0.53,0.64,0.75,0.66,0.79,0.76,0.76,0.68,0.6,0.55,0.6,0.63,0.73,0.79,0.82,0.78,0.71,0.69,0.75,0.82,0.79,0.81,0.79,0.77,0.72,0.73,0.68,0.75,0.82,0.81,0.85,0.79,0.81,0.81,0.75,0.76,0.64,0.61,0.7,0.65,0.61,0.64,0.51,0.64,0.68,0.73,0.8,0.59,0.54,0.45,0.49,0.47,0.56,0.71,0.71,0.84,0.83,0.72,0.76,0.77,0.71,0.73,0.69,0.76,0.81,0.82,0.81,0.8,0.76,0.74,0.6,0.61,0.57,0.67,0.78,0.8,0.87,0.89,0.89,0.88,0.87,0.85,0.8,0.76,0.76,0.8,0.82,0.79,0.87,0.9,0.86,0.86,0.78,0.78,0.7,0.75,0.75,0.75,0.66,0.63,0.63,0.52,0.43,0.42,0.41,0.36,0.44,0.37,0.39,0.4,0.45,0.43,0.42,0.5,0.45,0.46,0.53,0.56,0.49,0.54,0.57,0.75,0.82,0.82,0.8,0.83,0.72,0.83,0.83,0.83,0.87,0.84,0.88,0.88,0.76,0.79,0.74,0.73,0.74,0.81,0.75,0.74,0.82,0.85,0.89,0.9,0.88,0.84,0.8,0.88,0.87,0.89,0.92,0.89,0.83,0.67,0.56,0.53,0.42,0.4,0.36,0.36,0.3,0.3,0.34,0.3,0.35,0.32,0.37,0.51,0.59,0.71,0.82,0.82,0.89,0.84,0.86,0.75,0.75,0.58,0.57,0.55,0.44,0.41,0.49,0.54,0.58,0.49,0.68,0.68,0.79,0.83,0.81,0.84,0.8,0.85,0.83,0.83,0.86,0.89,0.9,0.91,0.91,0.89,0.88,0.86,0.88,0.9,0.92,0.92,0.9,0.83,0.82,0.76,0.8,0.84,0.86,0.85,0.84,0.8,0.75,0.83,0.86,0.85,0.77,0.67,0.79,0.79,0.76,0.83,0.81,0.78,0.8,0.81,0.75,0.73,0.71,0.67,0.74,0.82,0.81,0.8,0.82,0.85,0.83,0.79,0.87,0.86,0.81,0.86,0.85,0.87,0.79,0.79,0.83,0.81,0.81,0.87,0.87,0.81,0.82,0.88,0.86,0.87,0.79,0.78,0.7,0.72,0.78,0.76,0.73,0.74,0.72,0.66,0.63,0.69,0.66,0.79,0.83,0.88,0.84,0.86,0.86,0.87,0.84,0.88,0.86,0.89,0.77,0.76,0.74,0.69,0.66,0.7,0.78,0.74,0.87,0.85,0.86,0.84,0.85,0.82,0.84,0.82,0.8,0.74,0.74,0.62,0.56,0.51,0.4,0.41,0.44,0.36,0.36,0.33,0.24,0.33,0.41,0.33,0.39,0.3,0.41,0.35,0.36,0.34,0.35,0.36,0.39,0.47,0.56,0.52,0.56,0.64,0.59,0.49,0.66,0.76,0.79,0.73,0.71,0.63,0.68,0.8,0.66,0.76,0.78,0.81,0.77,0.77,0.84,0.87,0.81,0.82,0.85,0.86,0.87,0.84,0.85,0.86,0.87,0.85,0.85,0.83,0.83,0.85,0.78,0.74,0.72,0.79,0.62,0.66,0.64,0.69,0.66,0.71,0.7,0.76,0.77,0.82,0.69,0.79,0.82,0.84,0.77,0.78,0.82,0.8,0.83,0.79,0.84,0.83,0.8,0.75,0.74,0.82,0.8,0.66,0.74,0.82,0.78,0.8,0.83,0.85,0.87,0.86,0.84,0.85,0.85,0.88,0.9,0.86,0.88,0.81,0.79,0.76,0.8,0.76,0.73,0.75,0.77,0.7,0.62,0.76,0.79,0.81,0.83,0.78,0.83,0.77,0.8,0.84,0.79,0.75,0.73,0.77,0.77,0.7,0.83,0.78,0.73,0.79,0.82,0.79,0.74,0.79,0.8,0.78,0.8,0.78,0.75,0.79,0.82,0.74,0.81,0.82,0.78,0.77,0.74,0.73,0.78,0.79,0.74,0.69,0.75,0.73,0.68,0.71,0.71,0.83,0.77,0.8,0.81,0.86,0.84,0.75,0.82,0.85,0.8,0.85,0.78,0.83,0.77,0.83,0.86,0.76,0.77,0.8,0.84,0.76,0.73,0.8,0.78,0.71,0.74,0.88,0.79,0.72,0.83,0.75,0.74,0.85,0.89,0.77,0.8,0.88,0.87,0.81,0.81,0.8,0.84,0.74,0.8,0.85,0.83,0.85,0.78,0.77,0.66,0.59,0.59,0.67,0.7,0.84,0.85,0.72,0.86,0.81,0.84,0.87,0.85,0.89,0.87,0.88,0.83,0.87,0.89,0.84,0.81,0.91,0.9,0.9,0.89,0.89,0.87,0.9,0.89,0.86,0.89,0.88,0.82,0.77,0.74,0.77,0.8,0.83,0.85,0.86,0.88,0.88,0.89,0.85,0.86,0.78,0.8,0.86,0.82,0.89,0.85,0.85,0.89,0.69,0.74,0.87,0.86,0.86,0.88,0.87,0.83,0.84,0.79,0.79,0.83,0.85,0.87,0.86,0.81,0.75,0.82,0.83,0.84,0.82,0.87,0.78,0.79,0.84,0.82,0.82,0.77,0.82,0.86,0.71,0.8,0.72,0.79,0.78,0.83,0.75,0.68,0.69,0.6,0.74,0.79,0.84,0.79,0.78,0.78,0.85,0.79,0.81,0.77,0.66,0.68,0.8,0.63,0.57,0.64,0.69,0.56,0.64,0.69,0.62,0.6,0.68,0.64,0.51,0.44,0.53,0.48,0.48,0.55,0.55,0.55,0.6,0.45,0.52,0.47,0.46,0.43,0.41,0.49,0.5,0.47,0.56,0.56,0.51,0.52,0.45,0.49,0.65,0.74,0.78,0.72,0.72,0.76,0.76,0.64,0.72,0.78,0.69,0.65,0.65,0.63,0.61,0.54,0.52,0.55,0.53,0.45,0.46,0.45,0.52,0.45,0.39,0.43,0.44,0.28,0.24,0.36,0.36,0.29,0.22,0.23,0.4,0.3,0.32,0.38,0.34,0.49,0.6,0.56,0.59,0.68,0.76,0.67,0.63,0.67,0.61,0.56,0.6,0.59,0.64,0.53,0.42,0.37,0.37,0.36,0.27,0.25,0.55,0.49,0.49,0.42,0.33,0.62,0.56,0.51,0.36,0.32,0.35,0.27,0.33,0.63,0.65,0.3,0.32,0.4,0.46,0.51,0.59,0.56,0.54,0.46,0.42,0.38,0.35,0.29,0.38,0.37,0.41,0.43,0.54,0.53,null] },
+        'qmean_global':{"qmean4_norm_score":0.6755301431169384,"qmean4_z_score":-2.5164755843334943,"qmean6_norm_score":0.654590388674331,"qmean6_z_score":-2.6319646783696036,"interaction_norm_score":-0.017894728774146194,"interaction_z_score":-0.7017588499051255,"cbeta_norm_score":-0.009632906543434247,"cbeta_z_score":-0.6629187575780621,"packing_norm_score":-0.32828571286112146,"packing_z_score":-0.5602029963637991,"torsion_norm_score":-0.08353856052735434,"torsion_z_score":-2.1566930184953925,"ss_agreement_norm_score":0.38363622524726754,"ss_agreement_z_score":-2.32880524131565,"acc_agreement_norm_score":0.6551362683438156,"acc_agreement_z_score":-0.574950341557414,"avg_local_score":0.6918742755660996,"avg_local_score_error":0.053}
+      }
+    
+ }  
+
+
+ $(document).ready( function()
+   {  
+      drawQMEAN('01')
+   }) ;
+
+function drawQMEAN(id)
+{
+  var resCount = 0;
+  var local_scores = [];
+  for(chain in modelData[id].qmean_local)
+  {
+    var ls = {'chain':chain,'scores':[]};
+
+    for(var i=0; i<modelData[id].qmean_local[chain].length; i++)
+    {
+        ls['scores'].push([i, modelData[id].qmean_local[chain][i]]);
+        if(modelData[id].qmean_local[chain][i])
+          resCount++;
+    }
+    local_scores.push(ls);
+  }
+
+  $('#avgLocalScore_'+id)
+    .css({'background-color':
+          qmeanLocalColour(modelData[id].qmean_global.avg_local_score, .9),
+          'padding':'2px 8px 2px 8px',
+          'color':'white',
+          'border-radius':'1em',               
+          'display':'inline-block'});
+
+  drawQMEANLocal(local_scores, modelData[id].qmean_global.avg_local_score, id);
+
+  drawQMEANGlobal(modelData[id]['qmean_global'], resCount, id, false);
+
+  $('a[rel=lq-'+id+'],a[href="#qn-chart-'+id+'"]')
+    .fancybox(
+      {
+        padding:30, 
+        'cyclic':true,
+        'hideOnContentClick':true,
+        beforeShow:function(a,b)
+        {
+          var id = $(this.content[0]).first().attr('id');
+          if(id.indexOf('lq-chart')>-1)
+            $('#'+id).closest('.fancybox-outer').after(
+               '<a style="color:#666;float:right;" onclick="svgToPNG(\''+id+'\',\'Local_quality_estimate.png\');">&#128247; Save as PNG</a>'
+               );
+          else if(id.indexOf('qn-chart')>-1)
+            $('#'+id).after(
+               '<a style="color:#666;float:right;" onclick="svgToPNG(\''+id+'\',\'Quality_comparison.png\');">&#128247; Save as PNG</a>'
+               );
+        }
+      });
+}
+
+
+
+
+  </script>
+
+  </body>
+</html>
