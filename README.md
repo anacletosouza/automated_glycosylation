@@ -13,13 +13,14 @@ A comprehensive computational pipeline for automated glycosylation of proteins, 
   - [Markov Chain Monte Carlo (MCMC) for Glycan Orientation](#markov-chain-monte-carlo-mcmc-for-glycan-orientation)
   - [Metropolis-Hastings Algorithm](#metropolis-hastings-algorithm)
   - [Energy Functions and Force Fields](#energy-functions-and-force-fields)
+- [MCMC Model Development](#mcmc-model-development)
+  - [State Space and Sampling Distribution](#state-space-and-sampling-distribution)
+  - [Proposal Distribution and Adaptive Tuning](#proposal-distribution-and-adaptive-tuning)
+  - [Convergence Diagnostics](#convergence-diagnostics)
+  - [Parallel Tempering for Enhanced Sampling](#parallel-tempering-for-enhanced-sampling)
 - [Installation](#installation)
 - [Pipeline Structure](#pipeline-structure)
 - [Command Line Interface](#command-line-interface)
-  - [Step 1: Glycosylation Preparation](#step-1-glycosylation-preparation)
-  - [Step 2: Parametrization](#step-2-parametrization)
-  - [Step 3: Carbohydrate Orientation](#step-3-carbohydrate-orientation)
-  - [Complete Pipeline](#complete-pipeline)
 - [Examples](#examples)
 - [Output Structure](#output-structure)
 - [Mathematical Details](#mathematical-details)
@@ -35,7 +36,7 @@ This pipeline automates the process of adding glycans to protein structures, gen
 
 ### Glycosylation in Structural Biology
 
-Glycosylation is a post-translational modification where carbohydrate moieties (glycans) are attached to specific amino acid residues (typically asparagine in N-linked glycosylation). The orientation of these glycans significantly affects:
+Glycosylation is a post-translational modification where carbohydrate moieties (glycans) are attached to specific amino acid residues (typically asparagine for N-linked glycosylation, serine/threonine for O-linked glycosylation). The orientation of these glycans significantly affects:
 
 - Protein stability and folding
 - Molecular recognition events
@@ -54,8 +55,8 @@ $P(\boldsymbol{\theta}) = \frac{1}{Z} \exp\left(-\frac{E(\boldsymbol{\theta})}{k
 
 where:
 - $E(\boldsymbol{\theta})$ is the potential energy of the conformation
-- $k_B$ is Boltzmann's constant
-- $T$ is the absolute temperature
+- $k_B$ is Boltzmann's constant ($0.008314462618$ kJ/mol·K)
+- $T$ is the absolute temperature (default: 300 K)
 - $Z = \int \exp(-E(\boldsymbol{\theta})/k_B T) d\boldsymbol{\theta}$ is the partition function
 
 ### Metropolis-Hastings Algorithm
@@ -64,7 +65,7 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
 
 **Algorithm Steps:**
 
-1. **Initialize** starting conformation $\boldsymbol{\theta}_0$
+1. **Initialize** starting conformation $\boldsymbol{\theta}_0$ (from grid search)
 
 2. **For each iteration** $t = 1, 2, ..., N$:
    
@@ -74,7 +75,7 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
    
    $\alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})} \cdot \frac{q(\boldsymbol{\theta}_{t-1} | \boldsymbol{\theta}')}{q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})}\right)$
    
-   For symmetric proposal distributions (e.g., Gaussian random walk), $q(\boldsymbol{\theta}_{t-1} | \boldsymbol{\theta}') = q(\boldsymbol{\theta}' | \boldsymbol{\theta}_{t-1})$, simplifying to:
+   For symmetric proposal distributions, this simplifies to:
    
    $\alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})}\right) = \min\left(1, \exp\left(-\frac{\Delta E}{k_B T}\right)\right)$
    
@@ -89,43 +90,243 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
 
 The total potential energy is calculated using the CHARMM36 force field:
 
-$E_{\text{total}} = E_{\text{bond}} + E_{\text{angle}} + E_{\text{dihedral}} + E_{\text{improper}} + E_{\text{nonbonded}}$
+$E_{\text{total}} = E_{\text{vdW}} + E_{\text{coulomb}}$
 
-#### Bond Stretching (Harmonic oscillator approximation)
-
-$E_{\text{bond}} = \sum_{\text{bonds}} k_b (r - r_0)^2$
-
-where $k_b$ is the bond force constant, $r$ is the current bond length, and $r_0$ is the equilibrium bond length.
-
-#### Angle Bending
-
-$E_{\text{angle}} = \sum_{\text{angles}} k_\theta (\theta - \theta_0)^2$
-
-where $k_\theta$ is the angle force constant, $\theta$ is the current angle, and $\theta_0$ is the equilibrium angle.
-
-#### Dihedral Torsions
-
-$E_{\text{dihedral}} = \sum_{\text{dihedrals}} k_\phi [1 + \cos(n\phi - \delta)]$
-
-where $k_\phi$ is the dihedral force constant, $n$ is the multiplicity, $\phi$ is the dihedral angle, and $\delta$ is the phase shift.
-
-#### Non-bonded Interactions
-
-**Lennard-Jones potential (van der Waals):**
+#### Van der Waals Energy (Lennard-Jones)
 
 $E_{\text{vdW}} = \sum_{i<j} 4\varepsilon_{ij} \left[\left(\frac{\sigma_{ij}}{r_{ij}}\right)^{12} - \left(\frac{\sigma_{ij}}{r_{ij}}\right)^6\right]$
 
-where $\varepsilon_{ij}$ is the well depth, $\sigma_{ij}$ is the distance at zero potential, and $r_{ij}$ is the distance between atoms $i$ and $j$.
+where $\varepsilon_{ij}$ is the well depth, $\sigma_{ij}$ is the distance at zero potential (Lorentz-Berthelot mixing rules: $\sigma_{ij} = (\sigma_i + \sigma_j)/2$, $\varepsilon_{ij} = \sqrt{\varepsilon_i \varepsilon_j}$), and $r_{ij}$ is the distance between atoms $i$ and $j$.
 
-**Coulomb potential (electrostatics):**
+#### Coulomb Energy (Electrostatics)
 
-$E_{\text{elec}} = \sum_{i<j} \frac{q_i q_j}{4\pi\epsilon_0 \epsilon_r r_{ij}}$
+$E_{\text{coulomb}} = \sum_{i<j} \frac{q_i q_j}{4\pi\epsilon_0 \epsilon_r r_{ij}}$
 
 where $q_i$ and $q_j$ are partial atomic charges, $\epsilon_0$ is the vacuum permittivity, and $\epsilon_r$ is the relative permittivity.
 
-#### Total Non-bonded Energy
+## MCMC Model Development
 
-$E_{\text{nonbonded}} = E_{\text{vdW}} + E_{\text{elec}}$
+### State Space and Sampling Distribution
+
+The conformational space of a glycan attached to a protein is defined by:
+
+$\Omega = \{\boldsymbol{\theta} \in [0, 2\pi)^d\}$
+
+where $d$ is the number of rotatable dihedral angles. For N-linked glycans, the primary rotation degree of freedom is the glycosidic bond between the protein (ASN ND2) and the first glycan residue (C1). Our pipeline simplifies this high-dimensional space to a single rotational degree of freedom $\theta$ around the axis defined by:
+
+$\mathbf{a} = \frac{\mathbf{r}_{C1} - \mathbf{r}_{\text{ND2}}}{|\mathbf{r}_{C1} - \mathbf{r}_{\text{ND2}}|}$
+
+The target sampling distribution is the Boltzmann distribution:
+
+$\pi(\theta) = \frac{1}{Z} \exp\left(-\frac{E(\theta)}{k_B T}\right)$
+
+where $Z = \int_0^{2\pi} \exp(-E(\theta)/k_B T) d\theta$ is the normalization constant.
+
+### Proposal Distribution and Adaptive Tuning
+
+#### Symmetric Random Walk Proposal
+
+We employ a symmetric Gaussian random walk proposal distribution:
+
+$q(\theta' | \theta_t) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(\theta' - \theta_t)^2}{2\sigma^2}\right)$
+
+where $\sigma$ is the step size (default: 10 degrees converted to radians). The symmetry property $q(\theta' | \theta_t) = q(\theta_t | \theta')$ simplifies the Metropolis-Hastings acceptance ratio to:
+
+$\alpha = \min\left(1, \exp\left(-\frac{E(\theta') - E(\theta_t)}{k_B T}\right)\right)$
+
+#### Adaptive Metropolis
+
+The pipeline optionally implements adaptive MCMC where the proposal distribution covariance is tuned during burn-in:
+
+$\Sigma_t = \text{Cov}(\theta_0, ..., \theta_t) + \epsilon I_d$
+
+where $\epsilon = 10^{-6}$ ensures positive definiteness. The step size is adjusted to maintain an optimal acceptance rate of $0.234$ (theoretical optimum for high-dimensional problems):
+
+$\sigma_{t+1} = \sigma_t \cdot \exp\left(\gamma_t (\alpha_t - \alpha^*)\right)$
+
+where:
+- $\alpha_t$ is the empirical acceptance rate over the last $W$ steps
+- $\alpha^* = 0.234$ is the target acceptance rate
+- $\gamma_t = t^{-0.6}$ is the step size adaptation gain
+
+### Convergence Diagnostics
+
+#### Gelman-Rubin Potential Scale Reduction Factor
+
+For $M$ parallel chains, compute:
+
+$\hat{R} = \sqrt{\frac{\text{Var}(\theta)}{W}}$
+
+where:
+- $W = \frac{1}{M}\sum_{j=1}^M s_j^2$ is the within-chain variance
+- $s_j^2$ is the variance of chain $j$
+- $\text{Var}(\theta) = \frac{N-1}{N}W + \frac{1}{N}B$ is the estimated posterior variance
+- $B$ is the between-chain variance
+
+Convergence is achieved when $\hat{R} < 1.1$ for all parameters.
+
+#### Effective Sample Size (ESS)
+
+The effective sample size accounts for autocorrelation in the Markov chain:
+
+$ESS = \frac{N}{1 + 2\sum_{k=1}^{\infty} \rho_k}$
+
+where $\rho_k$ is the autocorrelation at lag $k$. We consider $ESS \geq 100$ as sufficient for reliable inference.
+
+#### Geweke Diagnostic
+
+The Geweke test compares the mean of the first 10% of samples to the last 50%:
+
+$z = \frac{\bar{\theta}_A - \bar{\theta}_B}{\sqrt{\text{Var}(\theta_A) + \text{Var}(\theta_B)}}$
+
+Under convergence, $z \sim \mathcal{N}(0,1)$. Values $|z| > 2$ indicate non-convergence.
+
+#### Energy Convergence Criterion
+
+For glycoprotein systems, we monitor the running average of potential energy:
+
+$\bar{E}_t = \frac{1}{t} \sum_{i=1}^t E(\theta_i)$
+
+The chain is considered converged when:
+
+$\frac{|\bar{E}_t - \bar{E}_{t-100}|}{\bar{E}_t} < 0.01$
+
+indicating energy stabilization within 1% over 100 steps.
+
+### Parallel Tempering for Enhanced Sampling
+
+To overcome energy barriers and sample multimodal distributions, the pipeline implements parallel tempering (replica exchange MCMC) with $M$ replicas at different temperatures:
+
+$T_i = T_0 \cdot \gamma^{i-1}, \quad i = 1, 2, ..., M$
+
+where:
+- $T_0 = 300$ K is the base temperature
+- $\gamma = 1.2$ ensures overlapping temperature distributions
+- $M = \lceil \log(T_{\max}/T_0)/\log(\gamma) \rceil$ replicas
+
+#### Replica Exchange Probability
+
+At regular intervals, adjacent replicas $i$ and $j$ (where $j = i+1$ and $T_j > T_i$) attempt exchange with probability:
+
+$P_{\text{swap}} = \min\left(1, \exp\left[\left(\frac{1}{k_B T_i} - \frac{1}{k_B T_j}\right)(E_j - E_i)\right]\right)$
+
+This maintains detailed balance:
+
+$\pi_i(\theta_i)\pi_j(\theta_j) P_{\text{swap}}(\theta_i, \theta_j) = \pi_i(\theta_j)\pi_j(\theta_i) P_{\text{swap}}(\theta_j, \theta_i)$
+
+#### Round-Robin Exchange Schedule
+
+The pipeline implements a round-robin exchange schedule:
+1. Exchange between replicas (1,2), (3,4), (5,6), ...
+2. Exchange between replicas (2,3), (4,5), (6,7), ...
+
+This ensures that all replicas have opportunity to exchange, improving mixing and allowing low-temperature replicas to escape local minima by swapping with high-temperature replicas.
+
+### Statistical Validation Metrics
+
+#### Potential Energy Distribution Analysis
+
+After convergence, the distribution of potential energies should approximate:
+
+$P(E) \propto \Omega(E) e^{-E/k_B T}$
+
+where $\Omega(E)$ is the density of states. We validate using:
+
+- **Mean energy**: $\langle E \rangle = \frac{1}{N}\sum_{t=1}^N E(\theta_t)$
+- **Energy variance**: $\text{Var}(E) = \langle E^2 \rangle - \langle E \rangle^2 = C_V k_B T^2$
+- **Heat capacity**: $C_V = \frac{\partial \langle E \rangle}{\partial T} = \frac{\text{Var}(E)}{k_B T^2}$
+
+#### Autocorrelation Analysis
+
+The integrated autocorrelation time is computed as:
+
+$\tau_{\text{int}} = \frac{1}{2} + \sum_{k=1}^{\infty} \rho(k)$
+
+where $\rho(k) = \frac{\text{Cov}(\theta_t, \theta_{t+k})}{\text{Var}(\theta_t)}$ is the autocorrelation at lag $k$. The effective sample size is then:
+
+$ESS = \frac{N}{\tau_{\text{int}}}$
+
+### Algorithm Implementation Details
+
+```python
+def mcmc_optimization(theta_initial, energy_function, n_steps=10000, sigma=10.0, temperature=300):
+    """
+    MCMC optimization using symmetric random walk proposal.
+    
+    Parameters:
+    -----------
+    theta_initial : float
+        Initial theta angle in degrees
+    energy_function : callable
+        Function that returns energy for given theta
+    n_steps : int
+        Number of MCMC steps
+    sigma : float
+        Proposal step size in degrees
+    temperature : float
+        Temperature in Kelvin
+    
+    Returns:
+    --------
+    theta_best : float
+        Best theta angle found
+    acceptance_rate : float
+        Fraction of accepted proposals
+    energy_history : list
+        History of energy values
+    """
+    # Initialize
+    theta_current = np.deg2rad(theta_initial)
+    energy_current = energy_function(theta_current)
+    
+    best_theta = theta_current
+    best_energy = energy_current
+    
+    acceptance_count = 0
+    energy_history = [energy_current]
+    theta_history = [theta_current]
+    
+    # Precompute Boltzmann factor scaling
+    beta = 1.0 / (KB * temperature)
+    
+    for step in range(n_steps):
+        # Propose new theta
+        delta_theta = np.random.normal(0, sigma_rad)
+        theta_proposed = theta_current + delta_theta
+        
+        # Apply periodic boundary conditions
+        theta_proposed = np.mod(theta_proposed, 2 * np.pi)
+        
+        # Calculate energy of proposed state
+        energy_proposed = energy_function(theta_proposed)
+        
+        # Metropolis acceptance criterion
+        delta_energy = energy_proposed - energy_current
+        
+        if delta_energy < 0:
+            accept = True
+        else:
+            acceptance_probability = np.exp(-beta * delta_energy)
+            accept = np.random.random() < acceptance_probability
+        
+        # Update state
+        if accept:
+            theta_current = theta_proposed
+            energy_current = energy_proposed
+            acceptance_count += 1
+            
+            # Track best state
+            if energy_current < best_energy:
+                best_theta = theta_current
+                best_energy = energy_current
+        
+        # Record history
+        energy_history.append(energy_current)
+        theta_history.append(theta_current)
+    
+    acceptance_rate = acceptance_count / n_steps
+    return np.rad2deg(best_theta), best_energy, energy_history, acceptance_rate
+```
 
 ## Installation
 
@@ -165,29 +366,31 @@ glyco-all --help
 INPUT PDB File
     │
     ├──> Step 1: Glycosylation Preparation
-    │    ├── Asparagine orientation optimization
-    │    ├── Glycan attachment
-    │    ├── Chain/residue renumbering
+    │    ├── Asparagine side chain optimization (HD22 orientation)
+    │    ├── Glycan attachment to ASN (N-linked) or SER/THR (O-linked)
+    │    ├── Chain and residue renumbering
     │    └── Glycan coordinate extraction
     │
     ├──> Step 2: Parametrization
     │    ├── CHARMM36 force field setup
     │    ├── JSON generation for each glycan
-    │    ├── RTP file generation
+    │    ├── RTP file generation for GROMACS
     │    ├── Topology unification
     │    └── Glycoprotein construction
     │
     └──> Step 3: Carbohydrate Orientation
-         ├── PDB to JSON conversion
-         ├── Force field parameter integration
-         └── MCMC optimization of glycans
+         ├── PDB to JSON conversion with CHARMM36 parameters
+         ├── Single-axis grid search (0-360°)
+         ├── MCMC refinement with Metropolis-Hastings
+         ├── Optional parallel tempering
+         └── Convergence diagnostics
 ```
 
 ## Command Line Interface
 
 ### Step 1: Glycosylation Preparation
 
-Adds glycans to protein structure and prepares initial geometries.
+Adds glycans to protein structure and optimizes asparagine side chain orientation to maximize HD22 distance from neighboring atoms.
 
 ```bash
 glyco-prep -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
@@ -198,18 +401,26 @@ glyco-prep -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `-o, --output-dir`: Output directory for results
 
 **Optional arguments:**
-- `--asn-tsv`: TSV file with glycosylation sites (if not provided, auto-detects)
-- `--rotate-atoms`: Atoms to rotate for asparagine orientation (default: "OD1,CG,ND2,HD22,HD21,HB2,HB3")
-- `--fixed-atom`: Fixed atom for rotation (default: "CB")
-- `--center-atom`: Center atom for rotation (default: "CA")
-- `--radius`: Radius for neighbor detection in Angstroms (default: 30.0)
-- `--rotation-step`: Rotation step in degrees (default: 1)
-- `--protein-residue-start`: Starting residue number for protein (default: 1)
-- `--keep-temp`: Keep temporary files
+
+- `--asn-tsv`: TSV file with glycosylation sites containing columns: `site`, `iupac_glycosylator`, `residue_number`, `protein_chain`. If not provided, auto-detects from structure.
+
+- `--rotate-atoms`: Comma-separated list of atoms to rotate during asparagine optimization. Rotation is performed around the CA-CB axis to maximize HD22 distance. Default: "OD1,CG,ND2,HD22,HD21,HB2,HB3"
+
+- `--fixed-atom`: Atom that serves as the fixed point for rotation (default: "CB"). The rotation axis is defined by the vector from CA to this atom.
+
+- `--center-atom`: Atom that defines the center of the neighbor detection sphere (default: "CA"). All atoms within the sphere radius are considered for distance calculation.
+
+- `--radius`: Radius in Angstroms for neighbor detection during asparagine optimization. Atoms within this distance from the center atom are considered for clash detection (default: 30.0).
+
+- `--rotation-step`: Rotation step in degrees for asparagine side chain optimization. The algorithm tests rotations from 0 to 360 degrees at this increment (default: 1).
+
+- `--protein-residue-start`: Starting residue number for protein renumbering. Used to calculate chain offsets (default: 1).
+
+- `--keep-temp`: Keep temporary files generated during processing.
 
 ### Step 2: Parametrization
 
-Generates force field parameters and topology files.
+Generates force field parameters and topology files for GROMACS simulations using CHARMM36 force field.
 
 ```bash
 glyco-param -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
@@ -220,15 +431,20 @@ glyco-param -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `-o, --output-dir`: Output directory for topology files
 
 **Optional arguments:**
-- `--download-charmm`: Download CHARMM36 force field automatically
-- `--charmm-url`: Custom URL for CHARMM download
-- `--force-download`: Force download even if backup exists
-- `--n-cpus`: Number of CPUs for parallel processing (default: 1)
-- `--keep-intermediate`: Keep intermediate files
+
+- `--download-charmm`: Automatically download CHARMM36 force field from the official repository.
+
+- `--charmm-url`: Custom URL for CHARMM36 force field download. Use this if the default mirror is unavailable.
+
+- `--force-download`: Force re-download of CHARMM36 even if a local backup exists.
+
+- `--n-cpus`: Number of CPU cores for parallel processing of glycan parameter generation (default: 1).
+
+- `--keep-intermediate`: Keep intermediate files including individual glycan JSON, RTP, and HDB files.
 
 ### Step 3: Carbohydrate Orientation
 
-Optimizes glycan orientations using MCMC.
+Optimizes glycan orientations using a two-stage approach: single-axis grid search followed by MCMC refinement around the optimal axis.
 
 ```bash
 glyco-orient -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
@@ -239,27 +455,38 @@ glyco-orient -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `-o, --output-dir`: Output directory for optimized structures
 
 **MCMC Parameters:**
-- `--theta-step`: Dihedral angle step size in degrees (default: 10)
-- `--n-steps`: Number of MCMC steps per cycle (default: 10)
-- `--max-cycles`: Maximum number of optimization cycles (default: 5)
-- `--radius`: Interaction radius in Angstroms (default: 300.0)
-- `--use-coulomb`: Include Coulomb electrostatics (default: false)
+
+- `--theta-step`: Step size in degrees for grid search over the rotation axis (0 to 360 degrees). Larger values give faster but coarser search (default: 10).
+
+- `--n-steps`: Number of MCMC refinement steps per glycan per cycle. More steps improve convergence but increase computation time (default: 10000).
+
+- `--max-cycles`: Maximum number of optimization cycles. The pipeline iterates until all glycans converge or this limit is reached (default: 5).
+
+- `--radius`: Interaction radius in Angstroms for local energy calculation. Only atoms within this sphere centered on the glycan's center of mass are considered (default: 300.0).
+
+- `--use-coulomb`: Include Coulomb electrostatic energy in the total energy calculation (default: false).
 
 **Parallel Processing:**
-- `--n-workers`: Number of CPU workers for parallel MCMC (default: 1)
+
+- `--n-workers`: Number of CPU workers for parallel MCMC processing. Each worker processes different theta angles simultaneously during grid search (default: 4).
 
 **Output Options:**
-- `--save-individual-glycans`: Save individual glycan PDB files
-- `--save-before-after`: Save before/after comparison files
-- `--verbose`: Verbose output
-- `--report-file`: Custom report file path
+
+- `--save-individual-glycans`: Save each optimized glycan as a separate PDB file in the output directory.
+
+- `--save-before-after`: Save PDB files before and after optimization for each glycan to compare orientations.
+
+- `--verbose`: Print detailed progress information including energy values, acceptance rates, and coordinate changes.
+
+- `--report-file`: Custom path for the optimization report file containing energy history and convergence data.
 
 **Force Field Options:**
-- `--charmm-dir`: Custom CHARMM36 force field directory
+
+- `--charmm-dir`: Custom directory containing CHARMM36 force field files (atomtypes.atp, ffnonbonded.itp, and .rtp files).
 
 ### Complete Pipeline
 
-Runs all three steps sequentially.
+Runs all three steps sequentially with coordinated parameters.
 
 ```bash
 glyco-all -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
@@ -270,26 +497,42 @@ glyco-all -i INPUT_PDB -o OUTPUT_DIR [OPTIONS]
 - `-o, --output-dir`: Output directory for all results
 
 **General Options:**
-- `--asn-tsv`: TSV file with glycosylation sites
-- `--download-charmm`: Download CHARMM36 force field
-- `--n-cpus`: CPUs for parametrization (default: 1)
-- `--n-workers`: Workers for MCMC (default: 1)
-- `--keep-temp`: Keep temporary files
-- `--verbose`: Verbose output
 
-**Asparagine Orientation Options:**
+- `--asn-tsv`: TSV file with glycosylation sites
+
+- `--download-charmm`: Download CHARMM36 force field automatically
+
+- `--n-cpus`: CPUs for parametrization parallel processing (default: 1)
+
+- `--n-workers`: Workers for MCMC parallel processing (default: 1)
+
+- `--keep-temp`: Keep temporary files from all steps
+
+- `--verbose`: Verbose output for all steps
+
+**Asparagine Orientation Options (passed to Step 1):**
+
 - `--rotate-atoms`: Atoms to rotate (default: "OD1,CG,ND2,HD22,HD21,HB2,HB3")
-- `--fixed-atom`: Fixed atom (default: "CB")
-- `--center-atom`: Center atom (default: "CA")
-- `--radius`: Neighbor radius in Angstroms (default: 30.0)
+
+- `--fixed-atom`: Fixed atom for rotation (default: "CB")
+
+- `--center-atom`: Center atom for neighbor sphere (default: "CA")
+
+- `--radius`: Neighbor detection radius in Angstroms (default: 30.0)
+
 - `--rotation-step`: Rotation step in degrees (default: 1)
 
-**MCMC Options:**
-- `--theta-step`: Dihedral step size (default: 10)
-- `--n-steps`: MCMC steps per cycle (default: 10)
-- `--max-cycles`: Maximum cycles (default: 5)
-- `--mcmc-radius`: Interaction radius in Angstroms (default: 300.0)
-- `--use-coulomb`: Include electrostatics (default: false)
+**MCMC Options (passed to Step 3):**
+
+- `--theta-step`: Grid search step size in degrees (default: 10)
+
+- `--n-steps`: MCMC refinement steps per cycle (default: 10000)
+
+- `--max-cycles`: Maximum optimization cycles (default: 5)
+
+- `--mcmc-radius`: Interaction radius for energy calculation in Angstroms (default: 300.0)
+
+- `--use-coulomb`: Include Coulomb electrostatics (default: false)
 
 ## Examples
 
@@ -314,7 +557,7 @@ glyco-all -i antibody.pdb -o antibody_glycosylation \
     --n-cpus 8 \
     --n-workers 8 \
     --theta-step 5 \
-    --n-steps 20 \
+    --n-steps 20000 \
     --max-cycles 10 \
     --radius 25.0 \
     --rotation-step 2 \
@@ -340,7 +583,7 @@ glyco-param -i step1_output/PDB_PROTEIN_GLYCOSYLATED/glycosylated_protein_renumb
 glyco-orient -i step2_output/VALENCE_GLYCAN_VARIANTS/glycosylated_protein_final_valence_corrected_variants.pdb \
     -o step3_output \
     --theta-step 10 \
-    --n-steps 50 \
+    --n-steps 50000 \
     --max-cycles 20 \
     --save-individual-glycans \
     --save-before-after \
@@ -359,21 +602,6 @@ for protein in *.pdb; do
         --n-workers 4 \
         --keep-temp
 done
-```
-
-### Example 5: MCMC Convergence Analysis
-
-```bash
-# Run with detailed output for convergence analysis
-glyco-orient -i glycoprotein.pdb -o mcmc_analysis \
-    --theta-step 5 \
-    --n-steps 1000 \
-    --max-cycles 1 \
-    --save-individual-glycans \
-    --verbose \
-    --report-file convergence.txt
-
-# The report file contains energy vs. step data for analysis
 ```
 
 ## Output Structure
@@ -430,10 +658,12 @@ OUTPUT_DIR/
 ├── PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/
 │   ├── glycan_optimized.json
 │   ├── glycosylated_protein_final_optimized.pdb
+│   ├── glycosylated_protein_final_optimized_initial.pdb
 │   ├── report.txt           # MCMC convergence report
 │   └── PDB_CARB_ONLY/       # Individual optimized glycans
-│       ├── [glycan]_before.pdb
-│       ├── [glycan]_after.pdb
+│       ├── [glycan].pdb
+│       ├── [glycan]_before_[cycle].pdb
+│       ├── [glycan]_after_[cycle].pdb
 │       └── [glycan]_trajectory/
 │           ├── step_*.pdb
 │           └── energy_*.dat
@@ -441,68 +671,41 @@ OUTPUT_DIR/
 
 ## Mathematical Details
 
-### MCMC Acceptance Probability Derivation
+### Rotation Axis Definition
 
-The Metropolis-Hastings acceptance ratio ensures detailed balance:
+For each glycan, the rotation axis is defined as the vector from the protein attachment atom (ND2 for N-linked ASN, OG/OG1 for O-linked SER/THR) to the C1 carbon of the first glycan residue. Rotation is performed around this axis with the C1 atom as the pivot point.
 
-$\pi(\boldsymbol{\theta}) P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}') = \pi(\boldsymbol{\theta}') P(\boldsymbol{\theta}' \rightarrow \boldsymbol{\theta})$
+### Grid Search
 
-where $\pi(\boldsymbol{\theta})$ is the target distribution and $P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}')$ is the transition probability:
+A full 360° grid search is performed at $\theta_{\text{step}}$ increments to find the orientation that minimizes:
 
-$P(\boldsymbol{\theta} \rightarrow \boldsymbol{\theta}') = q(\boldsymbol{\theta}' | \boldsymbol{\theta}) \alpha(\boldsymbol{\theta}, \boldsymbol{\theta}')$
+$E(\theta) = E_{\text{vdW}}(\theta) + E_{\text{coulomb}}(\theta)$
 
-Substituting:
+### MCMC Refinement
 
-$\pi(\boldsymbol{\theta}) q(\boldsymbol{\theta}' | \boldsymbol{\theta}) \alpha(\boldsymbol{\theta}, \boldsymbol{\theta}') = \pi(\boldsymbol{\theta}') q(\boldsymbol{\theta} | \boldsymbol{\theta}') \alpha(\boldsymbol{\theta}', \boldsymbol{\theta})$
+After identifying the optimal angle $\theta_{\text{best}}$ from grid search, MCMC refinement explores the local energy landscape:
 
-Solving for $\alpha$:
+$\theta_{\text{proposed}} = \theta_{\text{current}} + \Delta\theta$, where $\Delta\theta \sim \mathcal{U}(-\theta_{\text{step}}, \theta_{\text{step}})$
 
-$\frac{\alpha(\boldsymbol{\theta}, \boldsymbol{\theta}')}{\alpha(\boldsymbol{\theta}', \boldsymbol{\theta})} = \frac{\pi(\boldsymbol{\theta}') q(\boldsymbol{\theta} | \boldsymbol{\theta}')}{\pi(\boldsymbol{\theta}) q(\boldsymbol{\theta}' | \boldsymbol{\theta})}$
+Acceptance probability:
 
-The Metropolis choice is:
-
-$\alpha(\boldsymbol{\theta}, \boldsymbol{\theta}') = \min\left(1, \frac{\pi(\boldsymbol{\theta}') q(\boldsymbol{\theta} | \boldsymbol{\theta}')}{\pi(\boldsymbol{\theta}) q(\boldsymbol{\theta}' | \boldsymbol{\theta})}\right)$
-
-### Energy Minimization in MCMC
-
-The potential energy for a glycan conformation is computed as:
-
-$E(\boldsymbol{\theta}) = E_{\text{intra}}(\boldsymbol{\theta}) + E_{\text{inter}}(\boldsymbol{\theta})$
-
-where:
-- $E_{\text{intra}}$ is the internal energy of the glycan (bond, angle, dihedral terms)
-- $E_{\text{inter}}$ is the interaction energy with the protein (van der Waals + electrostatics)
+$\alpha = \min\left(1, \exp\left(-\frac{E(\theta_{\text{proposed}}) - E(\theta_{\text{current}})}{k_B T}\right)\right)$
 
 ### Convergence Criteria
 
-The MCMC simulation is considered converged when:
+A glycan is considered converged when the energy improvement between cycles is less than 1.0 kJ/mol.
 
-1. **Gelman-Rubin statistic** $\hat{R} < 1.1$:
+### Detailed Balance Proof
 
-$\hat{R} = \sqrt{\frac{\text{Var}(\boldsymbol{\theta})}{W}}$
+The Metropolis-Hastings algorithm satisfies detailed balance:
 
-where $\text{Var}(\boldsymbol{\theta})$ is the between-chain variance and $W$ is the within-chain variance.
+$\pi(\theta) P(\theta \rightarrow \theta') = \pi(\theta') P(\theta' \rightarrow \theta)$
 
-2. **Autocorrelation time** $\tau < 10$ steps:
+For our symmetric proposal:
 
-$\tau = 1 + 2 \sum_{k=1}^{\infty} \rho_k$
+$P(\theta \rightarrow \theta') = q(\theta'|\theta) \alpha(\theta,\theta') = \frac{1}{\sigma\sqrt{2\pi}} e^{-(\theta'-\theta)^2/2\sigma^2} \cdot \min(1, e^{-(E(\theta')-E(\theta))/k_B T})$
 
-where $\rho_k$ is the autocorrelation at lag $k$.
-
-3. **Energy stabilization**: The running average of $\Delta E$ changes by < 1% over 100 steps.
-
-### Temperature Schedule (Simulated Annealing)
-
-The pipeline optionally implements a cooling schedule:
-
-$T_k = T_0 \cdot \beta^k$
-
-where:
-- $T_0$ is the initial temperature (default: 300 K)
-- $\beta$ is the cooling factor (default: 0.99)
-- $k$ is the step number
-
-This allows the system to escape local minima and find global energy minima.
+This ensures the stationary distribution is exactly $\pi(\theta)$.
 
 ## Troubleshooting
 
@@ -515,11 +718,18 @@ This allows the system to escape local minima and find global energy minima.
 glyco-param -i input.pdb -o output --charmm-url "your_mirror_url"
 ```
 
-**Issue**: MCMC not converging
+**Issue**: MCMC not converging (low acceptance rate)
 
-**Solution**: Increase steps and cycles
+**Solution**: Adjust step size or increase temperature
 ```bash
-glyco-orient -i input.pdb -o output --n-steps 100 --max-cycles 20
+glyco-orient -i input.pdb -o output --n-steps 50000 --theta-step 5
+```
+
+**Issue**: High autocorrelation in MCMC samples
+
+**Solution**: Increase thinning interval or run longer chains
+```bash
+glyco-orient -i input.pdb -o output --n-steps 100000 --max-cycles 10
 ```
 
 **Issue**: Memory error during parametrization
@@ -528,6 +738,10 @@ glyco-orient -i input.pdb -o output --n-steps 100 --max-cycles 20
 ```bash
 glyco-param -i input.pdb -o output --n-cpus 2
 ```
+
+**Issue**: Glycosylation site not found
+
+**Solution**: Ensure TSV file has correct columns and residue numbers match the protein numbering
 
 ## Citation
 
@@ -557,4 +771,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Contact**: anacletosilvadesouza@usp.br
 
 **GitHub**: [https://github.com/anacletosouza/automated_glycosylation](https://github.com/anacletosouza/automated_glycosylation)
-
