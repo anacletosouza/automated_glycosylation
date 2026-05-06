@@ -686,22 +686,23 @@ $$
 
 where $\Omega(E)$ is the density of states. We validate using:
 
-**Mean energy**:
+- **Mean energy**:
+  
+  $$
+  <E> = \frac{1}{N}\sum_{t=1}^N E(\theta_t)
+  $$
 
-$$
-<E> = \frac{1}{N}\sum_{t=1}^N E(\theta_t)
-$$
+- **Energy variance**:
+  
+  $$
+  \mathrm{Var}(E) = <E^2> - <E>^2 = C_V k_B T^2
+  $$
 
-**Energy variance**:
-
-$$
-\mathrm{Var}(E) = <E^2> - <E>^2 = C_V k_B T^2
-$$
-
-**Heat capacity**:
-
-$$
-C_V = \frac{\partial <E>}{\partial T} = \frac{\mathrm{Var}(E)}{k_B T^2}
+- **Heat capacity**:
+  
+  $$
+  C_V = \frac{\partial <E>}{\partial T} = \frac{\mathrm{Var}(E)}{k_B T^2}
+  $$
 
 #### Autocorrelation Analysis
 
