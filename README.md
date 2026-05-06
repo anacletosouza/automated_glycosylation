@@ -73,7 +73,9 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
    
    b. **Calculate acceptance probability**:
    
-   $\alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})} \cdot \frac{q(\boldsymbol{\theta}_{t-1} \mid \boldsymbol{\theta}')}{q(\boldsymbol{\theta}' \mid \boldsymbol{\theta}_{t-1})}\right)$
+   $$
+   \alpha = \min\left(1, \frac{P(\boldsymbol{\theta}')}{P(\boldsymbol{\theta}_{t-1})} \cdot \frac{q(\boldsymbol{\theta}_{t-1} \mid \boldsymbol{\theta}')}{q(\boldsymbol{\theta}' \mid \boldsymbol{\theta}_{t-1})}\right)
+   $$
    
    For symmetric proposal distributions, this simplifies to:
    
@@ -82,7 +84,11 @@ The Metropolis-Hastings algorithm generates a Markov chain that samples from $P(
    c. **Accept or reject the proposal**:
    - Generate random number $u \sim \mathcal{U}(0,1)$
    - If $u \leq \alpha$, accept: $\boldsymbol{\theta}_t = \boldsymbol{\theta}'$
-   - Else, reject: $\boldsymbol{\theta}_t = \boldsymbol{\theta}_{t-1}$
+   - Else, reject:
+
+   $$
+   \boldsymbol{\theta}_t = \boldsymbol{\theta}_{t-1}
+   $$
 
 3. **After convergence**, the samples $\{\boldsymbol{\theta}_t\}$ approximate the Boltzmann distribution.
 
