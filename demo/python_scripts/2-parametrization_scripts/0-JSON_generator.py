@@ -5,6 +5,7 @@ with JSON files for carbohydrate parameterization.
 
 Author: Anacleto
 Date: 2026-01-08
+Modified: 2026-05-07 - Generic file names
 """
 
 import os
@@ -15,6 +16,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import re
 import argparse
+import glob
 
 # Define the mapping from PDB residue names to CHARMM names
 CARB_PDB_CHARMM_DICT = {
@@ -28,6 +30,13 @@ CARB_PDB_CHARMM_DICT = {
     "SIA": "ANE5AC"
     # Add more mappings as needed
 }
+
+def find_file(base_dir: Path, pattern: str) -> Optional[Path]:
+    """Find a file matching pattern in directory."""
+    matches = list(base_dir.glob(pattern))
+    if matches:
+        return matches[0]
+    return None
 
 def extract_residue_names(sequence_poly: str) -> List[str]:
     if pd.isna(sequence_poly) or not sequence_poly:
@@ -56,9 +65,22 @@ def create_residue_list(residue_names: List[str]) -> List[Dict[str, str]]:
 def process_glycans(base_dir: Path, output_base_dir: Path):
     """Main function to process all glycan data."""
     
-    # Input files
-    topol_carb_path = base_dir / "TO_TOP" / "topol_carb.tsv"
-    caselino_table_path = base_dir / "TSV" / "caselino_2020_tables_glycosylator.tsv"
+    # Find input files dynamically (generic names)
+    topol_carb_path = find_file(base_dir / "TO_TOP", "topol_carb*.tsv")
+    if not topol_carb_path:
+        topol_carb_path = base_dir / "TO_TOP" / "topol_carb.tsv"
+    
+    # Find the glycosylator TSV file (generic pattern)
+    tsv_dir = base_dir / "TSV"
+    glycosylator_path = find_file(tsv_dir, "*_glycosylator.tsv")
+    if not glycosylator_path:
+        # Try alternative patterns
+        glycosylator_path = find_file(tsv_dir, "*.tsv")
+        if glycosylator_path:
+            # Filter out corrected files
+            if "_corrected" in str(glycosylator_path):
+                glycosylator_path = find_file(tsv_dir, "*_glycosylator.tsv")
+    
     pdb_dir = base_dir / "TO_TOP" / "PDB"
     
     # Log file for warnings
@@ -67,19 +89,38 @@ def process_glycans(base_dir: Path, output_base_dir: Path):
     # Create output directory if it doesn't exist
     output_base_dir.mkdir(parents=True, exist_ok=True)
     
+    # Check if required files exist
+    if not topol_carb_path.exists():
+        print(f"Error: topol_carb file not found in {base_dir / 'TO_TOP'}")
+        print(f"Looking for pattern: topol_carb*.tsv")
+        return
+    
+    if not glycosylator_path or not glycosylator_path.exists():
+        print(f"Error: Glycosylator TSV file not found in {tsv_dir}")
+        print(f"Looking for pattern: *_glycosylator.tsv")
+        return
+    
+    if not pdb_dir.exists():
+        print(f"Error: PDB directory not found: {pdb_dir}")
+        return
+    
+    print(f"Using topol_carb file: {topol_carb_path}")
+    print(f"Using glycosylator file: {glycosylator_path}")
+    print(f"Using PDB directory: {pdb_dir}")
+    
     # Read data files
-    print("Reading data files...")
+    print("\nReading data files...")
     try:
         topol_carb_df = pd.read_csv(topol_carb_path, sep='\t')
-        caselino_df = pd.read_csv(caselino_table_path, sep='\t')
+        glycosylator_df = pd.read_csv(glycosylator_path, sep='\t')
     except Exception as e:
         print(f"Error reading input files: {e}")
         return
     
-    if len(topol_carb_df) != len(caselino_df):
+    if len(topol_carb_df) != len(glycosylator_df):
         print(f"Warning: Dataframes have different lengths!")
         print(f"topol_carb.tsv: {len(topol_carb_df)} rows")
-        print(f"caselino_2020_tables_glycosylator.tsv: {len(caselino_df)} rows")
+        print(f"glycosylator file: {len(glycosylator_df)} rows")
     
     warnings = []
     
@@ -94,8 +135,8 @@ def process_glycans(base_dir: Path, output_base_dir: Path):
             warnings.append(f"Missing PDB: {pdb_filename}")
             continue
         
-        if idx < len(caselino_df):
-            iupac_sequence = caselino_df.loc[idx, 'iupac_glycosylator']
+        if idx < len(glycosylator_df):
+            iupac_sequence = glycosylator_df.loc[idx, 'iupac_glycosylator']
             if pd.isna(iupac_sequence):
                 iupac_sequence = ""
         else:
@@ -156,31 +197,29 @@ def process_glycans(base_dir: Path, output_base_dir: Path):
 
 def main():
     parser = argparse.ArgumentParser(description="Process glycan data and generate JSON files.")
-    parser.add_argument("--base_dir", type=str, default="/grain/anacleto/project/AA_simulations/with_membranes/glycosylation_method/Delta",
-                        help="Base directory containing input files and PDB directory")
-    parser.add_argument("--output_dir", type=str, default=None,
-                        help="Directory where JSON files and logs will be saved (default: under base_dir/python_scripts/...)")
+    parser.add_argument("--base_dir", type=str, required=True,
+                        help="Base directory containing input files (output from previous pipeline)")
+    parser.add_argument("--output_dir", type=str, required=True,
+                        help="Directory where JSON files and logs will be saved")
     args = parser.parse_args()
     
     base_dir = Path(args.base_dir)
+    output_base_dir = Path(args.output_dir)
     
-    if args.output_dir:
-        output_base_dir = Path(args.output_dir)
-    else:
-        output_base_dir = base_dir / "python_scripts" / "2-parametrization_scripts" / "JSON"
+    # Check if base directory exists
+    if not base_dir.exists():
+        print(f"Error: Base directory not found: {base_dir}")
+        return
     
-    required_files = [
-        base_dir / "TO_TOP" / "topol_carb.tsv",
-        base_dir / "TSV" / "caselino_2020_tables_glycosylator.tsv",
-        base_dir / "TO_TOP" / "PDB"
-    ]
-    for req_file in required_files:
-        if not req_file.exists():
-            print(f"Error: Required file/directory not found: {req_file}")
-            return
+    # Create output directory
+    output_base_dir.mkdir(parents=True, exist_ok=True)
     
     print("Glycan Processing Script")
     print("=" * 50)
+    print(f"Base directory: {base_dir}")
+    print(f"Output directory: {output_base_dir}")
+    print("=" * 50)
+    
     try:
         process_glycans(base_dir, output_base_dir)
     except Exception as e:
@@ -190,4 +229,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
