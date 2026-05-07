@@ -1,0 +1,425 @@
+HETATM    1 C1   NDG A   1      -0.207   1.202   0.140  1.00  0.00          C   
+HETATM    2 C2   NDG A   1      -0.859  -0.132  -0.234  1.00  0.00          C   
+HETATM    3 C3   NDG A   1       0.010  -1.280   0.290  1.00  0.00          C   
+HETATM    4 C4   NDG A   1       1.422  -1.141  -0.287  1.00  0.00          C   
+HETATM    5 C5   NDG A   1       1.986   0.231   0.088  1.00  0.00          C   
+HETATM    6 C6   NDG A   1       3.372   0.401  -0.535  1.00  0.00          C   
+HETATM    7 C7   NDG A   1      -2.969  -1.289   0.144  1.00  0.00          C   
+HETATM    8 C8   NDG A   1      -3.613  -1.484  -1.204  1.00  0.00          C   
+HETATM    9 O5   NDG A   1       1.115   1.253  -0.402  1.00  0.00          O   
+HETATM   10 O3   NDG A   1      -0.553  -2.529  -0.117  1.00  0.00          O   
+HETATM   11 O4   NDG A   1       2.260  -2.165   0.252  1.00  0.00          O   
+HETATM   12 O6   NDG A   1       4.276  -0.539   0.051  1.00  0.00          O   
+HETATM   13 O7   NDG A   1      -3.149  -2.103   1.025  1.00  0.00          O   
+HETATM   14 N2   NDG A   1      -2.191  -0.212   0.370  1.00  0.00          N   
+HETATM   15 O1   NDG A   1      -0.144   1.320   1.562  1.00  0.00          O   
+HETATM  115 H1   NDG A   1      -0.798   2.022  -0.267  1.00  0.00          H   
+HETATM  116 H2   NDG A   1      -0.946  -0.202  -1.318  1.00  0.00          H   
+HETATM  117 H3   NDG A   1       0.051  -1.236   1.378  1.00  0.00          H   
+HETATM  118 H4   NDG A   1       1.382  -1.238  -1.372  1.00  0.00          H   
+HETATM  119 H5   NDG A   1       2.063   0.308   1.172  1.00  0.00          H   
+HETATM  120 H61  NDG A   1       3.731   1.414  -0.352  1.00  0.00          H   
+HETATM  121 H62  NDG A   1       3.311   0.226  -1.609  1.00  0.00          H   
+HETATM  122 H81  NDG A   1      -2.891  -1.259  -1.989  1.00  0.00          H   
+HETATM  123 H82  NDG A   1      -3.945  -2.518  -1.303  1.00  0.00          H   
+HETATM  124 H83  NDG A   1      -4.471  -0.817  -1.298  1.00  0.00          H   
+HETATM  125 HO3  NDG A   1      -0.645  -2.733  -1.051  1.00  0.00          H   
+HETATM  126 HO6  NDG A   1       5.091  -0.233   0.456  1.00  0.00          H   
+HETATM  127 HN2  NDG A   1      -2.510   0.707   0.097  1.00  0.00          H   
+HETATM  128 HO1  NDG A   1       0.267   2.090   1.962  1.00  0.00          H   
+HETATM   16 C1   NAG A   2       3.540  -2.345  -0.295  1.00  0.00          C   
+HETATM   17 C2   NAG A   2       3.534  -3.456  -1.311  1.00  0.00          C   
+HETATM   18 C3   NAG A   2       4.963  -3.650  -1.852  1.00  0.00          C   
+HETATM   19 C4   NAG A   2       5.929  -3.893  -0.688  1.00  0.00          C   
+HETATM   20 C5   NAG A   2       5.835  -2.724   0.295  1.00  0.00          C   
+HETATM   21 C6   NAG A   2       6.753  -2.987   1.490  1.00  0.00          C   
+HETATM   22 C7   NAG A   2       2.246  -1.896  -2.637  1.00  0.00          C   
+HETATM   23 C8   NAG A   2       1.434  -1.142  -1.616  1.00  0.00          C   
+HETATM   24 N2   NAG A   2       2.625  -3.166  -2.392  1.00  0.00          N   
+HETATM   25 O1   NAG A   2       1.454  -2.847   1.172  1.00  0.00          O   
+HETATM   26 O3   NAG A   2       4.991  -4.771  -2.738  1.00  0.00          O   
+HETATM   27 O4   NAG A   2       7.265  -3.988  -1.190  1.00  0.00          O   
+HETATM   28 O5   NAG A   2       4.499  -2.576   0.777  1.00  0.00          O   
+HETATM   29 O6   NAG A   2       6.373  -4.210   2.123  1.00  0.00          O   
+HETATM   30 O7   NAG A   2       2.561  -1.361  -3.678  1.00  0.00          O   
+HETATM  129 H2   NAG A   2       3.225  -4.399  -0.859  1.00  0.00          H   
+HETATM  130 H3   NAG A   2       5.274  -2.755  -2.390  1.00  0.00          H   
+HETATM  131 H4   NAG A   2       5.664  -4.821  -0.183  1.00  0.00          H   
+HETATM  132 H5   NAG A   2       6.129  -1.791  -0.186  1.00  0.00          H   
+HETATM  133 H61  NAG A   2       7.785  -3.061   1.147  1.00  0.00          H   
+HETATM  134 H62  NAG A   2       6.666  -2.167   2.203  1.00  0.00          H   
+HETATM  135 H81  NAG A   2       1.965  -1.132  -0.664  1.00  0.00          H   
+HETATM  136 H82  NAG A   2       1.283  -0.117  -1.957  1.00  0.00          H   
+HETATM  137 H83  NAG A   2       0.468  -1.628  -1.489  1.00  0.00          H   
+HETATM  138 HN2  NAG A   2       2.872  -3.405  -3.341  1.00  0.00          H   
+HETATM  139 HO1  NAG A   2       2.117  -2.266   1.226  1.00  0.00          H   
+HETATM  140 HO3  NAG A   2       5.561  -5.520  -2.548  1.00  0.00          H   
+HETATM  141 HO6  NAG A   2       6.831  -4.503   2.914  1.00  0.00          H   
+HETATM   31 C1   BMA A   3       8.299  -4.455  -0.388  1.00  0.00          C   
+HETATM   32 C2   BMA A   3       9.631  -4.432  -1.144  1.00  0.00          C   
+HETATM   33 C3   BMA A   3      10.761  -4.926  -0.241  1.00  0.00          C   
+HETATM   34 C4   BMA A   3      10.724  -4.157   1.083  1.00  0.00          C   
+HETATM   35 C5   BMA A   3       9.314  -4.247   1.672  1.00  0.00          C   
+HETATM   36 C6   BMA A   3       9.276  -3.512   3.013  1.00  0.00          C   
+HETATM   37 O1   BMA A   3       7.139  -4.508  -2.484  1.00  0.00          O   
+HETATM   38 O2   BMA A   3       9.916  -3.044  -1.506  1.00  0.00          O   
+HETATM   39 O3   BMA A   3      12.025  -4.729  -0.878  1.00  0.00          O   
+HETATM   40 O4   BMA A   3      11.661  -4.730   1.996  1.00  0.00          O   
+HETATM   41 O5   BMA A   3       8.369  -3.634   0.802  1.00  0.00          O   
+HETATM   42 O6   BMA A   3       9.154  -4.461   4.074  1.00  0.00          O   
+HETATM  142 H2   BMA A   3       9.606  -5.068  -2.030  1.00  0.00          H   
+HETATM  143 H3   BMA A   3      10.630  -5.991  -0.050  1.00  0.00          H   
+HETATM  144 H4   BMA A   3      10.981  -3.114   0.902  1.00  0.00          H   
+HETATM  145 H5   BMA A   3       9.071  -5.299   1.821  1.00  0.00          H   
+HETATM  146 H61  BMA A   3       8.422  -2.835   3.032  1.00  0.00          H   
+HETATM  147 H62  BMA A   3      10.195  -2.940   3.140  1.00  0.00          H   
+HETATM  148 HO1  BMA A   3       7.467  -3.666  -2.109  1.00  0.00          H   
+HETATM  149 HO2  BMA A   3      10.578  -2.847  -2.173  1.00  0.00          H   
+HETATM  150 HO4  BMA A   3      12.593  -4.767   1.767  1.00  0.00          H   
+HETATM   43 C1   MAN A   4       8.702  -3.916   5.270  1.00  0.00          C   
+HETATM   44 C2   MAN A   4       8.737  -4.956   6.394  1.00  0.00          C   
+HETATM   45 C3   MAN A   4      10.216  -5.448   6.527  1.00  0.00          C   
+HETATM   46 C4   MAN A   4      11.127  -4.227   6.697  1.00  0.00          C   
+HETATM   47 C5   MAN A   4      10.863  -3.247   5.553  1.00  0.00          C   
+HETATM   48 C6   MAN A   4      11.793  -2.040   5.692  1.00  0.00          C   
+HETATM   49 O1   MAN A   4       8.510  -5.661   3.750  1.00  0.00          O   
+HETATM   50 O2   MAN A   4       8.353  -4.372   7.635  1.00  0.00          O   
+HETATM   51 O3   MAN A   4      10.340  -6.304   7.665  1.00  0.00          O   
+HETATM   52 O4   MAN A   4      12.493  -4.643   6.667  1.00  0.00          O   
+HETATM   53 O5   MAN A   4       9.507  -2.802   5.590  1.00  0.00          O   
+HETATM   54 O6   MAN A   4      11.360  -1.228   6.784  1.00  0.00          O   
+HETATM  151 H2   MAN A   4       8.114  -5.821   6.162  1.00  0.00          H   
+HETATM  152 H3   MAN A   4      10.486  -5.996   5.625  1.00  0.00          H   
+HETATM  153 H4   MAN A   4      10.912  -3.745   7.651  1.00  0.00          H   
+HETATM  154 H5   MAN A   4      11.067  -3.748   4.606  1.00  0.00          H   
+HETATM  155 H61  MAN A   4      11.769  -1.455   4.773  1.00  0.00          H   
+HETATM  156 H62  MAN A   4      12.810  -2.385   5.876  1.00  0.00          H   
+HETATM  157 HO1  MAN A   4       8.812  -4.174   3.218  1.00  0.00          H   
+HETATM  158 HO2  MAN A   4       7.767  -3.612   7.647  1.00  0.00          H   
+HETATM  159 HO4  MAN A   4      12.981  -4.630   5.841  1.00  0.00          H   
+HETATM   55 C1   MAN A   5      11.474  -7.130   7.719  1.00  0.00          C   
+HETATM   56 C2   MAN A   5      11.157  -8.424   8.422  1.00  0.00          C   
+HETATM   57 C3   MAN A   5      10.735  -8.081   9.872  1.00  0.00          C   
+HETATM   58 C4   MAN A   5      11.812  -7.205  10.520  1.00  0.00          C   
+HETATM   59 C5   MAN A   5      12.077  -5.997   9.620  1.00  0.00          C   
+HETATM   60 C6   MAN A   5      13.126  -5.095  10.276  1.00  0.00          C   
+HETATM   61 O1   MAN A   5       9.808  -5.495   8.676  1.00  0.00          O   
+HETATM   62 O2   MAN A   5      12.336  -9.241   8.476  1.00  0.00          O   
+HETATM   63 O3   MAN A   5      10.581  -9.289  10.621  1.00  0.00          O   
+HETATM   64 O4   MAN A   5      11.360  -6.761  11.800  1.00  0.00          O   
+HETATM   65 O5   MAN A   5      12.578  -6.405   8.349  1.00  0.00          O   
+HETATM   66 O6   MAN A   5      12.939  -5.098  11.691  1.00  0.00          O   
+HETATM  160 H2   MAN A   5      10.339  -8.964   7.945  1.00  0.00          H   
+HETATM  161 H3   MAN A   5       9.787  -7.543   9.854  1.00  0.00          H   
+HETATM  162 H4   MAN A   5      12.728  -7.784  10.637  1.00  0.00          H   
+HETATM  163 H5   MAN A   5      11.142  -5.447   9.515  1.00  0.00          H   
+HETATM  164 H61  MAN A   5      13.019  -4.079   9.897  1.00  0.00          H   
+HETATM  165 H62  MAN A   5      14.123  -5.468  10.040  1.00  0.00          H   
+HETATM  166 HO1  MAN A   5      10.245  -5.602   7.020  1.00  0.00          H   
+HETATM  167 HO2  MAN A   5      13.036  -9.116   7.832  1.00  0.00          H   
+HETATM  168 HO3  MAN A   5      10.853 -10.128  10.241  1.00  0.00          H   
+HETATM  169 HO4  MAN A   5      11.277  -5.821  11.981  1.00  0.00          H   
+HETATM  170 HO6  MAN A   5      12.110  -4.792  12.066  1.00  0.00          H   
+HETATM   67 C1   MAN A   6      10.445  -0.249   6.368  1.00  0.00          C   
+HETATM   68 C2   MAN A   6      10.926   1.127   6.749  1.00  0.00          C   
+HETATM   69 C3   MAN A   6      11.040   1.182   8.289  1.00  0.00          C   
+HETATM   70 C4   MAN A   6       9.711   0.734   8.905  1.00  0.00          C   
+HETATM   71 C5   MAN A   6       9.330  -0.631   8.328  1.00  0.00          C   
+HETATM   72 C6   MAN A   6       8.021  -1.104   8.964  1.00  0.00          C   
+HETATM   73 O1   MAN A   6      12.118  -1.610   7.898  1.00  0.00          O   
+HETATM   74 O2   MAN A   6       9.967   2.106   6.327  1.00  0.00          O   
+HETATM   75 O3   MAN A   6      11.337   2.518   8.701  1.00  0.00          O   
+HETATM   76 O4   MAN A   6       9.851   0.634  10.324  1.00  0.00          O   
+HETATM   77 O5   MAN A   6       9.156  -0.544   6.905  1.00  0.00          O   
+HETATM   78 O6   MAN A   6       8.235  -2.355   9.620  1.00  0.00          O   
+HETATM  171 H2   MAN A   6      11.904   1.345   6.320  1.00  0.00          H   
+HETATM  172 H3   MAN A   6      11.841   0.516   8.610  1.00  0.00          H   
+HETATM  173 H4   MAN A   6       8.937   1.463   8.666  1.00  0.00          H   
+HETATM  174 H5   MAN A   6      10.120  -1.341   8.573  1.00  0.00          H   
+HETATM  175 H61  MAN A   6       7.264  -1.226   8.189  1.00  0.00          H   
+HETATM  176 H62  MAN A   6       7.682  -0.366   9.690  1.00  0.00          H   
+HETATM  177 HO1  MAN A   6      11.928  -1.069   7.580  1.00  0.00          H   
+HETATM  178 HO2  MAN A   6       9.884   2.934   6.807  1.00  0.00          H   
+HETATM  179 HO3  MAN A   6      11.618   2.691   9.603  1.00  0.00          H   
+HETATM  180 HO4  MAN A   6      10.168   1.386  10.829  1.00  0.00          H   
+HETATM  181 HO6  MAN A   6       8.178  -2.411  10.577  1.00  0.00          H   
+HETATM   79 C1   MAN A   7      12.094  -4.405  -2.228  1.00  0.00          C   
+HETATM   80 C2   MAN A   7      13.539  -4.467  -2.731  1.00  0.00          C   
+HETATM   81 C3   MAN A   7      14.054  -5.926  -2.481  1.00  0.00          C   
+HETATM   82 C4   MAN A   7      13.071  -6.917  -3.114  1.00  0.00          C   
+HETATM   83 C5   MAN A   7      11.664  -6.624  -2.590  1.00  0.00          C   
+HETATM   84 C6   MAN A   7      10.679  -7.631  -3.188  1.00  0.00          C   
+HETATM   85 O1   MAN A   7      12.894  -4.073   0.001  1.00  0.00          O   
+HETATM   86 O2   MAN A   7      13.596  -4.218  -4.134  1.00  0.00          O   
+HETATM   87 O3   MAN A   7      15.347  -6.086  -3.071  1.00  0.00          O   
+HETATM   88 O4   MAN A   7      13.445  -8.251  -2.766  1.00  0.00          O   
+HETATM   89 O5   MAN A   7      11.251  -5.321  -2.967  1.00  0.00          O   
+HETATM   90 O6   MAN A   7       9.542  -7.751  -2.332  1.00  0.00          O   
+HETATM  182 H2   MAN A   7      14.192  -3.786  -2.185  1.00  0.00          H   
+HETATM  183 H3   MAN A   7      14.119  -6.101  -1.407  1.00  0.00          H   
+HETATM  184 H4   MAN A   7      13.090  -6.804  -4.198  1.00  0.00          H   
+HETATM  185 H5   MAN A   7      11.676  -6.724  -1.505  1.00  0.00          H   
+HETATM  186 H61  MAN A   7      11.165  -8.601  -3.285  1.00  0.00          H   
+HETATM  187 H62  MAN A   7      10.359  -7.285  -4.171  1.00  0.00          H   
+HETATM  188 HO1  MAN A   7      12.743  -5.249  -0.455  1.00  0.00          H   
+HETATM  189 HO3  MAN A   7      15.669  -6.964  -3.289  1.00  0.00          H   
+HETATM  190 HO4  MAN A   7      14.225  -8.649  -3.159  1.00  0.00          H   
+HETATM  191 HO6  MAN A   7       8.974  -8.522  -2.394  1.00  0.00          H   
+HETATM   91 C1   MAN A   8      14.651  -4.895  -4.766  1.00  0.00          C   
+HETATM   92 C2   MAN A   8      15.563  -3.922  -5.469  1.00  0.00          C   
+HETATM   93 C3   MAN A   8      14.734  -3.186  -6.545  1.00  0.00          C   
+HETATM   94 C4   MAN A   8      14.033  -4.222  -7.432  1.00  0.00          C   
+HETATM   95 C5   MAN A   8      13.241  -5.182  -6.544  1.00  0.00          C   
+HETATM   96 C6   MAN A   8      12.508  -6.199  -7.422  1.00  0.00          C   
+HETATM   97 O1   MAN A   8      12.621  -3.247  -4.386  1.00  0.00          O   
+HETATM   98 O2   MAN A   8      16.621  -4.639  -6.119  1.00  0.00          O   
+HETATM   99 O3   MAN A   8      15.598  -2.373  -7.343  1.00  0.00          O   
+HETATM  100 O4   MAN A   8      13.146  -3.557  -8.333  1.00  0.00          O   
+HETATM  101 O5   MAN A   8      14.120  -5.883  -5.651  1.00  0.00          O   
+HETATM  102 O6   MAN A   8      11.332  -6.650  -6.748  1.00  0.00          O   
+HETATM  192 H2   MAN A   8      15.973  -3.182  -4.781  1.00  0.00          H   
+HETATM  193 H3   MAN A   8      13.992  -2.556  -6.055  1.00  0.00          H   
+HETATM  194 H4   MAN A   8      14.780  -4.777  -7.999  1.00  0.00          H   
+HETATM  195 H5   MAN A   8      12.507  -4.604  -5.982  1.00  0.00          H   
+HETATM  196 H61  MAN A   8      13.163  -7.048  -7.618  1.00  0.00          H   
+HETATM  197 H62  MAN A   8      12.229  -5.730  -8.365  1.00  0.00          H   
+HETATM  198 HO1  MAN A   8      13.597  -4.020  -3.196  1.00  0.00          H   
+HETATM  199 HO3  MAN A   8      16.478  -2.684  -7.567  1.00  0.00          H   
+HETATM  200 HO4  MAN A   8      13.348  -3.526  -9.271  1.00  0.00          H   
+HETATM  201 HO6  MAN A   8      11.362  -7.445  -6.212  1.00  0.00          H   
+HETATM  103 C1   MAN A   9      17.841  -4.559  -5.429  1.00  0.00          C   
+HETATM  104 C2   MAN A   9      18.920  -3.996  -6.319  1.00  0.00          C   
+HETATM  105 C3   MAN A   9      19.095  -4.956  -7.517  1.00  0.00          C   
+HETATM  106 C4   MAN A   9      19.321  -6.378  -6.991  1.00  0.00          C   
+HETATM  107 C5   MAN A   9      18.187  -6.738  -6.029  1.00  0.00          C   
+HETATM  108 C6   MAN A   9      18.383  -8.170  -5.525  1.00  0.00          C   
+HETATM  109 O1   MAN A   9      16.083  -5.102  -7.326  1.00  0.00          O   
+HETATM  110 O2   MAN A   9      20.158  -3.939  -5.595  1.00  0.00          O   
+HETATM  111 O3   MAN A   9      20.220  -4.547  -8.299  1.00  0.00          O   
+HETATM  112 O4   MAN A   9      19.332  -7.297  -8.085  1.00  0.00          O   
+HETATM  113 O5   MAN A   9      18.178  -5.845  -4.905  1.00  0.00          O   
+HETATM  114 O6   MAN A   9      17.418  -8.454  -4.512  1.00  0.00          O   
+HETATM  202 H2   MAN A   9      18.658  -3.010  -6.700  1.00  0.00          H   
+HETATM  203 H3   MAN A   9      18.195  -4.927  -8.131  1.00  0.00          H   
+HETATM  204 H4   MAN A   9      20.276  -6.423  -6.467  1.00  0.00          H   
+HETATM  205 H5   MAN A   9      17.244  -6.679  -6.572  1.00  0.00          H   
+HETATM  206 H61  MAN A   9      19.386  -8.275  -5.112  1.00  0.00          H   
+HETATM  207 H62  MAN A   9      18.257  -8.867  -6.354  1.00  0.00          H   
+HETATM  208 HO1  MAN A   9      16.597  -4.522  -7.100  1.00  0.00          H   
+HETATM  209 HO2  MAN A   9      20.976  -3.747  -6.059  1.00  0.00          H   
+HETATM  210 HO3  MAN A   9      21.105  -4.819  -8.045  1.00  0.00          H   
+HETATM  211 HO4  MAN A   9      20.084  -7.324  -8.682  1.00  0.00          H   
+HETATM  212 HO6  MAN A   9      17.706  -8.682  -3.625  1.00  0.00          H   
+CONECT    1    2    9   15  115
+CONECT    2    1    3   14  116
+CONECT    9    1    5
+CONECT   15    1  128
+CONECT    3    2    4   10  117
+CONECT   14    2    7  127
+CONECT    4    3    5   11  118
+CONECT   10    3  125
+CONECT    5    4    6    9  119
+CONECT   11    4   16
+CONECT    6    5   12  120  121
+CONECT   12    6  126
+CONECT    7    8   13   13   14
+CONECT    8    7  122  123  124
+CONECT   13    7    7
+CONECT   16   17   25   28   11
+CONECT   17   16   18   24  129
+CONECT   25   16  139
+CONECT   28   16   20
+CONECT   18   17   19   26  130
+CONECT   24   17   22  138
+CONECT   19   18   20   27  131
+CONECT   26   18  140
+CONECT   20   19   21   28  132
+CONECT   27   19   31
+CONECT   21   20   29  133  134
+CONECT   29   21  141
+CONECT   22   23   24   30   30
+CONECT   23   22  135  136  137
+CONECT   30   22   22
+CONECT   31   32   37   41   27
+CONECT   32   31   33   38  142
+CONECT   37   31  148
+CONECT   41   31   35
+CONECT   33   32   34   39  143
+CONECT   38   32  149
+CONECT   34   33   35   40  144
+CONECT   39   33   79
+CONECT   35   34   36   41  145
+CONECT   40   34  150
+CONECT   36   35   42  146  147
+CONECT   42   36   43
+CONECT   43   44   49   53   42
+CONECT   44   43   45   50  151
+CONECT   49   43  157
+CONECT   53   43   47
+CONECT   45   44   46   51  152
+CONECT   50   44  158
+CONECT   46   45   47   52  153
+CONECT   51   45   55
+CONECT   47   46   48   53  154
+CONECT   52   46  159
+CONECT   48   47   54  155  156
+CONECT   54   48   67
+CONECT   55   56   61   65   51
+CONECT   56   55   57   62  160
+CONECT   61   55  166
+CONECT   65   55   59
+CONECT   57   56   58   63  161
+CONECT   62   56  167
+CONECT   58   57   59   64  162
+CONECT   63   57  168
+CONECT   59   58   60   65  163
+CONECT   64   58  169
+CONECT   60   59   66  164  165
+CONECT   66   60  170
+CONECT   67   68   73   77   54
+CONECT   68   67   69   74  171
+CONECT   73   67  177
+CONECT   77   67   71
+CONECT   69   68   70   75  172
+CONECT   74   68  178
+CONECT   70   69   71   76  173
+CONECT   75   69  179
+CONECT   71   70   72   77  174
+CONECT   76   70  180
+CONECT   72   71   78  175  176
+CONECT   78   72  181
+CONECT   79   80   85   89   39
+CONECT   80   79   81   86  182
+CONECT   85   79  188
+CONECT   89   79   83
+CONECT   81   80   82   87  183
+CONECT   86   80   91
+CONECT   82   81   83   88  184
+CONECT   87   81  189
+CONECT   83   82   84   89  185
+CONECT   88   82  190
+CONECT   84   83   90  186  187
+CONECT   90   84  191
+CONECT   91   92   97  101   86
+CONECT   92   91   93   98  192
+CONECT   97   91  198
+CONECT  101   91   95
+CONECT   93   92   94   99  193
+CONECT   98   92  103
+CONECT   94   93   95  100  194
+CONECT   99   93  199
+CONECT   95   94   96  101  195
+CONECT  100   94  200
+CONECT   96   95  102  196  197
+CONECT  102   96  201
+CONECT  103  104  109  113   98
+CONECT  104  103  105  110  202
+CONECT  109  103  208
+CONECT  113  103  107
+CONECT  105  104  106  111  203
+CONECT  110  104  209
+CONECT  106  105  107  112  204
+CONECT  111  105  210
+CONECT  107  106  108  113  205
+CONECT  112  106  211
+CONECT  108  107  114  206  207
+CONECT  114  108  212
+CONECT  115    1
+CONECT  116    2
+CONECT  117    3
+CONECT  118    4
+CONECT  119    5
+CONECT  120    6
+CONECT  121    6
+CONECT  122    8
+CONECT  123    8
+CONECT  124    8
+CONECT  125   10
+CONECT  126   12
+CONECT  127   14
+CONECT  128   15
+CONECT  129   17
+CONECT  130   18
+CONECT  131   19
+CONECT  132   20
+CONECT  133   21
+CONECT  134   21
+CONECT  135   23
+CONECT  136   23
+CONECT  137   23
+CONECT  138   24
+CONECT  139   25
+CONECT  140   26
+CONECT  141   29
+CONECT  142   32
+CONECT  143   33
+CONECT  144   34
+CONECT  145   35
+CONECT  146   36
+CONECT  147   36
+CONECT  148   37
+CONECT  149   38
+CONECT  150   40
+CONECT  151   44
+CONECT  152   45
+CONECT  153   46
+CONECT  154   47
+CONECT  155   48
+CONECT  156   48
+CONECT  157   49
+CONECT  158   50
+CONECT  159   52
+CONECT  160   56
+CONECT  161   57
+CONECT  162   58
+CONECT  163   59
+CONECT  164   60
+CONECT  165   60
+CONECT  166   61
+CONECT  167   62
+CONECT  168   63
+CONECT  169   64
+CONECT  170   66
+CONECT  171   68
+CONECT  172   69
+CONECT  173   70
+CONECT  174   71
+CONECT  175   72
+CONECT  176   72
+CONECT  177   73
+CONECT  178   74
+CONECT  179   75
+CONECT  180   76
+CONECT  181   78
+CONECT  182   80
+CONECT  183   81
+CONECT  184   82
+CONECT  185   83
+CONECT  186   84
+CONECT  187   84
+CONECT  188   85
+CONECT  189   87
+CONECT  190   88
+CONECT  191   90
+CONECT  192   92
+CONECT  193   93
+CONECT  194   94
+CONECT  195   95
+CONECT  196   96
+CONECT  197   96
+CONECT  198   97
+CONECT  199   99
+CONECT  200  100
+CONECT  201  102
+CONECT  202  104
+CONECT  203  105
+CONECT  204  106
+CONECT  205  107
+CONECT  206  108
+CONECT  207  108
+CONECT  208  109
+CONECT  209  110
+CONECT  210  111
+CONECT  211  112
+CONECT  212  114
+END

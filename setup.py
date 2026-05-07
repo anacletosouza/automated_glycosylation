@@ -42,18 +42,14 @@ setup(
     include_package_data=True,
     package_data={
         "automated_glycosylation": [
-            "scripts/**/*.py",
-            "scripts/**/*.sh",
-            "bin/*.sh",
+            "python_scripts/**/*.py",
+            "python_scripts/**/*.sh",
         ],
     },
     install_requires=requirements,
     entry_points={
         "console_scripts": [
-            "glyco-prep=automated_glycosylation.cli:run_glyco_prep",
-            "glyco-param=automated_glycosylation.cli:run_glyco_param",
-            "glyco-orient=automated_glycosylation.cli:run_glyco_orient",
-            "auto_glyco=automated_glycosylation.cli:auto_glyco",
+            "auto_glyco=automated_glycosylation.cli:main",
         ],
     },
     classifiers=[
