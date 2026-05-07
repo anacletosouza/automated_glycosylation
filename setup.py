@@ -53,7 +53,7 @@ setup(
             "glyco-prep=automated_glycosylation.cli:run_glyco_prep",
             "glyco-param=automated_glycosylation.cli:run_glyco_param",
             "glyco-orient=automated_glycosylation.cli:run_glyco_orient",
-            "glyco-all=automated_glycosylation.cli:run_glyco_all",
+            "auto_glyco=automated_glycosylation.cli:auto_glyco",
         ],
     },
     classifiers=[

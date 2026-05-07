@@ -10,7 +10,7 @@ from .cli import (
     run_glyco_prep,
     run_glyco_param, 
     run_glyco_orient,
-    run_glyco_all,
+    auto_glyco,
 )
 
 __version__ = "1.0.0"
@@ -21,7 +21,7 @@ __all__ = [
     "run_glyco_prep",
     "run_glyco_param",
     "run_glyco_orient",
-    "run_glyco_all",
+    "auto_glyco",
     "__version__",
     "__author__",
     "__email__",
