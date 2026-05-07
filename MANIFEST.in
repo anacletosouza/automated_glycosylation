@@ -1,9 +1,0 @@
-include README.md
-include LICENSE
-include requirements.txt
-recursive-include automated_glycosylation/bin *.sh
-recursive-include automated_glycosylation/scripts *.py
-recursive-include automated_glycosylation/scripts/1_glycosylation_preparation *.py
-recursive-include automated_glycosylation/scripts/2_parametrization_scripts *.py
-recursive-include automated_glycosylation/scripts/3_carbohydrate_orientation *.py
-include INPUT_DIR_EXAMPLE/*
