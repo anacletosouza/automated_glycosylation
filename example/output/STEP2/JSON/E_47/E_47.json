@@ -1,0 +1,17 @@
+{
+  "sequence": "Neu5Ac(a2-3)Gal(b1-3)[Neu5Ac(a2-6)]GalNAc",
+  "residues": [
+    {
+      "pdb_name": "A2G",
+      "charmm_name": "AGALNA"
+    },
+    {
+      "pdb_name": "SIA",
+      "charmm_name": "ANE5AC"
+    },
+    {
+      "pdb_name": "GAL",
+      "charmm_name": "BLGAL"
+    }
+  ]
+}

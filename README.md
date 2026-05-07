@@ -62,17 +62,19 @@ pip install -e .
 
 ### Basic Usage
 
+In this example, it is necessary to determine the protonation state of the protein before running the code
+
 ```bash
-auto_glyco --pdb input/protein.pdb --tsv input/glycans.tsv
+auto_glyco --pdb protein.pdb --tsv input/glycans.tsv
 ```
 
 ### Complete Example
 
 ```bash
 auto_glyco \
-    --pdb examples/1CRN.pdb \
-    --tsv examples/glycosylation_sites.tsv \
-    --output_dir ./results \
+    --pdb examples/test.pdb \
+    --tsv examples/test.tsv \
+    --output_dir OUTPUT \
     --theta_step 5 \
     --n_steps 20 \
     --max_cycles 10 \

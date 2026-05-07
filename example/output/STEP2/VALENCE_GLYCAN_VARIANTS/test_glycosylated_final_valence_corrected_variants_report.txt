@@ -1,0 +1,789 @@
+================================================================================
+CARBOHYDRATE VARIANT ANALYSIS REPORT
+================================================================================
+
+SUMMARY BY RESIDUE TYPE:
+----------------------------------------
+
+A2G:
+  Total residues: 4
+  CHARMM name: AGALNA
+  A21: 3 residues
+    Atoms in PDB: 27
+    Missing atoms: HO1, HO3, O1
+  A22: 1 residues
+    Atoms in PDB: 26
+    Missing atoms: HO1, HO3, HO6, O1
+
+BMA:
+  Total residues: 66
+  CHARMM name: BMAN
+  BM1: 66 residues
+    Atoms in PDB: 19
+    Missing atoms: H1, HO1, HO3, HO6, O1
+
+FCA:
+  Total residues: 33
+  CHARMM name: AFUC
+  FC1: 33 residues
+    Atoms in PDB: 20
+    Missing atoms: H1, HO1, O1
+
+GAL:
+  Total residues: 39
+  CHARMM name: BLGAL
+  GA1: 14 residues
+    Atoms in PDB: 20
+    Missing atoms: H1, HO1, HO6, O1
+  GA2: 21 residues
+    Atoms in PDB: 21
+    Missing atoms: H1, HO1, O1
+  GA3: 1 residues
+    Atoms in PDB: 20
+    Missing atoms: H1, HO1, HO4, O1
+  GA4: 3 residues
+    Atoms in PDB: 19
+    Missing atoms: H1, HO1, HO3, O1, O3
+
+MAN:
+  Total residues: 200
+  CHARMM name: AMAN
+  MA1: 76 residues
+    Atoms in PDB: 20
+    Missing atoms: H1, HO1, HO2, O1
+  MA2: 7 residues
+    Atoms in PDB: 19
+    Missing atoms: H1, HO1, HO2, HO4, O1
+  MA3: 15 residues
+    Atoms in PDB: 19
+    Missing atoms: H1, HO1, HO2, HO6, O1
+  MA4: 75 residues
+    Atoms in PDB: 21
+    Missing atoms: H1, HO1, O1
+  MA5: 26 residues
+    Atoms in PDB: 19
+    Missing atoms: H1, HO1, HO3, HO6, O1
+  MA6: 1 residues
+    Atoms in PDB: 20
+    Missing atoms: H1, HO1, HO4, O1
+
+NAG:
+  Total residues: 169
+  CHARMM name: BGLCNA
+  NA1: 97 residues
+    Atoms in PDB: 26
+    Missing atoms: H1, HO1, HO4, O1
+  NA2: 65 residues
+    Atoms in PDB: 27
+    Missing atoms: H1, HO1, O1
+  NA3: 1 residues
+    Atoms in PDB: 25
+    Missing atoms: H1, HO1, HO4, HT1, O1
+  NA4: 1 residues
+    Atoms in PDB: 25
+    Missing atoms: H1, HO1, HO4, HT2, O1
+  NA5: 1 residues
+    Atoms in PDB: 26
+    Missing atoms: H1, HO1, HT3, O1
+  NA6: 1 residues
+    Atoms in PDB: 26
+    Missing atoms: H1, HO1, HT2, O1
+  NA7: 1 residues
+    Atoms in PDB: 25
+    Missing atoms: H1, HO1, HO4, HO6, O1
+  NA8: 1 residues
+    Atoms in PDB: 26
+    Missing atoms: H1, HO1, HO6, O1
+  NA9: 1 residues
+    Atoms in PDB: 24
+    Missing atoms: H1, HO1, HO4, HT1, HT3, O1
+
+NDG:
+  Total residues: 66
+  CHARMM name: BGLCNA
+  ND1: 33 residues
+    Atoms in PDB: 26
+    Missing atoms: HO1, HO4, HO6, O1
+  ND2: 33 residues
+    Atoms in PDB: 27
+    Missing atoms: HO1, HO4, O1
+
+SIA:
+  Total residues: 18
+  CHARMM name: ANE5AC
+  SI1: 15 residues
+    Atoms in PDB: 38
+    Missing atoms: O2
+  SI2: 3 residues
+    Atoms in PDB: 39
+
+
+================================================================================
+RESIDUE MAPPING DETAILS:
+================================================================================
+A2G D: 194 -> A21
+A2G D: 197 -> A21
+A2G E: 200 -> A22
+A2G F: 192 -> A21
+BMA D:   4 -> BM1
+BMA D:  11 -> BM1
+BMA D:  18 -> BM1
+BMA D:  26 -> BM1
+BMA D:  34 -> BM1
+BMA D:  45 -> BM1
+BMA D:  56 -> BM1
+BMA D:  67 -> BM1
+BMA D:  76 -> BM1
+BMA D:  84 -> BM1
+BMA D:  92 -> BM1
+BMA D:  99 -> BM1
+BMA D: 106 -> BM1
+BMA D: 113 -> BM1
+BMA D: 121 -> BM1
+BMA D: 130 -> BM1
+BMA D: 139 -> BM1
+BMA D: 150 -> BM1
+BMA D: 158 -> BM1
+BMA D: 164 -> BM1
+BMA D: 172 -> BM1
+BMA D: 182 -> BM1
+BMA E:   4 -> BM1
+BMA E:  12 -> BM1
+BMA E:  20 -> BM1
+BMA E:  34 -> BM1
+BMA E:  42 -> BM1
+BMA E:  50 -> BM1
+BMA E:  57 -> BM1
+BMA E:  69 -> BM1
+BMA E:  82 -> BM1
+BMA E:  90 -> BM1
+BMA E:  96 -> BM1
+BMA E: 104 -> BM1
+BMA E: 111 -> BM1
+BMA E: 120 -> BM1
+BMA E: 127 -> BM1
+BMA E: 134 -> BM1
+BMA E: 143 -> BM1
+BMA E: 150 -> BM1
+BMA E: 158 -> BM1
+BMA E: 167 -> BM1
+BMA E: 178 -> BM1
+BMA E: 188 -> BM1
+BMA F:   4 -> BM1
+BMA F:  12 -> BM1
+BMA F:  19 -> BM1
+BMA F:  26 -> BM1
+BMA F:  34 -> BM1
+BMA F:  42 -> BM1
+BMA F:  52 -> BM1
+BMA F:  63 -> BM1
+BMA F:  71 -> BM1
+BMA F:  84 -> BM1
+BMA F:  91 -> BM1
+BMA F:  99 -> BM1
+BMA F: 106 -> BM1
+BMA F: 115 -> BM1
+BMA F: 122 -> BM1
+BMA F: 130 -> BM1
+BMA F: 137 -> BM1
+BMA F: 144 -> BM1
+BMA F: 155 -> BM1
+BMA F: 162 -> BM1
+BMA F: 170 -> BM1
+BMA F: 180 -> BM1
+FCA D:   2 -> FC1
+FCA D:  32 -> FC1
+FCA D:  43 -> FC1
+FCA D:  65 -> FC1
+FCA D:  74 -> FC1
+FCA D:  82 -> FC1
+FCA D:  90 -> FC1
+FCA D: 137 -> FC1
+FCA D: 148 -> FC1
+FCA D: 156 -> FC1
+FCA D: 170 -> FC1
+FCA D: 180 -> FC1
+FCA E:   2 -> FC1
+FCA E:  18 -> FC1
+FCA E:  32 -> FC1
+FCA E:  40 -> FC1
+FCA E:  67 -> FC1
+FCA E:  80 -> FC1
+FCA E:  88 -> FC1
+FCA E: 102 -> FC1
+FCA E: 156 -> FC1
+FCA E: 165 -> FC1
+FCA E: 176 -> FC1
+FCA E: 186 -> FC1
+FCA F:   2 -> FC1
+FCA F:  32 -> FC1
+FCA F:  40 -> FC1
+FCA F:  69 -> FC1
+FCA F:  82 -> FC1
+FCA F:  97 -> FC1
+FCA F: 153 -> FC1
+FCA F: 168 -> FC1
+FCA F: 178 -> FC1
+GAL D:  37 -> GA2
+GAL D:  40 -> GA1
+GAL D:  48 -> GA1
+GAL D:  52 -> GA1
+GAL D: 127 -> GA2
+GAL D: 142 -> GA2
+GAL D: 145 -> GA1
+GAL D: 185 -> GA3
+GAL D: 187 -> GA2
+GAL D: 190 -> GA2
+GAL D: 192 -> GA1
+GAL D: 195 -> GA4
+GAL D: 198 -> GA4
+GAL E:  23 -> GA1
+GAL E:  27 -> GA2
+GAL E:  29 -> GA1
+GAL E:  72 -> GA2
+GAL E:  74 -> GA2
+GAL E:  77 -> GA1
+GAL E: 117 -> GA2
+GAL E: 170 -> GA2
+GAL E: 173 -> GA1
+GAL E: 191 -> GA2
+GAL E: 193 -> GA2
+GAL E: 196 -> GA2
+GAL E: 198 -> GA1
+GAL E: 202 -> GA4
+GAL F:  45 -> GA2
+GAL F:  48 -> GA1
+GAL F:  74 -> GA2
+GAL F:  76 -> GA2
+GAL F:  79 -> GA1
+GAL F: 112 -> GA2
+GAL F: 150 -> GA1
+GAL F: 183 -> GA2
+GAL F: 185 -> GA2
+GAL F: 188 -> GA2
+GAL F: 190 -> GA1
+GAL F: 193 -> GA2
+MAN D:   5 -> MA1
+MAN D:   7 -> MA1
+MAN D:  12 -> MA4
+MAN D:  13 -> MA5
+MAN D:  14 -> MA4
+MAN D:  15 -> MA4
+MAN D:  19 -> MA1
+MAN D:  21 -> MA3
+MAN D:  27 -> MA4
+MAN D:  28 -> MA5
+MAN D:  29 -> MA4
+MAN D:  30 -> MA4
+MAN D:  35 -> MA1
+MAN D:  38 -> MA1
+MAN D:  46 -> MA1
+MAN D:  50 -> MA1
+MAN D:  57 -> MA1
+MAN D:  58 -> MA1
+MAN D:  59 -> MA4
+MAN D:  60 -> MA5
+MAN D:  61 -> MA4
+MAN D:  62 -> MA1
+MAN D:  63 -> MA4
+MAN D:  68 -> MA1
+MAN D:  70 -> MA3
+MAN D:  77 -> MA1
+MAN D:  79 -> MA1
+MAN D:  85 -> MA1
+MAN D:  87 -> MA1
+MAN D:  93 -> MA1
+MAN D:  95 -> MA1
+MAN D: 100 -> MA1
+MAN D: 102 -> MA1
+MAN D: 107 -> MA4
+MAN D: 108 -> MA5
+MAN D: 109 -> MA4
+MAN D: 110 -> MA4
+MAN D: 114 -> MA1
+MAN D: 115 -> MA4
+MAN D: 116 -> MA5
+MAN D: 117 -> MA4
+MAN D: 118 -> MA6
+MAN D: 122 -> MA5
+MAN D: 123 -> MA4
+MAN D: 124 -> MA4
+MAN D: 125 -> MA1
+MAN D: 131 -> MA1
+MAN D: 132 -> MA4
+MAN D: 133 -> MA5
+MAN D: 134 -> MA4
+MAN D: 135 -> MA4
+MAN D: 140 -> MA1
+MAN D: 143 -> MA1
+MAN D: 151 -> MA1
+MAN D: 153 -> MA1
+MAN D: 159 -> MA4
+MAN D: 160 -> MA1
+MAN D: 165 -> MA1
+MAN D: 167 -> MA1
+MAN D: 173 -> MA2
+MAN D: 176 -> MA3
+MAN D: 183 -> MA2
+MAN D: 188 -> MA3
+MAN E:   5 -> MA2
+MAN E:   7 -> MA3
+MAN E:  13 -> MA4
+MAN E:  14 -> MA5
+MAN E:  15 -> MA4
+MAN E:  16 -> MA4
+MAN E:  21 -> MA1
+MAN E:  25 -> MA3
+MAN E:  35 -> MA1
+MAN E:  37 -> MA1
+MAN E:  43 -> MA1
+MAN E:  45 -> MA3
+MAN E:  51 -> MA4
+MAN E:  52 -> MA5
+MAN E:  53 -> MA4
+MAN E:  54 -> MA4
+MAN E:  58 -> MA1
+MAN E:  59 -> MA1
+MAN E:  60 -> MA4
+MAN E:  61 -> MA5
+MAN E:  62 -> MA1
+MAN E:  63 -> MA4
+MAN E:  64 -> MA1
+MAN E:  65 -> MA4
+MAN E:  70 -> MA3
+MAN E:  75 -> MA1
+MAN E:  83 -> MA1
+MAN E:  85 -> MA1
+MAN E:  91 -> MA4
+MAN E:  92 -> MA1
+MAN E:  97 -> MA4
+MAN E:  98 -> MA5
+MAN E:  99 -> MA4
+MAN E: 100 -> MA4
+MAN E: 105 -> MA1
+MAN E: 107 -> MA1
+MAN E: 112 -> MA5
+MAN E: 113 -> MA4
+MAN E: 114 -> MA4
+MAN E: 115 -> MA1
+MAN E: 121 -> MA4
+MAN E: 122 -> MA5
+MAN E: 123 -> MA4
+MAN E: 124 -> MA4
+MAN E: 128 -> MA4
+MAN E: 129 -> MA5
+MAN E: 130 -> MA4
+MAN E: 131 -> MA4
+MAN E: 135 -> MA5
+MAN E: 136 -> MA4
+MAN E: 137 -> MA4
+MAN E: 138 -> MA1
+MAN E: 139 -> MA1
+MAN E: 140 -> MA4
+MAN E: 144 -> MA4
+MAN E: 145 -> MA5
+MAN E: 146 -> MA4
+MAN E: 147 -> MA4
+MAN E: 151 -> MA1
+MAN E: 153 -> MA1
+MAN E: 159 -> MA1
+MAN E: 161 -> MA3
+MAN E: 168 -> MA1
+MAN E: 171 -> MA1
+MAN E: 179 -> MA2
+MAN E: 182 -> MA3
+MAN E: 189 -> MA2
+MAN E: 194 -> MA3
+MAN F:   5 -> MA1
+MAN F:   7 -> MA3
+MAN F:  13 -> MA4
+MAN F:  14 -> MA5
+MAN F:  15 -> MA4
+MAN F:  16 -> MA4
+MAN F:  20 -> MA1
+MAN F:  22 -> MA1
+MAN F:  27 -> MA4
+MAN F:  28 -> MA5
+MAN F:  29 -> MA4
+MAN F:  30 -> MA4
+MAN F:  35 -> MA1
+MAN F:  37 -> MA1
+MAN F:  43 -> MA1
+MAN F:  46 -> MA1
+MAN F:  53 -> MA1
+MAN F:  54 -> MA1
+MAN F:  55 -> MA4
+MAN F:  56 -> MA5
+MAN F:  57 -> MA1
+MAN F:  58 -> MA4
+MAN F:  59 -> MA1
+MAN F:  60 -> MA4
+MAN F:  64 -> MA1
+MAN F:  66 -> MA1
+MAN F:  72 -> MA3
+MAN F:  77 -> MA1
+MAN F:  85 -> MA1
+MAN F:  87 -> MA1
+MAN F:  92 -> MA4
+MAN F:  93 -> MA5
+MAN F:  94 -> MA4
+MAN F:  95 -> MA4
+MAN F: 100 -> MA1
+MAN F: 102 -> MA1
+MAN F: 107 -> MA5
+MAN F: 108 -> MA4
+MAN F: 109 -> MA4
+MAN F: 110 -> MA1
+MAN F: 116 -> MA4
+MAN F: 117 -> MA5
+MAN F: 118 -> MA4
+MAN F: 119 -> MA4
+MAN F: 123 -> MA1
+MAN F: 124 -> MA4
+MAN F: 125 -> MA5
+MAN F: 126 -> MA4
+MAN F: 127 -> MA4
+MAN F: 131 -> MA4
+MAN F: 132 -> MA5
+MAN F: 133 -> MA4
+MAN F: 134 -> MA4
+MAN F: 138 -> MA4
+MAN F: 139 -> MA5
+MAN F: 140 -> MA4
+MAN F: 141 -> MA4
+MAN F: 145 -> MA5
+MAN F: 146 -> MA4
+MAN F: 147 -> MA4
+MAN F: 148 -> MA1
+MAN F: 156 -> MA1
+MAN F: 158 -> MA1
+MAN F: 163 -> MA1
+MAN F: 165 -> MA1
+MAN F: 171 -> MA2
+MAN F: 174 -> MA3
+MAN F: 181 -> MA2
+MAN F: 186 -> MA3
+NAG D:   3 -> NA1
+NAG D:   6 -> NA2
+NAG D:   8 -> NA2
+NAG D:  10 -> NA1
+NAG D:  17 -> NA1
+NAG D:  20 -> NA2
+NAG D:  22 -> NA2
+NAG D:  23 -> NA2
+NAG D:  25 -> NA1
+NAG D:  33 -> NA1
+NAG D:  36 -> NA1
+NAG D:  39 -> NA1
+NAG D:  44 -> NA1
+NAG D:  47 -> NA1
+NAG D:  51 -> NA1
+NAG D:  55 -> NA1
+NAG D:  66 -> NA1
+NAG D:  69 -> NA2
+NAG D:  71 -> NA2
+NAG D:  72 -> NA2
+NAG D:  75 -> NA1
+NAG D:  78 -> NA2
+NAG D:  80 -> NA2
+NAG D:  83 -> NA1
+NAG D:  86 -> NA2
+NAG D:  88 -> NA2
+NAG D:  91 -> NA1
+NAG D:  94 -> NA2
+NAG D:  96 -> NA2
+NAG D:  98 -> NA1
+NAG D: 101 -> NA5
+NAG D: 103 -> NA2
+NAG D: 105 -> NA1
+NAG D: 112 -> NA1
+NAG D: 120 -> NA1
+NAG D: 126 -> NA1
+NAG D: 129 -> NA1
+NAG D: 138 -> NA1
+NAG D: 141 -> NA7
+NAG D: 144 -> NA1
+NAG D: 149 -> NA1
+NAG D: 152 -> NA8
+NAG D: 154 -> NA2
+NAG D: 157 -> NA1
+NAG D: 161 -> NA2
+NAG D: 163 -> NA1
+NAG D: 166 -> NA2
+NAG D: 168 -> NA2
+NAG D: 171 -> NA1
+NAG D: 174 -> NA2
+NAG D: 175 -> NA2
+NAG D: 177 -> NA2
+NAG D: 178 -> NA2
+NAG D: 181 -> NA1
+NAG D: 184 -> NA1
+NAG D: 186 -> NA1
+NAG D: 189 -> NA1
+NAG D: 191 -> NA1
+NAG E:   3 -> NA1
+NAG E:   6 -> NA2
+NAG E:   8 -> NA2
+NAG E:   9 -> NA2
+NAG E:  11 -> NA1
+NAG E:  19 -> NA1
+NAG E:  22 -> NA1
+NAG E:  26 -> NA1
+NAG E:  28 -> NA1
+NAG E:  33 -> NA1
+NAG E:  36 -> NA2
+NAG E:  38 -> NA2
+NAG E:  41 -> NA1
+NAG E:  44 -> NA2
+NAG E:  46 -> NA2
+NAG E:  47 -> NA2
+NAG E:  49 -> NA1
+NAG E:  56 -> NA1
+NAG E:  68 -> NA1
+NAG E:  71 -> NA1
+NAG E:  73 -> NA3
+NAG E:  76 -> NA1
+NAG E:  81 -> NA1
+NAG E:  84 -> NA2
+NAG E:  86 -> NA2
+NAG E:  89 -> NA1
+NAG E:  93 -> NA2
+NAG E:  95 -> NA1
+NAG E: 103 -> NA1
+NAG E: 106 -> NA2
+NAG E: 108 -> NA2
+NAG E: 110 -> NA1
+NAG E: 116 -> NA1
+NAG E: 119 -> NA1
+NAG E: 126 -> NA1
+NAG E: 133 -> NA1
+NAG E: 142 -> NA1
+NAG E: 149 -> NA1
+NAG E: 152 -> NA2
+NAG E: 154 -> NA2
+NAG E: 157 -> NA1
+NAG E: 160 -> NA2
+NAG E: 162 -> NA2
+NAG E: 163 -> NA2
+NAG E: 166 -> NA1
+NAG E: 169 -> NA9
+NAG E: 172 -> NA1
+NAG E: 177 -> NA1
+NAG E: 180 -> NA2
+NAG E: 181 -> NA2
+NAG E: 183 -> NA2
+NAG E: 184 -> NA2
+NAG E: 187 -> NA1
+NAG E: 190 -> NA1
+NAG E: 192 -> NA1
+NAG E: 195 -> NA1
+NAG E: 197 -> NA1
+NAG F:   3 -> NA1
+NAG F:   6 -> NA2
+NAG F:   8 -> NA2
+NAG F:   9 -> NA2
+NAG F:  11 -> NA1
+NAG F:  18 -> NA1
+NAG F:  21 -> NA2
+NAG F:  23 -> NA2
+NAG F:  25 -> NA1
+NAG F:  33 -> NA1
+NAG F:  36 -> NA2
+NAG F:  38 -> NA2
+NAG F:  41 -> NA1
+NAG F:  44 -> NA1
+NAG F:  47 -> NA1
+NAG F:  51 -> NA1
+NAG F:  62 -> NA1
+NAG F:  65 -> NA2
+NAG F:  67 -> NA2
+NAG F:  70 -> NA1
+NAG F:  73 -> NA1
+NAG F:  75 -> NA1
+NAG F:  78 -> NA1
+NAG F:  83 -> NA4
+NAG F:  86 -> NA2
+NAG F:  88 -> NA2
+NAG F:  90 -> NA1
+NAG F:  98 -> NA1
+NAG F: 101 -> NA6
+NAG F: 103 -> NA2
+NAG F: 105 -> NA1
+NAG F: 111 -> NA1
+NAG F: 114 -> NA1
+NAG F: 121 -> NA1
+NAG F: 129 -> NA1
+NAG F: 136 -> NA1
+NAG F: 143 -> NA1
+NAG F: 149 -> NA1
+NAG F: 154 -> NA1
+NAG F: 157 -> NA2
+NAG F: 159 -> NA2
+NAG F: 161 -> NA1
+NAG F: 164 -> NA2
+NAG F: 166 -> NA2
+NAG F: 169 -> NA1
+NAG F: 172 -> NA2
+NAG F: 173 -> NA2
+NAG F: 175 -> NA2
+NAG F: 176 -> NA2
+NAG F: 179 -> NA1
+NAG F: 182 -> NA1
+NAG F: 184 -> NA1
+NAG F: 187 -> NA1
+NAG F: 189 -> NA1
+NDG D:   1 -> ND1
+NDG D:   9 -> ND2
+NDG D:  16 -> ND2
+NDG D:  24 -> ND2
+NDG D:  31 -> ND1
+NDG D:  42 -> ND1
+NDG D:  54 -> ND2
+NDG D:  64 -> ND1
+NDG D:  73 -> ND1
+NDG D:  81 -> ND1
+NDG D:  89 -> ND1
+NDG D:  97 -> ND2
+NDG D: 104 -> ND2
+NDG D: 111 -> ND2
+NDG D: 119 -> ND2
+NDG D: 128 -> ND2
+NDG D: 136 -> ND1
+NDG D: 147 -> ND1
+NDG D: 155 -> ND1
+NDG D: 162 -> ND2
+NDG D: 169 -> ND1
+NDG D: 179 -> ND1
+NDG E:   1 -> ND1
+NDG E:  10 -> ND2
+NDG E:  17 -> ND1
+NDG E:  31 -> ND1
+NDG E:  39 -> ND1
+NDG E:  48 -> ND2
+NDG E:  55 -> ND2
+NDG E:  66 -> ND1
+NDG E:  79 -> ND1
+NDG E:  87 -> ND1
+NDG E:  94 -> ND2
+NDG E: 101 -> ND1
+NDG E: 109 -> ND2
+NDG E: 118 -> ND2
+NDG E: 125 -> ND2
+NDG E: 132 -> ND2
+NDG E: 141 -> ND2
+NDG E: 148 -> ND2
+NDG E: 155 -> ND1
+NDG E: 164 -> ND1
+NDG E: 175 -> ND1
+NDG E: 185 -> ND1
+NDG F:   1 -> ND1
+NDG F:  10 -> ND2
+NDG F:  17 -> ND2
+NDG F:  24 -> ND2
+NDG F:  31 -> ND1
+NDG F:  39 -> ND1
+NDG F:  50 -> ND2
+NDG F:  61 -> ND2
+NDG F:  68 -> ND1
+NDG F:  81 -> ND1
+NDG F:  89 -> ND2
+NDG F:  96 -> ND1
+NDG F: 104 -> ND2
+NDG F: 113 -> ND2
+NDG F: 120 -> ND2
+NDG F: 128 -> ND2
+NDG F: 135 -> ND2
+NDG F: 142 -> ND2
+NDG F: 152 -> ND1
+NDG F: 160 -> ND2
+NDG F: 167 -> ND1
+NDG F: 177 -> ND1
+SIA D:  41 -> SI1
+SIA D:  49 -> SI1
+SIA D:  53 -> SI1
+SIA D: 146 -> SI1
+SIA D: 193 -> SI1
+SIA D: 196 -> SI2
+SIA D: 199 -> SI2
+SIA E:  24 -> SI1
+SIA E:  30 -> SI1
+SIA E:  78 -> SI1
+SIA E: 174 -> SI1
+SIA E: 199 -> SI1
+SIA E: 201 -> SI1
+SIA E: 203 -> SI2
+SIA F:  49 -> SI1
+SIA F:  80 -> SI1
+SIA F: 151 -> SI1
+SIA F: 191 -> SI1
+
+
+================================================================================
+STATISTICS:
+================================================================================
+Total residues processed: 595
+Total variants created: 27
+RTP variants generated: 27
+HDB variants generated: 27
+
+
+CHARGE INFORMATION:
+----------------------------------------
+A21: Total charge = -0.000000
+A22: Total charge = 0.000000
+BM1: Total charge = 0.000000
+FC1: Total charge = -0.000000
+GA1: Total charge = -0.000000
+GA2: Total charge = -0.000000
+GA3: Total charge = -0.000000
+GA4: Total charge = -0.000000
+MA1: Total charge = -0.000000
+MA2: Total charge = 0.000000
+MA3: Total charge = 0.000000
+MA4: Total charge = -0.000000
+MA5: Total charge = 0.000000
+MA6: Total charge = -0.000000
+NA1: Total charge = -0.000000
+NA2: Total charge = -0.000000
+NA3: Total charge = -0.000000
+NA4: Total charge = -0.000000
+NA5: Total charge = -0.000000
+NA6: Total charge = -0.000000
+NA7: Total charge = 0.000000
+NA8: Total charge = -0.000000
+NA9: Total charge = -0.000000
+ND1: Total charge = 0.000000
+ND2: Total charge = -0.000000
+SI1: Total charge = -1.000000
+SI2: Total charge = -1.000000
+
+
+HDB VALIDATION:
+----------------------------------------
+A21: 9 valid hydrogen donors
+A22: 9 valid hydrogen donors
+BM1: 6 valid hydrogen donors
+FC1: 7 valid hydrogen donors
+GA1: 6 valid hydrogen donors
+GA2: 6 valid hydrogen donors
+GA3: 6 valid hydrogen donors
+GA4: 5 valid hydrogen donors
+MA1: 6 valid hydrogen donors
+MA2: 6 valid hydrogen donors
+MA3: 6 valid hydrogen donors
+MA4: 6 valid hydrogen donors
+MA5: 6 valid hydrogen donors
+MA6: 6 valid hydrogen donors
+NA1: 9 valid hydrogen donors
+NA2: 9 valid hydrogen donors
+NA3: 6 valid hydrogen donors
+NA4: 7 valid hydrogen donors
+NA5: 8 valid hydrogen donors
+NA6: 7 valid hydrogen donors
+NA7: 9 valid hydrogen donors
+NA8: 9 valid hydrogen donors
+NA9: 6 valid hydrogen donors
+ND1: 9 valid hydrogen donors
+ND2: 9 valid hydrogen donors
+SI1: 12 valid hydrogen donors
+SI2: 12 valid hydrogen donors

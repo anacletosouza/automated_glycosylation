@@ -1,0 +1,119 @@
+NDG    15
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     N     
+2       6 HN     N      C2     C     
+3       4 HT1    CT     C      HT2   
+3       4 HT2    CT     C      HT1   
+3       4 HT3    CT     C      HT1   
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+1       2 HO6    O6    
+FCA    12
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     O2    
+1       2 HO2    O2    
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+3       4 H63    C6     C5     H61   
+NAG    15
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     N     
+2       6 HN     N      C2     C     
+3       4 HT1    CT     C      HT2   
+3       4 HT2    CT     C      HT1   
+3       4 HT3    CT     C      HT1   
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+1       2 HO6    O6    
+BMA    12
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     O2    
+1       2 HO2    O2    
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+1       2 HO6    O6    
+MAN    12
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     O2    
+1       2 HO2    O2    
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+1       2 HO6    O6    
+GAL    12
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     O2    
+1       2 HO2    O2    
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+1       2 HO6    O6    
+SIA    18
+1       2 HO2    O2    
+3       4 H6     C6     C5     C7    
+3       4 H31    C3     C2     H32   
+3       4 H32    C3     C2     H31   
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H5     C5     C4     N     
+2       6 HN     N      C5     C     
+3       4 HT1    CT     C      HT2   
+3       4 HT2    CT     C      HT1   
+3       4 HT3    CT     C      HT1   
+3       4 H7     C7     C6     O7    
+1       2 HO7    O7    
+3       4 H8     C8     C7     O8    
+1       2 HO8    O8    
+3       4 H91    C9     C8     H92   
+3       4 H92    C9     C8     H91   
+1       2 HO9    O9    
+A2G    15
+3       4 H1     C1     O1     O5    
+1       2 HO1    O1    
+3       4 H5     C5     C4     C6    
+3       4 H2     C2     C1     N     
+2       6 HN     N      C2     C     
+3       4 HT1    CT     C      HT2   
+3       4 HT2    CT     C      HT1   
+3       4 HT3    CT     C      HT1   
+3       4 H3     C3     C2     O3    
+1       2 HO3    O3    
+3       4 H4     C4     C3     O4    
+1       2 HO4    O4    
+3       4 H61    C6     C5     H62   
+3       4 H62    C6     C5     H61   
+1       2 HO6    O6    

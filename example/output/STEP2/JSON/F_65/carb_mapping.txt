@@ -1,0 +1,28 @@
+================================================================================
+PDB TO CHARMM CARBOHYDRATE RESIDUE MAPPING
+================================================================================
+
+JSON mapping source: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP2/JSON/F_65/F_65.json
+Sequence: Neu5Ac(a2-6)Gal(b1-4)GlcNAc(b1-2)Man(a1-3)[Man(a1-6)[Man(a1-3)]Man(a1-6)]Man(b1-4)GlcNAc(b1-4)GlcNAc
+
+PDB Residue     Chain    Position   CHARMM Name     IUPAC Name                               Match %   
+----------------------------------------------------------------------------------------------------
+NDG             F        142        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+NAG             F        143        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+BMA             F        144        BMAN            4C1 beta-D-mannose                          100.0%
+MAN             F        145        AMAN            4C1 alpha-D-mannose                         100.0%
+MAN             F        146        AMAN            4C1 alpha-D-mannose                         100.0%
+MAN             F        147        AMAN            4C1 alpha-D-mannose                         100.0%
+MAN             F        148        AMAN            4C1 alpha-D-mannose                         100.0%
+NAG             F        149        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+GAL             F        150        BLGAL           beta-L-galactose                            100.0%
+SIA             F        151        ANE5AC          alpha-Neu5Ac (N-acetyl-alpha-D-neur...      100.0%
+
+================================================================================
+NOTES:
+--------------------------------------------------------------------------------
+1. Residue names in the RTP file follow the pattern: PDBcode_ChainPosition
+2. Original CHARMM names are preserved in comments
+3. Atom names and parameters are from CHARMM carbohydrate force field
+4. JSON mapping was used for residue selection
+5. Use this mapping when setting up your simulation system

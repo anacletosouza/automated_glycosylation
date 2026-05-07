@@ -1,0 +1,18 @@
+================================================================================
+GLYCOSIDIC LINKAGE ANALYSIS REPORT
+================================================================================
+
+SUMMARY:
+  Total glycans analyzed: 0
+  Total glycosidic linkages (carb-carb): 0
+  Total protein-glycan linkages: 0
+
+GLYCOSIDIC LINKAGES WITHIN GLYCANS:
+--------------------------------------------------------------------------------
+No glycosidic linkages found within glycans.
+
+
+================================================================================
+PROTEIN-GLYCAN LINKAGES:
+--------------------------------------------------------------------------------
+No protein-glycan linkages found.

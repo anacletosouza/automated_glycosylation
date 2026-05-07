@@ -1,0 +1,6351 @@
+{
+  "pdb_file": "/home/anacleto/projects/github/automated_glycosylation/example/output/STEP2/PDB_GLYCOPROTEIN/test_glycosylated_final_valence_corrected.pdb",
+  "rtp_file": "/home/anacleto/projects/github/automated_glycosylation/example/output/STEP2/JSON/carb_redundance_removed.rtp",
+  "hdb_file": "/home/anacleto/projects/github/automated_glycosylation/example/output/STEP2/JSON/carb_redundance_removed.hdb",
+  "variants": {
+    "ND1": {
+      "original": "NDG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "HO1",
+        "HO4",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 33,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 26
+    },
+    "ND2": {
+      "original": "NDG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO6",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "HO1",
+        "HO4",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 33,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 27
+    },
+    "FC1": {
+      "original": "FCA",
+      "charmm_name": "AFUC",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "H63",
+        "HO2",
+        "HO3",
+        "HO4",
+        "O2",
+        "O3",
+        "O4",
+        "O5"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 33,
+      "rtp_atoms_count": 23,
+      "pdb_atoms_count": 20
+    },
+    "NA1": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO6",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 97,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 26
+    },
+    "NA2": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO4",
+        "HO6",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 65,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 27
+    },
+    "NA3": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO6",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "HT1",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 25
+    },
+    "NA4": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO6",
+        "HT1",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "HT2",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 25
+    },
+    "NA5": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO4",
+        "HO6",
+        "HT1",
+        "HT2",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HT3",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 26
+    },
+    "NA6": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO4",
+        "HO6",
+        "HT1",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HT2",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 26
+    },
+    "NA7": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 25
+    },
+    "NA8": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO4",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 26
+    },
+    "NA9": {
+      "original": "NAG",
+      "charmm_name": "BGLCNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO3",
+        "HO6",
+        "HT2",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "HT1",
+        "HT3",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 24
+    },
+    "BM1": {
+      "original": "BMA",
+      "charmm_name": "BMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO4",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO3",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 66,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 19
+    },
+    "MA1": {
+      "original": "MAN",
+      "charmm_name": "AMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO3",
+        "HO4",
+        "HO6",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO2",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 76,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 20
+    },
+    "MA2": {
+      "original": "MAN",
+      "charmm_name": "AMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO3",
+        "HO6",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO2",
+        "HO4",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 7,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 19
+    },
+    "MA3": {
+      "original": "MAN",
+      "charmm_name": "AMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO3",
+        "HO4",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO2",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 15,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 19
+    },
+    "MA4": {
+      "original": "MAN",
+      "charmm_name": "AMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO3",
+        "HO4",
+        "HO6",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 75,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 21
+    },
+    "MA5": {
+      "original": "MAN",
+      "charmm_name": "AMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO4",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO3",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 26,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 19
+    },
+    "MA6": {
+      "original": "MAN",
+      "charmm_name": "AMAN",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO3",
+        "HO6",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 20
+    },
+    "GA1": {
+      "original": "GAL",
+      "charmm_name": "BLGAL",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO3",
+        "HO4",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 14,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 20
+    },
+    "GA2": {
+      "original": "GAL",
+      "charmm_name": "BLGAL",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO3",
+        "HO4",
+        "HO6",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 21,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 21
+    },
+    "GA3": {
+      "original": "GAL",
+      "charmm_name": "BLGAL",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO3",
+        "HO6",
+        "O2",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO4",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 20
+    },
+    "GA4": {
+      "original": "GAL",
+      "charmm_name": "BLGAL",
+      "atoms_present": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HO2",
+        "HO4",
+        "HO6",
+        "O2",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "H1",
+        "HO1",
+        "HO3",
+        "O1",
+        "O3"
+      ],
+      "atoms_extra": [],
+      "count": 3,
+      "rtp_atoms_count": 24,
+      "pdb_atoms_count": 19
+    },
+    "SI1": {
+      "original": "SIA",
+      "charmm_name": "ANE5AC",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CT",
+        "H31",
+        "H32",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H91",
+        "H92",
+        "HN",
+        "HO2",
+        "HO4",
+        "HO7",
+        "HO8",
+        "HO9",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O11",
+        "O12",
+        "O4",
+        "O6",
+        "O7",
+        "O8",
+        "O9"
+      ],
+      "atoms_missing": [
+        "O2"
+      ],
+      "atoms_extra": [],
+      "count": 15,
+      "rtp_atoms_count": 39,
+      "pdb_atoms_count": 38
+    },
+    "SI2": {
+      "original": "SIA",
+      "charmm_name": "ANE5AC",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CT",
+        "H31",
+        "H32",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H91",
+        "H92",
+        "HN",
+        "HO2",
+        "HO4",
+        "HO7",
+        "HO8",
+        "HO9",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O11",
+        "O12",
+        "O2",
+        "O4",
+        "O6",
+        "O7",
+        "O8",
+        "O9"
+      ],
+      "atoms_missing": [],
+      "atoms_extra": [],
+      "count": 3,
+      "rtp_atoms_count": 39,
+      "pdb_atoms_count": 39
+    },
+    "A21": {
+      "original": "A2G",
+      "charmm_name": "AGALNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO4",
+        "HO6",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "HO1",
+        "HO3",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 3,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 27
+    },
+    "A22": {
+      "original": "A2G",
+      "charmm_name": "AGALNA",
+      "atoms_present": [
+        "C",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "CT",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H61",
+        "H62",
+        "HN",
+        "HO4",
+        "HT1",
+        "HT2",
+        "HT3",
+        "N",
+        "O",
+        "O3",
+        "O4",
+        "O5",
+        "O6"
+      ],
+      "atoms_missing": [
+        "HO1",
+        "HO3",
+        "HO6",
+        "O1"
+      ],
+      "atoms_extra": [],
+      "count": 1,
+      "rtp_atoms_count": 30,
+      "pdb_atoms_count": 26
+    }
+  },
+  "mapping": {
+    "NDG_D_1": "ND1",
+    "NDG_E_1": "ND1",
+    "NDG_F_1": "ND1",
+    "NDG_D_9": "ND2",
+    "NDG_E_10": "ND2",
+    "NDG_F_10": "ND2",
+    "NDG_D_16": "ND2",
+    "NDG_E_17": "ND1",
+    "NDG_F_17": "ND2",
+    "NDG_D_24": "ND2",
+    "NDG_F_24": "ND2",
+    "NDG_D_31": "ND1",
+    "NDG_E_31": "ND1",
+    "NDG_F_31": "ND1",
+    "NDG_E_39": "ND1",
+    "NDG_F_39": "ND1",
+    "NDG_D_42": "ND1",
+    "NDG_E_48": "ND2",
+    "NDG_F_50": "ND2",
+    "NDG_D_54": "ND2",
+    "NDG_E_55": "ND2",
+    "NDG_F_61": "ND2",
+    "NDG_D_64": "ND1",
+    "NDG_E_66": "ND1",
+    "NDG_F_68": "ND1",
+    "NDG_D_73": "ND1",
+    "NDG_E_79": "ND1",
+    "NDG_D_81": "ND1",
+    "NDG_F_81": "ND1",
+    "NDG_E_87": "ND1",
+    "NDG_D_89": "ND1",
+    "NDG_F_89": "ND2",
+    "NDG_E_94": "ND2",
+    "NDG_F_96": "ND1",
+    "NDG_D_97": "ND2",
+    "NDG_E_101": "ND1",
+    "NDG_D_104": "ND2",
+    "NDG_F_104": "ND2",
+    "NDG_E_109": "ND2",
+    "NDG_D_111": "ND2",
+    "NDG_F_113": "ND2",
+    "NDG_E_118": "ND2",
+    "NDG_D_119": "ND2",
+    "NDG_F_120": "ND2",
+    "NDG_E_125": "ND2",
+    "NDG_D_128": "ND2",
+    "NDG_F_128": "ND2",
+    "NDG_E_132": "ND2",
+    "NDG_F_135": "ND2",
+    "NDG_D_136": "ND1",
+    "NDG_E_141": "ND2",
+    "NDG_F_142": "ND2",
+    "NDG_D_147": "ND1",
+    "NDG_E_148": "ND2",
+    "NDG_F_152": "ND1",
+    "NDG_D_155": "ND1",
+    "NDG_E_155": "ND1",
+    "NDG_F_160": "ND2",
+    "NDG_D_162": "ND2",
+    "NDG_E_164": "ND1",
+    "NDG_F_167": "ND1",
+    "NDG_D_169": "ND1",
+    "NDG_E_175": "ND1",
+    "NDG_F_177": "ND1",
+    "NDG_D_179": "ND1",
+    "NDG_E_185": "ND1",
+    "FCA_D_2": "FC1",
+    "FCA_E_2": "FC1",
+    "FCA_F_2": "FC1",
+    "FCA_E_18": "FC1",
+    "FCA_D_32": "FC1",
+    "FCA_E_32": "FC1",
+    "FCA_F_32": "FC1",
+    "FCA_E_40": "FC1",
+    "FCA_F_40": "FC1",
+    "FCA_D_43": "FC1",
+    "FCA_D_65": "FC1",
+    "FCA_E_67": "FC1",
+    "FCA_F_69": "FC1",
+    "FCA_D_74": "FC1",
+    "FCA_E_80": "FC1",
+    "FCA_D_82": "FC1",
+    "FCA_F_82": "FC1",
+    "FCA_E_88": "FC1",
+    "FCA_D_90": "FC1",
+    "FCA_F_97": "FC1",
+    "FCA_E_102": "FC1",
+    "FCA_D_137": "FC1",
+    "FCA_D_148": "FC1",
+    "FCA_F_153": "FC1",
+    "FCA_D_156": "FC1",
+    "FCA_E_156": "FC1",
+    "FCA_E_165": "FC1",
+    "FCA_F_168": "FC1",
+    "FCA_D_170": "FC1",
+    "FCA_E_176": "FC1",
+    "FCA_F_178": "FC1",
+    "FCA_D_180": "FC1",
+    "FCA_E_186": "FC1",
+    "NAG_D_3": "NA1",
+    "NAG_E_3": "NA1",
+    "NAG_F_3": "NA1",
+    "NAG_D_6": "NA2",
+    "NAG_E_6": "NA2",
+    "NAG_F_6": "NA2",
+    "NAG_D_8": "NA2",
+    "NAG_E_8": "NA2",
+    "NAG_F_8": "NA2",
+    "NAG_E_9": "NA2",
+    "NAG_F_9": "NA2",
+    "NAG_D_10": "NA1",
+    "NAG_E_11": "NA1",
+    "NAG_F_11": "NA1",
+    "NAG_D_17": "NA1",
+    "NAG_F_18": "NA1",
+    "NAG_E_19": "NA1",
+    "NAG_D_20": "NA2",
+    "NAG_F_21": "NA2",
+    "NAG_D_22": "NA2",
+    "NAG_E_22": "NA1",
+    "NAG_D_23": "NA2",
+    "NAG_F_23": "NA2",
+    "NAG_D_25": "NA1",
+    "NAG_F_25": "NA1",
+    "NAG_E_26": "NA1",
+    "NAG_E_28": "NA1",
+    "NAG_D_33": "NA1",
+    "NAG_E_33": "NA1",
+    "NAG_F_33": "NA1",
+    "NAG_D_36": "NA1",
+    "NAG_E_36": "NA2",
+    "NAG_F_36": "NA2",
+    "NAG_E_38": "NA2",
+    "NAG_F_38": "NA2",
+    "NAG_D_39": "NA1",
+    "NAG_E_41": "NA1",
+    "NAG_F_41": "NA1",
+    "NAG_D_44": "NA1",
+    "NAG_E_44": "NA2",
+    "NAG_F_44": "NA1",
+    "NAG_E_46": "NA2",
+    "NAG_D_47": "NA1",
+    "NAG_E_47": "NA2",
+    "NAG_F_47": "NA1",
+    "NAG_E_49": "NA1",
+    "NAG_D_51": "NA1",
+    "NAG_F_51": "NA1",
+    "NAG_D_55": "NA1",
+    "NAG_E_56": "NA1",
+    "NAG_F_62": "NA1",
+    "NAG_F_65": "NA2",
+    "NAG_D_66": "NA1",
+    "NAG_F_67": "NA2",
+    "NAG_E_68": "NA1",
+    "NAG_D_69": "NA2",
+    "NAG_F_70": "NA1",
+    "NAG_D_71": "NA2",
+    "NAG_E_71": "NA1",
+    "NAG_D_72": "NA2",
+    "NAG_E_73": "NA3",
+    "NAG_F_73": "NA1",
+    "NAG_D_75": "NA1",
+    "NAG_F_75": "NA1",
+    "NAG_E_76": "NA1",
+    "NAG_D_78": "NA2",
+    "NAG_F_78": "NA1",
+    "NAG_D_80": "NA2",
+    "NAG_E_81": "NA1",
+    "NAG_D_83": "NA1",
+    "NAG_F_83": "NA4",
+    "NAG_E_84": "NA2",
+    "NAG_D_86": "NA2",
+    "NAG_E_86": "NA2",
+    "NAG_F_86": "NA2",
+    "NAG_D_88": "NA2",
+    "NAG_F_88": "NA2",
+    "NAG_E_89": "NA1",
+    "NAG_F_90": "NA1",
+    "NAG_D_91": "NA1",
+    "NAG_E_93": "NA2",
+    "NAG_D_94": "NA2",
+    "NAG_E_95": "NA1",
+    "NAG_D_96": "NA2",
+    "NAG_D_98": "NA1",
+    "NAG_F_98": "NA1",
+    "NAG_D_101": "NA5",
+    "NAG_F_101": "NA6",
+    "NAG_D_103": "NA2",
+    "NAG_E_103": "NA1",
+    "NAG_F_103": "NA2",
+    "NAG_D_105": "NA1",
+    "NAG_F_105": "NA1",
+    "NAG_E_106": "NA2",
+    "NAG_E_108": "NA2",
+    "NAG_E_110": "NA1",
+    "NAG_F_111": "NA1",
+    "NAG_D_112": "NA1",
+    "NAG_F_114": "NA1",
+    "NAG_E_116": "NA1",
+    "NAG_E_119": "NA1",
+    "NAG_D_120": "NA1",
+    "NAG_F_121": "NA1",
+    "NAG_D_126": "NA1",
+    "NAG_E_126": "NA1",
+    "NAG_D_129": "NA1",
+    "NAG_F_129": "NA1",
+    "NAG_E_133": "NA1",
+    "NAG_F_136": "NA1",
+    "NAG_D_138": "NA1",
+    "NAG_D_141": "NA7",
+    "NAG_E_142": "NA1",
+    "NAG_F_143": "NA1",
+    "NAG_D_144": "NA1",
+    "NAG_D_149": "NA1",
+    "NAG_E_149": "NA1",
+    "NAG_F_149": "NA1",
+    "NAG_D_152": "NA8",
+    "NAG_E_152": "NA2",
+    "NAG_D_154": "NA2",
+    "NAG_E_154": "NA2",
+    "NAG_F_154": "NA1",
+    "NAG_D_157": "NA1",
+    "NAG_E_157": "NA1",
+    "NAG_F_157": "NA2",
+    "NAG_F_159": "NA2",
+    "NAG_E_160": "NA2",
+    "NAG_D_161": "NA2",
+    "NAG_F_161": "NA1",
+    "NAG_E_162": "NA2",
+    "NAG_D_163": "NA1",
+    "NAG_E_163": "NA2",
+    "NAG_F_164": "NA2",
+    "NAG_D_166": "NA2",
+    "NAG_E_166": "NA1",
+    "NAG_F_166": "NA2",
+    "NAG_D_168": "NA2",
+    "NAG_E_169": "NA9",
+    "NAG_F_169": "NA1",
+    "NAG_D_171": "NA1",
+    "NAG_E_172": "NA1",
+    "NAG_F_172": "NA2",
+    "NAG_F_173": "NA2",
+    "NAG_D_174": "NA2",
+    "NAG_D_175": "NA2",
+    "NAG_F_175": "NA2",
+    "NAG_F_176": "NA2",
+    "NAG_D_177": "NA2",
+    "NAG_E_177": "NA1",
+    "NAG_D_178": "NA2",
+    "NAG_F_179": "NA1",
+    "NAG_E_180": "NA2",
+    "NAG_D_181": "NA1",
+    "NAG_E_181": "NA2",
+    "NAG_F_182": "NA1",
+    "NAG_E_183": "NA2",
+    "NAG_D_184": "NA1",
+    "NAG_E_184": "NA2",
+    "NAG_F_184": "NA1",
+    "NAG_D_186": "NA1",
+    "NAG_E_187": "NA1",
+    "NAG_F_187": "NA1",
+    "NAG_D_189": "NA1",
+    "NAG_F_189": "NA1",
+    "NAG_E_190": "NA1",
+    "NAG_D_191": "NA1",
+    "NAG_E_192": "NA1",
+    "NAG_E_195": "NA1",
+    "NAG_E_197": "NA1",
+    "BMA_D_4": "BM1",
+    "BMA_E_4": "BM1",
+    "BMA_F_4": "BM1",
+    "BMA_D_11": "BM1",
+    "BMA_E_12": "BM1",
+    "BMA_F_12": "BM1",
+    "BMA_D_18": "BM1",
+    "BMA_F_19": "BM1",
+    "BMA_E_20": "BM1",
+    "BMA_D_26": "BM1",
+    "BMA_F_26": "BM1",
+    "BMA_D_34": "BM1",
+    "BMA_E_34": "BM1",
+    "BMA_F_34": "BM1",
+    "BMA_E_42": "BM1",
+    "BMA_F_42": "BM1",
+    "BMA_D_45": "BM1",
+    "BMA_E_50": "BM1",
+    "BMA_F_52": "BM1",
+    "BMA_D_56": "BM1",
+    "BMA_E_57": "BM1",
+    "BMA_F_63": "BM1",
+    "BMA_D_67": "BM1",
+    "BMA_E_69": "BM1",
+    "BMA_F_71": "BM1",
+    "BMA_D_76": "BM1",
+    "BMA_E_82": "BM1",
+    "BMA_D_84": "BM1",
+    "BMA_F_84": "BM1",
+    "BMA_E_90": "BM1",
+    "BMA_F_91": "BM1",
+    "BMA_D_92": "BM1",
+    "BMA_E_96": "BM1",
+    "BMA_D_99": "BM1",
+    "BMA_F_99": "BM1",
+    "BMA_E_104": "BM1",
+    "BMA_D_106": "BM1",
+    "BMA_F_106": "BM1",
+    "BMA_E_111": "BM1",
+    "BMA_D_113": "BM1",
+    "BMA_F_115": "BM1",
+    "BMA_E_120": "BM1",
+    "BMA_D_121": "BM1",
+    "BMA_F_122": "BM1",
+    "BMA_E_127": "BM1",
+    "BMA_D_130": "BM1",
+    "BMA_F_130": "BM1",
+    "BMA_E_134": "BM1",
+    "BMA_F_137": "BM1",
+    "BMA_D_139": "BM1",
+    "BMA_E_143": "BM1",
+    "BMA_F_144": "BM1",
+    "BMA_D_150": "BM1",
+    "BMA_E_150": "BM1",
+    "BMA_F_155": "BM1",
+    "BMA_D_158": "BM1",
+    "BMA_E_158": "BM1",
+    "BMA_F_162": "BM1",
+    "BMA_D_164": "BM1",
+    "BMA_E_167": "BM1",
+    "BMA_F_170": "BM1",
+    "BMA_D_172": "BM1",
+    "BMA_E_178": "BM1",
+    "BMA_F_180": "BM1",
+    "BMA_D_182": "BM1",
+    "BMA_E_188": "BM1",
+    "MAN_D_5": "MA1",
+    "MAN_E_5": "MA2",
+    "MAN_F_5": "MA1",
+    "MAN_D_7": "MA1",
+    "MAN_E_7": "MA3",
+    "MAN_F_7": "MA3",
+    "MAN_D_12": "MA4",
+    "MAN_D_13": "MA5",
+    "MAN_E_13": "MA4",
+    "MAN_F_13": "MA4",
+    "MAN_D_14": "MA4",
+    "MAN_E_14": "MA5",
+    "MAN_F_14": "MA5",
+    "MAN_D_15": "MA4",
+    "MAN_E_15": "MA4",
+    "MAN_F_15": "MA4",
+    "MAN_E_16": "MA4",
+    "MAN_F_16": "MA4",
+    "MAN_D_19": "MA1",
+    "MAN_F_20": "MA1",
+    "MAN_D_21": "MA3",
+    "MAN_E_21": "MA1",
+    "MAN_F_22": "MA1",
+    "MAN_E_25": "MA3",
+    "MAN_D_27": "MA4",
+    "MAN_F_27": "MA4",
+    "MAN_D_28": "MA5",
+    "MAN_F_28": "MA5",
+    "MAN_D_29": "MA4",
+    "MAN_F_29": "MA4",
+    "MAN_D_30": "MA4",
+    "MAN_F_30": "MA4",
+    "MAN_D_35": "MA1",
+    "MAN_E_35": "MA1",
+    "MAN_F_35": "MA1",
+    "MAN_E_37": "MA1",
+    "MAN_F_37": "MA1",
+    "MAN_D_38": "MA1",
+    "MAN_E_43": "MA1",
+    "MAN_F_43": "MA1",
+    "MAN_E_45": "MA3",
+    "MAN_D_46": "MA1",
+    "MAN_F_46": "MA1",
+    "MAN_D_50": "MA1",
+    "MAN_E_51": "MA4",
+    "MAN_E_52": "MA5",
+    "MAN_E_53": "MA4",
+    "MAN_F_53": "MA1",
+    "MAN_E_54": "MA4",
+    "MAN_F_54": "MA1",
+    "MAN_F_55": "MA4",
+    "MAN_F_56": "MA5",
+    "MAN_D_57": "MA1",
+    "MAN_F_57": "MA1",
+    "MAN_D_58": "MA1",
+    "MAN_E_58": "MA1",
+    "MAN_F_58": "MA4",
+    "MAN_D_59": "MA4",
+    "MAN_E_59": "MA1",
+    "MAN_F_59": "MA1",
+    "MAN_D_60": "MA5",
+    "MAN_E_60": "MA4",
+    "MAN_F_60": "MA4",
+    "MAN_D_61": "MA4",
+    "MAN_E_61": "MA5",
+    "MAN_D_62": "MA1",
+    "MAN_E_62": "MA1",
+    "MAN_D_63": "MA4",
+    "MAN_E_63": "MA4",
+    "MAN_E_64": "MA1",
+    "MAN_F_64": "MA1",
+    "MAN_E_65": "MA4",
+    "MAN_F_66": "MA1",
+    "MAN_D_68": "MA1",
+    "MAN_D_70": "MA3",
+    "MAN_E_70": "MA3",
+    "MAN_F_72": "MA3",
+    "MAN_E_75": "MA1",
+    "MAN_D_77": "MA1",
+    "MAN_F_77": "MA1",
+    "MAN_D_79": "MA1",
+    "MAN_E_83": "MA1",
+    "MAN_D_85": "MA1",
+    "MAN_E_85": "MA1",
+    "MAN_F_85": "MA1",
+    "MAN_D_87": "MA1",
+    "MAN_F_87": "MA1",
+    "MAN_E_91": "MA4",
+    "MAN_E_92": "MA1",
+    "MAN_F_92": "MA4",
+    "MAN_D_93": "MA1",
+    "MAN_F_93": "MA5",
+    "MAN_F_94": "MA4",
+    "MAN_D_95": "MA1",
+    "MAN_F_95": "MA4",
+    "MAN_E_97": "MA4",
+    "MAN_E_98": "MA5",
+    "MAN_E_99": "MA4",
+    "MAN_D_100": "MA1",
+    "MAN_E_100": "MA4",
+    "MAN_F_100": "MA1",
+    "MAN_D_102": "MA1",
+    "MAN_F_102": "MA1",
+    "MAN_E_105": "MA1",
+    "MAN_D_107": "MA4",
+    "MAN_E_107": "MA1",
+    "MAN_F_107": "MA5",
+    "MAN_D_108": "MA5",
+    "MAN_F_108": "MA4",
+    "MAN_D_109": "MA4",
+    "MAN_F_109": "MA4",
+    "MAN_D_110": "MA4",
+    "MAN_F_110": "MA1",
+    "MAN_E_112": "MA5",
+    "MAN_E_113": "MA4",
+    "MAN_D_114": "MA1",
+    "MAN_E_114": "MA4",
+    "MAN_D_115": "MA4",
+    "MAN_E_115": "MA1",
+    "MAN_D_116": "MA5",
+    "MAN_F_116": "MA4",
+    "MAN_D_117": "MA4",
+    "MAN_F_117": "MA5",
+    "MAN_D_118": "MA6",
+    "MAN_F_118": "MA4",
+    "MAN_F_119": "MA4",
+    "MAN_E_121": "MA4",
+    "MAN_D_122": "MA5",
+    "MAN_E_122": "MA5",
+    "MAN_D_123": "MA4",
+    "MAN_E_123": "MA4",
+    "MAN_F_123": "MA1",
+    "MAN_D_124": "MA4",
+    "MAN_E_124": "MA4",
+    "MAN_F_124": "MA4",
+    "MAN_D_125": "MA1",
+    "MAN_F_125": "MA5",
+    "MAN_F_126": "MA4",
+    "MAN_F_127": "MA4",
+    "MAN_E_128": "MA4",
+    "MAN_E_129": "MA5",
+    "MAN_E_130": "MA4",
+    "MAN_D_131": "MA1",
+    "MAN_E_131": "MA4",
+    "MAN_F_131": "MA4",
+    "MAN_D_132": "MA4",
+    "MAN_F_132": "MA5",
+    "MAN_D_133": "MA5",
+    "MAN_F_133": "MA4",
+    "MAN_D_134": "MA4",
+    "MAN_F_134": "MA4",
+    "MAN_D_135": "MA4",
+    "MAN_E_135": "MA5",
+    "MAN_E_136": "MA4",
+    "MAN_E_137": "MA4",
+    "MAN_E_138": "MA1",
+    "MAN_F_138": "MA4",
+    "MAN_E_139": "MA1",
+    "MAN_F_139": "MA5",
+    "MAN_D_140": "MA1",
+    "MAN_E_140": "MA4",
+    "MAN_F_140": "MA4",
+    "MAN_F_141": "MA4",
+    "MAN_D_143": "MA1",
+    "MAN_E_144": "MA4",
+    "MAN_E_145": "MA5",
+    "MAN_F_145": "MA5",
+    "MAN_E_146": "MA4",
+    "MAN_F_146": "MA4",
+    "MAN_E_147": "MA4",
+    "MAN_F_147": "MA4",
+    "MAN_F_148": "MA1",
+    "MAN_D_151": "MA1",
+    "MAN_E_151": "MA1",
+    "MAN_D_153": "MA1",
+    "MAN_E_153": "MA1",
+    "MAN_F_156": "MA1",
+    "MAN_F_158": "MA1",
+    "MAN_D_159": "MA4",
+    "MAN_E_159": "MA1",
+    "MAN_D_160": "MA1",
+    "MAN_E_161": "MA3",
+    "MAN_F_163": "MA1",
+    "MAN_D_165": "MA1",
+    "MAN_F_165": "MA1",
+    "MAN_D_167": "MA1",
+    "MAN_E_168": "MA1",
+    "MAN_E_171": "MA1",
+    "MAN_F_171": "MA2",
+    "MAN_D_173": "MA2",
+    "MAN_F_174": "MA3",
+    "MAN_D_176": "MA3",
+    "MAN_E_179": "MA2",
+    "MAN_F_181": "MA2",
+    "MAN_E_182": "MA3",
+    "MAN_D_183": "MA2",
+    "MAN_F_186": "MA3",
+    "MAN_D_188": "MA3",
+    "MAN_E_189": "MA2",
+    "MAN_E_194": "MA3",
+    "GAL_E_23": "GA1",
+    "GAL_E_27": "GA2",
+    "GAL_E_29": "GA1",
+    "GAL_D_37": "GA2",
+    "GAL_D_40": "GA1",
+    "GAL_F_45": "GA2",
+    "GAL_D_48": "GA1",
+    "GAL_F_48": "GA1",
+    "GAL_D_52": "GA1",
+    "GAL_E_72": "GA2",
+    "GAL_E_74": "GA2",
+    "GAL_F_74": "GA2",
+    "GAL_F_76": "GA2",
+    "GAL_E_77": "GA1",
+    "GAL_F_79": "GA1",
+    "GAL_F_112": "GA2",
+    "GAL_E_117": "GA2",
+    "GAL_D_127": "GA2",
+    "GAL_D_142": "GA2",
+    "GAL_D_145": "GA1",
+    "GAL_F_150": "GA1",
+    "GAL_E_170": "GA2",
+    "GAL_E_173": "GA1",
+    "GAL_F_183": "GA2",
+    "GAL_D_185": "GA3",
+    "GAL_F_185": "GA2",
+    "GAL_D_187": "GA2",
+    "GAL_F_188": "GA2",
+    "GAL_D_190": "GA2",
+    "GAL_F_190": "GA1",
+    "GAL_E_191": "GA2",
+    "GAL_D_192": "GA1",
+    "GAL_E_193": "GA2",
+    "GAL_F_193": "GA2",
+    "GAL_D_195": "GA4",
+    "GAL_E_196": "GA2",
+    "GAL_D_198": "GA4",
+    "GAL_E_198": "GA1",
+    "GAL_E_202": "GA4",
+    "SIA_E_24": "SI1",
+    "SIA_E_30": "SI1",
+    "SIA_D_41": "SI1",
+    "SIA_D_49": "SI1",
+    "SIA_F_49": "SI1",
+    "SIA_D_53": "SI1",
+    "SIA_E_78": "SI1",
+    "SIA_F_80": "SI1",
+    "SIA_D_146": "SI1",
+    "SIA_F_151": "SI1",
+    "SIA_E_174": "SI1",
+    "SIA_F_191": "SI1",
+    "SIA_D_193": "SI1",
+    "SIA_D_196": "SI2",
+    "SIA_D_199": "SI2",
+    "SIA_E_199": "SI1",
+    "SIA_E_201": "SI1",
+    "SIA_E_203": "SI2",
+    "A2G_F_192": "A21",
+    "A2G_D_194": "A21",
+    "A2G_D_197": "A21",
+    "A2G_E_200": "A22"
+  },
+  "variant_rtp": {
+    "ND1": {
+      "original": "NDG",
+      "atom_count": 26,
+      "bond_count": 26,
+      "improper_count": 2,
+      "missing_atoms": [
+        "O1",
+        "HO1",
+        "HO4",
+        "HO6"
+      ],
+      "total_charge": 2.220446049250313e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.95,
+          "charge_group": 1
+        },
+        {
+          "name": "H1",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        }
+      ]
+    },
+    "ND2": {
+      "original": "NDG",
+      "atom_count": 27,
+      "bond_count": 27,
+      "improper_count": 2,
+      "missing_atoms": [
+        "O1",
+        "HO1",
+        "HO4"
+      ],
+      "total_charge": -2.7755575615628914e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.53,
+          "charge_group": 1
+        },
+        {
+          "name": "H1",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "FC1": {
+      "original": "FCA",
+      "atom_count": 20,
+      "bond_count": 20,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1"
+      ],
+      "total_charge": -1.942890293094024e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.19999999999999996,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H63",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 5
+        }
+      ]
+    },
+    "NA1": {
+      "original": "NAG",
+      "atom_count": 26,
+      "bond_count": 26,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO4"
+      ],
+      "total_charge": -2.7755575615628914e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.6199999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA2": {
+      "original": "NAG",
+      "atom_count": 27,
+      "bond_count": 27,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1"
+      ],
+      "total_charge": -5.551115123125783e-17,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.19999999999999996,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA3": {
+      "original": "NAG",
+      "atom_count": 25,
+      "bond_count": 25,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HT1",
+        "HO4"
+      ],
+      "total_charge": -4.996003610813204e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.71,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA4": {
+      "original": "NAG",
+      "atom_count": 25,
+      "bond_count": 25,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HT2",
+        "HO4"
+      ],
+      "total_charge": -4.996003610813204e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.71,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA5": {
+      "original": "NAG",
+      "atom_count": 26,
+      "bond_count": 26,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HT3"
+      ],
+      "total_charge": -1.6653345369377348e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.2899999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA6": {
+      "original": "NAG",
+      "atom_count": 26,
+      "bond_count": 26,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HT2"
+      ],
+      "total_charge": -1.6653345369377348e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.2899999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA7": {
+      "original": "NAG",
+      "atom_count": 25,
+      "bond_count": 25,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO4",
+        "HO6"
+      ],
+      "total_charge": 2.220446049250313e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 1.04,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA8": {
+      "original": "NAG",
+      "atom_count": 26,
+      "bond_count": 26,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO6"
+      ],
+      "total_charge": -3.3306690738754696e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.6199999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        }
+      ]
+    },
+    "NA9": {
+      "original": "NAG",
+      "atom_count": 24,
+      "bond_count": 24,
+      "improper_count": 2,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HT1",
+        "HT3",
+        "HO4"
+      ],
+      "total_charge": -2.7755575615628914e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.7999999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "BM1": {
+      "original": "BMA",
+      "atom_count": 19,
+      "bond_count": 19,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO3",
+        "HO6"
+      ],
+      "total_charge": 1.1102230246251565e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 1.04,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        }
+      ]
+    },
+    "MA1": {
+      "original": "MAN",
+      "atom_count": 20,
+      "bond_count": 20,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO2"
+      ],
+      "total_charge": -2.7755575615628914e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.6199999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "MA2": {
+      "original": "MAN",
+      "atom_count": 19,
+      "bond_count": 19,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO2",
+        "HO4"
+      ],
+      "total_charge": 1.6653345369377348e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 1.04,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "MA3": {
+      "original": "MAN",
+      "atom_count": 19,
+      "bond_count": 19,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO2",
+        "HO6"
+      ],
+      "total_charge": 1.1102230246251565e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 1.04,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        }
+      ]
+    },
+    "MA4": {
+      "original": "MAN",
+      "atom_count": 21,
+      "bond_count": 21,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1"
+      ],
+      "total_charge": -1.6653345369377348e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.19999999999999996,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "MA5": {
+      "original": "MAN",
+      "atom_count": 19,
+      "bond_count": 19,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO3",
+        "HO6"
+      ],
+      "total_charge": 1.1102230246251565e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 1.04,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        }
+      ]
+    },
+    "MA6": {
+      "original": "MAN",
+      "atom_count": 20,
+      "bond_count": 20,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO4"
+      ],
+      "total_charge": -2.7755575615628914e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.6199999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "GA1": {
+      "original": "GAL",
+      "atom_count": 20,
+      "bond_count": 20,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO6"
+      ],
+      "total_charge": -3.3306690738754696e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.6199999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        }
+      ]
+    },
+    "GA2": {
+      "original": "GAL",
+      "atom_count": 21,
+      "bond_count": 21,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1"
+      ],
+      "total_charge": -1.6653345369377348e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.19999999999999996,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "GA3": {
+      "original": "GAL",
+      "atom_count": 20,
+      "bond_count": 20,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "HO4"
+      ],
+      "total_charge": -2.7755575615628914e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.6199999999999999,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO3",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "GA4": {
+      "original": "GAL",
+      "atom_count": 19,
+      "bond_count": 19,
+      "improper_count": 0,
+      "missing_atoms": [
+        "H1",
+        "O1",
+        "HO1",
+        "O3",
+        "HO3"
+      ],
+      "total_charge": -5.551115123125783e-17,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": -0.030000000000000027,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 2
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 2
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 4
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 4
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 4
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 5
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 5
+        }
+      ]
+    },
+    "SI1": {
+      "original": "SIA",
+      "atom_count": 38,
+      "bond_count": 37,
+      "improper_count": 3,
+      "missing_atoms": [
+        "O2"
+      ],
+      "total_charge": -1.0,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC2O2",
+          "charge": -0.35000000000000003,
+          "charge_group": 1
+        },
+        {
+          "name": "O11",
+          "type": "OC2D2",
+          "charge": -0.6,
+          "charge_group": 1
+        },
+        {
+          "name": "O12",
+          "type": "OC2D2",
+          "charge": -0.6,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3062",
+          "charge": 0.33,
+          "charge_group": 1
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 1
+        },
+        {
+          "name": "C6",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H6",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O6",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C3",
+          "type": "CC3261",
+          "charge": -0.18,
+          "charge_group": 2
+        },
+        {
+          "name": "H31",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "H32",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C5",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 4
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 4
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 4
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 5
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 5
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 6
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "C7",
+          "type": "CC312",
+          "charge": 0.14,
+          "charge_group": 7
+        },
+        {
+          "name": "H7",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O7",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO7",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        },
+        {
+          "name": "C8",
+          "type": "CC312",
+          "charge": 0.14,
+          "charge_group": 8
+        },
+        {
+          "name": "H8",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 8
+        },
+        {
+          "name": "O8",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 8
+        },
+        {
+          "name": "HO8",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 8
+        },
+        {
+          "name": "C9",
+          "type": "CC322",
+          "charge": 0.05,
+          "charge_group": 9
+        },
+        {
+          "name": "H91",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 9
+        },
+        {
+          "name": "H92",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 9
+        },
+        {
+          "name": "O9",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 9
+        },
+        {
+          "name": "HO9",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 9
+        }
+      ]
+    },
+    "SI2": {
+      "original": "SIA",
+      "atom_count": 39,
+      "bond_count": 39,
+      "improper_count": 3,
+      "missing_atoms": [],
+      "total_charge": -1.0,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC2O2",
+          "charge": 0.3,
+          "charge_group": 1
+        },
+        {
+          "name": "O11",
+          "type": "OC2D2",
+          "charge": -0.6,
+          "charge_group": 1
+        },
+        {
+          "name": "O12",
+          "type": "OC2D2",
+          "charge": -0.6,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3062",
+          "charge": 0.33,
+          "charge_group": 1
+        },
+        {
+          "name": "O2",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 1
+        },
+        {
+          "name": "HO2",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 1
+        },
+        {
+          "name": "C6",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H6",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O6",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C3",
+          "type": "CC3261",
+          "charge": -0.18,
+          "charge_group": 2
+        },
+        {
+          "name": "H31",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "H32",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 3
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 3
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 3
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 3
+        },
+        {
+          "name": "C5",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 4
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 4
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 4
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 5
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 5
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 6
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "C7",
+          "type": "CC312",
+          "charge": 0.14,
+          "charge_group": 7
+        },
+        {
+          "name": "H7",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O7",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO7",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        },
+        {
+          "name": "C8",
+          "type": "CC312",
+          "charge": 0.14,
+          "charge_group": 8
+        },
+        {
+          "name": "H8",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 8
+        },
+        {
+          "name": "O8",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 8
+        },
+        {
+          "name": "HO8",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 8
+        },
+        {
+          "name": "C9",
+          "type": "CC322",
+          "charge": 0.05,
+          "charge_group": 9
+        },
+        {
+          "name": "H91",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 9
+        },
+        {
+          "name": "H92",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 9
+        },
+        {
+          "name": "O9",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 9
+        },
+        {
+          "name": "HO9",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 9
+        }
+      ]
+    },
+    "A21": {
+      "original": "A2G",
+      "atom_count": 27,
+      "bond_count": 27,
+      "improper_count": 2,
+      "missing_atoms": [
+        "O1",
+        "HO1",
+        "HO3"
+      ],
+      "total_charge": -1.6653345369377348e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.53,
+          "charge_group": 1
+        },
+        {
+          "name": "H1",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        },
+        {
+          "name": "HO6",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 7
+        }
+      ]
+    },
+    "A22": {
+      "original": "A2G",
+      "atom_count": 26,
+      "bond_count": 26,
+      "improper_count": 2,
+      "missing_atoms": [
+        "O1",
+        "HO1",
+        "HO3",
+        "HO6"
+      ],
+      "total_charge": 1.1102230246251565e-16,
+      "atoms": [
+        {
+          "name": "C1",
+          "type": "CC3162",
+          "charge": 0.95,
+          "charge_group": 1
+        },
+        {
+          "name": "H1",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "C5",
+          "type": "CC3163",
+          "charge": 0.11,
+          "charge_group": 1
+        },
+        {
+          "name": "H5",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 1
+        },
+        {
+          "name": "O5",
+          "type": "OC3C61",
+          "charge": -0.4,
+          "charge_group": 1
+        },
+        {
+          "name": "C2",
+          "type": "CC3161",
+          "charge": 0.07,
+          "charge_group": 2
+        },
+        {
+          "name": "H2",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 2
+        },
+        {
+          "name": "N",
+          "type": "NC2D1",
+          "charge": -0.47,
+          "charge_group": 2
+        },
+        {
+          "name": "HN",
+          "type": "HCP1",
+          "charge": 0.31,
+          "charge_group": 2
+        },
+        {
+          "name": "C",
+          "type": "CC2O1",
+          "charge": 0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "O",
+          "type": "OC2D1",
+          "charge": -0.51,
+          "charge_group": 3
+        },
+        {
+          "name": "CT",
+          "type": "CC331",
+          "charge": -0.27,
+          "charge_group": 4
+        },
+        {
+          "name": "HT1",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT2",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "HT3",
+          "type": "HCA3",
+          "charge": 0.09,
+          "charge_group": 4
+        },
+        {
+          "name": "C3",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 5
+        },
+        {
+          "name": "H3",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 5
+        },
+        {
+          "name": "O3",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 5
+        },
+        {
+          "name": "C4",
+          "type": "CC3161",
+          "charge": 0.14,
+          "charge_group": 6
+        },
+        {
+          "name": "H4",
+          "type": "HCA1",
+          "charge": 0.09,
+          "charge_group": 6
+        },
+        {
+          "name": "O4",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 6
+        },
+        {
+          "name": "HO4",
+          "type": "HCP1",
+          "charge": 0.42,
+          "charge_group": 6
+        },
+        {
+          "name": "C6",
+          "type": "CC321",
+          "charge": 0.05,
+          "charge_group": 7
+        },
+        {
+          "name": "H61",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "H62",
+          "type": "HCA2",
+          "charge": 0.09,
+          "charge_group": 7
+        },
+        {
+          "name": "O6",
+          "type": "OC311",
+          "charge": -0.65,
+          "charge_group": 7
+        }
+      ]
+    }
+  },
+  "variant_hdb": {
+    "ND1": {
+      "original": "NDG",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "ND2": {
+      "original": "NDG",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "FC1": {
+      "original": "FCA",
+      "num_donors": 7,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61",
+        "3       4 H63    C6     C5     H61"
+      ]
+    },
+    "NA1": {
+      "original": "NAG",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA2": {
+      "original": "NAG",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA3": {
+      "original": "NAG",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA4": {
+      "original": "NAG",
+      "num_donors": 7,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA5": {
+      "original": "NAG",
+      "num_donors": 8,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA6": {
+      "original": "NAG",
+      "num_donors": 7,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA7": {
+      "original": "NAG",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA8": {
+      "original": "NAG",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "NA9": {
+      "original": "NAG",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "BM1": {
+      "original": "BMA",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "MA1": {
+      "original": "MAN",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "MA2": {
+      "original": "MAN",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "MA3": {
+      "original": "MAN",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "MA4": {
+      "original": "MAN",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "MA5": {
+      "original": "MAN",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "MA6": {
+      "original": "MAN",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "GA1": {
+      "original": "GAL",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "GA2": {
+      "original": "GAL",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "GA3": {
+      "original": "GAL",
+      "num_donors": 6,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "GA4": {
+      "original": "GAL",
+      "num_donors": 5,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     O2",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "SI1": {
+      "original": "SIA",
+      "num_donors": 12,
+      "donors": [
+        "3       4 H6     C6     C5     C7",
+        "3       4 H31    C3     C2     H32",
+        "3       4 H32    C3     C2     H31",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H5     C5     C4     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H7     C7     C6     O7",
+        "3       4 H8     C8     C7     O8",
+        "3       4 H91    C9     C8     H92",
+        "3       4 H92    C9     C8     H91"
+      ]
+    },
+    "SI2": {
+      "original": "SIA",
+      "num_donors": 12,
+      "donors": [
+        "3       4 H6     C6     C5     C7",
+        "3       4 H31    C3     C2     H32",
+        "3       4 H32    C3     C2     H31",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H5     C5     C4     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H7     C7     C6     O7",
+        "3       4 H8     C8     C7     O8",
+        "3       4 H91    C9     C8     H92",
+        "3       4 H92    C9     C8     H91"
+      ]
+    },
+    "A21": {
+      "original": "A2G",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    },
+    "A22": {
+      "original": "A2G",
+      "num_donors": 9,
+      "donors": [
+        "3       4 H5     C5     C4     C6",
+        "3       4 H2     C2     C1     N",
+        "3       4 HT1    CT     C      HT2",
+        "3       4 HT2    CT     C      HT1",
+        "3       4 HT3    CT     C      HT1",
+        "3       4 H3     C3     C2     O3",
+        "3       4 H4     C4     C3     O4",
+        "3       4 H61    C6     C5     H62",
+        "3       4 H62    C6     C5     H61"
+      ]
+    }
+  }
+}

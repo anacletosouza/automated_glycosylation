@@ -1,0 +1,256 @@
+[ NDG ]
+; Original CHARMM name: BGLCNA
+; IUPAC name: 2-acetyl-2-deoxy-beta-D-glucosamine
+; PDB code: NDG, Chain: D, Position: 162
+; Match percentage: 100.0%
+ [ atoms ]
+  C1     CC3162     0.3400 1
+  H1     HCA1       0.0900 1
+  O1     OC311     -0.6500 1
+  HO1    HCP1       0.4200 1
+  C5     CC3163     0.1100 1
+  H5     HCA1       0.0900 1
+  O5     OC3C61    -0.4000 1
+  C2     CC3161     0.0700 2
+  H2     HCA1       0.0900 2
+  N      NC2D1     -0.4700 2
+  HN     HCP1       0.3100 2
+  C      CC2O1      0.5100 3
+  O      OC2D1     -0.5100 3
+  CT     CC331     -0.2700 4
+  HT1    HCA3       0.0900 4
+  HT2    HCA3       0.0900 4
+  HT3    HCA3       0.0900 4
+  C3     CC3161     0.1400 5
+  H3     HCA1       0.0900 5
+  O3     OC311     -0.6500 5
+  HO3    HCP1       0.4200 5
+  C4     CC3161     0.1400 6
+  H4     HCA1       0.0900 6
+  O4     OC311     -0.6500 6
+  HO4    HCP1       0.4200 6
+  C6     CC321      0.0500 7
+  H61    HCA2       0.0900 7
+  H62    HCA2       0.0900 7
+  O6     OC311     -0.6500 7
+  HO6    HCP1       0.4200 7
+ [ bonds ]
+  C1     O1    
+  C1     H1    
+  O1     HO1   
+  C1     O5    
+  C1     C2    
+  C2     H2    
+  C2     N     
+  N      HN    
+  C2     C3    
+  C3     H3    
+  C3     O3    
+  O3     HO3   
+  C3     C4    
+  C4     H4    
+  C4     O4    
+  O4     HO4   
+  C4     C5    
+  C5     H5    
+  C5     C6    
+  C6     H61   
+  C6     H62   
+  C6     O6    
+  O6     HO6   
+  C5     O5    
+  N      C     
+  C      O     
+  C      CT    
+  CT     HT1   
+  CT     HT2   
+  CT     HT3   
+ [ impropers ]
+  C      CT     N      O     
+  N      C      C2     HN
+
+
+[ NAG ]
+; Original CHARMM name: BGLCNA
+; IUPAC name: 2-acetyl-2-deoxy-beta-D-glucosamine
+; PDB code: NAG, Chain: D, Position: 163
+; Match percentage: 100.0%
+ [ atoms ]
+  C1     CC3162     0.3400 1
+  H1     HCA1       0.0900 1
+  O1     OC311     -0.6500 1
+  HO1    HCP1       0.4200 1
+  C5     CC3163     0.1100 1
+  H5     HCA1       0.0900 1
+  O5     OC3C61    -0.4000 1
+  C2     CC3161     0.0700 2
+  H2     HCA1       0.0900 2
+  N      NC2D1     -0.4700 2
+  HN     HCP1       0.3100 2
+  C      CC2O1      0.5100 3
+  O      OC2D1     -0.5100 3
+  CT     CC331     -0.2700 4
+  HT1    HCA3       0.0900 4
+  HT2    HCA3       0.0900 4
+  HT3    HCA3       0.0900 4
+  C3     CC3161     0.1400 5
+  H3     HCA1       0.0900 5
+  O3     OC311     -0.6500 5
+  HO3    HCP1       0.4200 5
+  C4     CC3161     0.1400 6
+  H4     HCA1       0.0900 6
+  O4     OC311     -0.6500 6
+  HO4    HCP1       0.4200 6
+  C6     CC321      0.0500 7
+  H61    HCA2       0.0900 7
+  H62    HCA2       0.0900 7
+  O6     OC311     -0.6500 7
+  HO6    HCP1       0.4200 7
+ [ bonds ]
+  C1     O1    
+  C1     H1    
+  O1     HO1   
+  C1     O5    
+  C1     C2    
+  C2     H2    
+  C2     N     
+  N      HN    
+  C2     C3    
+  C3     H3    
+  C3     O3    
+  O3     HO3   
+  C3     C4    
+  C4     H4    
+  C4     O4    
+  O4     HO4   
+  C4     C5    
+  C5     H5    
+  C5     C6    
+  C6     H61   
+  C6     H62   
+  C6     O6    
+  O6     HO6   
+  C5     O5    
+  N      C     
+  C      O     
+  C      CT    
+  CT     HT1   
+  CT     HT2   
+  CT     HT3   
+ [ impropers ]
+  C      CT     N      O     
+  N      C      C2     HN
+
+
+[ BMA ]
+; Original CHARMM name: BMAN
+; IUPAC name: 4C1 beta-D-mannose
+; PDB code: BMA, Chain: D, Position: 164
+; Match percentage: 100.0%
+ [ atoms ]
+  C1     CC3162     0.3400 1
+  H1     HCA1       0.0900 1
+  O1     OC311     -0.6500 1
+  HO1    HCP1       0.4200 1
+  C5     CC3163     0.1100 1
+  H5     HCA1       0.0900 1
+  O5     OC3C61    -0.4000 1
+  C2     CC3161     0.1400 2
+  H2     HCA1       0.0900 2
+  O2     OC311     -0.6500 2
+  HO2    HCP1       0.4200 2
+  C3     CC3161     0.1400 3
+  H3     HCA1       0.0900 3
+  O3     OC311     -0.6500 3
+  HO3    HCP1       0.4200 3
+  C4     CC3161     0.1400 4
+  H4     HCA1       0.0900 4
+  O4     OC311     -0.6500 4
+  HO4    HCP1       0.4200 4
+  C6     CC321      0.0500 5
+  H61    HCA2       0.0900 5
+  H62    HCA2       0.0900 5
+  O6     OC311     -0.6500 5
+  HO6    HCP1       0.4200 5
+ [ bonds ]
+  C1     O1    
+  C1     H1    
+  O1     HO1   
+  C1     O5    
+  C1     C2    
+  C2     H2    
+  C2     O2    
+  O2     HO2   
+  C2     C3    
+  C3     H3    
+  C3     O3    
+  O3     HO3   
+  C3     C4    
+  C4     H4    
+  C4     O4    
+  O4     HO4   
+  C4     C5    
+  C5     H5    
+  C5     C6    
+  C6     H61   
+  C6     H62   
+  C6     O6    
+  O6     HO6   
+  C5     O5
+
+
+[ MAN ]
+; Original CHARMM name: AMAN
+; IUPAC name: 4C1 alpha-D-mannose
+; PDB code: MAN, Chain: D, Position: 165
+; Match percentage: 100.0%
+ [ atoms ]
+  C1     CC3162     0.3400 1
+  H1     HCA1       0.0900 1
+  O1     OC311     -0.6500 1
+  HO1    HCP1       0.4200 1
+  C5     CC3163     0.1100 1
+  H5     HCA1       0.0900 1
+  O5     OC3C61    -0.4000 1
+  C2     CC3161     0.1400 2
+  H2     HCA1       0.0900 2
+  O2     OC311     -0.6500 2
+  HO2    HCP1       0.4200 2
+  C3     CC3161     0.1400 3
+  H3     HCA1       0.0900 3
+  O3     OC311     -0.6500 3
+  HO3    HCP1       0.4200 3
+  C4     CC3161     0.1400 4
+  H4     HCA1       0.0900 4
+  O4     OC311     -0.6500 4
+  HO4    HCP1       0.4200 4
+  C6     CC321      0.0500 5
+  H61    HCA2       0.0900 5
+  H62    HCA2       0.0900 5
+  O6     OC311     -0.6500 5
+  HO6    HCP1       0.4200 5
+ [ bonds ]
+  C1     O1    
+  C1     H1    
+  O1     HO1   
+  C1     O5    
+  C1     C2    
+  C2     H2    
+  C2     O2    
+  O2     HO2   
+  C2     C3    
+  C3     H3    
+  C3     O3    
+  O3     HO3   
+  C3     C4    
+  C4     H4    
+  C4     O4    
+  O4     HO4   
+  C4     C5    
+  C5     H5    
+  C5     C6    
+  C6     H61   
+  C6     H62   
+  C6     O6    
+  O6     HO6   
+  C5     O5

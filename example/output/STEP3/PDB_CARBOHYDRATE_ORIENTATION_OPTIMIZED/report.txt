@@ -1,0 +1,613 @@
+================================================================================
+GLYCAN ORIENTATION OPTIMIZATION - SINGLE AXIS ROTATION
+================================================================================
+Report file created: 2026-05-08T00:13:07.439540
+================================================================================
+
+================================================================================
+GLYCAN ORIENTATION OPTIMIZATION - SINGLE AXIS ROTATION
+================================================================================
+Number of glycans: 70
+Single-axis rotation: theta_step=10°
+MCMC refinement steps: 10
+Maximum cycles: 5
+Search radius: 300.0 Å
+Include Coulomb: False
+Parallel workers: 12
+Save before/after PDBs: True
+Glycans output directory: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY
+Report file: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/report.txt
+================================================================================
+
+========================================
+CYCLE 1/5
+========================================
+
+[1] Optimizing glycan: E_46
+  Linkage: ASN1192 -> E_46
+  Type: N-linked
+  Glycan has 15 residues: [('BM1', 188), ('FC1', 186), ('GA1', 198), ('GA2', 191), ('GA2', 193)]...
+  No collisions detected before optimization
+  Minimum distance: 5.58 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/E_46_before_1.pdb
+  Fixed point: ASN1192.ND2 at (8.95, -4.20, 43.09)
+  First glycan residue C1: ND1185.C1 at (9.80, -5.04, 42.88)
+  Center of mass of glycan: (20.29, -2.92, 47.44)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.22 Å
+    Vector C1 -> COM: [10.49, 2.12, 4.56]
+    Vector magnitude (C1->COM): 11.63 Å
+    Rotation axis (fixed->C1): [0.71, -0.69, -0.17]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.00 kJ/mol
+    VdW: -0.00 kJ/mol
+
+  Grid search results:
+    Best theta angle: 180°
+    Best energy: -1.19 kJ/mol
+      VdW: -1.19 kJ/mol
+    Energy improvement: 1.19 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 206.0°
+    Final energy: -1.38 kJ/mol
+    Acceptance rate: 0.300
+    Total improvement: 1.38 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 3.60 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.22 Å
+    Vector C1 -> COM: [-1.32, -6.41, -9.61]
+    Vector magnitude (C1->COM): 11.63 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-11.81, -8.53, -14.17]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/E_46_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (20.29, -2.92, 47.44)
+    Final COM:   (8.49, -11.45, 33.26)
+    First atom C1:
+      Initial: (9.80, -5.04, 42.88)
+      Final:   (9.80, -5.04, 42.88)
+  Glycan E_46: Converged (improvement: 1.38 kJ/mol)
+
+[1] Optimizing glycan: F_69
+  Linkage: ASN1192 -> F_69
+  Type: N-linked
+  Glycan has 15 residues: [('BM1', 180), ('FC1', 178), ('GA1', 190), ('GA2', 183), ('GA2', 185)]...
+  No collisions detected before optimization
+  Minimum distance: 2.03 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/F_69_before_1.pdb
+  Fixed point: ASN1192.ND2 at (-1.11, 9.98, 43.28)
+  First glycan residue C1: ND1177.C1 at (-0.84, 11.14, 43.02)
+  Center of mass of glycan: (1.62, 15.47, 54.29)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.60 Å
+    Vector C1 -> COM: [2.47, 4.33, 11.26]
+    Vector magnitude (C1->COM): 12.32 Å
+    Rotation axis (fixed->C1): [0.22, 0.95, -0.21]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: 140.61 kJ/mol
+    VdW: 140.61 kJ/mol
+
+  Grid search results:
+    Best theta angle: 150°
+    Best energy: -1.34 kJ/mol
+      VdW: -1.34 kJ/mol
+    Energy improvement: 141.95 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 150.0°
+    Final energy: -1.34 kJ/mol
+    Acceptance rate: 0.300
+    Total improvement: 141.95 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 1.62 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.60 Å
+    Vector C1 -> COM: [4.61, -1.25, -11.35]
+    Vector magnitude (C1->COM): 12.32 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [2.14, -5.58, -22.62]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/F_69_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (1.62, 15.47, 54.29)
+    Final COM:   (3.76, 9.88, 31.67)
+    First atom C1:
+      Initial: (-0.84, 11.14, 43.02)
+      Final:   (-0.84, 11.14, 43.02)
+  Glycan F_69: Converged (improvement: 141.95 kJ/mol)
+
+[1] Optimizing glycan: D_15
+  Linkage: ASN1192 -> D_15
+  Type: N-linked
+  Glycan has 15 residues: [('BM1', 182), ('FC1', 180), ('GA1', 192), ('GA2', 187), ('GA2', 190)]...
+  No collisions detected before optimization
+  Minimum distance: 3.65 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_15_before_1.pdb
+  Fixed point: ASN1192.ND2 at (-8.07, -5.60, 44.29)
+  First glycan residue C1: ND1179.C1 at (-9.21, -5.95, 44.04)
+  Center of mass of glycan: (-13.83, 1.50, 50.83)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 11.24 Å
+    Vector C1 -> COM: [-4.62, 7.45, 6.79]
+    Vector magnitude (C1->COM): 11.08 Å
+    Rotation axis (fixed->C1): [-0.94, -0.29, -0.20]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.78 kJ/mol
+    VdW: -0.78 kJ/mol
+
+  Grid search results:
+    Best theta angle: 80°
+    Best energy: -1.94 kJ/mol
+      VdW: -1.94 kJ/mol
+    Energy improvement: 1.16 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 80.0°
+    Final energy: -1.94 kJ/mol
+    Acceptance rate: 0.400
+    Total improvement: 1.16 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 3.38 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 11.24 Å
+    Vector C1 -> COM: [-1.84, 8.29, -7.12]
+    Vector magnitude (C1->COM): 11.08 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [2.78, 0.84, -13.91]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_15_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (-13.83, 1.50, 50.83)
+    Final COM:   (-11.05, 2.34, 36.92)
+    First atom C1:
+      Initial: (-9.21, -5.95, 44.04)
+      Final:   (-9.21, -5.95, 44.04)
+  Glycan D_15: Converged (improvement: 1.16 kJ/mol)
+
+[1] Optimizing glycan: E_27
+  Linkage: ASN74 -> E_27
+  Type: N-linked
+  Glycan has 14 residues: [('BM1', 20), ('FC1', 18), ('GA1', 23), ('GA1', 29), ('GA2', 27)]...
+  No collisions detected before optimization
+  Minimum distance: 6.03 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/E_27_before_1.pdb
+  Fixed point: ASN74.ND2 at (-46.29, 57.70, 222.29)
+  First glycan residue C1: ND117.C1 at (-47.17, 58.31, 221.71)
+  Center of mass of glycan: (-42.56, 60.51, 210.52)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.67 Å
+    Vector C1 -> COM: [4.61, 2.20, -11.19]
+    Vector magnitude (C1->COM): 12.30 Å
+    Rotation axis (fixed->C1): [-0.72, 0.50, -0.48]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.01 kJ/mol
+    VdW: -0.01 kJ/mol
+
+  Grid search results:
+    Best theta angle: 200°
+    Best energy: -0.69 kJ/mol
+      VdW: -0.69 kJ/mol
+    Energy improvement: 0.68 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 200.0°
+    Final energy: -0.69 kJ/mol
+    Acceptance rate: 0.800
+    Total improvement: 0.68 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 3.58 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.67 Å
+    Vector C1 -> COM: [-7.14, 4.49, 8.95]
+    Vector magnitude (C1->COM): 12.30 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-11.75, 2.28, 20.14]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/E_27_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (-42.56, 60.51, 210.52)
+    Final COM:   (-54.31, 62.80, 230.66)
+    First atom C1:
+      Initial: (-47.17, 58.31, 221.71)
+      Final:   (-47.17, 58.31, 221.71)
+  Glycan E_27: Did not converge (improvement: 0.68 kJ/mol)
+
+[1] Optimizing glycan: F_56
+  Linkage: ASN329 -> F_56
+  Type: N-linked
+  Glycan has 13 residues: [('BM1', 71), ('FC1', 69), ('GA1', 79), ('GA2', 74), ('GA2', 76)]...
+  No collisions detected before optimization
+  Minimum distance: 4.24 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/F_56_before_1.pdb
+  Fixed point: ASN329.ND2 at (29.85, -33.15, 235.84)
+  First glycan residue C1: ND168.C1 at (30.12, -34.10, 236.54)
+  Center of mass of glycan: (29.09, -29.90, 245.85)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 10.55 Å
+    Vector C1 -> COM: [-1.02, 4.20, 9.30]
+    Vector magnitude (C1->COM): 10.26 Å
+    Rotation axis (fixed->C1): [0.21, -0.79, 0.58]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.84 kJ/mol
+    VdW: -0.84 kJ/mol
+
+  Grid search results:
+    Best theta angle: 20°
+    Best energy: -1.36 kJ/mol
+      VdW: -1.36 kJ/mol
+    Energy improvement: 0.52 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 17.1°
+    Final energy: -1.57 kJ/mol
+    Acceptance rate: 0.300
+    Total improvement: 0.72 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 3.33 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 10.55 Å
+    Vector C1 -> COM: [-3.82, 3.19, 8.97]
+    Vector magnitude (C1->COM): 10.26 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-2.80, -1.01, -0.33]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/F_56_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (29.09, -29.90, 245.85)
+    Final COM:   (26.29, -30.92, 245.51)
+    First atom C1:
+      Initial: (30.12, -34.10, 236.54)
+      Final:   (30.12, -34.10, 236.54)
+  Glycan F_56: Did not converge (improvement: 0.72 kJ/mol)
+
+[1] Optimizing glycan: E_32
+  Linkage: ASN280 -> E_32
+  Type: N-linked
+  Glycan has 13 residues: [('BM1', 69), ('FC1', 67), ('GA1', 77), ('GA2', 72), ('GA2', 74)]...
+  No collisions detected before optimization
+  Minimum distance: 2.63 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/E_32_before_1.pdb
+  Fixed point: ASN280.ND2 at (-1.51, 43.31, 208.63)
+  First glycan residue C1: ND166.C1 at (-0.82, 44.18, 208.14)
+  Center of mass of glycan: (-0.38, 33.44, 207.82)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 9.97 Å
+    Vector C1 -> COM: [0.44, -10.75, -0.32]
+    Vector magnitude (C1->COM): 10.76 Å
+    Rotation axis (fixed->C1): [0.57, 0.72, -0.41]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.18 kJ/mol
+    VdW: -0.18 kJ/mol
+
+  Grid search results:
+    Best theta angle: 270°
+    Best energy: -1.93 kJ/mol
+      VdW: -1.93 kJ/mol
+    Energy improvement: 1.75 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 270.0°
+    Final energy: -1.93 kJ/mol
+    Acceptance rate: 0.200
+    Total improvement: 1.75 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 2.52 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 9.97 Å
+    Vector C1 -> COM: [0.44, -5.26, 9.38]
+    Vector magnitude (C1->COM): 10.76 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-0.00, 5.49, 9.70]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/E_32_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (-0.38, 33.44, 207.82)
+    Final COM:   (-0.38, 38.92, 217.52)
+    First atom C1:
+      Initial: (-0.82, 44.18, 208.14)
+      Final:   (-0.82, 44.18, 208.14)
+  Glycan E_32: Converged (improvement: 1.75 kJ/mol)
+
+[1] Optimizing glycan: D_21
+  Linkage: ASN163 -> D_21
+  Type: N-linked
+  Glycan has 12 residues: [('BM1', 45), ('FC1', 43), ('GA1', 48), ('GA1', 52), ('MA1', 46)]...
+  No collisions detected before optimization
+  Minimum distance: 2.01 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_21_before_1.pdb
+  Fixed point: ASN163.ND2 at (42.35, -0.77, 254.66)
+  First glycan residue C1: ND142.C1 at (42.45, -0.42, 255.82)
+  Center of mass of glycan: (51.00, 4.37, 260.00)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 11.39 Å
+    Vector C1 -> COM: [8.55, 4.79, 4.18]
+    Vector magnitude (C1->COM): 10.65 Å
+    Rotation axis (fixed->C1): [0.08, 0.28, 0.96]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: 3.22 kJ/mol
+    VdW: 3.22 kJ/mol
+
+  Grid search results:
+    Best theta angle: 290°
+    Best energy: -0.67 kJ/mol
+      VdW: -0.67 kJ/mol
+    Energy improvement: 3.89 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 291.9°
+    Final energy: -0.84 kJ/mol
+    Acceptance rate: 1.000
+    Total improvement: 4.06 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 3.72 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 11.39 Å
+    Vector C1 -> COM: [6.65, -4.41, 7.06]
+    Vector magnitude (C1->COM): 10.65 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-1.90, -9.20, 2.89]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_21_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (51.00, 4.37, 260.00)
+    Final COM:   (49.10, -4.83, 262.88)
+    First atom C1:
+      Initial: (42.45, -0.42, 255.82)
+      Final:   (42.45, -0.42, 255.82)
+  Glycan D_21: Converged (improvement: 4.06 kJ/mol)
+
+[1] Optimizing glycan: D_20
+  Linkage: ASN149 -> D_20
+  Type: N-linked
+  Glycan has 11 residues: [('BM1', 34), ('FC1', 32), ('GA1', 40), ('GA2', 37), ('MA1', 35)]...
+  No collisions detected before optimization
+  Minimum distance: 12.19 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_20_before_1.pdb
+  Fixed point: ASN149.ND2 at (75.97, -17.19, 240.97)
+  First glycan residue C1: ND131.C1 at (75.92, -18.39, 241.22)
+  Center of mass of glycan: (86.65, -23.76, 237.72)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.95 Å
+    Vector C1 -> COM: [10.73, -5.37, -3.50]
+    Vector magnitude (C1->COM): 12.50 Å
+    Rotation axis (fixed->C1): [-0.04, -0.98, 0.20]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.00 kJ/mol
+    VdW: -0.00 kJ/mol
+
+  Grid search results:
+    Best theta angle: 200°
+    Best energy: -0.55 kJ/mol
+      VdW: -0.55 kJ/mol
+    Energy improvement: 0.55 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 200.0°
+    Final energy: -0.55 kJ/mol
+    Acceptance rate: 0.900
+    Total improvement: 0.55 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 2.31 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 12.95 Å
+    Vector C1 -> COM: [-11.97, -3.38, 1.21]
+    Vector magnitude (C1->COM): 12.50 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-22.70, 2.00, 4.71]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_20_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (86.65, -23.76, 237.72)
+    Final COM:   (63.94, -21.76, 242.43)
+    First atom C1:
+      Initial: (75.92, -18.39, 241.22)
+      Final:   (75.92, -18.39, 241.22)
+  Glycan D_20: Did not converge (improvement: 0.55 kJ/mol)
+
+[1] Optimizing glycan: F_53
+  Linkage: ASN163 -> F_53
+  Type: N-linked
+  Glycan has 11 residues: [('BM1', 42), ('FC1', 40), ('GA1', 48), ('GA2', 45), ('MA1', 43)]...
+  No collisions detected before optimization
+  Minimum distance: 2.48 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/F_53_before_1.pdb
+  Fixed point: ASN163.ND2 at (-21.34, -36.68, 253.77)
+  First glycan residue C1: ND139.C1 at (-20.93, -36.94, 254.89)
+  Center of mass of glycan: (-21.14, -27.28, 252.34)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 9.51 Å
+    Vector C1 -> COM: [-0.21, 9.66, -2.54]
+    Vector magnitude (C1->COM): 9.99 Å
+    Rotation axis (fixed->C1): [0.34, -0.22, 0.92]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -0.55 kJ/mol
+    VdW: -0.55 kJ/mol
+
+  Grid search results:
+    Best theta angle: 20°
+    Best energy: -1.56 kJ/mol
+      VdW: -1.56 kJ/mol
+    Energy improvement: 1.01 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 20.0°
+    Final energy: -1.56 kJ/mol
+    Acceptance rate: 0.700
+    Total improvement: 1.01 kJ/mol
+  No collisions detected after optimization
+  Minimum distance: 3.64 Å
+
+  COORDINATE CHANGE APPLIED (final energy < initial energy)
+  VECTORS AND DISTANCES AFTER COORDINATE CHANGE:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 9.51 Å
+    Vector C1 -> COM: [-3.13, 9.36, -1.54]
+    Vector magnitude (C1->COM): 9.99 Å
+    Distance change (fixed->C1): 0.00 Å
+    Vector change (C1->COM): [-2.92, -0.30, 1.00]
+  OK: Distance from fixed point to C1 maintained (change: 0.0000 Å)
+    Saved after coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/F_53_after_1.pdb
+
+  Coordinate comparison:
+    Initial COM: (-21.14, -27.28, 252.34)
+    Final COM:   (-24.06, -27.58, 253.34)
+    First atom C1:
+      Initial: (-20.93, -36.94, 254.89)
+      Final:   (-20.93, -36.94, 254.89)
+  Glycan F_53: Converged (improvement: 1.01 kJ/mol)
+
+[1] Optimizing glycan: D_9
+  Linkage: ASN1072 -> D_9
+  Type: N-linked
+  Glycan has 11 residues: [('BM1', 139), ('FC1', 137), ('GA1', 145), ('GA2', 142), ('MA1', 140)]...
+  No collisions detected before optimization
+  Minimum distance: 3.17 Å
+    Saved before coordinates to: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP3/PDB_CARBOHYDRATE_ORIENTATION_OPTIMIZED/PDB_CARB_ONLY/D_9_before_1.pdb
+  Fixed point: ASN1072.ND2 at (24.46, 17.01, 147.72)
+  First glycan residue C1: ND1136.C1 at (25.46, 17.19, 147.04)
+  Center of mass of glycan: (17.74, 22.49, 141.88)
+  Search radius: 300.0 Å (30.00 nm)
+  Coulomb energy: EXCLUDED
+
+  VECTORS AND DISTANCES BEFORE OPTIMIZATION:
+    Distance fixed point to C1: 1.22 Å
+    Distance fixed point to COM: 10.46 Å
+    Vector C1 -> COM: [-7.73, 5.30, -5.16]
+    Vector magnitude (C1->COM): 10.70 Å
+    Rotation axis (fixed->C1): [0.82, 0.15, -0.55]
+
+  Single-axis grid search: 36 angles
+  Theta step: 10°
+  Parallel workers: 12
+
+  Initial energy: -1.19 kJ/mol
+    VdW: -1.19 kJ/mol
+
+  Grid search results:
+    Best theta angle: 340°
+    Best energy: -1.79 kJ/mol
+      VdW: -1.79 kJ/mol
+    Energy improvement: 0.61 kJ/mol
+    MCMC refinement: 10 steps, step_size=10°
+
+  MCMC refinement results:
+    Final theta angle: 340.0°
+    Final energy: -1.79 kJ/mol
+    Acceptance rate: 0.500
+    Total improvement: 0.61 kJ/mol

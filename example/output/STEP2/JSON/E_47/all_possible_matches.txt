@@ -1,0 +1,1528 @@
+========================================================================================================================
+ALL POSSIBLE CARBOHYDRATE MATCHES - COMPREHENSIVE LIST
+========================================================================================================================
+
+Reference sequence: GlcNAc(b1-2)Man(a1-6)[GlcNAc(b1-2)Man(a1-3)]Man(b1-4)GlcNAc(b1-4)[Fuc(a1-6)]GlcNAc
+
+
+========================================================================================================================
+PDB RESIDUE: A2G (Chain E, Position 200)
+========================================================================================================================
+Composition: 26 atoms [C8, H12, N1, O5]
+
+RTP Name     IUPAC Name                                              Match %    Atoms      Expected  
+------------------------------------------------------------------------------------------------------------------------
+AFUCNA       N-Acetyl-alpha-L-fucosamine                                100.0%        29    ✓ Fuc    
+ALMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                       100.0%        30    ✓ Man    
+AMANNA       2-acetyl-2-deoxy-alpha-D-mannosamine                       100.0%        30    ✓ Man    
+BFUCNA       N-Acetyl-beta-L-fucosamine                                 100.0%        29    ✓ Fuc    
+BLMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                       100.0%        30    ✓ Man    
+BMANNA       2-acetyl-2-deoxy-beta-D-mannosamine                        100.0%        30    ✓ Man    
+AKDA         3-deoxy-alpha-D-manno-oct-2-ulopyranosidonic acid           96.2%        36    ✓ Man    
+AKDO         3-deoxy-alpha-D-mannooctulosonic acid                       96.2%        29    ✓ Man    
+ARHMOA       2-O-Acetyl-alpha-L-rhamnose (alpha-6-Deoxy-L-mann...        96.2%        28    ✓ Man    
+A6HEP        6-deoxy-alpha-D-mannoheptose                                92.3%        27    ✓ Man    
+ADHEP        alpha D-glycero-D-mannoheptose                              92.3%        28    ✓ Man    
+AHEP         alpha glycero-D-mannoheptose                                92.3%        28    ✓ Man    
+AMANN        alpha-D-mannosamine                                         92.3%        26    ✓ Man    
+B6HEP        6-deoxy-beta-D-mannoheptose                                 92.3%        27    ✓ Man    
+BDHEP        alpha D-glycero-D-mannoheptose                              92.3%        28    ✓ Man    
+BHEP         beta glycero-D-mannoheptose                                 92.3%        28    ✓ Man    
+BMANN        beta-D-mannosamine                                          92.3%        26    ✓ Man    
+ADFUC        alpha-D-fucose                                              88.5%        23    ✓ Fuc    
+ADFUCF       alpha-Fucofuranose                                          88.5%        23    ✓ Fuc    
+ALMAN        alpha-L-mannose                                             88.5%        24    ✓ Man    
+BDFUC        4C1 beta-D-fucose                                           88.5%        23    ✓ Fuc    
+BDFUCF       beta-Fucofuranose                                           88.5%        23    ✓ Fuc    
+BLMAN        beta-L-mannose                                              88.5%        24    ✓ Man    
+AFUC         alpha-L-fucose                                              88.5%        23    ✓ Fuc    
+AMAN         4C1 alpha-D-mannose                                         88.5%        24    ✓ Man    
+BFUC         beta-L-fucose                                               88.5%        23    ✓ Fuc    
+BMAN         4C1 beta-D-mannose                                          88.5%        24    ✓ Man    
+DMANOL       D-MANnitOL                                                  88.5%        26    ✓ Man    
+LMANOL       L-MANnitOL                                                  88.5%        26    ✓ Man    
+AMANA        alpha-D-mannuronic acid                                     76.9%        22    ✓ Man    
+BMANA        beta-D-mannuronic acid                                      76.9%        22    ✓ Man    
+ABAC         2,4-diacetamido-2,4,6-trideoxyglucose                      100.0%        35             
+AMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-α-D-Glucopyranoside         100.0%        52             
+BBAC         2,4-diacetamido-2,4,6-trideoxyglucose                      100.0%        35             
+BBCYG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%       105             
+BBPHG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%        99             
+BMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-beta-D-Glucopyrano...       100.0%        52             
+DHEG         Decanoyl-N-Hydroxyethylglucamide                           100.0%        63             
+DMG          Decanoyl-N-methylglucamide                                 100.0%        59             
+NHEG         Nonanoyl-N-Hydroxyethylglucamide                           100.0%        60             
+NMG          Nonanoyl-N-methylglucamide                                 100.0%        56             
+A8LEG        8-epi-alpha-legionaminic acid                              100.0%        44             
+AALLNA       2-acetyl-2-deoxy-alpha-D-allosamine                        100.0%        30             
+AALTNA       2-acetyl-2-deoxy-alpha-D-altrosamine                       100.0%        30             
+AGALAA       2-acetyl-2-deoxy-alpha-D-galactosamine                     100.0%        36             
+AGLAA        2-acetyl-2-deoxy-alpha-D-glucoronic acid                   100.0%        28             
+AGULNA       2-acetyl-2-deoxy-alpha-D-gulosamine                        100.0%        30             
+AIDONA       2-acetyl-2-deoxy-alpha-L-idosamine                         100.0%        30             
+ALALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                       100.0%        30             
+ALEG         alpha-legionaminic acid                                    100.0%        44             
+ALGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                     100.0%        30             
+ALGLAA       2-acetyl-2-deoxy-alpha-L-glucoronic acid                   100.0%        28             
+ALGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                       100.0%        30             
+ALGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                        100.0%        30             
+ALIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                         100.0%        30             
+ALTANA       2-acetyl-2-deoxy-alpha-L-talosamine                        100.0%        30             
+AMU2AC       alpha-N-acetyl-Muramic acid                                100.0%        38             
+AMU2GC       alpha-N-Glycolyl-Muramic Acid                              100.0%        39             
+AMUR         alpha-Muramic acid                                         100.0%        33             
+ANE5GC       alpha-Neu5Gc (N-glycolyl-alpha-D-neuraminic acid)          100.0%        40             
+ANEU         alpha-D-neuraminic acid                                    100.0%        34             
+APSE         alpha-Pseudaminic acid                                     100.0%        44             
+AQUINA       2-acetyl-2-deoxy-alpha-D-quinovose                         100.0%        29             
+ARHMNA       N-Acetyl-alpha-L-Rhamnosamine                              100.0%        29             
+ATALNA       2-acetyl-2-deoxy-alpha-D-talosamine                        100.0%        30             
+B8LEG        8-epi-beta-legionaminic acid                               100.0%        44             
+BALLNA       2-acetyl-2-deoxy-beta-D-allosamine                         100.0%        30             
+BALTNA       2-acetyl-2-deoxy-beta-D-altrosamine                        100.0%        30             
+BGLGL        4C1 beta-D-glucose                                         100.0%        29             
+BGULNA       2-acetyl-2-deoxy-beta-D-gulosamine                         100.0%        30             
+BIDONA       2-acetyl-2-deoxy-beta-L-idosamine                          100.0%        30             
+BLALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                       100.0%        30             
+BLEG         beta-legionaminic acid                                     100.0%        44             
+BLGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                     100.0%        30             
+BLGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                       100.0%        30             
+BLGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                        100.0%        30             
+BLIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                         100.0%        30             
+BLTANA       2-acetyl-2-deoxy-alpha-L-talosamine                        100.0%        30             
+BMU2AC       beta-N-acetyl-Muramic acid                                 100.0%        38             
+BMU2GC       beta-N-Glycolyl-Muramic Acid                               100.0%        39             
+BMUR         beta-Muramic acid                                          100.0%        33             
+BNE5GC       beta-Neu5Gc (N-glycolyl-beta-D-neuraminic acid)            100.0%        40             
+BNEU         beta-D-neuraminic acid                                     100.0%        34             
+BPSE         beta-Pseudaminic acid                                      100.0%        44             
+BQUINA       2-acetyl-2-deoxy-beta-D-quinovose                          100.0%        29             
+BRHMNA       N-Acetyl-beta-L-Rhamnosamine                               100.0%        29             
+BTALNA       2-acetyl-2-deoxy-beta-D-talosamine                         100.0%        30             
+QUITA        alpha-D-Quinovose-N-[(R)-3-hydroxybutyramido]              100.0%        36             
+AGALNA       2-acetyl-2-deoxy-alpha-D-galactosamine                     100.0%        30             
+AGLCNA       2-acetyl-2-deoxy-alpha-D-glucosamine                       100.0%        30             
+ANE5AC       alpha-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)            100.0%        39             
+BGALNA       2-acetyl-2-deoxy-beta-D-galactosamine                      100.0%        30             
+BGLCN0       2-acetyl-2-deoxy-beta-D-glucosamine                        100.0%        30             
+BGLCNA       2-acetyl-2-deoxy-beta-D-glucosamine                        100.0%        30             
+BNE5AC       beta-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)             100.0%        39             
+A2UDM        omega-Undecyl-alpha-D-maltoside                             96.2%        76             
+ACY3G        3-Cyclohexyl-1-Propyl-alpha-D-glucoside                     96.2%        49             
+ACY3M        3-Cyclohexyl-1-Propyl-alpha-D-Maltoside                     96.2%        70             
+ACY4M        3-Cyclohexyl-1-Butyl-alpha-D-Maltoside                      96.2%        73             
+ACY5M        3-Cyclohexyl-1-Pentyl-alpha-D-Maltoside                     96.2%        76             
+ACY6M        3-Cyclohexyl-1-Hexyl-alpha-D-Maltoside                      96.2%        79             
+ACY7M        3-Cyclohexyl-1-Heptyl-alpha-D-Maltoside                     96.2%        82             
+ADDG         dodecyl-alpha-D-glucoside                                   96.2%        60             
+ADDM         dodecyl-alpha-D-maltoside                                   96.2%        81             
+ADDTM        dodecyl-alpha-D-thiomaltoside                               96.2%        81             
+ADG          decyl-alpha-D-glucoside                                     96.2%        54             
+ADM          decyl-alpha-D-maltoside                                     96.2%        75             
+ADMHM        2,6-Dimethyl-4-Heptyl-alpha-D-Maltopyranoside               96.2%        72             
+ADTM         decyl-alpha-D-thiomaltoside                                 96.2%        75             
+AHTG         Heptyl-alpha-D-thioglucoside                                96.2%        45             
+ANG          nonyl-alpha-D-glucoside                                     96.2%        51             
+ANM          Nonyl-alpha-D-maltoside                                     96.2%        72             
+ANTM         Nonyl-alpha-D-thiomaltoside                                 96.2%        72             
+AOG          octyl-alpha-D-glucoside                                     96.2%        48             
+AOM          octyl-alpha-D-maltoside                                     96.2%        69             
+AOTG         octyl-alpha-D-thioglucoside                                 96.2%        48             
+AOTM         octyl-alpha-D-thiomaltoside                                 96.2%        69             
+APPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                    96.2%        69             
+ATM          Tridecyl-alpha-D-maltoside                                  96.2%        84             
+AUDM         Undecyl-alpha-D-maltoside                                   96.2%        78             
+AUDTM        Undecyl-alpha-D-thiomaltoside                               96.2%        78             
+B2UDM        omega-Undecyl-beta-D-maltoside                              96.2%        76             
+BCY3G        3-Cyclohexyl-1-Propyl-beta-D-glucoside                      96.2%        49             
+BCY3M        3-Cyclohexyl-1-Propyl-beta-D-Maltoside                      96.2%        70             
+BCY4M        3-Cyclohexyl-1-Butyl-beta-D-Maltoside                       96.2%        73             
+BCY5M        3-Cyclohexyl-1-Pentyl-beta-D-Maltoside                      96.2%        76             
+BCY6M        3-Cyclohexyl-1-Hexyl-beta-D-Maltoside                       96.2%        79             
+BCY7M        3-Cyclohexyl-1-Heptyl-beta-D-Maltoside                      96.2%        82             
+BDDG         dodecyl-beta-D-glucoside                                    96.2%        60             
+BDDM         dodecyl-beta-D-maltoside                                    96.2%        81             
+BDDTM        dodecyl-beta-D-thiomaltoside                                96.2%        81             
+BDG          decyl-beta-D-glucoside                                      96.2%        54             
+BDM          decyl-beta-D-maltoside                                      96.2%        75             
+BDMHM        2,6-Dimethyl-4-Heptyl-beta-D-Maltopyranoside                96.2%        72             
+BDMNG        Decyl Maltose Neopentyl Glycol                              96.2%       145             
+BDTM         decyl-beta-D-thiomaltoside                                  96.2%        75             
+BHTG         Heptyl-beta-D-thioglucoside                                 96.2%        45             
+BLMNG        Lauryl beta-Maltose Neopentyl Glycol                        96.2%       157             
+BNG          Nonyl-beta-D-glucoside                                      96.2%        51             
+BNM          Nonyl-beta-D-maltoside                                      96.2%        72             
+BNTM         Nonyl-beta-D-thiomaltoside                                  96.2%        72             
+BOG          octyl-beta-D-glucoside                                      96.2%        48             
+BOGNG        Octyl beta-Glucose Neopentyl Glycol                         96.2%        91             
+BOM          octyl-beta-D-maltoside                                      96.2%        69             
+BOTG         octyl-beta-D-thioglucoside                                  96.2%        48             
+BOTM         octyl-beta-D-thiomaltoside                                  96.2%        69             
+BPPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                    96.2%        69             
+BTM          Tridecyl-beta-D-maltoside                                   96.2%        84             
+BUDM         Undecyl-beta-D-maltoside                                    96.2%        78             
+BUDTM        Undecyl-beta-D-thiomaltoside                                96.2%        78             
+C10EG5       Pentaethylene Glycol Monodecyl Ether                        96.2%        68             
+C10EG6       Hexaethylene Glycol Monodecyl Ether                         96.2%        75             
+C10EG9       Polyoxyethylene(9)decyl Ether                               96.2%        96             
+C12DEG       Polyoxyethylene(10)dodecyl ether                            96.2%       109             
+C12EG7       Heptaethylene glycol monododecyl ether                      96.2%        88             
+C12EG8       Octaethylene glycol monododecyl ether                       96.2%        95             
+C12EG9       Polyoxyethylene(9)dodecyl ether                             96.2%       102             
+C13EG8       Polyoxyethylene(8)tridecyl ether                            96.2%        98             
+C5MNG        CYMAL-5 Neopentyl Glycol, (2,2-bis(3'-cyclohexylp...        96.2%       147             
+C6EG4        Tetraethylene Glycol Monohexyl Ether                        96.2%        49             
+C6EG5        Pentaethylene Glycol Monohexyl Ether                        96.2%        56             
+C6MNG        CYMAL-6 Neopentyl Glycol ,(2,2-bis(3'-cyclohexylb...        96.2%       153             
+C7EG4        Tetraethylene Glycol Monoheptyl Ether                       96.2%        52             
+C7EG5        Pentaethylene Glycol Monoheptyl Ether                       96.2%        59             
+C8EG4        Tetraethylene Glycol Monooctyl Ether                        96.2%        55             
+C8EG5        Pentaethylene Glycol Monooctyl Ether                        96.2%        62             
+C8EG6        Hexaethylene Glycol Monooctyl Ether                         96.2%        69             
+DL16PP       [name]                                                      96.2%       221             
+DL19PP       [name]                                                      96.2%       260             
+NIDP40       [Octylphenoxy]Polyethoxyethanol                             96.2%       100             
+SMDD         Sucrose Monododecanoate                                     96.2%        80             
+TX100        TRITON X-100 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...        96.2%       107             
+TX114        TRITON X-114 • α-[(1,1,3,3-Tetramethylbutyl)pheny...        96.2%        93             
+TX305        TRITON X-305 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...        96.2%       247             
+TX405        TRITON X-405 • α-[4-(1,1,3,3-Tetramethyl-Butyl)Ph...        96.2%       317             
+UNDPP        [name]                                                      96.2%       154             
+AKDN         alpha-D-2-keto-3-deoxynonic acid                            96.2%        33             
+AKO          D-glycero-alpha-D-talo-oct-2-ulosonic acid                  96.2%        30             
+BKDN         beta-D-2-keto-3-deoxynonic acid                             96.2%        33             
+BKO          D-glycero-beta-D-talo-oct-2-ulosonic acid                   96.2%        30             
+CAT          catechyl C-lignin                                           96.2%        26             
+GUAI         guaiacyl, G-lignin                                          96.2%        29             
+SYR          Syringyl, S-lignin                                          96.2%        33             
+TRCN                                                                     96.2%        38             
+C6EG3        Triethylene Glycol Monohexyl Ether                          92.3%        42             
+AALLN        alpha-D-allosamine                                          92.3%        26             
+AALTN        alpha-D-altorsamine                                         92.3%        26             
+AGALN        alpha-D-galactosamine                                       92.3%        26             
+AGLCN        alpha-D-glucosamine                                         92.3%        26             
+AGULN        alpha-D-gulosamine                                          92.3%        26             
+AIDON        alpha-L-idosamine                                           92.3%        26             
+ATALN        alpha-D-talosamine                                          92.3%        26             
+BALLN        beta-D-allosamine                                           92.3%        26             
+BALTN        beta-D-altorsamine                                          92.3%        26             
+BGALN        beta-D-galactosamine                                        92.3%        26             
+BGLCN        beta-D-glucosamine                                          92.3%        26             
+BGULN        beta-D-gulosamine                                           92.3%        26             
+BIDON        alpha-L-idosamine                                           92.3%        26             
+BTALN        beta-D-talosamine                                           92.3%        26             
+PHP          p-hydroxyphenyl, H-lignin                                   92.3%        25             
+ADPSI        alpha-D-Psicofuranose                                       88.5%        24             
+ADRHM        alpha-D-rhamnose                                            88.5%        23             
+AFRUP        alpha-D-Fructopyranose                                      88.5%        24             
+AGALF        alpha-Galactofuranose                                       88.5%        24             
+AL6ALT       6-Deoxy-alpha-L-Altrose                                     88.5%        23             
+AL6TAL       6-Deoxy-alpha-L-Talose                                      88.5%        23             
+ALALL        alpha-L-allose                                              88.5%        24             
+ALALT        alpha-L-altrose                                             88.5%        24             
+ALFRU        alpha-L-Fructofuranose                                      88.5%        24             
+ALGAL        alpha-L-galactose                                           88.5%        24             
+ALGALF       alpha-L-Galactofuranose                                     88.5%        24             
+ALGLC        alpha-L-glucose                                             88.5%        24             
+ALGUL        alpha-L-gulose                                              88.5%        24             
+ALIDO        alpha-L-idose                                               88.5%        24             
+ALQUI        alpha-L-quinovose                                           88.5%        23             
+ALTAGP       alpha-L-tagatopyranose                                      88.5%        24             
+ALTAL        alpha-L-talose                                              88.5%        24             
+APSI         alpha-L-Psicofuranose                                       88.5%        24             
+APSIP        alpha-D-psicopyranose                                       88.5%        24             
+AQUI         alpha-D-Quinovose                                           88.5%        23             
+ASOR         alpha-L-Sorbofuranose                                       88.5%        24             
+ASORP        alpha-L-sorbopyranose                                       88.5%        24             
+ATAG         alpha-D-Tagatofuranose                                      88.5%        24             
+ATAGP        alpha-D-Tagatopyranose                                      88.5%        24             
+BDPSI        beta-D-Psicofuranose                                        88.5%        24             
+BDRHM        beta-D-rhamnose                                             88.5%        23             
+BFRUP        beta-D-Fructopyranose                                       88.5%        24             
+BGALF        beta-Galactofuranose                                        88.5%        24             
+BL6ALT       6-Deoxy-beta-L-Altrose                                      88.5%        23             
+BL6TAL       6-Deoxy-beta-L-Talose                                       88.5%        23             
+BLALL        beta-L-allose                                               88.5%        24             
+BLALT        beta-L-altrose                                              88.5%        24             
+BLFRU        beta-L-Fructofuranose                                       88.5%        24             
+BLGAL        beta-L-galactose                                            88.5%        24             
+BLGALF       alpha-L-Galactofuranose                                     88.5%        24             
+BLGLC        beta-L-glucose                                              88.5%        24             
+BLGUL        beta-L-gulose                                               88.5%        24             
+BLIDO        beta-L-idose                                                88.5%        24             
+BLQUI        beta-L-quinovose                                            88.5%        23             
+BLTAGP       beta-L-tagatopyranose                                       88.5%        24             
+BLTAL        beta-L-talose                                               88.5%        24             
+BPSI         beta-L-Psicofuranose                                        88.5%        24             
+BPSIP        beta-D-Psicopyranose                                        88.5%        24             
+BQUI         beta-D-Quinovose                                            88.5%        23             
+BSOR         beta-L-Sorbofuranose                                        88.5%        24             
+BSORP        beta-L-sorbopyranose                                        88.5%        24             
+BTAG         beta-D-Tagatofuranose                                       88.5%        24             
+BTAGP        beta-D-Tagatopyranose                                       88.5%        24             
+DPHG         2,3-DI-PHYTANYL-GLYCEROL                                    88.5%       134             
+AALL         4C1 alpha-D-allose                                          88.5%        24             
+AALT         4C1 alpha-D-altrose                                         88.5%        24             
+AFRU         alpha-Fructofuranose                                        88.5%        24             
+AGAL         4C1 alpha-D-galactose                                       88.5%        24             
+AGLC         4C1 alpha-D-glucose                                         88.5%        24             
+AGUL         4C1 alpha-D-gulose                                          88.5%        24             
+AIDO         4C1 alpha-D-idose                                           88.5%        24             
+ALLOSE       D-Allose, open, free aldehdye                               88.5%        24             
+ARHM         alpha-L-rhamnose                                            88.5%        23             
+ATAL         4C1 alpha-D-talose                                          88.5%        24             
+BALL         4C1 beta-D-allose                                           88.5%        24             
+BALT         4C1 beta-D-altrose                                          88.5%        24             
+BFRU         beta-Fructofuranose                                         88.5%        24             
+BGAL         4C1 beta-D-galactose                                        88.5%        24             
+BGLC         4C1 beta-D-glucose                                          88.5%        24             
+BGUL         4C1 beta-D-gulose                                           88.5%        24             
+BIDO         4C1 beta-D-idose                                            88.5%        24             
+BRHM         beta-L-rhamnose                                             88.5%        23             
+BTAL         4C1 beta-D-talose                                           88.5%        24             
+DALTOL       D-ALTritOL (same as talitol)                                88.5%        26             
+DGLUOL       D-GLUcitOL (sorbitol)                                       88.5%        26             
+DGULOL       D-GULitOL                                                   88.5%        26             
+DIDIOL       D-IDItOL                                                    88.5%        26             
+INI1         cyclic  myi-inositol                                        88.5%        24             
+INI2         cyclic  epi-inositol                                        88.5%        24             
+INI3         cyclic  allo-inositol                                       88.5%        24             
+INI4         cyclic  l-chiro-inositol                                    88.5%        24             
+INI5         cyclic  muco-inositol                                       88.5%        24             
+LALTOL       L-ALTritOL (same as talitol)                                88.5%        26             
+LGLUOL       L-GLUcitOL                                                  88.5%        26             
+LGULOL       L-GULitOL                                                   88.5%        26             
+LIDIOL       L-IDItOL                                                    88.5%        26             
+MALLOL       Meso-ALLitOL                                                88.5%        26             
+MGALOL       Meso-GALacticOL                                             88.5%        26             
+PSICOS       D-Psicose, open, free ketose                                88.5%        24             
+AASC         alpha-Ascarylose                                            84.6%        22             
+ACOL         alpha-L-colitose                                            84.6%        22             
+ADIG         alpha-D-digitoxose                                          84.6%        22             
+AOLI         alpha-D-olivose                                             84.6%        22             
+APAR         alpha-D-paratose                                            84.6%        22             
+ATYV         alpha-D-tyvelose                                            84.6%        22             
+BASC         beta-Ascarylose                                             84.6%        22             
+BCOL         beta-L-colitose                                             84.6%        22             
+BDIG         beta-D-digitoxose                                           84.6%        22             
+BOLI         beta-D-olivose                                              84.6%        22             
+BPAR         alpha-D-paratose                                            84.6%        22             
+BTYV         beta-D-tyvelose                                             84.6%        22             
+FERU         ferulic acid, for lignin:hemicellulose crosslinks           84.6%        24             
+ABEQ         abequose, 3,6-didexoxy-alpha-D-xylo-hexose                  84.6%        22             
+DARAOL       D-ARAbitOL (same as lyxitol)                                84.6%        22             
+LARAOL       L-ARAbitOL (same as lyxitol)                                84.6%        22             
+MRIBOL       Meso-RIBitOL                                                84.6%        22             
+MXYLOL       Meso-XYLitOL                                                84.6%        22             
+FERUT        ferulate, for lignin:hemicellulose crosslinks               80.8%        23             
+AALLA        alpha-D-alluronic acid                                      76.9%        22             
+AALTA        alpha-D-alturonic acid                                      76.9%        22             
+AARBP        alpha-L-arabinopyranose                                     76.9%        20             
+ADARBP       alpha-D-arabinopyranose                                     76.9%        20             
+ADHA         alpha-3-Deoxy-Lyxo-Heptulosaric Acid                        76.9%        23             
+AGALA        4C1 alpha-D-galactoronic acid                               76.9%        22             
+AGULA        alpha-D-guluronic acid                                      76.9%        22             
+ALALTA       alpha-L-alturonic acid                                      76.9%        22             
+ALARB        alpha-L-Arabinose                                           76.9%        20             
+ALGULA       alpha-L-guluronic acid                                      76.9%        22             
+ALRIB        alpha-L-Ribose                                              76.9%        20             
+ALRIBP       alpha-L-Ribopyranose                                        76.9%        20             
+ALRULF       alpha-L-ribulofuranose                                      76.9%        20             
+ALXYL        alpha-L-xylose                                              76.9%        20             
+ALYXP        alpha-D-Lyxopyranose                                        76.9%        20             
+ARIBP        alpha-D-Ribopyranose                                        76.9%        20             
+ATALA        alpha-D-taluronic acid                                      76.9%        22             
+AXULF        alpha-xylulofuranose                                        76.9%        20             
+BALLA        beta-D-alluronic acid                                       76.9%        22             
+BALTA        beta-D-alturonic acid                                       76.9%        22             
+BARBP        beta-L-arabinopyranose                                      76.9%        20             
+BDARBP       beta-D-arabinopyranose                                      76.9%        20             
+BDHA         beta-3-Deoxy-Lyxo-Heptulosaric Acid                         76.9%        23             
+BGALA        4C1 beta-D-galactoronic acid                                76.9%        22             
+BGULA        beta-D-guluronic acid                                       76.9%        22             
+BLALTA       beta-L-alturonic acid                                       76.9%        22             
+BLARB        beta-L-Arabinose                                            76.9%        20             
+BLGULA       beta-L-guluronic acid                                       76.9%        22             
+BLRIB        alpha-L-Ribose                                              76.9%        20             
+BLRIBP       beta-L-Ribopyranose                                         76.9%        20             
+BLRULF       beta-L-ribulofuranose                                       76.9%        20             
+BLXYL        beta-L-xylose                                               76.9%        20             
+BLYXP        beta-D-Lyxopyranose                                         76.9%        20             
+BRIBP        beta-D-Ribopyranose                                         76.9%        20             
+BTALA        beta-D-taluronic acid                                       76.9%        22             
+BXULF        beta-xylulofuranose                                         76.9%        20             
+AARB         alpha-Arabinose                                             76.9%        20             
+AGLCA        4C1 alpha-D-glucoronic acid                                 76.9%        22             
+AIDOA        alpha-L-iduronic acid                                       76.9%        22             
+ALYF         alpha-Lyxofuranose                                          76.9%        20             
+ARIB         alpha-Ribose                                                76.9%        20             
+AXYF         alpha-Xylofuranose                                          76.9%        20             
+AXYL         alpha-D-xylose (a-glucose w/o exocyclic moiety) og          76.9%        20             
+BARB         beta-Arabinose                                              76.9%        20             
+BGLCA        4C1 beta-D-glucoronic acid                                  76.9%        22             
+BGLCA0       4C1 beta-D-glucoronic acid                                  76.9%        22             
+BIDOA        beta-L-iduronic acid                                        76.9%        22             
+BLYF         beta-Lyxofuranose                                           76.9%        20             
+BRIB         beta-Ribose                                                 76.9%        20             
+BXYF         beta-Xylofuranose                                           76.9%        20             
+BXYL         beta-D-xylose (b-glucose w/o exocyclic moiety) og           76.9%        20             
+ADEO         alpha-Deoxy-Ribose                                          73.1%        19             
+BDEO         beta-Deoxy-Ribose                                           73.1%        19             
+PCA          p-coumaric acid, for switchgrass                            69.2%        19             
+DTHROL       D-THReitOL                                                  69.2%        18             
+LTHROL       L-THReitOL                                                  69.2%        18             
+MERYOL       Meso-ERYthritOL (mertitol)                                  69.2%        18             
+ETPP         protonated ethanolamine and diphospate                      57.7%        19             
+MGLYOL       Meso-GLYcerOL                                               53.8%        14             
+DGLYA        D-Glyceric acid                                             46.2%        12             
+
+Statistics:
+  • Total possible matches: 363
+  • Exact element matches: 0
+  • Matches with ≥90% similarity: 186
+  • Matches with expected residue type: 31
+
+
+========================================================================================================================
+PDB RESIDUE: SIA (Chain E, Position 201)
+========================================================================================================================
+Composition: 38 atoms [C11, H18, N1, O8]
+
+RTP Name     IUPAC Name                                              Match %    Atoms      Expected  
+------------------------------------------------------------------------------------------------------------------------
+AKDA         3-deoxy-alpha-D-manno-oct-2-ulopyranosidonic acid           94.7%        36    ✓ Man    
+ALMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                        78.9%        30    ✓ Man    
+AMANNA       2-acetyl-2-deoxy-alpha-D-mannosamine                        78.9%        30    ✓ Man    
+BLMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                        78.9%        30    ✓ Man    
+BMANNA       2-acetyl-2-deoxy-beta-D-mannosamine                         78.9%        30    ✓ Man    
+AFUCNA       N-Acetyl-alpha-L-fucosamine                                 76.3%        29    ✓ Fuc    
+AKDO         3-deoxy-alpha-D-mannooctulosonic acid                       76.3%        29    ✓ Man    
+BFUCNA       N-Acetyl-beta-L-fucosamine                                  76.3%        29    ✓ Fuc    
+ADHEP        alpha D-glycero-D-mannoheptose                              73.7%        28    ✓ Man    
+AHEP         alpha glycero-D-mannoheptose                                73.7%        28    ✓ Man    
+BDHEP        alpha D-glycero-D-mannoheptose                              73.7%        28    ✓ Man    
+BHEP         beta glycero-D-mannoheptose                                 73.7%        28    ✓ Man    
+ARHMOA       2-O-Acetyl-alpha-L-rhamnose (alpha-6-Deoxy-L-mann...        73.7%        28    ✓ Man    
+A6HEP        6-deoxy-alpha-D-mannoheptose                                71.1%        27    ✓ Man    
+B6HEP        6-deoxy-beta-D-mannoheptose                                 71.1%        27    ✓ Man    
+AMANN        alpha-D-mannosamine                                         68.4%        26    ✓ Man    
+BMANN        beta-D-mannosamine                                          68.4%        26    ✓ Man    
+DMANOL       D-MANnitOL                                                  68.4%        26    ✓ Man    
+LMANOL       L-MANnitOL                                                  68.4%        26    ✓ Man    
+ALMAN        alpha-L-mannose                                             63.2%        24    ✓ Man    
+BLMAN        beta-L-mannose                                              63.2%        24    ✓ Man    
+AMAN         4C1 alpha-D-mannose                                         63.2%        24    ✓ Man    
+BMAN         4C1 beta-D-mannose                                          63.2%        24    ✓ Man    
+ADFUC        alpha-D-fucose                                              60.5%        23    ✓ Fuc    
+ADFUCF       alpha-Fucofuranose                                          60.5%        23    ✓ Fuc    
+BDFUC        4C1 beta-D-fucose                                           60.5%        23    ✓ Fuc    
+BDFUCF       beta-Fucofuranose                                           60.5%        23    ✓ Fuc    
+AFUC         alpha-L-fucose                                              60.5%        23    ✓ Fuc    
+BFUC         beta-L-fucose                                               60.5%        23    ✓ Fuc    
+AMANA        alpha-D-mannuronic acid                                     57.9%        22    ✓ Man    
+BMANA        beta-D-mannuronic acid                                      57.9%        22    ✓ Man    
+BBCYG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%       105             
+BBPHG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%        99             
+A8LEG        8-epi-alpha-legionaminic acid                              100.0%        44             
+ALEG         alpha-legionaminic acid                                    100.0%        44             
+AMU2AC       alpha-N-acetyl-Muramic acid                                100.0%        38             
+AMU2GC       alpha-N-Glycolyl-Muramic Acid                              100.0%        39             
+ANE5GC       alpha-Neu5Gc (N-glycolyl-alpha-D-neuraminic acid)          100.0%        40             
+APSE         alpha-Pseudaminic acid                                     100.0%        44             
+B8LEG        8-epi-beta-legionaminic acid                               100.0%        44             
+BLEG         beta-legionaminic acid                                     100.0%        44             
+BMU2AC       beta-N-acetyl-Muramic acid                                 100.0%        38             
+BMU2GC       beta-N-Glycolyl-Muramic Acid                               100.0%        39             
+BNE5GC       beta-Neu5Gc (N-glycolyl-beta-D-neuraminic acid)            100.0%        40             
+BPSE         beta-Pseudaminic acid                                      100.0%        44             
+ANE5AC       alpha-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)            100.0%        39             
+BNE5AC       beta-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)             100.0%        39             
+A2UDM        omega-Undecyl-alpha-D-maltoside                             97.4%        76             
+ACY3M        3-Cyclohexyl-1-Propyl-alpha-D-Maltoside                     97.4%        70             
+ACY4M        3-Cyclohexyl-1-Butyl-alpha-D-Maltoside                      97.4%        73             
+ACY5M        3-Cyclohexyl-1-Pentyl-alpha-D-Maltoside                     97.4%        76             
+ACY6M        3-Cyclohexyl-1-Hexyl-alpha-D-Maltoside                      97.4%        79             
+ACY7M        3-Cyclohexyl-1-Heptyl-alpha-D-Maltoside                     97.4%        82             
+ADDM         dodecyl-alpha-D-maltoside                                   97.4%        81             
+ADDTM        dodecyl-alpha-D-thiomaltoside                               97.4%        81             
+ADM          decyl-alpha-D-maltoside                                     97.4%        75             
+ADMHM        2,6-Dimethyl-4-Heptyl-alpha-D-Maltopyranoside               97.4%        72             
+ADTM         decyl-alpha-D-thiomaltoside                                 97.4%        75             
+AMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-α-D-Glucopyranoside          97.4%        52             
+ANM          Nonyl-alpha-D-maltoside                                     97.4%        72             
+ANTM         Nonyl-alpha-D-thiomaltoside                                 97.4%        72             
+AOM          octyl-alpha-D-maltoside                                     97.4%        69             
+AOTM         octyl-alpha-D-thiomaltoside                                 97.4%        69             
+APPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                    97.4%        69             
+ATM          Tridecyl-alpha-D-maltoside                                  97.4%        84             
+AUDM         Undecyl-alpha-D-maltoside                                   97.4%        78             
+AUDTM        Undecyl-alpha-D-thiomaltoside                               97.4%        78             
+B2UDM        omega-Undecyl-beta-D-maltoside                              97.4%        76             
+BCY3M        3-Cyclohexyl-1-Propyl-beta-D-Maltoside                      97.4%        70             
+BCY4M        3-Cyclohexyl-1-Butyl-beta-D-Maltoside                       97.4%        73             
+BCY5M        3-Cyclohexyl-1-Pentyl-beta-D-Maltoside                      97.4%        76             
+BCY6M        3-Cyclohexyl-1-Hexyl-beta-D-Maltoside                       97.4%        79             
+BCY7M        3-Cyclohexyl-1-Heptyl-beta-D-Maltoside                      97.4%        82             
+BDDM         dodecyl-beta-D-maltoside                                    97.4%        81             
+BDDTM        dodecyl-beta-D-thiomaltoside                                97.4%        81             
+BDM          decyl-beta-D-maltoside                                      97.4%        75             
+BDMHM        2,6-Dimethyl-4-Heptyl-beta-D-Maltopyranoside                97.4%        72             
+BDMNG        Decyl Maltose Neopentyl Glycol                              97.4%       145             
+BDTM         decyl-beta-D-thiomaltoside                                  97.4%        75             
+BLMNG        Lauryl beta-Maltose Neopentyl Glycol                        97.4%       157             
+BMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-beta-D-Glucopyrano...        97.4%        52             
+BNM          Nonyl-beta-D-maltoside                                      97.4%        72             
+BNTM         Nonyl-beta-D-thiomaltoside                                  97.4%        72             
+BOGNG        Octyl beta-Glucose Neopentyl Glycol                         97.4%        91             
+BOM          octyl-beta-D-maltoside                                      97.4%        69             
+BOTM         octyl-beta-D-thiomaltoside                                  97.4%        69             
+BPPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                    97.4%        69             
+BTM          Tridecyl-beta-D-maltoside                                   97.4%        84             
+BUDM         Undecyl-beta-D-maltoside                                    97.4%        78             
+BUDTM        Undecyl-beta-D-thiomaltoside                                97.4%        78             
+C10EG9       Polyoxyethylene(9)decyl Ether                               97.4%        96             
+C12DEG       Polyoxyethylene(10)dodecyl ether                            97.4%       109             
+C12EG7       Heptaethylene glycol monododecyl ether                      97.4%        88             
+C12EG8       Octaethylene glycol monododecyl ether                       97.4%        95             
+C12EG9       Polyoxyethylene(9)dodecyl ether                             97.4%       102             
+C13EG8       Polyoxyethylene(8)tridecyl ether                            97.4%        98             
+C5MNG        CYMAL-5 Neopentyl Glycol, (2,2-bis(3'-cyclohexylp...        97.4%       147             
+C6MNG        CYMAL-6 Neopentyl Glycol ,(2,2-bis(3'-cyclohexylb...        97.4%       153             
+DHEG         Decanoyl-N-Hydroxyethylglucamide                            97.4%        63             
+NHEG         Nonanoyl-N-Hydroxyethylglucamide                            97.4%        60             
+NIDP40       [Octylphenoxy]Polyethoxyethanol                             97.4%       100             
+SMDD         Sucrose Monododecanoate                                     97.4%        80             
+TX100        TRITON X-100 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...        97.4%       107             
+TX114        TRITON X-114 • α-[(1,1,3,3-Tetramethylbutyl)pheny...        97.4%        93             
+TX305        TRITON X-305 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...        97.4%       247             
+TX405        TRITON X-405 • α-[4-(1,1,3,3-Tetramethyl-Butyl)Ph...        97.4%       317             
+C10EG6       Hexaethylene Glycol Monodecyl Ether                         94.7%        75             
+C8EG6        Hexaethylene Glycol Monooctyl Ether                         94.7%        69             
+DL16PP       [name]                                                      94.7%       221             
+DL19PP       [name]                                                      94.7%       260             
+DMG          Decanoyl-N-methylglucamide                                  94.7%        59             
+NMG          Nonanoyl-N-methylglucamide                                  94.7%        56             
+UNDPP        [name]                                                      94.7%       154             
+ACY3G        3-Cyclohexyl-1-Propyl-alpha-D-glucoside                     92.1%        49             
+ADDG         dodecyl-alpha-D-glucoside                                   92.1%        60             
+ADG          decyl-alpha-D-glucoside                                     92.1%        54             
+ANG          nonyl-alpha-D-glucoside                                     92.1%        51             
+AOG          octyl-alpha-D-glucoside                                     92.1%        48             
+BCY3G        3-Cyclohexyl-1-Propyl-beta-D-glucoside                      92.1%        49             
+BDDG         dodecyl-beta-D-glucoside                                    92.1%        60             
+BDG          decyl-beta-D-glucoside                                      92.1%        54             
+BNG          Nonyl-beta-D-glucoside                                      92.1%        51             
+BOG          octyl-beta-D-glucoside                                      92.1%        48             
+C10EG5       Pentaethylene Glycol Monodecyl Ether                        92.1%        68             
+C6EG5        Pentaethylene Glycol Monohexyl Ether                        92.1%        56             
+C7EG5        Pentaethylene Glycol Monoheptyl Ether                       92.1%        59             
+C8EG5        Pentaethylene Glycol Monooctyl Ether                        92.1%        62             
+QUITA        alpha-D-Quinovose-N-[(R)-3-hydroxybutyramido]               92.1%        36             
+ABAC         2,4-diacetamido-2,4,6-trideoxyglucose                       89.5%        35             
+AHTG         Heptyl-alpha-D-thioglucoside                                89.5%        45             
+AOTG         octyl-alpha-D-thioglucoside                                 89.5%        48             
+BBAC         2,4-diacetamido-2,4,6-trideoxyglucose                       89.5%        35             
+BHTG         Heptyl-beta-D-thioglucoside                                 89.5%        45             
+BOTG         octyl-beta-D-thioglucoside                                  89.5%        48             
+C6EG4        Tetraethylene Glycol Monohexyl Ether                        89.5%        49             
+C7EG4        Tetraethylene Glycol Monoheptyl Ether                       89.5%        52             
+C8EG4        Tetraethylene Glycol Monooctyl Ether                        89.5%        55             
+AGALAA       2-acetyl-2-deoxy-alpha-D-galactosamine                      89.5%        36             
+ANEU         alpha-D-neuraminic acid                                     89.5%        34             
+BNEU         beta-D-neuraminic acid                                      89.5%        34             
+C6EG3        Triethylene Glycol Monohexyl Ether                          86.8%        42             
+AMUR         alpha-Muramic acid                                          86.8%        33             
+BMUR         beta-Muramic acid                                           86.8%        33             
+SYR          Syringyl, S-lignin                                          86.8%        33             
+AKDN         alpha-D-2-keto-3-deoxynonic acid                            84.2%        33             
+BKDN         beta-D-2-keto-3-deoxynonic acid                             84.2%        33             
+DPHG         2,3-DI-PHYTANYL-GLYCEROL                                    84.2%       134             
+TRCN                                                                     84.2%        38             
+AALLNA       2-acetyl-2-deoxy-alpha-D-allosamine                         78.9%        30             
+AALTNA       2-acetyl-2-deoxy-alpha-D-altrosamine                        78.9%        30             
+AGULNA       2-acetyl-2-deoxy-alpha-D-gulosamine                         78.9%        30             
+AIDONA       2-acetyl-2-deoxy-alpha-L-idosamine                          78.9%        30             
+ALALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                        78.9%        30             
+ALGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                      78.9%        30             
+ALGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                        78.9%        30             
+ALGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                         78.9%        30             
+ALIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                          78.9%        30             
+ALTANA       2-acetyl-2-deoxy-alpha-L-talosamine                         78.9%        30             
+ATALNA       2-acetyl-2-deoxy-alpha-D-talosamine                         78.9%        30             
+BALLNA       2-acetyl-2-deoxy-beta-D-allosamine                          78.9%        30             
+BALTNA       2-acetyl-2-deoxy-beta-D-altrosamine                         78.9%        30             
+BGULNA       2-acetyl-2-deoxy-beta-D-gulosamine                          78.9%        30             
+BIDONA       2-acetyl-2-deoxy-beta-L-idosamine                           78.9%        30             
+BLALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                        78.9%        30             
+BLGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                      78.9%        30             
+BLGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                        78.9%        30             
+BLGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                         78.9%        30             
+BLIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                          78.9%        30             
+BLTANA       2-acetyl-2-deoxy-alpha-L-talosamine                         78.9%        30             
+BTALNA       2-acetyl-2-deoxy-beta-D-talosamine                          78.9%        30             
+AGALNA       2-acetyl-2-deoxy-alpha-D-galactosamine                      78.9%        30             
+AGLCNA       2-acetyl-2-deoxy-alpha-D-glucosamine                        78.9%        30             
+BGALNA       2-acetyl-2-deoxy-beta-D-galactosamine                       78.9%        30             
+BGLCN0       2-acetyl-2-deoxy-beta-D-glucosamine                         78.9%        30             
+BGLCNA       2-acetyl-2-deoxy-beta-D-glucosamine                         78.9%        30             
+AKO          D-glycero-alpha-D-talo-oct-2-ulosonic acid                  76.3%        30             
+AQUINA       2-acetyl-2-deoxy-alpha-D-quinovose                          76.3%        29             
+ARHMNA       N-Acetyl-alpha-L-Rhamnosamine                               76.3%        29             
+BGLGL        4C1 beta-D-glucose                                          76.3%        29             
+BKO          D-glycero-beta-D-talo-oct-2-ulosonic acid                   76.3%        30             
+BQUINA       2-acetyl-2-deoxy-beta-D-quinovose                           76.3%        29             
+BRHMNA       N-Acetyl-beta-L-Rhamnosamine                                76.3%        29             
+GUAI         guaiacyl, G-lignin                                          76.3%        29             
+AGLAA        2-acetyl-2-deoxy-alpha-D-glucoronic acid                    73.7%        28             
+ALGLAA       2-acetyl-2-deoxy-alpha-L-glucoronic acid                    73.7%        28             
+AALLN        alpha-D-allosamine                                          68.4%        26             
+AALTN        alpha-D-altorsamine                                         68.4%        26             
+AGALN        alpha-D-galactosamine                                       68.4%        26             
+AGLCN        alpha-D-glucosamine                                         68.4%        26             
+AGULN        alpha-D-gulosamine                                          68.4%        26             
+AIDON        alpha-L-idosamine                                           68.4%        26             
+ATALN        alpha-D-talosamine                                          68.4%        26             
+BALLN        beta-D-allosamine                                           68.4%        26             
+BALTN        beta-D-altorsamine                                          68.4%        26             
+BGALN        beta-D-galactosamine                                        68.4%        26             
+BGLCN        beta-D-glucosamine                                          68.4%        26             
+BGULN        beta-D-gulosamine                                           68.4%        26             
+BIDON        alpha-L-idosamine                                           68.4%        26             
+BTALN        beta-D-talosamine                                           68.4%        26             
+CAT          catechyl C-lignin                                           68.4%        26             
+DALTOL       D-ALTritOL (same as talitol)                                68.4%        26             
+DGLUOL       D-GLUcitOL (sorbitol)                                       68.4%        26             
+DGULOL       D-GULitOL                                                   68.4%        26             
+DIDIOL       D-IDItOL                                                    68.4%        26             
+LALTOL       L-ALTritOL (same as talitol)                                68.4%        26             
+LGLUOL       L-GLUcitOL                                                  68.4%        26             
+LGULOL       L-GULitOL                                                   68.4%        26             
+LIDIOL       L-IDItOL                                                    68.4%        26             
+MALLOL       Meso-ALLitOL                                                68.4%        26             
+MGALOL       Meso-GALacticOL                                             68.4%        26             
+PHP          p-hydroxyphenyl, H-lignin                                   65.8%        25             
+ADPSI        alpha-D-Psicofuranose                                       63.2%        24             
+AFRUP        alpha-D-Fructopyranose                                      63.2%        24             
+AGALF        alpha-Galactofuranose                                       63.2%        24             
+ALALL        alpha-L-allose                                              63.2%        24             
+ALALT        alpha-L-altrose                                             63.2%        24             
+ALFRU        alpha-L-Fructofuranose                                      63.2%        24             
+ALGAL        alpha-L-galactose                                           63.2%        24             
+ALGALF       alpha-L-Galactofuranose                                     63.2%        24             
+ALGLC        alpha-L-glucose                                             63.2%        24             
+ALGUL        alpha-L-gulose                                              63.2%        24             
+ALIDO        alpha-L-idose                                               63.2%        24             
+ALTAGP       alpha-L-tagatopyranose                                      63.2%        24             
+ALTAL        alpha-L-talose                                              63.2%        24             
+APSI         alpha-L-Psicofuranose                                       63.2%        24             
+APSIP        alpha-D-psicopyranose                                       63.2%        24             
+ASOR         alpha-L-Sorbofuranose                                       63.2%        24             
+ASORP        alpha-L-sorbopyranose                                       63.2%        24             
+ATAG         alpha-D-Tagatofuranose                                      63.2%        24             
+ATAGP        alpha-D-Tagatopyranose                                      63.2%        24             
+BDPSI        beta-D-Psicofuranose                                        63.2%        24             
+BFRUP        beta-D-Fructopyranose                                       63.2%        24             
+BGALF        beta-Galactofuranose                                        63.2%        24             
+BLALL        beta-L-allose                                               63.2%        24             
+BLALT        beta-L-altrose                                              63.2%        24             
+BLFRU        beta-L-Fructofuranose                                       63.2%        24             
+BLGAL        beta-L-galactose                                            63.2%        24             
+BLGALF       alpha-L-Galactofuranose                                     63.2%        24             
+BLGLC        beta-L-glucose                                              63.2%        24             
+BLGUL        beta-L-gulose                                               63.2%        24             
+BLIDO        beta-L-idose                                                63.2%        24             
+BLTAGP       beta-L-tagatopyranose                                       63.2%        24             
+BLTAL        beta-L-talose                                               63.2%        24             
+BPSI         beta-L-Psicofuranose                                        63.2%        24             
+BPSIP        beta-D-Psicopyranose                                        63.2%        24             
+BSOR         beta-L-Sorbofuranose                                        63.2%        24             
+BSORP        beta-L-sorbopyranose                                        63.2%        24             
+BTAG         beta-D-Tagatofuranose                                       63.2%        24             
+BTAGP        beta-D-Tagatopyranose                                       63.2%        24             
+FERU         ferulic acid, for lignin:hemicellulose crosslinks           63.2%        24             
+AALL         4C1 alpha-D-allose                                          63.2%        24             
+AALT         4C1 alpha-D-altrose                                         63.2%        24             
+AFRU         alpha-Fructofuranose                                        63.2%        24             
+AGAL         4C1 alpha-D-galactose                                       63.2%        24             
+AGLC         4C1 alpha-D-glucose                                         63.2%        24             
+AGUL         4C1 alpha-D-gulose                                          63.2%        24             
+AIDO         4C1 alpha-D-idose                                           63.2%        24             
+ALLOSE       D-Allose, open, free aldehdye                               63.2%        24             
+ATAL         4C1 alpha-D-talose                                          63.2%        24             
+BALL         4C1 beta-D-allose                                           63.2%        24             
+BALT         4C1 beta-D-altrose                                          63.2%        24             
+BFRU         beta-Fructofuranose                                         63.2%        24             
+BGAL         4C1 beta-D-galactose                                        63.2%        24             
+BGLC         4C1 beta-D-glucose                                          63.2%        24             
+BGUL         4C1 beta-D-gulose                                           63.2%        24             
+BIDO         4C1 beta-D-idose                                            63.2%        24             
+BTAL         4C1 beta-D-talose                                           63.2%        24             
+INI1         cyclic  myi-inositol                                        63.2%        24             
+INI2         cyclic  epi-inositol                                        63.2%        24             
+INI3         cyclic  allo-inositol                                       63.2%        24             
+INI4         cyclic  l-chiro-inositol                                    63.2%        24             
+INI5         cyclic  muco-inositol                                       63.2%        24             
+PSICOS       D-Psicose, open, free ketose                                63.2%        24             
+ADHA         alpha-3-Deoxy-Lyxo-Heptulosaric Acid                        60.5%        23             
+ADRHM        alpha-D-rhamnose                                            60.5%        23             
+AL6ALT       6-Deoxy-alpha-L-Altrose                                     60.5%        23             
+AL6TAL       6-Deoxy-alpha-L-Talose                                      60.5%        23             
+ALQUI        alpha-L-quinovose                                           60.5%        23             
+AQUI         alpha-D-Quinovose                                           60.5%        23             
+BDHA         beta-3-Deoxy-Lyxo-Heptulosaric Acid                         60.5%        23             
+BDRHM        beta-D-rhamnose                                             60.5%        23             
+BL6ALT       6-Deoxy-beta-L-Altrose                                      60.5%        23             
+BL6TAL       6-Deoxy-beta-L-Talose                                       60.5%        23             
+BLQUI        beta-L-quinovose                                            60.5%        23             
+BQUI         beta-D-Quinovose                                            60.5%        23             
+FERUT        ferulate, for lignin:hemicellulose crosslinks               60.5%        23             
+ARHM         alpha-L-rhamnose                                            60.5%        23             
+BRHM         beta-L-rhamnose                                             60.5%        23             
+AALLA        alpha-D-alluronic acid                                      57.9%        22             
+AALTA        alpha-D-alturonic acid                                      57.9%        22             
+AASC         alpha-Ascarylose                                            57.9%        22             
+ACOL         alpha-L-colitose                                            57.9%        22             
+ADIG         alpha-D-digitoxose                                          57.9%        22             
+AGALA        4C1 alpha-D-galactoronic acid                               57.9%        22             
+AGULA        alpha-D-guluronic acid                                      57.9%        22             
+ALALTA       alpha-L-alturonic acid                                      57.9%        22             
+ALGULA       alpha-L-guluronic acid                                      57.9%        22             
+AOLI         alpha-D-olivose                                             57.9%        22             
+APAR         alpha-D-paratose                                            57.9%        22             
+ATALA        alpha-D-taluronic acid                                      57.9%        22             
+ATYV         alpha-D-tyvelose                                            57.9%        22             
+BALLA        beta-D-alluronic acid                                       57.9%        22             
+BALTA        beta-D-alturonic acid                                       57.9%        22             
+BASC         beta-Ascarylose                                             57.9%        22             
+BCOL         beta-L-colitose                                             57.9%        22             
+BDIG         beta-D-digitoxose                                           57.9%        22             
+BGALA        4C1 beta-D-galactoronic acid                                57.9%        22             
+BGULA        beta-D-guluronic acid                                       57.9%        22             
+BLALTA       beta-L-alturonic acid                                       57.9%        22             
+BLGULA       beta-L-guluronic acid                                       57.9%        22             
+BOLI         beta-D-olivose                                              57.9%        22             
+BPAR         alpha-D-paratose                                            57.9%        22             
+BTALA        beta-D-taluronic acid                                       57.9%        22             
+BTYV         beta-D-tyvelose                                             57.9%        22             
+ABEQ         abequose, 3,6-didexoxy-alpha-D-xylo-hexose                  57.9%        22             
+AGLCA        4C1 alpha-D-glucoronic acid                                 57.9%        22             
+AIDOA        alpha-L-iduronic acid                                       57.9%        22             
+BGLCA        4C1 beta-D-glucoronic acid                                  57.9%        22             
+BGLCA0       4C1 beta-D-glucoronic acid                                  57.9%        22             
+BIDOA        beta-L-iduronic acid                                        57.9%        22             
+DARAOL       D-ARAbitOL (same as lyxitol)                                57.9%        22             
+LARAOL       L-ARAbitOL (same as lyxitol)                                57.9%        22             
+MRIBOL       Meso-RIBitOL                                                57.9%        22             
+MXYLOL       Meso-XYLitOL                                                57.9%        22             
+AARBP        alpha-L-arabinopyranose                                     52.6%        20             
+ADARBP       alpha-D-arabinopyranose                                     52.6%        20             
+ALARB        alpha-L-Arabinose                                           52.6%        20             
+ALRIB        alpha-L-Ribose                                              52.6%        20             
+ALRIBP       alpha-L-Ribopyranose                                        52.6%        20             
+ALRULF       alpha-L-ribulofuranose                                      52.6%        20             
+ALXYL        alpha-L-xylose                                              52.6%        20             
+ALYXP        alpha-D-Lyxopyranose                                        52.6%        20             
+ARIBP        alpha-D-Ribopyranose                                        52.6%        20             
+AXULF        alpha-xylulofuranose                                        52.6%        20             
+BARBP        beta-L-arabinopyranose                                      52.6%        20             
+BDARBP       beta-D-arabinopyranose                                      52.6%        20             
+BLARB        beta-L-Arabinose                                            52.6%        20             
+BLRIB        alpha-L-Ribose                                              52.6%        20             
+BLRIBP       beta-L-Ribopyranose                                         52.6%        20             
+BLRULF       beta-L-ribulofuranose                                       52.6%        20             
+BLXYL        beta-L-xylose                                               52.6%        20             
+BLYXP        beta-D-Lyxopyranose                                         52.6%        20             
+BRIBP        beta-D-Ribopyranose                                         52.6%        20             
+BXULF        beta-xylulofuranose                                         52.6%        20             
+AARB         alpha-Arabinose                                             52.6%        20             
+ALYF         alpha-Lyxofuranose                                          52.6%        20             
+ARIB         alpha-Ribose                                                52.6%        20             
+AXYF         alpha-Xylofuranose                                          52.6%        20             
+AXYL         alpha-D-xylose (a-glucose w/o exocyclic moiety) og          52.6%        20             
+BARB         beta-Arabinose                                              52.6%        20             
+BLYF         beta-Lyxofuranose                                           52.6%        20             
+BRIB         beta-Ribose                                                 52.6%        20             
+BXYF         beta-Xylofuranose                                           52.6%        20             
+BXYL         beta-D-xylose (b-glucose w/o exocyclic moiety) og           52.6%        20             
+PCA          p-coumaric acid, for switchgrass                            50.0%        19             
+ADEO         alpha-Deoxy-Ribose                                          50.0%        19             
+BDEO         beta-Deoxy-Ribose                                           50.0%        19             
+DTHROL       D-THReitOL                                                  47.4%        18             
+LTHROL       L-THReitOL                                                  47.4%        18             
+MERYOL       Meso-ERYthritOL (mertitol)                                  47.4%        18             
+ETPP         protonated ethanolamine and diphospate                      44.7%        19             
+MGLYOL       Meso-GLYcerOL                                               36.8%        14             
+DGLYA        D-Glyceric acid                                             31.6%        12             
+
+Statistics:
+  • Total possible matches: 363
+  • Exact element matches: 2
+  • Matches with ≥90% similarity: 98
+  • Matches with expected residue type: 31
+
+Exact element matches:
+  AMU2AC: alpha-N-acetyl-Muramic acid
+  BMU2AC: beta-N-acetyl-Muramic acid
+
+
+========================================================================================================================
+PDB RESIDUE: GAL (Chain E, Position 202)
+========================================================================================================================
+Composition: 21 atoms [C6, H10, O5]
+
+RTP Name     IUPAC Name                                              Match %    Atoms      Expected  
+------------------------------------------------------------------------------------------------------------------------
+A6HEP        6-deoxy-alpha-D-mannoheptose                               100.0%        27    ✓ Man    
+ADFUC        alpha-D-fucose                                             100.0%        23    ✓ Fuc    
+ADFUCF       alpha-Fucofuranose                                         100.0%        23    ✓ Fuc    
+ADHEP        alpha D-glycero-D-mannoheptose                             100.0%        28    ✓ Man    
+AFUCNA       N-Acetyl-alpha-L-fucosamine                                100.0%        29    ✓ Fuc    
+AHEP         alpha glycero-D-mannoheptose                               100.0%        28    ✓ Man    
+AKDA         3-deoxy-alpha-D-manno-oct-2-ulopyranosidonic acid          100.0%        36    ✓ Man    
+AKDO         3-deoxy-alpha-D-mannooctulosonic acid                      100.0%        29    ✓ Man    
+ALMAN        alpha-L-mannose                                            100.0%        24    ✓ Man    
+ALMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                       100.0%        30    ✓ Man    
+AMANN        alpha-D-mannosamine                                        100.0%        26    ✓ Man    
+AMANNA       2-acetyl-2-deoxy-alpha-D-mannosamine                       100.0%        30    ✓ Man    
+B6HEP        6-deoxy-beta-D-mannoheptose                                100.0%        27    ✓ Man    
+BDFUC        4C1 beta-D-fucose                                          100.0%        23    ✓ Fuc    
+BDFUCF       beta-Fucofuranose                                          100.0%        23    ✓ Fuc    
+BDHEP        alpha D-glycero-D-mannoheptose                             100.0%        28    ✓ Man    
+BFUCNA       N-Acetyl-beta-L-fucosamine                                 100.0%        29    ✓ Fuc    
+BHEP         beta glycero-D-mannoheptose                                100.0%        28    ✓ Man    
+BLMAN        beta-L-mannose                                             100.0%        24    ✓ Man    
+BLMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                       100.0%        30    ✓ Man    
+BMANN        beta-D-mannosamine                                         100.0%        26    ✓ Man    
+BMANNA       2-acetyl-2-deoxy-beta-D-mannosamine                        100.0%        30    ✓ Man    
+AFUC         alpha-L-fucose                                             100.0%        23    ✓ Fuc    
+AMAN         4C1 alpha-D-mannose                                        100.0%        24    ✓ Man    
+ARHMOA       2-O-Acetyl-alpha-L-rhamnose (alpha-6-Deoxy-L-mann...       100.0%        28    ✓ Man    
+BFUC         beta-L-fucose                                              100.0%        23    ✓ Fuc    
+BMAN         4C1 beta-D-mannose                                         100.0%        24    ✓ Man    
+DMANOL       D-MANnitOL                                                 100.0%        26    ✓ Man    
+LMANOL       L-MANnitOL                                                 100.0%        26    ✓ Man    
+AMANA        alpha-D-mannuronic acid                                     95.2%        22    ✓ Man    
+BMANA        beta-D-mannuronic acid                                      95.2%        22    ✓ Man    
+A2UDM        omega-Undecyl-alpha-D-maltoside                            100.0%        76             
+ABAC         2,4-diacetamido-2,4,6-trideoxyglucose                      100.0%        35             
+ACY3G        3-Cyclohexyl-1-Propyl-alpha-D-glucoside                    100.0%        49             
+ACY3M        3-Cyclohexyl-1-Propyl-alpha-D-Maltoside                    100.0%        70             
+ACY4M        3-Cyclohexyl-1-Butyl-alpha-D-Maltoside                     100.0%        73             
+ACY5M        3-Cyclohexyl-1-Pentyl-alpha-D-Maltoside                    100.0%        76             
+ACY6M        3-Cyclohexyl-1-Hexyl-alpha-D-Maltoside                     100.0%        79             
+ACY7M        3-Cyclohexyl-1-Heptyl-alpha-D-Maltoside                    100.0%        82             
+ADDG         dodecyl-alpha-D-glucoside                                  100.0%        60             
+ADDM         dodecyl-alpha-D-maltoside                                  100.0%        81             
+ADDTM        dodecyl-alpha-D-thiomaltoside                              100.0%        81             
+ADG          decyl-alpha-D-glucoside                                    100.0%        54             
+ADM          decyl-alpha-D-maltoside                                    100.0%        75             
+ADMHM        2,6-Dimethyl-4-Heptyl-alpha-D-Maltopyranoside              100.0%        72             
+ADTM         decyl-alpha-D-thiomaltoside                                100.0%        75             
+AHTG         Heptyl-alpha-D-thioglucoside                               100.0%        45             
+AMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-α-D-Glucopyranoside         100.0%        52             
+ANG          nonyl-alpha-D-glucoside                                    100.0%        51             
+ANM          Nonyl-alpha-D-maltoside                                    100.0%        72             
+ANTM         Nonyl-alpha-D-thiomaltoside                                100.0%        72             
+AOG          octyl-alpha-D-glucoside                                    100.0%        48             
+AOM          octyl-alpha-D-maltoside                                    100.0%        69             
+AOTG         octyl-alpha-D-thioglucoside                                100.0%        48             
+AOTM         octyl-alpha-D-thiomaltoside                                100.0%        69             
+APPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                   100.0%        69             
+ATM          Tridecyl-alpha-D-maltoside                                 100.0%        84             
+AUDM         Undecyl-alpha-D-maltoside                                  100.0%        78             
+AUDTM        Undecyl-alpha-D-thiomaltoside                              100.0%        78             
+B2UDM        omega-Undecyl-beta-D-maltoside                             100.0%        76             
+BBAC         2,4-diacetamido-2,4,6-trideoxyglucose                      100.0%        35             
+BBCYG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%       105             
+BBPHG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%        99             
+BCY3G        3-Cyclohexyl-1-Propyl-beta-D-glucoside                     100.0%        49             
+BCY3M        3-Cyclohexyl-1-Propyl-beta-D-Maltoside                     100.0%        70             
+BCY4M        3-Cyclohexyl-1-Butyl-beta-D-Maltoside                      100.0%        73             
+BCY5M        3-Cyclohexyl-1-Pentyl-beta-D-Maltoside                     100.0%        76             
+BCY6M        3-Cyclohexyl-1-Hexyl-beta-D-Maltoside                      100.0%        79             
+BCY7M        3-Cyclohexyl-1-Heptyl-beta-D-Maltoside                     100.0%        82             
+BDDG         dodecyl-beta-D-glucoside                                   100.0%        60             
+BDDM         dodecyl-beta-D-maltoside                                   100.0%        81             
+BDDTM        dodecyl-beta-D-thiomaltoside                               100.0%        81             
+BDG          decyl-beta-D-glucoside                                     100.0%        54             
+BDM          decyl-beta-D-maltoside                                     100.0%        75             
+BDMHM        2,6-Dimethyl-4-Heptyl-beta-D-Maltopyranoside               100.0%        72             
+BDMNG        Decyl Maltose Neopentyl Glycol                             100.0%       145             
+BDTM         decyl-beta-D-thiomaltoside                                 100.0%        75             
+BHTG         Heptyl-beta-D-thioglucoside                                100.0%        45             
+BLMNG        Lauryl beta-Maltose Neopentyl Glycol                       100.0%       157             
+BMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-beta-D-Glucopyrano...       100.0%        52             
+BNG          Nonyl-beta-D-glucoside                                     100.0%        51             
+BNM          Nonyl-beta-D-maltoside                                     100.0%        72             
+BNTM         Nonyl-beta-D-thiomaltoside                                 100.0%        72             
+BOG          octyl-beta-D-glucoside                                     100.0%        48             
+BOGNG        Octyl beta-Glucose Neopentyl Glycol                        100.0%        91             
+BOM          octyl-beta-D-maltoside                                     100.0%        69             
+BOTG         octyl-beta-D-thioglucoside                                 100.0%        48             
+BOTM         octyl-beta-D-thiomaltoside                                 100.0%        69             
+BPPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                   100.0%        69             
+BTM          Tridecyl-beta-D-maltoside                                  100.0%        84             
+BUDM         Undecyl-beta-D-maltoside                                   100.0%        78             
+BUDTM        Undecyl-beta-D-thiomaltoside                               100.0%        78             
+C10EG5       Pentaethylene Glycol Monodecyl Ether                       100.0%        68             
+C10EG6       Hexaethylene Glycol Monodecyl Ether                        100.0%        75             
+C10EG9       Polyoxyethylene(9)decyl Ether                              100.0%        96             
+C12DEG       Polyoxyethylene(10)dodecyl ether                           100.0%       109             
+C12EG7       Heptaethylene glycol monododecyl ether                     100.0%        88             
+C12EG8       Octaethylene glycol monododecyl ether                      100.0%        95             
+C12EG9       Polyoxyethylene(9)dodecyl ether                            100.0%       102             
+C13EG8       Polyoxyethylene(8)tridecyl ether                           100.0%        98             
+C5MNG        CYMAL-5 Neopentyl Glycol, (2,2-bis(3'-cyclohexylp...       100.0%       147             
+C6EG4        Tetraethylene Glycol Monohexyl Ether                       100.0%        49             
+C6EG5        Pentaethylene Glycol Monohexyl Ether                       100.0%        56             
+C6MNG        CYMAL-6 Neopentyl Glycol ,(2,2-bis(3'-cyclohexylb...       100.0%       153             
+C7EG4        Tetraethylene Glycol Monoheptyl Ether                      100.0%        52             
+C7EG5        Pentaethylene Glycol Monoheptyl Ether                      100.0%        59             
+C8EG4        Tetraethylene Glycol Monooctyl Ether                       100.0%        55             
+C8EG5        Pentaethylene Glycol Monooctyl Ether                       100.0%        62             
+C8EG6        Hexaethylene Glycol Monooctyl Ether                        100.0%        69             
+DHEG         Decanoyl-N-Hydroxyethylglucamide                           100.0%        63             
+DL16PP       [name]                                                     100.0%       221             
+DL19PP       [name]                                                     100.0%       260             
+DMG          Decanoyl-N-methylglucamide                                 100.0%        59             
+NHEG         Nonanoyl-N-Hydroxyethylglucamide                           100.0%        60             
+NIDP40       [Octylphenoxy]Polyethoxyethanol                            100.0%       100             
+NMG          Nonanoyl-N-methylglucamide                                 100.0%        56             
+SMDD         Sucrose Monododecanoate                                    100.0%        80             
+TX100        TRITON X-100 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...       100.0%       107             
+TX114        TRITON X-114 • α-[(1,1,3,3-Tetramethylbutyl)pheny...       100.0%        93             
+TX305        TRITON X-305 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...       100.0%       247             
+TX405        TRITON X-405 • α-[4-(1,1,3,3-Tetramethyl-Butyl)Ph...       100.0%       317             
+UNDPP        [name]                                                     100.0%       154             
+A8LEG        8-epi-alpha-legionaminic acid                              100.0%        44             
+AALLN        alpha-D-allosamine                                         100.0%        26             
+AALLNA       2-acetyl-2-deoxy-alpha-D-allosamine                        100.0%        30             
+AALTN        alpha-D-altorsamine                                        100.0%        26             
+AALTNA       2-acetyl-2-deoxy-alpha-D-altrosamine                       100.0%        30             
+ADPSI        alpha-D-Psicofuranose                                      100.0%        24             
+ADRHM        alpha-D-rhamnose                                           100.0%        23             
+AFRUP        alpha-D-Fructopyranose                                     100.0%        24             
+AGALAA       2-acetyl-2-deoxy-alpha-D-galactosamine                     100.0%        36             
+AGALF        alpha-Galactofuranose                                      100.0%        24             
+AGALN        alpha-D-galactosamine                                      100.0%        26             
+AGLAA        2-acetyl-2-deoxy-alpha-D-glucoronic acid                   100.0%        28             
+AGLCN        alpha-D-glucosamine                                        100.0%        26             
+AGULN        alpha-D-gulosamine                                         100.0%        26             
+AGULNA       2-acetyl-2-deoxy-alpha-D-gulosamine                        100.0%        30             
+AIDON        alpha-L-idosamine                                          100.0%        26             
+AIDONA       2-acetyl-2-deoxy-alpha-L-idosamine                         100.0%        30             
+AKDN         alpha-D-2-keto-3-deoxynonic acid                           100.0%        33             
+AKO          D-glycero-alpha-D-talo-oct-2-ulosonic acid                 100.0%        30             
+AL6ALT       6-Deoxy-alpha-L-Altrose                                    100.0%        23             
+AL6TAL       6-Deoxy-alpha-L-Talose                                     100.0%        23             
+ALALL        alpha-L-allose                                             100.0%        24             
+ALALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                       100.0%        30             
+ALALT        alpha-L-altrose                                            100.0%        24             
+ALEG         alpha-legionaminic acid                                    100.0%        44             
+ALFRU        alpha-L-Fructofuranose                                     100.0%        24             
+ALGAL        alpha-L-galactose                                          100.0%        24             
+ALGALF       alpha-L-Galactofuranose                                    100.0%        24             
+ALGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                     100.0%        30             
+ALGLAA       2-acetyl-2-deoxy-alpha-L-glucoronic acid                   100.0%        28             
+ALGLC        alpha-L-glucose                                            100.0%        24             
+ALGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                       100.0%        30             
+ALGUL        alpha-L-gulose                                             100.0%        24             
+ALGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                        100.0%        30             
+ALIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                         100.0%        30             
+ALIDO        alpha-L-idose                                              100.0%        24             
+ALQUI        alpha-L-quinovose                                          100.0%        23             
+ALTAGP       alpha-L-tagatopyranose                                     100.0%        24             
+ALTAL        alpha-L-talose                                             100.0%        24             
+ALTANA       2-acetyl-2-deoxy-alpha-L-talosamine                        100.0%        30             
+AMU2AC       alpha-N-acetyl-Muramic acid                                100.0%        38             
+AMU2GC       alpha-N-Glycolyl-Muramic Acid                              100.0%        39             
+AMUR         alpha-Muramic acid                                         100.0%        33             
+ANE5GC       alpha-Neu5Gc (N-glycolyl-alpha-D-neuraminic acid)          100.0%        40             
+ANEU         alpha-D-neuraminic acid                                    100.0%        34             
+APSE         alpha-Pseudaminic acid                                     100.0%        44             
+APSI         alpha-L-Psicofuranose                                      100.0%        24             
+APSIP        alpha-D-psicopyranose                                      100.0%        24             
+AQUI         alpha-D-Quinovose                                          100.0%        23             
+AQUINA       2-acetyl-2-deoxy-alpha-D-quinovose                         100.0%        29             
+ARHMNA       N-Acetyl-alpha-L-Rhamnosamine                              100.0%        29             
+ASOR         alpha-L-Sorbofuranose                                      100.0%        24             
+ASORP        alpha-L-sorbopyranose                                      100.0%        24             
+ATAG         alpha-D-Tagatofuranose                                     100.0%        24             
+ATAGP        alpha-D-Tagatopyranose                                     100.0%        24             
+ATALN        alpha-D-talosamine                                         100.0%        26             
+ATALNA       2-acetyl-2-deoxy-alpha-D-talosamine                        100.0%        30             
+B8LEG        8-epi-beta-legionaminic acid                               100.0%        44             
+BALLN        beta-D-allosamine                                          100.0%        26             
+BALLNA       2-acetyl-2-deoxy-beta-D-allosamine                         100.0%        30             
+BALTN        beta-D-altorsamine                                         100.0%        26             
+BALTNA       2-acetyl-2-deoxy-beta-D-altrosamine                        100.0%        30             
+BDPSI        beta-D-Psicofuranose                                       100.0%        24             
+BDRHM        beta-D-rhamnose                                            100.0%        23             
+BFRUP        beta-D-Fructopyranose                                      100.0%        24             
+BGALF        beta-Galactofuranose                                       100.0%        24             
+BGALN        beta-D-galactosamine                                       100.0%        26             
+BGLCN        beta-D-glucosamine                                         100.0%        26             
+BGLGL        4C1 beta-D-glucose                                         100.0%        29             
+BGULN        beta-D-gulosamine                                          100.0%        26             
+BGULNA       2-acetyl-2-deoxy-beta-D-gulosamine                         100.0%        30             
+BIDON        alpha-L-idosamine                                          100.0%        26             
+BIDONA       2-acetyl-2-deoxy-beta-L-idosamine                          100.0%        30             
+BKDN         beta-D-2-keto-3-deoxynonic acid                            100.0%        33             
+BKO          D-glycero-beta-D-talo-oct-2-ulosonic acid                  100.0%        30             
+BL6ALT       6-Deoxy-beta-L-Altrose                                     100.0%        23             
+BL6TAL       6-Deoxy-beta-L-Talose                                      100.0%        23             
+BLALL        beta-L-allose                                              100.0%        24             
+BLALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                       100.0%        30             
+BLALT        beta-L-altrose                                             100.0%        24             
+BLEG         beta-legionaminic acid                                     100.0%        44             
+BLFRU        beta-L-Fructofuranose                                      100.0%        24             
+BLGAL        beta-L-galactose                                           100.0%        24             
+BLGALF       alpha-L-Galactofuranose                                    100.0%        24             
+BLGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                     100.0%        30             
+BLGLC        beta-L-glucose                                             100.0%        24             
+BLGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                       100.0%        30             
+BLGUL        beta-L-gulose                                              100.0%        24             
+BLGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                        100.0%        30             
+BLIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                         100.0%        30             
+BLIDO        beta-L-idose                                               100.0%        24             
+BLQUI        beta-L-quinovose                                           100.0%        23             
+BLTAGP       beta-L-tagatopyranose                                      100.0%        24             
+BLTAL        beta-L-talose                                              100.0%        24             
+BLTANA       2-acetyl-2-deoxy-alpha-L-talosamine                        100.0%        30             
+BMU2AC       beta-N-acetyl-Muramic acid                                 100.0%        38             
+BMU2GC       beta-N-Glycolyl-Muramic Acid                               100.0%        39             
+BMUR         beta-Muramic acid                                          100.0%        33             
+BNE5GC       beta-Neu5Gc (N-glycolyl-beta-D-neuraminic acid)            100.0%        40             
+BNEU         beta-D-neuraminic acid                                     100.0%        34             
+BPSE         beta-Pseudaminic acid                                      100.0%        44             
+BPSI         beta-L-Psicofuranose                                       100.0%        24             
+BPSIP        beta-D-Psicopyranose                                       100.0%        24             
+BQUI         beta-D-Quinovose                                           100.0%        23             
+BQUINA       2-acetyl-2-deoxy-beta-D-quinovose                          100.0%        29             
+BRHMNA       N-Acetyl-beta-L-Rhamnosamine                               100.0%        29             
+BSOR         beta-L-Sorbofuranose                                       100.0%        24             
+BSORP        beta-L-sorbopyranose                                       100.0%        24             
+BTAG         beta-D-Tagatofuranose                                      100.0%        24             
+BTAGP        beta-D-Tagatopyranose                                      100.0%        24             
+BTALN        beta-D-talosamine                                          100.0%        26             
+BTALNA       2-acetyl-2-deoxy-beta-D-talosamine                         100.0%        30             
+QUITA        alpha-D-Quinovose-N-[(R)-3-hydroxybutyramido]              100.0%        36             
+CAT          catechyl C-lignin                                          100.0%        26             
+GUAI         guaiacyl, G-lignin                                         100.0%        29             
+SYR          Syringyl, S-lignin                                         100.0%        33             
+TRCN                                                                    100.0%        38             
+AALL         4C1 alpha-D-allose                                         100.0%        24             
+AALT         4C1 alpha-D-altrose                                        100.0%        24             
+AFRU         alpha-Fructofuranose                                       100.0%        24             
+AGAL         4C1 alpha-D-galactose                                      100.0%        24             
+AGALNA       2-acetyl-2-deoxy-alpha-D-galactosamine                     100.0%        30             
+AGLC         4C1 alpha-D-glucose                                        100.0%        24             
+AGLCNA       2-acetyl-2-deoxy-alpha-D-glucosamine                       100.0%        30             
+AGUL         4C1 alpha-D-gulose                                         100.0%        24             
+AIDO         4C1 alpha-D-idose                                          100.0%        24             
+ALLOSE       D-Allose, open, free aldehdye                              100.0%        24             
+ANE5AC       alpha-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)            100.0%        39             
+ARHM         alpha-L-rhamnose                                           100.0%        23             
+ATAL         4C1 alpha-D-talose                                         100.0%        24             
+BALL         4C1 beta-D-allose                                          100.0%        24             
+BALT         4C1 beta-D-altrose                                         100.0%        24             
+BFRU         beta-Fructofuranose                                        100.0%        24             
+BGAL         4C1 beta-D-galactose                                       100.0%        24             
+BGALNA       2-acetyl-2-deoxy-beta-D-galactosamine                      100.0%        30             
+BGLC         4C1 beta-D-glucose                                         100.0%        24             
+BGLCN0       2-acetyl-2-deoxy-beta-D-glucosamine                        100.0%        30             
+BGLCNA       2-acetyl-2-deoxy-beta-D-glucosamine                        100.0%        30             
+BGUL         4C1 beta-D-gulose                                          100.0%        24             
+BIDO         4C1 beta-D-idose                                           100.0%        24             
+BNE5AC       beta-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)             100.0%        39             
+BRHM         beta-L-rhamnose                                            100.0%        23             
+BTAL         4C1 beta-D-talose                                          100.0%        24             
+DALTOL       D-ALTritOL (same as talitol)                               100.0%        26             
+DGLUOL       D-GLUcitOL (sorbitol)                                      100.0%        26             
+DGULOL       D-GULitOL                                                  100.0%        26             
+DIDIOL       D-IDItOL                                                   100.0%        26             
+INI1         cyclic  myi-inositol                                       100.0%        24             
+INI2         cyclic  epi-inositol                                       100.0%        24             
+INI3         cyclic  allo-inositol                                      100.0%        24             
+INI4         cyclic  l-chiro-inositol                                   100.0%        24             
+INI5         cyclic  muco-inositol                                      100.0%        24             
+LALTOL       L-ALTritOL (same as talitol)                               100.0%        26             
+LGLUOL       L-GLUcitOL                                                 100.0%        26             
+LGULOL       L-GULitOL                                                  100.0%        26             
+LIDIOL       L-IDItOL                                                   100.0%        26             
+MALLOL       Meso-ALLitOL                                               100.0%        26             
+MGALOL       Meso-GALacticOL                                            100.0%        26             
+PSICOS       D-Psicose, open, free ketose                               100.0%        24             
+C6EG3        Triethylene Glycol Monohexyl Ether                          95.2%        42             
+AALLA        alpha-D-alluronic acid                                      95.2%        22             
+AALTA        alpha-D-alturonic acid                                      95.2%        22             
+AARBP        alpha-L-arabinopyranose                                     95.2%        20             
+AASC         alpha-Ascarylose                                            95.2%        22             
+ACOL         alpha-L-colitose                                            95.2%        22             
+ADARBP       alpha-D-arabinopyranose                                     95.2%        20             
+ADIG         alpha-D-digitoxose                                          95.2%        22             
+AGALA        4C1 alpha-D-galactoronic acid                               95.2%        22             
+AGULA        alpha-D-guluronic acid                                      95.2%        22             
+ALALTA       alpha-L-alturonic acid                                      95.2%        22             
+ALARB        alpha-L-Arabinose                                           95.2%        20             
+ALGULA       alpha-L-guluronic acid                                      95.2%        22             
+ALRIB        alpha-L-Ribose                                              95.2%        20             
+ALRIBP       alpha-L-Ribopyranose                                        95.2%        20             
+ALRULF       alpha-L-ribulofuranose                                      95.2%        20             
+ALXYL        alpha-L-xylose                                              95.2%        20             
+ALYXP        alpha-D-Lyxopyranose                                        95.2%        20             
+AOLI         alpha-D-olivose                                             95.2%        22             
+APAR         alpha-D-paratose                                            95.2%        22             
+ARIBP        alpha-D-Ribopyranose                                        95.2%        20             
+ATALA        alpha-D-taluronic acid                                      95.2%        22             
+ATYV         alpha-D-tyvelose                                            95.2%        22             
+AXULF        alpha-xylulofuranose                                        95.2%        20             
+BALLA        beta-D-alluronic acid                                       95.2%        22             
+BALTA        beta-D-alturonic acid                                       95.2%        22             
+BARBP        beta-L-arabinopyranose                                      95.2%        20             
+BASC         beta-Ascarylose                                             95.2%        22             
+BCOL         beta-L-colitose                                             95.2%        22             
+BDARBP       beta-D-arabinopyranose                                      95.2%        20             
+BDIG         beta-D-digitoxose                                           95.2%        22             
+BGALA        4C1 beta-D-galactoronic acid                                95.2%        22             
+BGULA        beta-D-guluronic acid                                       95.2%        22             
+BLALTA       beta-L-alturonic acid                                       95.2%        22             
+BLARB        beta-L-Arabinose                                            95.2%        20             
+BLGULA       beta-L-guluronic acid                                       95.2%        22             
+BLRIB        alpha-L-Ribose                                              95.2%        20             
+BLRIBP       beta-L-Ribopyranose                                         95.2%        20             
+BLRULF       beta-L-ribulofuranose                                       95.2%        20             
+BLXYL        beta-L-xylose                                               95.2%        20             
+BLYXP        beta-D-Lyxopyranose                                         95.2%        20             
+BOLI         beta-D-olivose                                              95.2%        22             
+BPAR         alpha-D-paratose                                            95.2%        22             
+BRIBP        beta-D-Ribopyranose                                         95.2%        20             
+BTALA        beta-D-taluronic acid                                       95.2%        22             
+BTYV         beta-D-tyvelose                                             95.2%        22             
+BXULF        beta-xylulofuranose                                         95.2%        20             
+FERU         ferulic acid, for lignin:hemicellulose crosslinks           95.2%        24             
+PHP          p-hydroxyphenyl, H-lignin                                   95.2%        25             
+AARB         alpha-Arabinose                                             95.2%        20             
+ABEQ         abequose, 3,6-didexoxy-alpha-D-xylo-hexose                  95.2%        22             
+AGLCA        4C1 alpha-D-glucoronic acid                                 95.2%        22             
+AIDOA        alpha-L-iduronic acid                                       95.2%        22             
+ALYF         alpha-Lyxofuranose                                          95.2%        20             
+ARIB         alpha-Ribose                                                95.2%        20             
+AXYF         alpha-Xylofuranose                                          95.2%        20             
+AXYL         alpha-D-xylose (a-glucose w/o exocyclic moiety) og          95.2%        20             
+BARB         beta-Arabinose                                              95.2%        20             
+BGLCA        4C1 beta-D-glucoronic acid                                  95.2%        22             
+BGLCA0       4C1 beta-D-glucoronic acid                                  95.2%        22             
+BIDOA        beta-L-iduronic acid                                        95.2%        22             
+BLYF         beta-Lyxofuranose                                           95.2%        20             
+BRIB         beta-Ribose                                                 95.2%        20             
+BXYF         beta-Xylofuranose                                           95.2%        20             
+BXYL         beta-D-xylose (b-glucose w/o exocyclic moiety) og           95.2%        20             
+DARAOL       D-ARAbitOL (same as lyxitol)                                95.2%        22             
+LARAOL       L-ARAbitOL (same as lyxitol)                                95.2%        22             
+MRIBOL       Meso-RIBitOL                                                95.2%        22             
+MXYLOL       Meso-XYLitOL                                                95.2%        22             
+ADHA         alpha-3-Deoxy-Lyxo-Heptulosaric Acid                        90.5%        23             
+BDHA         beta-3-Deoxy-Lyxo-Heptulosaric Acid                         90.5%        23             
+DPHG         2,3-DI-PHYTANYL-GLYCEROL                                    90.5%       134             
+FERUT        ferulate, for lignin:hemicellulose crosslinks               90.5%        23             
+ADEO         alpha-Deoxy-Ribose                                          90.5%        19             
+BDEO         beta-Deoxy-Ribose                                           90.5%        19             
+DTHROL       D-THReitOL                                                  85.7%        18             
+LTHROL       L-THReitOL                                                  85.7%        18             
+MERYOL       Meso-ERYthritOL (mertitol)                                  85.7%        18             
+PCA          p-coumaric acid, for switchgrass                            76.2%        19             
+ETPP         protonated ethanolamine and diphospate                      66.7%        19             
+MGLYOL       Meso-GLYcerOL                                               66.7%        14             
+DGLYA        D-Glyceric acid                                             57.1%        12             
+
+Statistics:
+  • Total possible matches: 363
+  • Exact element matches: 0
+  • Matches with ≥90% similarity: 356
+  • Matches with expected residue type: 31
+
+
+========================================================================================================================
+PDB RESIDUE: SIA (Chain E, Position 203)
+========================================================================================================================
+Composition: 39 atoms [C11, H18, N1, O9]
+
+RTP Name     IUPAC Name                                              Match %    Atoms      Expected  
+------------------------------------------------------------------------------------------------------------------------
+AKDA         3-deoxy-alpha-D-manno-oct-2-ulopyranosidonic acid           92.3%        36    ✓ Man    
+ALMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                        76.9%        30    ✓ Man    
+AMANNA       2-acetyl-2-deoxy-alpha-D-mannosamine                        76.9%        30    ✓ Man    
+BLMANA       2-acetyl-2-deoxy-alpha-L-mannosamine                        76.9%        30    ✓ Man    
+BMANNA       2-acetyl-2-deoxy-beta-D-mannosamine                         76.9%        30    ✓ Man    
+AFUCNA       N-Acetyl-alpha-L-fucosamine                                 74.4%        29    ✓ Fuc    
+AKDO         3-deoxy-alpha-D-mannooctulosonic acid                       74.4%        29    ✓ Man    
+BFUCNA       N-Acetyl-beta-L-fucosamine                                  74.4%        29    ✓ Fuc    
+ADHEP        alpha D-glycero-D-mannoheptose                              71.8%        28    ✓ Man    
+AHEP         alpha glycero-D-mannoheptose                                71.8%        28    ✓ Man    
+BDHEP        alpha D-glycero-D-mannoheptose                              71.8%        28    ✓ Man    
+BHEP         beta glycero-D-mannoheptose                                 71.8%        28    ✓ Man    
+ARHMOA       2-O-Acetyl-alpha-L-rhamnose (alpha-6-Deoxy-L-mann...        71.8%        28    ✓ Man    
+A6HEP        6-deoxy-alpha-D-mannoheptose                                69.2%        27    ✓ Man    
+B6HEP        6-deoxy-beta-D-mannoheptose                                 69.2%        27    ✓ Man    
+AMANN        alpha-D-mannosamine                                         66.7%        26    ✓ Man    
+BMANN        beta-D-mannosamine                                          66.7%        26    ✓ Man    
+DMANOL       D-MANnitOL                                                  66.7%        26    ✓ Man    
+LMANOL       L-MANnitOL                                                  66.7%        26    ✓ Man    
+ALMAN        alpha-L-mannose                                             61.5%        24    ✓ Man    
+BLMAN        beta-L-mannose                                              61.5%        24    ✓ Man    
+AMAN         4C1 alpha-D-mannose                                         61.5%        24    ✓ Man    
+BMAN         4C1 beta-D-mannose                                          61.5%        24    ✓ Man    
+ADFUC        alpha-D-fucose                                              59.0%        23    ✓ Fuc    
+ADFUCF       alpha-Fucofuranose                                          59.0%        23    ✓ Fuc    
+BDFUC        4C1 beta-D-fucose                                           59.0%        23    ✓ Fuc    
+BDFUCF       beta-Fucofuranose                                           59.0%        23    ✓ Fuc    
+AFUC         alpha-L-fucose                                              59.0%        23    ✓ Fuc    
+BFUC         beta-L-fucose                                               59.0%        23    ✓ Fuc    
+AMANA        alpha-D-mannuronic acid                                     56.4%        22    ✓ Man    
+BMANA        beta-D-mannuronic acid                                      56.4%        22    ✓ Man    
+BBCYG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%       105             
+BBPHG        N-(1,3-bis(Glucopyranoside)propan-2-yl)-3-Butyl-3...       100.0%        99             
+AMU2GC       alpha-N-Glycolyl-Muramic Acid                              100.0%        39             
+ANE5GC       alpha-Neu5Gc (N-glycolyl-alpha-D-neuraminic acid)          100.0%        40             
+BMU2GC       beta-N-Glycolyl-Muramic Acid                               100.0%        39             
+BNE5GC       beta-Neu5Gc (N-glycolyl-beta-D-neuraminic acid)            100.0%        40             
+ANE5AC       alpha-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)            100.0%        39             
+BNE5AC       beta-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)             100.0%        39             
+A2UDM        omega-Undecyl-alpha-D-maltoside                             97.4%        76             
+ACY3M        3-Cyclohexyl-1-Propyl-alpha-D-Maltoside                     97.4%        70             
+ACY4M        3-Cyclohexyl-1-Butyl-alpha-D-Maltoside                      97.4%        73             
+ACY5M        3-Cyclohexyl-1-Pentyl-alpha-D-Maltoside                     97.4%        76             
+ACY6M        3-Cyclohexyl-1-Hexyl-alpha-D-Maltoside                      97.4%        79             
+ACY7M        3-Cyclohexyl-1-Heptyl-alpha-D-Maltoside                     97.4%        82             
+ADDM         dodecyl-alpha-D-maltoside                                   97.4%        81             
+ADDTM        dodecyl-alpha-D-thiomaltoside                               97.4%        81             
+ADM          decyl-alpha-D-maltoside                                     97.4%        75             
+ADMHM        2,6-Dimethyl-4-Heptyl-alpha-D-Maltopyranoside               97.4%        72             
+ADTM         decyl-alpha-D-thiomaltoside                                 97.4%        75             
+ANM          Nonyl-alpha-D-maltoside                                     97.4%        72             
+ANTM         Nonyl-alpha-D-thiomaltoside                                 97.4%        72             
+AOM          octyl-alpha-D-maltoside                                     97.4%        69             
+AOTM         octyl-alpha-D-thiomaltoside                                 97.4%        69             
+APPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                    97.4%        69             
+ATM          Tridecyl-alpha-D-maltoside                                  97.4%        84             
+AUDM         Undecyl-alpha-D-maltoside                                   97.4%        78             
+AUDTM        Undecyl-alpha-D-thiomaltoside                               97.4%        78             
+B2UDM        omega-Undecyl-beta-D-maltoside                              97.4%        76             
+BCY3M        3-Cyclohexyl-1-Propyl-beta-D-Maltoside                      97.4%        70             
+BCY4M        3-Cyclohexyl-1-Butyl-beta-D-Maltoside                       97.4%        73             
+BCY5M        3-Cyclohexyl-1-Pentyl-beta-D-Maltoside                      97.4%        76             
+BCY6M        3-Cyclohexyl-1-Hexyl-beta-D-Maltoside                       97.4%        79             
+BCY7M        3-Cyclohexyl-1-Heptyl-beta-D-Maltoside                      97.4%        82             
+BDDM         dodecyl-beta-D-maltoside                                    97.4%        81             
+BDDTM        dodecyl-beta-D-thiomaltoside                                97.4%        81             
+BDM          decyl-beta-D-maltoside                                      97.4%        75             
+BDMHM        2,6-Dimethyl-4-Heptyl-beta-D-Maltopyranoside                97.4%        72             
+BDMNG        Decyl Maltose Neopentyl Glycol                              97.4%       145             
+BDTM         decyl-beta-D-thiomaltoside                                  97.4%        75             
+BLMNG        Lauryl beta-Maltose Neopentyl Glycol                        97.4%       157             
+BNM          Nonyl-beta-D-maltoside                                      97.4%        72             
+BNTM         Nonyl-beta-D-thiomaltoside                                  97.4%        72             
+BOGNG        Octyl beta-Glucose Neopentyl Glycol                         97.4%        91             
+BOM          octyl-beta-D-maltoside                                      97.4%        69             
+BOTM         octyl-beta-D-thiomaltoside                                  97.4%        69             
+BPPM         2-Propyl-1-Pentyl-beta-D-Maltopyranoside                    97.4%        69             
+BTM          Tridecyl-beta-D-maltoside                                   97.4%        84             
+BUDM         Undecyl-beta-D-maltoside                                    97.4%        78             
+BUDTM        Undecyl-beta-D-thiomaltoside                                97.4%        78             
+C10EG9       Polyoxyethylene(9)decyl Ether                               97.4%        96             
+C12DEG       Polyoxyethylene(10)dodecyl ether                            97.4%       109             
+C12EG8       Octaethylene glycol monododecyl ether                       97.4%        95             
+C12EG9       Polyoxyethylene(9)dodecyl ether                             97.4%       102             
+C13EG8       Polyoxyethylene(8)tridecyl ether                            97.4%        98             
+C5MNG        CYMAL-5 Neopentyl Glycol, (2,2-bis(3'-cyclohexylp...        97.4%       147             
+C6MNG        CYMAL-6 Neopentyl Glycol ,(2,2-bis(3'-cyclohexylb...        97.4%       153             
+NIDP40       [Octylphenoxy]Polyethoxyethanol                             97.4%       100             
+SMDD         Sucrose Monododecanoate                                     97.4%        80             
+TX100        TRITON X-100 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...        97.4%       107             
+TX114        TRITON X-114 • α-[(1,1,3,3-Tetramethylbutyl)pheny...        97.4%        93             
+TX305        TRITON X-305 • α-[4-(1,1,3,3-Tetramethylbutyl)phe...        97.4%       247             
+TX405        TRITON X-405 • α-[4-(1,1,3,3-Tetramethyl-Butyl)Ph...        97.4%       317             
+A8LEG        8-epi-alpha-legionaminic acid                               97.4%        44             
+ALEG         alpha-legionaminic acid                                     97.4%        44             
+AMU2AC       alpha-N-acetyl-Muramic acid                                 97.4%        38             
+APSE         alpha-Pseudaminic acid                                      97.4%        44             
+B8LEG        8-epi-beta-legionaminic acid                                97.4%        44             
+BLEG         beta-legionaminic acid                                      97.4%        44             
+BMU2AC       beta-N-acetyl-Muramic acid                                  97.4%        38             
+BPSE         beta-Pseudaminic acid                                       97.4%        44             
+AMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-α-D-Glucopyranoside          94.9%        52             
+BMHCG        Methyl-6-O-(N-Heptylcarbamoyl)-beta-D-Glucopyrano...        94.9%        52             
+C12EG7       Heptaethylene glycol monododecyl ether                      94.9%        88             
+DHEG         Decanoyl-N-Hydroxyethylglucamide                            94.9%        63             
+NHEG         Nonanoyl-N-Hydroxyethylglucamide                            94.9%        60             
+C10EG6       Hexaethylene Glycol Monodecyl Ether                         92.3%        75             
+C8EG6        Hexaethylene Glycol Monooctyl Ether                         92.3%        69             
+DL16PP       [name]                                                      92.3%       221             
+DL19PP       [name]                                                      92.3%       260             
+DMG          Decanoyl-N-methylglucamide                                  92.3%        59             
+NMG          Nonanoyl-N-methylglucamide                                  92.3%        56             
+UNDPP        [name]                                                      92.3%       154             
+ACY3G        3-Cyclohexyl-1-Propyl-alpha-D-glucoside                     89.7%        49             
+ADDG         dodecyl-alpha-D-glucoside                                   89.7%        60             
+ADG          decyl-alpha-D-glucoside                                     89.7%        54             
+ANG          nonyl-alpha-D-glucoside                                     89.7%        51             
+AOG          octyl-alpha-D-glucoside                                     89.7%        48             
+BCY3G        3-Cyclohexyl-1-Propyl-beta-D-glucoside                      89.7%        49             
+BDDG         dodecyl-beta-D-glucoside                                    89.7%        60             
+BDG          decyl-beta-D-glucoside                                      89.7%        54             
+BNG          Nonyl-beta-D-glucoside                                      89.7%        51             
+BOG          octyl-beta-D-glucoside                                      89.7%        48             
+C10EG5       Pentaethylene Glycol Monodecyl Ether                        89.7%        68             
+C6EG5        Pentaethylene Glycol Monohexyl Ether                        89.7%        56             
+C7EG5        Pentaethylene Glycol Monoheptyl Ether                       89.7%        59             
+C8EG5        Pentaethylene Glycol Monooctyl Ether                        89.7%        62             
+QUITA        alpha-D-Quinovose-N-[(R)-3-hydroxybutyramido]               89.7%        36             
+ABAC         2,4-diacetamido-2,4,6-trideoxyglucose                       87.2%        35             
+AHTG         Heptyl-alpha-D-thioglucoside                                87.2%        45             
+AOTG         octyl-alpha-D-thioglucoside                                 87.2%        48             
+BBAC         2,4-diacetamido-2,4,6-trideoxyglucose                       87.2%        35             
+BHTG         Heptyl-beta-D-thioglucoside                                 87.2%        45             
+BOTG         octyl-beta-D-thioglucoside                                  87.2%        48             
+C6EG4        Tetraethylene Glycol Monohexyl Ether                        87.2%        49             
+C7EG4        Tetraethylene Glycol Monoheptyl Ether                       87.2%        52             
+C8EG4        Tetraethylene Glycol Monooctyl Ether                        87.2%        55             
+AGALAA       2-acetyl-2-deoxy-alpha-D-galactosamine                      87.2%        36             
+ANEU         alpha-D-neuraminic acid                                     87.2%        34             
+BNEU         beta-D-neuraminic acid                                      87.2%        34             
+C6EG3        Triethylene Glycol Monohexyl Ether                          84.6%        42             
+AKDN         alpha-D-2-keto-3-deoxynonic acid                            84.6%        33             
+AMUR         alpha-Muramic acid                                          84.6%        33             
+BKDN         beta-D-2-keto-3-deoxynonic acid                             84.6%        33             
+BMUR         beta-Muramic acid                                           84.6%        33             
+SYR          Syringyl, S-lignin                                          84.6%        33             
+DPHG         2,3-DI-PHYTANYL-GLYCEROL                                    82.1%       134             
+TRCN                                                                     82.1%        38             
+AALLNA       2-acetyl-2-deoxy-alpha-D-allosamine                         76.9%        30             
+AALTNA       2-acetyl-2-deoxy-alpha-D-altrosamine                        76.9%        30             
+AGULNA       2-acetyl-2-deoxy-alpha-D-gulosamine                         76.9%        30             
+AIDONA       2-acetyl-2-deoxy-alpha-L-idosamine                          76.9%        30             
+AKO          D-glycero-alpha-D-talo-oct-2-ulosonic acid                  76.9%        30             
+ALALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                        76.9%        30             
+ALGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                      76.9%        30             
+ALGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                        76.9%        30             
+ALGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                         76.9%        30             
+ALIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                          76.9%        30             
+ALTANA       2-acetyl-2-deoxy-alpha-L-talosamine                         76.9%        30             
+ATALNA       2-acetyl-2-deoxy-alpha-D-talosamine                         76.9%        30             
+BALLNA       2-acetyl-2-deoxy-beta-D-allosamine                          76.9%        30             
+BALTNA       2-acetyl-2-deoxy-beta-D-altrosamine                         76.9%        30             
+BGULNA       2-acetyl-2-deoxy-beta-D-gulosamine                          76.9%        30             
+BIDONA       2-acetyl-2-deoxy-beta-L-idosamine                           76.9%        30             
+BKO          D-glycero-beta-D-talo-oct-2-ulosonic acid                   76.9%        30             
+BLALNA       2-acetyl-2-deoxy-alpha-L-altrosamine                        76.9%        30             
+BLGANA       2-acetyl-2-deoxy-alpha-L-galactosamine                      76.9%        30             
+BLGLNA       2-acetyl-2-deoxy-alpha-L-glucosamine                        76.9%        30             
+BLGUNA       2-acetyl-2-deoxy-alpha-L-gulosamine                         76.9%        30             
+BLIDNA       2-acetyl-2-deoxy-alpha-L-idosamine                          76.9%        30             
+BLTANA       2-acetyl-2-deoxy-alpha-L-talosamine                         76.9%        30             
+BTALNA       2-acetyl-2-deoxy-beta-D-talosamine                          76.9%        30             
+AGALNA       2-acetyl-2-deoxy-alpha-D-galactosamine                      76.9%        30             
+AGLCNA       2-acetyl-2-deoxy-alpha-D-glucosamine                        76.9%        30             
+BGALNA       2-acetyl-2-deoxy-beta-D-galactosamine                       76.9%        30             
+BGLCN0       2-acetyl-2-deoxy-beta-D-glucosamine                         76.9%        30             
+BGLCNA       2-acetyl-2-deoxy-beta-D-glucosamine                         76.9%        30             
+AQUINA       2-acetyl-2-deoxy-alpha-D-quinovose                          74.4%        29             
+ARHMNA       N-Acetyl-alpha-L-Rhamnosamine                               74.4%        29             
+BGLGL        4C1 beta-D-glucose                                          74.4%        29             
+BQUINA       2-acetyl-2-deoxy-beta-D-quinovose                           74.4%        29             
+BRHMNA       N-Acetyl-beta-L-Rhamnosamine                                74.4%        29             
+GUAI         guaiacyl, G-lignin                                          74.4%        29             
+AGLAA        2-acetyl-2-deoxy-alpha-D-glucoronic acid                    71.8%        28             
+ALGLAA       2-acetyl-2-deoxy-alpha-L-glucoronic acid                    71.8%        28             
+AALLN        alpha-D-allosamine                                          66.7%        26             
+AALTN        alpha-D-altorsamine                                         66.7%        26             
+AGALN        alpha-D-galactosamine                                       66.7%        26             
+AGLCN        alpha-D-glucosamine                                         66.7%        26             
+AGULN        alpha-D-gulosamine                                          66.7%        26             
+AIDON        alpha-L-idosamine                                           66.7%        26             
+ATALN        alpha-D-talosamine                                          66.7%        26             
+BALLN        beta-D-allosamine                                           66.7%        26             
+BALTN        beta-D-altorsamine                                          66.7%        26             
+BGALN        beta-D-galactosamine                                        66.7%        26             
+BGLCN        beta-D-glucosamine                                          66.7%        26             
+BGULN        beta-D-gulosamine                                           66.7%        26             
+BIDON        alpha-L-idosamine                                           66.7%        26             
+BTALN        beta-D-talosamine                                           66.7%        26             
+CAT          catechyl C-lignin                                           66.7%        26             
+DALTOL       D-ALTritOL (same as talitol)                                66.7%        26             
+DGLUOL       D-GLUcitOL (sorbitol)                                       66.7%        26             
+DGULOL       D-GULitOL                                                   66.7%        26             
+DIDIOL       D-IDItOL                                                    66.7%        26             
+LALTOL       L-ALTritOL (same as talitol)                                66.7%        26             
+LGLUOL       L-GLUcitOL                                                  66.7%        26             
+LGULOL       L-GULitOL                                                   66.7%        26             
+LIDIOL       L-IDItOL                                                    66.7%        26             
+MALLOL       Meso-ALLitOL                                                66.7%        26             
+MGALOL       Meso-GALacticOL                                             66.7%        26             
+PHP          p-hydroxyphenyl, H-lignin                                   64.1%        25             
+ADPSI        alpha-D-Psicofuranose                                       61.5%        24             
+AFRUP        alpha-D-Fructopyranose                                      61.5%        24             
+AGALF        alpha-Galactofuranose                                       61.5%        24             
+ALALL        alpha-L-allose                                              61.5%        24             
+ALALT        alpha-L-altrose                                             61.5%        24             
+ALFRU        alpha-L-Fructofuranose                                      61.5%        24             
+ALGAL        alpha-L-galactose                                           61.5%        24             
+ALGALF       alpha-L-Galactofuranose                                     61.5%        24             
+ALGLC        alpha-L-glucose                                             61.5%        24             
+ALGUL        alpha-L-gulose                                              61.5%        24             
+ALIDO        alpha-L-idose                                               61.5%        24             
+ALTAGP       alpha-L-tagatopyranose                                      61.5%        24             
+ALTAL        alpha-L-talose                                              61.5%        24             
+APSI         alpha-L-Psicofuranose                                       61.5%        24             
+APSIP        alpha-D-psicopyranose                                       61.5%        24             
+ASOR         alpha-L-Sorbofuranose                                       61.5%        24             
+ASORP        alpha-L-sorbopyranose                                       61.5%        24             
+ATAG         alpha-D-Tagatofuranose                                      61.5%        24             
+ATAGP        alpha-D-Tagatopyranose                                      61.5%        24             
+BDPSI        beta-D-Psicofuranose                                        61.5%        24             
+BFRUP        beta-D-Fructopyranose                                       61.5%        24             
+BGALF        beta-Galactofuranose                                        61.5%        24             
+BLALL        beta-L-allose                                               61.5%        24             
+BLALT        beta-L-altrose                                              61.5%        24             
+BLFRU        beta-L-Fructofuranose                                       61.5%        24             
+BLGAL        beta-L-galactose                                            61.5%        24             
+BLGALF       alpha-L-Galactofuranose                                     61.5%        24             
+BLGLC        beta-L-glucose                                              61.5%        24             
+BLGUL        beta-L-gulose                                               61.5%        24             
+BLIDO        beta-L-idose                                                61.5%        24             
+BLTAGP       beta-L-tagatopyranose                                       61.5%        24             
+BLTAL        beta-L-talose                                               61.5%        24             
+BPSI         beta-L-Psicofuranose                                        61.5%        24             
+BPSIP        beta-D-Psicopyranose                                        61.5%        24             
+BSOR         beta-L-Sorbofuranose                                        61.5%        24             
+BSORP        beta-L-sorbopyranose                                        61.5%        24             
+BTAG         beta-D-Tagatofuranose                                       61.5%        24             
+BTAGP        beta-D-Tagatopyranose                                       61.5%        24             
+FERU         ferulic acid, for lignin:hemicellulose crosslinks           61.5%        24             
+AALL         4C1 alpha-D-allose                                          61.5%        24             
+AALT         4C1 alpha-D-altrose                                         61.5%        24             
+AFRU         alpha-Fructofuranose                                        61.5%        24             
+AGAL         4C1 alpha-D-galactose                                       61.5%        24             
+AGLC         4C1 alpha-D-glucose                                         61.5%        24             
+AGUL         4C1 alpha-D-gulose                                          61.5%        24             
+AIDO         4C1 alpha-D-idose                                           61.5%        24             
+ALLOSE       D-Allose, open, free aldehdye                               61.5%        24             
+ATAL         4C1 alpha-D-talose                                          61.5%        24             
+BALL         4C1 beta-D-allose                                           61.5%        24             
+BALT         4C1 beta-D-altrose                                          61.5%        24             
+BFRU         beta-Fructofuranose                                         61.5%        24             
+BGAL         4C1 beta-D-galactose                                        61.5%        24             
+BGLC         4C1 beta-D-glucose                                          61.5%        24             
+BGUL         4C1 beta-D-gulose                                           61.5%        24             
+BIDO         4C1 beta-D-idose                                            61.5%        24             
+BTAL         4C1 beta-D-talose                                           61.5%        24             
+INI1         cyclic  myi-inositol                                        61.5%        24             
+INI2         cyclic  epi-inositol                                        61.5%        24             
+INI3         cyclic  allo-inositol                                       61.5%        24             
+INI4         cyclic  l-chiro-inositol                                    61.5%        24             
+INI5         cyclic  muco-inositol                                       61.5%        24             
+PSICOS       D-Psicose, open, free ketose                                61.5%        24             
+ADHA         alpha-3-Deoxy-Lyxo-Heptulosaric Acid                        59.0%        23             
+ADRHM        alpha-D-rhamnose                                            59.0%        23             
+AL6ALT       6-Deoxy-alpha-L-Altrose                                     59.0%        23             
+AL6TAL       6-Deoxy-alpha-L-Talose                                      59.0%        23             
+ALQUI        alpha-L-quinovose                                           59.0%        23             
+AQUI         alpha-D-Quinovose                                           59.0%        23             
+BDHA         beta-3-Deoxy-Lyxo-Heptulosaric Acid                         59.0%        23             
+BDRHM        beta-D-rhamnose                                             59.0%        23             
+BL6ALT       6-Deoxy-beta-L-Altrose                                      59.0%        23             
+BL6TAL       6-Deoxy-beta-L-Talose                                       59.0%        23             
+BLQUI        beta-L-quinovose                                            59.0%        23             
+BQUI         beta-D-Quinovose                                            59.0%        23             
+FERUT        ferulate, for lignin:hemicellulose crosslinks               59.0%        23             
+ARHM         alpha-L-rhamnose                                            59.0%        23             
+BRHM         beta-L-rhamnose                                             59.0%        23             
+AALLA        alpha-D-alluronic acid                                      56.4%        22             
+AALTA        alpha-D-alturonic acid                                      56.4%        22             
+AASC         alpha-Ascarylose                                            56.4%        22             
+ACOL         alpha-L-colitose                                            56.4%        22             
+ADIG         alpha-D-digitoxose                                          56.4%        22             
+AGALA        4C1 alpha-D-galactoronic acid                               56.4%        22             
+AGULA        alpha-D-guluronic acid                                      56.4%        22             
+ALALTA       alpha-L-alturonic acid                                      56.4%        22             
+ALGULA       alpha-L-guluronic acid                                      56.4%        22             
+AOLI         alpha-D-olivose                                             56.4%        22             
+APAR         alpha-D-paratose                                            56.4%        22             
+ATALA        alpha-D-taluronic acid                                      56.4%        22             
+ATYV         alpha-D-tyvelose                                            56.4%        22             
+BALLA        beta-D-alluronic acid                                       56.4%        22             
+BALTA        beta-D-alturonic acid                                       56.4%        22             
+BASC         beta-Ascarylose                                             56.4%        22             
+BCOL         beta-L-colitose                                             56.4%        22             
+BDIG         beta-D-digitoxose                                           56.4%        22             
+BGALA        4C1 beta-D-galactoronic acid                                56.4%        22             
+BGULA        beta-D-guluronic acid                                       56.4%        22             
+BLALTA       beta-L-alturonic acid                                       56.4%        22             
+BLGULA       beta-L-guluronic acid                                       56.4%        22             
+BOLI         beta-D-olivose                                              56.4%        22             
+BPAR         alpha-D-paratose                                            56.4%        22             
+BTALA        beta-D-taluronic acid                                       56.4%        22             
+BTYV         beta-D-tyvelose                                             56.4%        22             
+ABEQ         abequose, 3,6-didexoxy-alpha-D-xylo-hexose                  56.4%        22             
+AGLCA        4C1 alpha-D-glucoronic acid                                 56.4%        22             
+AIDOA        alpha-L-iduronic acid                                       56.4%        22             
+BGLCA        4C1 beta-D-glucoronic acid                                  56.4%        22             
+BGLCA0       4C1 beta-D-glucoronic acid                                  56.4%        22             
+BIDOA        beta-L-iduronic acid                                        56.4%        22             
+DARAOL       D-ARAbitOL (same as lyxitol)                                56.4%        22             
+LARAOL       L-ARAbitOL (same as lyxitol)                                56.4%        22             
+MRIBOL       Meso-RIBitOL                                                56.4%        22             
+MXYLOL       Meso-XYLitOL                                                56.4%        22             
+AARBP        alpha-L-arabinopyranose                                     51.3%        20             
+ADARBP       alpha-D-arabinopyranose                                     51.3%        20             
+ALARB        alpha-L-Arabinose                                           51.3%        20             
+ALRIB        alpha-L-Ribose                                              51.3%        20             
+ALRIBP       alpha-L-Ribopyranose                                        51.3%        20             
+ALRULF       alpha-L-ribulofuranose                                      51.3%        20             
+ALXYL        alpha-L-xylose                                              51.3%        20             
+ALYXP        alpha-D-Lyxopyranose                                        51.3%        20             
+ARIBP        alpha-D-Ribopyranose                                        51.3%        20             
+AXULF        alpha-xylulofuranose                                        51.3%        20             
+BARBP        beta-L-arabinopyranose                                      51.3%        20             
+BDARBP       beta-D-arabinopyranose                                      51.3%        20             
+BLARB        beta-L-Arabinose                                            51.3%        20             
+BLRIB        alpha-L-Ribose                                              51.3%        20             
+BLRIBP       beta-L-Ribopyranose                                         51.3%        20             
+BLRULF       beta-L-ribulofuranose                                       51.3%        20             
+BLXYL        beta-L-xylose                                               51.3%        20             
+BLYXP        beta-D-Lyxopyranose                                         51.3%        20             
+BRIBP        beta-D-Ribopyranose                                         51.3%        20             
+BXULF        beta-xylulofuranose                                         51.3%        20             
+AARB         alpha-Arabinose                                             51.3%        20             
+ALYF         alpha-Lyxofuranose                                          51.3%        20             
+ARIB         alpha-Ribose                                                51.3%        20             
+AXYF         alpha-Xylofuranose                                          51.3%        20             
+AXYL         alpha-D-xylose (a-glucose w/o exocyclic moiety) og          51.3%        20             
+BARB         beta-Arabinose                                              51.3%        20             
+BLYF         beta-Lyxofuranose                                           51.3%        20             
+BRIB         beta-Ribose                                                 51.3%        20             
+BXYF         beta-Xylofuranose                                           51.3%        20             
+BXYL         beta-D-xylose (b-glucose w/o exocyclic moiety) og           51.3%        20             
+PCA          p-coumaric acid, for switchgrass                            48.7%        19             
+ADEO         alpha-Deoxy-Ribose                                          48.7%        19             
+BDEO         beta-Deoxy-Ribose                                           48.7%        19             
+DTHROL       D-THReitOL                                                  46.2%        18             
+LTHROL       L-THReitOL                                                  46.2%        18             
+MERYOL       Meso-ERYthritOL (mertitol)                                  46.2%        18             
+ETPP         protonated ethanolamine and diphospate                      43.6%        19             
+MGLYOL       Meso-GLYcerOL                                               35.9%        14             
+DGLYA        D-Glyceric acid                                             30.8%        12             
+
+Statistics:
+  • Total possible matches: 363
+  • Exact element matches: 4
+  • Matches with ≥90% similarity: 83
+  • Matches with expected residue type: 31
+
+Exact element matches:
+  AMU2GC: alpha-N-Glycolyl-Muramic Acid
+  BMU2GC: beta-N-Glycolyl-Muramic Acid
+  ANE5AC: alpha-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)
+  BNE5AC: beta-Neu5Ac (N-acetyl-alpha-D-neuraminic acid)
+

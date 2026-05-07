@@ -1,0 +1,26 @@
+================================================================================
+PDB TO CHARMM CARBOHYDRATE RESIDUE MAPPING
+================================================================================
+
+JSON mapping source: /home/anacleto/projects/github/automated_glycosylation/example/output/STEP2/JSON/D_18/D_18.json
+Sequence: GlcNAc(b1-2)Man(a1-6)[GlcNAc(b1-2)Man(a1-3)]Man(b1-4)GlcNAc(b1-4)[Fuc(a1-6)]GlcNAc
+
+PDB Residue     Chain    Position   CHARMM Name     IUPAC Name                               Match %   
+----------------------------------------------------------------------------------------------------
+NDG             D        147        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+FCA             D        148        AFUC            alpha-L-fucose                              100.0%
+NAG             D        149        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+BMA             D        150        BMAN            4C1 beta-D-mannose                          100.0%
+MAN             D        151        AMAN            4C1 alpha-D-mannose                         100.0%
+NAG             D        152        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+MAN             D        153        AMAN            4C1 alpha-D-mannose                         100.0%
+NAG             D        154        BGLCNA          2-acetyl-2-deoxy-beta-D-glucosamine         100.0%
+
+================================================================================
+NOTES:
+--------------------------------------------------------------------------------
+1. Residue names in the RTP file follow the pattern: PDBcode_ChainPosition
+2. Original CHARMM names are preserved in comments
+3. Atom names and parameters are from CHARMM carbohydrate force field
+4. JSON mapping was used for residue selection
+5. Use this mapping when setting up your simulation system

@@ -1,0 +1,13 @@
+{
+  "sequence": "Gal(b1-3)GalNAc",
+  "residues": [
+    {
+      "pdb_name": "A2G",
+      "charmm_name": "AGALNA"
+    },
+    {
+      "pdb_name": "GAL",
+      "charmm_name": "BLGAL"
+    }
+  ]
+}
