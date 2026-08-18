@@ -261,7 +261,7 @@ auto_glyco \
 
 If you use this pipeline in your research, please cite:
 
-Anacleto Silva de Souza, Cristiane Rodrigues Guzzo and Siewert-Jan Marrink, Auto_glyco: Automated Glycosylation Pipeline, 2026, https://github.com/anacletosouza/automated_glycosylation
+Anacleto Silva de Souza, Cristiane Rodrigues Guzzo and Siewert-Jan Marrink, Auto_glyco: Automated glycosylation pipeline for glycoprotein modeling in all-atom model resolution, 2026, https://github.com/anacletosouza/automated_glycosylation
 
 ## License
 
