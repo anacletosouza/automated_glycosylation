@@ -269,12 +269,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
 
-- Anacleto Silva de Souza, Cristiane Rodrigues Guzzo and Siewert-Jan Marrink,
+- Anacleto Silva de Souza
 - email: anacletosilvadesouza@usp.br
 
-## Contact
 
-For questions, issues, or contributions, please:
-- Open an issue on [GitHub](https://github.com/anacletosouza/automated_glycosylation/issues)
-- Email the author at anacletosilvadesouza@usp.br
 
