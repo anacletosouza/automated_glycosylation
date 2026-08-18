@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Setup script for automated glycosylation pipeline.
+Setup script for automated glycosylation in all-atom model resolution using MCMC.
 """
 
 from setuptools import setup, find_packages
@@ -27,14 +27,14 @@ readme_file = Path(__file__).parent / "README.md"
 if readme_file.exists():
     long_description = readme_file.read_text()
 else:
-    long_description = "Automated glycosylation pipeline for glycoprotein modeling"
+    long_description = "Auto_glyco: Automated glycosylation pipeline for glycoprotein modeling in all-atom model resolution"
 
 setup(
     name="automated-glycosylation",
     version="1.0.0",
     author="Anacleto Silva de Souza",
     author_email="anacletosilvadesouza@usp.br",
-    description="Automated glycosylation pipeline for glycoprotein structure preparation and parametrization",
+    description="Auto_glyco: Automated glycosylation pipeline for glycoprotein structure preparation in all-atom model resolution",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",

@@ -1,4 +1,6 @@
-# Automated Glycosylation Pipeline
+# Auto_glyco: Automated glycosylation pipeline for glycoprotein modeling in all-atom model resolution.
+
+## Observation: This tool is in test phase.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -255,64 +257,20 @@ auto_glyco \
     --n_workers 4
 ```
 
-## Troubleshooting
-
-### Common Issues
-
-**Issue**: `ImportError: No module named 'automated_glycosylation'`
-```bash
-# Solution: Reinstall the package
-pip install -e . --force-reinstall
-```
-
-**Issue**: CHARMM force field download fails
-```bash
-# Manual download and placement
-wget https://mackerell.umaryland.edu/download.php?filename=CHARMM_ff_params_files/charmm36-jul2022.ff.tgz
-tar -xzf charmm36-jul2022.ff.tgz
-mv charmm36-jul2022.ff output/STEP2/charmm36.ff
-```
-
-**Issue**: wget not found
-```bash
-# Install wget
-sudo apt-get install wget  # Ubuntu/Debian
-brew install wget          # macOS
-```
-
-**Issue**: Permission denied for output directories
-```bash
-# Use a directory where you have write permissions
-auto_glyco --pdb protein.pdb --tsv sites.tsv --output_dir $HOME/glyco_results
-```
-
 ## Citation
 
 If you use this pipeline in your research, please cite:
 
-```bibtex
-@software{automated_glycosylation_2024,
-  author = {Anacleto Silva de Souza},
-  title = {Automated Glycosylation Pipeline},
-  year = {2024},
-  url = {https://github.com/anacletosouza/automated_glycosylation}
-}
-```
+Anacleto Silva de Souza, Cristiane Rodrigues Guzzo and Siewert-Jan Marrink, Auto_glyco: Automated Glycosylation Pipeline, 2026, https://github.com/anacletosouza/automated_glycosylation
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. This tool was supported by São Paulo Research Foundation (FAPESP) 2023/18211-0 and 2025/05583-1.
 
 ## Authors
 
-- **Anacleto Silva de Souza** - *Initial work* - [anacletosouza](https://github.com/anacletosouza)
+- Anacleto Silva de Souza, Cristiane Rodrigues Guzzo and Siewert-Jan Marrink,
 - email: anacletosilvadesouza@usp.br
-
-## Acknowledgments
-
-- CHARMM36 force field developers
-- GROMACS community
-- All contributors and users of this pipeline
 
 ## Contact
 
@@ -320,28 +278,3 @@ For questions, issues, or contributions, please:
 - Open an issue on [GitHub](https://github.com/anacletosouza/automated_glycosylation/issues)
 - Email the author at anacletosilvadesouza@usp.br
 
-## Version History
-
-- **1.0.0** (Current)
-  - Complete pipeline integration
-  - MCMC optimization for glycan orientation
-  - Parallel processing support
-  - Comprehensive reporting
-
-## Roadmap
-
-- [ ] Support for O-linked glycosylation
-- [ ] Integration with molecular dynamics simulations
-- [ ] Web interface for easy access
-- [ ] Docker container for reproducible environments
-- [ ] GPU acceleration for optimization
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
